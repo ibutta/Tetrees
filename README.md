@@ -17,7 +17,7 @@ AND OTHER FILES PRESENT INSIDE "Misc" DIRECTORY***
 
 For now, it'll only compile in Linux systems since IT'S THE BEST AND UNIQUE REAL O.S.!!!... Just kidding... I love to develop
 under Linux O.S. because it's free, beautiful, and it also allows you to put REAL computer science in action! I'll work to develop
-a version for Windows (sooner) and MacOS (only when I get one...).
+a version for Windows (soon) and MacOS (not so soon... only when I get one...).
 
 This project uses: 
   - cairo library for drawing on screen;
