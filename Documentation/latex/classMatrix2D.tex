@@ -1,0 +1,364 @@
+\hypertarget{classMatrix2D}{}\section{Matrix2D$<$ Type $>$ Class Template Reference}
+\label{classMatrix2D}\index{Matrix2\+D$<$ Type $>$@{Matrix2\+D$<$ Type $>$}}
+
+
+A matrix/vector abstraction class.  
+
+
+
+
+{\ttfamily \#include $<$Tetrees\+Defs.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classMatrix2D_a6166db3bae116e2f009721534abdb2de}{Matrix2D} (unsigned height, unsigned width)
+\begin{DoxyCompactList}\small\item\em Class constructor (2D -\/ matrix). \end{DoxyCompactList}\item 
+\hyperlink{classMatrix2D_aab23e73fe109ec1eb39dc442bcb67cbe}{Matrix2D} (unsigned width)
+\begin{DoxyCompactList}\small\item\em Class constructor (1D -\/ vector). \end{DoxyCompactList}\item 
+\hyperlink{classMatrix2D_a5a6653f697f1c397669bd556c1fd272a}{Matrix2D} ()
+\begin{DoxyCompactList}\small\item\em Class constructor (empty object). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classMatrix2D_a9c51e9afbf286db8aa8c08a523bbb46c}\label{classMatrix2D_a9c51e9afbf286db8aa8c08a523bbb46c}} 
+\hyperlink{classMatrix2D}{Matrix2D}$<$ Type $>$ \& \hyperlink{classMatrix2D_a9c51e9afbf286db8aa8c08a523bbb46c}{operator=} (const \hyperlink{classMatrix2D}{Matrix2D}$<$ Type $>$ \&other)
+\begin{DoxyCompactList}\small\item\em Assign operator override. \end{DoxyCompactList}\item 
+const Type \& \hyperlink{classMatrix2D_aa9a6df1e7cc653d635baedc659ea00f7}{operator()} (unsigned r, unsigned c) const
+\begin{DoxyCompactList}\small\item\em Matrix element access. \end{DoxyCompactList}\item 
+Type \& \hyperlink{classMatrix2D_a448fd38c905dd2879244ac345c76b14e}{operator()} (unsigned r, unsigned c)
+\begin{DoxyCompactList}\small\item\em Matrix element access. \end{DoxyCompactList}\item 
+const Type \& \hyperlink{classMatrix2D_ac5b60589d9d867150e045887aaebe5b0}{operator()} (unsigned i) const
+\begin{DoxyCompactList}\small\item\em Array element access. \end{DoxyCompactList}\item 
+Type \& \hyperlink{classMatrix2D_afebec0a3fc73a157fe8044416fb6d0b3}{operator()} (unsigned i)
+\begin{DoxyCompactList}\small\item\em Array element access. \end{DoxyCompactList}\item 
+void \hyperlink{classMatrix2D_abf7025332a5f4f75b172fb1a3ad56176}{set\+Matrix\+Dim} (unsigned new\+Height, unsigned new\+Width)
+\begin{DoxyCompactList}\small\item\em Change matrix dimensions. \end{DoxyCompactList}\item 
+void \hyperlink{classMatrix2D_a02d8df2be95d08423b44009ffe01c12f}{set\+Matrix\+Dim} (unsigned new\+Width)
+\begin{DoxyCompactList}\small\item\em Change array size. \end{DoxyCompactList}\item 
+void \hyperlink{classMatrix2D_a788abe5e1fbd6a1fbd0d445aca4f8300}{transpose} ()
+\begin{DoxyCompactList}\small\item\em Transpose the matrix. \end{DoxyCompactList}\item 
+void \hyperlink{classMatrix2D_aaaefe293f1a0549afb2e506b71b18490}{reverse\+Rows} ()
+\begin{DoxyCompactList}\small\item\em Reverse matrix\textquotesingle{}s rows or the entire array. \end{DoxyCompactList}\item 
+void \hyperlink{classMatrix2D_a2845ff86d7f24ccd338b42b2a9cbe017}{clockwise90\+Rotation} ()
+\begin{DoxyCompactList}\small\item\em Rotate the matrix 90 degrees clockwise. \end{DoxyCompactList}\item 
+void \hyperlink{classMatrix2D_a3fc1bc77793995134f6d2a9095eb57cb}{counterclockwise90\+Rotation} ()
+\begin{DoxyCompactList}\small\item\em Rotate the matrix 90 degrees counter clockwise. \end{DoxyCompactList}\item 
+void \hyperlink{classMatrix2D_a64929341625696e9500aa9b6d51a8ae6}{zero\+Fill} ()
+\begin{DoxyCompactList}\small\item\em Fill the matrix/array with zeroes. \end{DoxyCompactList}\item 
+unsigned \hyperlink{classMatrix2D_acc55ef0f69af583aaefb8a484b4c2ca7}{get\+Row\+Height} ()
+\begin{DoxyCompactList}\small\item\em Get rows amount. \end{DoxyCompactList}\item 
+unsigned \hyperlink{classMatrix2D_afd2fbe10a27044f6e716242fde6a645a}{get\+Col\+Width} ()
+\begin{DoxyCompactList}\small\item\em Get columns amount. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+unsigned \hyperlink{classMatrix2D_afdcd47964719a1c4e006fbdd313d2f17}{r\+Height}
+\item 
+unsigned \hyperlink{classMatrix2D_ad30f0f3c259aaa26ddda2b4d17eddef2}{c\+Width}
+\item 
+Type $\ast$ \hyperlink{classMatrix2D_a6e702a96baba89ad29226ceb44676e2b}{matrix\+Array}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class Type$>$\newline
+class Matrix2\+D$<$ Type $>$}
+
+A matrix/vector abstraction class. 
+
+Provides an abstraction for handling matrices (multidimensional vectors) and is by far the most important auxiliary piece of code implemented in this project. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classMatrix2D_a6166db3bae116e2f009721534abdb2de}\label{classMatrix2D_a6166db3bae116e2f009721534abdb2de}} 
+\index{Matrix2D@{Matrix2D}!Matrix2D@{Matrix2D}}
+\index{Matrix2D@{Matrix2D}!Matrix2D@{Matrix2D}}
+\subsubsection{\texorpdfstring{Matrix2\+D()}{Matrix2D()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$class Type$>$ \\
+\hyperlink{classMatrix2D}{Matrix2D}$<$ Type $>$\+::\hyperlink{classMatrix2D}{Matrix2D} (\begin{DoxyParamCaption}\item[{unsigned}]{height,  }\item[{unsigned}]{width }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Class constructor (2D -\/ matrix). 
+
+Generates an object representing a 2D matrix. 
+\begin{DoxyParams}{Parameters}
+{\em height} & The number of rows in the new matrix. \\
+\hline
+{\em width} & The number of columns in the new matrix. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classMatrix2D_aab23e73fe109ec1eb39dc442bcb67cbe}\label{classMatrix2D_aab23e73fe109ec1eb39dc442bcb67cbe}} 
+\index{Matrix2D@{Matrix2D}!Matrix2D@{Matrix2D}}
+\index{Matrix2D@{Matrix2D}!Matrix2D@{Matrix2D}}
+\subsubsection{\texorpdfstring{Matrix2\+D()}{Matrix2D()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$class Type$>$ \\
+\hyperlink{classMatrix2D}{Matrix2D}$<$ Type $>$\+::\hyperlink{classMatrix2D}{Matrix2D} (\begin{DoxyParamCaption}\item[{unsigned}]{width }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Class constructor (1D -\/ vector). 
+
+Generates an object representing a 1D vector. 
+\begin{DoxyParams}{Parameters}
+{\em width} & The number of elements of the new vector. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classMatrix2D_a5a6653f697f1c397669bd556c1fd272a}\label{classMatrix2D_a5a6653f697f1c397669bd556c1fd272a}} 
+\index{Matrix2D@{Matrix2D}!Matrix2D@{Matrix2D}}
+\index{Matrix2D@{Matrix2D}!Matrix2D@{Matrix2D}}
+\subsubsection{\texorpdfstring{Matrix2\+D()}{Matrix2D()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$class Type$>$ \\
+\hyperlink{classMatrix2D}{Matrix2D}$<$ Type $>$\+::\hyperlink{classMatrix2D}{Matrix2D} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Class constructor (empty object). 
+
+Generates an empty object. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classMatrix2D_a2845ff86d7f24ccd338b42b2a9cbe017}\label{classMatrix2D_a2845ff86d7f24ccd338b42b2a9cbe017}} 
+\index{Matrix2D@{Matrix2D}!clockwise90\+Rotation@{clockwise90\+Rotation}}
+\index{clockwise90\+Rotation@{clockwise90\+Rotation}!Matrix2D@{Matrix2D}}
+\subsubsection{\texorpdfstring{clockwise90\+Rotation()}{clockwise90Rotation()}}
+{\footnotesize\ttfamily template$<$class Type$>$ \\
+void \hyperlink{classMatrix2D}{Matrix2D}$<$ Type $>$\+::clockwise90\+Rotation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Rotate the matrix 90 degrees clockwise. 
+
+Applies the \hyperlink{classMatrix2D_a788abe5e1fbd6a1fbd0d445aca4f8300}{transpose} operation followed by the \hyperlink{classMatrix2D_aaaefe293f1a0549afb2e506b71b18490}{reverse\+Rows} operation resulting in a 90 degrees clockwise rotation of the matrix. \begin{DoxyRemark}{Remarks}
+If applied to an array it will result in the reversal of its elements since the transpose of an array has no effect on it. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{classMatrix2D_a3fc1bc77793995134f6d2a9095eb57cb}\label{classMatrix2D_a3fc1bc77793995134f6d2a9095eb57cb}} 
+\index{Matrix2D@{Matrix2D}!counterclockwise90\+Rotation@{counterclockwise90\+Rotation}}
+\index{counterclockwise90\+Rotation@{counterclockwise90\+Rotation}!Matrix2D@{Matrix2D}}
+\subsubsection{\texorpdfstring{counterclockwise90\+Rotation()}{counterclockwise90Rotation()}}
+{\footnotesize\ttfamily template$<$class Type$>$ \\
+void \hyperlink{classMatrix2D}{Matrix2D}$<$ Type $>$\+::counterclockwise90\+Rotation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Rotate the matrix 90 degrees counter clockwise. 
+
+Applies the \hyperlink{classMatrix2D_aaaefe293f1a0549afb2e506b71b18490}{reverse\+Rows} operation followed by the \hyperlink{classMatrix2D_a788abe5e1fbd6a1fbd0d445aca4f8300}{transpose} operation resulting in a 90 degrees counter clockwise rotation of the matrix. \begin{DoxyRemark}{Remarks}
+If applied to an array it will result in the reversal of its elements since the transpose of an array has no effect on it. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{classMatrix2D_afd2fbe10a27044f6e716242fde6a645a}\label{classMatrix2D_afd2fbe10a27044f6e716242fde6a645a}} 
+\index{Matrix2D@{Matrix2D}!get\+Col\+Width@{get\+Col\+Width}}
+\index{get\+Col\+Width@{get\+Col\+Width}!Matrix2D@{Matrix2D}}
+\subsubsection{\texorpdfstring{get\+Col\+Width()}{getColWidth()}}
+{\footnotesize\ttfamily template$<$class Type$>$ \\
+unsigned \hyperlink{classMatrix2D}{Matrix2D}$<$ Type $>$\+::get\+Col\+Width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get columns amount. 
+
+Returns the amount of columns present in the matrix. \begin{DoxyRemark}{Remarks}
+If the object is an array, returns the amount of elements (i.\+e. its length). 
+\end{DoxyRemark}
+\begin{DoxyReturn}{Returns}
+The number of columns. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMatrix2D_acc55ef0f69af583aaefb8a484b4c2ca7}\label{classMatrix2D_acc55ef0f69af583aaefb8a484b4c2ca7}} 
+\index{Matrix2D@{Matrix2D}!get\+Row\+Height@{get\+Row\+Height}}
+\index{get\+Row\+Height@{get\+Row\+Height}!Matrix2D@{Matrix2D}}
+\subsubsection{\texorpdfstring{get\+Row\+Height()}{getRowHeight()}}
+{\footnotesize\ttfamily template$<$class Type$>$ \\
+unsigned \hyperlink{classMatrix2D}{Matrix2D}$<$ Type $>$\+::get\+Row\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get rows amount. 
+
+Returns the amount of rows present in the matrix. \begin{DoxyRemark}{Remarks}
+If the object is an array, returns 1. 
+\end{DoxyRemark}
+\begin{DoxyReturn}{Returns}
+The number of rows. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMatrix2D_aa9a6df1e7cc653d635baedc659ea00f7}\label{classMatrix2D_aa9a6df1e7cc653d635baedc659ea00f7}} 
+\index{Matrix2D@{Matrix2D}!operator()@{operator()}}
+\index{operator()@{operator()}!Matrix2D@{Matrix2D}}
+\subsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$class Type$>$ \\
+const Type\& \hyperlink{classMatrix2D}{Matrix2D}$<$ Type $>$\+::operator() (\begin{DoxyParamCaption}\item[{unsigned}]{r,  }\item[{unsigned}]{c }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Matrix element access. 
+
+Overrides the \textquotesingle{}()\textquotesingle{} operator in order to access a matrix\textquotesingle{}s element by providing its row and column indexes. 
+\begin{DoxyParams}{Parameters}
+{\em r} & The row containing the element to be accessed. \\
+\hline
+{\em c} & The column containing the element to be accessed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The element pointed by the pair (r,c). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMatrix2D_a448fd38c905dd2879244ac345c76b14e}\label{classMatrix2D_a448fd38c905dd2879244ac345c76b14e}} 
+\index{Matrix2D@{Matrix2D}!operator()@{operator()}}
+\index{operator()@{operator()}!Matrix2D@{Matrix2D}}
+\subsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$class Type$>$ \\
+Type\& \hyperlink{classMatrix2D}{Matrix2D}$<$ Type $>$\+::operator() (\begin{DoxyParamCaption}\item[{unsigned}]{r,  }\item[{unsigned}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Matrix element access. 
+
+Overrides the \textquotesingle{}()\textquotesingle{} operator in order to access a matrix\textquotesingle{}s element by providing its row and column indexes. 
+\begin{DoxyParams}{Parameters}
+{\em r} & The row containing the element to be accessed. \\
+\hline
+{\em c} & The column containing the element to be accessed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The element pointed by the pair (r,c). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMatrix2D_ac5b60589d9d867150e045887aaebe5b0}\label{classMatrix2D_ac5b60589d9d867150e045887aaebe5b0}} 
+\index{Matrix2D@{Matrix2D}!operator()@{operator()}}
+\index{operator()@{operator()}!Matrix2D@{Matrix2D}}
+\subsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$class Type$>$ \\
+const Type\& \hyperlink{classMatrix2D}{Matrix2D}$<$ Type $>$\+::operator() (\begin{DoxyParamCaption}\item[{unsigned}]{i }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Array element access. 
+
+Overrides the \textquotesingle{}()\textquotesingle{} operator in order to access an array\textquotesingle{}s element. 
+\begin{DoxyParams}{Parameters}
+{\em i} & The index of the element to be accessed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The element pointed by i. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMatrix2D_afebec0a3fc73a157fe8044416fb6d0b3}\label{classMatrix2D_afebec0a3fc73a157fe8044416fb6d0b3}} 
+\index{Matrix2D@{Matrix2D}!operator()@{operator()}}
+\index{operator()@{operator()}!Matrix2D@{Matrix2D}}
+\subsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$class Type$>$ \\
+Type\& \hyperlink{classMatrix2D}{Matrix2D}$<$ Type $>$\+::operator() (\begin{DoxyParamCaption}\item[{unsigned}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Array element access. 
+
+Overrides the \textquotesingle{}()\textquotesingle{} operator in order to access an array\textquotesingle{}s element. 
+\begin{DoxyParams}{Parameters}
+{\em i} & The index of the element to be accessed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The element pointed by i. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMatrix2D_aaaefe293f1a0549afb2e506b71b18490}\label{classMatrix2D_aaaefe293f1a0549afb2e506b71b18490}} 
+\index{Matrix2D@{Matrix2D}!reverse\+Rows@{reverse\+Rows}}
+\index{reverse\+Rows@{reverse\+Rows}!Matrix2D@{Matrix2D}}
+\subsubsection{\texorpdfstring{reverse\+Rows()}{reverseRows()}}
+{\footnotesize\ttfamily template$<$class Type$>$ \\
+void \hyperlink{classMatrix2D}{Matrix2D}$<$ Type $>$\+::reverse\+Rows (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Reverse matrix\textquotesingle{}s rows or the entire array. 
+
+Inverts the order in which the elements of each row of the matrix (or the entire array) appear, i.\+e. the first element of a row will become its nth, the second its (nth -\/ 1), and so on... \mbox{\Hypertarget{classMatrix2D_abf7025332a5f4f75b172fb1a3ad56176}\label{classMatrix2D_abf7025332a5f4f75b172fb1a3ad56176}} 
+\index{Matrix2D@{Matrix2D}!set\+Matrix\+Dim@{set\+Matrix\+Dim}}
+\index{set\+Matrix\+Dim@{set\+Matrix\+Dim}!Matrix2D@{Matrix2D}}
+\subsubsection{\texorpdfstring{set\+Matrix\+Dim()}{setMatrixDim()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class Type$>$ \\
+void \hyperlink{classMatrix2D}{Matrix2D}$<$ Type $>$\+::set\+Matrix\+Dim (\begin{DoxyParamCaption}\item[{unsigned}]{new\+Height,  }\item[{unsigned}]{new\+Width }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Change matrix dimensions. 
+
+Resizes the matrix by changing its dimensions, i.\+e. the number of rows and columns. \begin{DoxyRemark}{Remarks}
+The matrix will be reseted and all its elements will be lost. 
+\end{DoxyRemark}
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Height} & The new number of rows. \\
+\hline
+{\em new\+Width} & The new number of columns. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classMatrix2D_a02d8df2be95d08423b44009ffe01c12f}\label{classMatrix2D_a02d8df2be95d08423b44009ffe01c12f}} 
+\index{Matrix2D@{Matrix2D}!set\+Matrix\+Dim@{set\+Matrix\+Dim}}
+\index{set\+Matrix\+Dim@{set\+Matrix\+Dim}!Matrix2D@{Matrix2D}}
+\subsubsection{\texorpdfstring{set\+Matrix\+Dim()}{setMatrixDim()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class Type$>$ \\
+void \hyperlink{classMatrix2D}{Matrix2D}$<$ Type $>$\+::set\+Matrix\+Dim (\begin{DoxyParamCaption}\item[{unsigned}]{new\+Width }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Change array size. 
+
+Resizes the array by changing its number of elements. \begin{DoxyRemark}{Remarks}
+The array will be reseted and all its elements will be lost. 
+\end{DoxyRemark}
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Width} & The new number of elements. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classMatrix2D_a788abe5e1fbd6a1fbd0d445aca4f8300}\label{classMatrix2D_a788abe5e1fbd6a1fbd0d445aca4f8300}} 
+\index{Matrix2D@{Matrix2D}!transpose@{transpose}}
+\index{transpose@{transpose}!Matrix2D@{Matrix2D}}
+\subsubsection{\texorpdfstring{transpose()}{transpose()}}
+{\footnotesize\ttfamily template$<$class Type$>$ \\
+void \hyperlink{classMatrix2D}{Matrix2D}$<$ Type $>$\+::transpose (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Transpose the matrix. 
+
+Applies the standard transpose operation to the matrix, i.\+e. makes columns into rows and rows into columns. \begin{DoxyRemark}{Remarks}
+When applied to an array (i.\+e. a single rowed matrix) it does nothing. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{classMatrix2D_a64929341625696e9500aa9b6d51a8ae6}\label{classMatrix2D_a64929341625696e9500aa9b6d51a8ae6}} 
+\index{Matrix2D@{Matrix2D}!zero\+Fill@{zero\+Fill}}
+\index{zero\+Fill@{zero\+Fill}!Matrix2D@{Matrix2D}}
+\subsubsection{\texorpdfstring{zero\+Fill()}{zeroFill()}}
+{\footnotesize\ttfamily template$<$class Type$>$ \\
+void \hyperlink{classMatrix2D}{Matrix2D}$<$ Type $>$\+::zero\+Fill (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Fill the matrix/array with zeroes. 
+
+Sets all elements of the matrix/array to zero. 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classMatrix2D_ad30f0f3c259aaa26ddda2b4d17eddef2}\label{classMatrix2D_ad30f0f3c259aaa26ddda2b4d17eddef2}} 
+\index{Matrix2D@{Matrix2D}!c\+Width@{c\+Width}}
+\index{c\+Width@{c\+Width}!Matrix2D@{Matrix2D}}
+\subsubsection{\texorpdfstring{c\+Width}{cWidth}}
+{\footnotesize\ttfamily template$<$class Type$>$ \\
+unsigned \hyperlink{classMatrix2D}{Matrix2D}$<$ Type $>$\+::c\+Width\hspace{0.3cm}{\ttfamily [private]}}
+
+Matrix\textquotesingle{}s number of columns/\+Array\textquotesingle{}s length. \mbox{\Hypertarget{classMatrix2D_a6e702a96baba89ad29226ceb44676e2b}\label{classMatrix2D_a6e702a96baba89ad29226ceb44676e2b}} 
+\index{Matrix2D@{Matrix2D}!matrix\+Array@{matrix\+Array}}
+\index{matrix\+Array@{matrix\+Array}!Matrix2D@{Matrix2D}}
+\subsubsection{\texorpdfstring{matrix\+Array}{matrixArray}}
+{\footnotesize\ttfamily template$<$class Type$>$ \\
+Type$\ast$ \hyperlink{classMatrix2D}{Matrix2D}$<$ Type $>$\+::matrix\+Array\hspace{0.3cm}{\ttfamily [private]}}
+
+The vector abstracting a matrix/array. \mbox{\Hypertarget{classMatrix2D_afdcd47964719a1c4e006fbdd313d2f17}\label{classMatrix2D_afdcd47964719a1c4e006fbdd313d2f17}} 
+\index{Matrix2D@{Matrix2D}!r\+Height@{r\+Height}}
+\index{r\+Height@{r\+Height}!Matrix2D@{Matrix2D}}
+\subsubsection{\texorpdfstring{r\+Height}{rHeight}}
+{\footnotesize\ttfamily template$<$class Type$>$ \\
+unsigned \hyperlink{classMatrix2D}{Matrix2D}$<$ Type $>$\+::r\+Height\hspace{0.3cm}{\ttfamily [private]}}
+
+Matrix\textquotesingle{}s number of rows. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Headers/\hyperlink{TetreesDefs_8hpp}{Tetrees\+Defs.\+hpp}\end{DoxyCompactItemize}

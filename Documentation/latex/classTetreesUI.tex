@@ -1,0 +1,110 @@
+\hypertarget{classTetreesUI}{}\section{Tetrees\+UI Class Reference}
+\label{classTetreesUI}\index{Tetrees\+UI@{Tetrees\+UI}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTetreesUI_ad6a5b91b1574c25c2bcd48601142013c}\label{classTetreesUI_ad6a5b91b1574c25c2bcd48601142013c}} 
+{\bfseries Tetrees\+UI} (\hyperlink{classTetreesEngine}{Tetrees\+Engine})
+\item 
+void \hyperlink{classTetreesUI_a492d68860089cfbe52c5756b2c3cd2ae}{setup\+UI} (Gtk\+Application $\ast$, gpointer)
+\begin{DoxyCompactList}\small\item\em User interface (UI) assembly. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTetreesUI_a829fc73fdc1f45fb567168f2c37ab012}\label{classTetreesUI_a829fc73fdc1f45fb567168f2c37ab012}} 
+static gboolean {\bfseries on\+Draw\+Playing\+Field\+Drawing\+Area} (Gtk\+Widget $\ast$, cairo\+\_\+t $\ast$, gpointer)
+\item 
+\mbox{\Hypertarget{classTetreesUI_aa775d6f3e3ca5c11ec3bb73e8dd7f62d}\label{classTetreesUI_aa775d6f3e3ca5c11ec3bb73e8dd7f62d}} 
+static gboolean {\bfseries on\+Draw\+Next\+Tetromino\+Drawing\+Area} (Gtk\+Widget $\ast$, cairo\+\_\+t $\ast$, gpointer)
+\item 
+\mbox{\Hypertarget{classTetreesUI_a9d2b1a8025a16aac4097850deedadd18}\label{classTetreesUI_a9d2b1a8025a16aac4097850deedadd18}} 
+static void {\bfseries on\+Play\+Clicked} (Gtk\+Button $\ast$)
+\item 
+\mbox{\Hypertarget{classTetreesUI_afe0ff659354e4c6dfe6a7f2fce3ad0de}\label{classTetreesUI_afe0ff659354e4c6dfe6a7f2fce3ad0de}} 
+static void {\bfseries on\+Pause\+Clicked} (Gtk\+Button $\ast$)
+\item 
+\mbox{\Hypertarget{classTetreesUI_af80a44c26a4ce356e1f999c8a341197c}\label{classTetreesUI_af80a44c26a4ce356e1f999c8a341197c}} 
+static void {\bfseries on\+Reset\+Clicked} (Gtk\+Button $\ast$)
+\item 
+\mbox{\Hypertarget{classTetreesUI_a357ae7240cc5f35b5d61244e7a6bcfe3}\label{classTetreesUI_a357ae7240cc5f35b5d61244e7a6bcfe3}} 
+static void {\bfseries draw\+Scene} (cairo\+\_\+t $\ast$)
+\item 
+\mbox{\Hypertarget{classTetreesUI_a7d39f8caa75f5e755e3cebb0e05bb779}\label{classTetreesUI_a7d39f8caa75f5e755e3cebb0e05bb779}} 
+static void {\bfseries draw\+Paused\+Scene} (cairo\+\_\+t $\ast$)
+\item 
+\mbox{\Hypertarget{classTetreesUI_a9f4fa68c99e9d6146d9bdf2baa9db4d6}\label{classTetreesUI_a9f4fa68c99e9d6146d9bdf2baa9db4d6}} 
+static void {\bfseries draw\+Next\+Tetromino} (cairo\+\_\+t $\ast$)
+\item 
+\mbox{\Hypertarget{classTetreesUI_a4d16e60b9a27bfbc2aac1deba09cc74c}\label{classTetreesUI_a4d16e60b9a27bfbc2aac1deba09cc74c}} 
+static void {\bfseries draw\+Game\+Over\+Animation\+Step} (cairo\+\_\+t $\ast$)
+\item 
+\mbox{\Hypertarget{classTetreesUI_a5db6dc449dab49c7baa83f35a7909c0c}\label{classTetreesUI_a5db6dc449dab49c7baa83f35a7909c0c}} 
+static void {\bfseries draw\+Row\+Removal\+Animation\+Step} (cairo\+\_\+t $\ast$)
+\item 
+\mbox{\Hypertarget{classTetreesUI_a5b96d12dcb64cd2d8b76ec7feeb9e80b}\label{classTetreesUI_a5b96d12dcb64cd2d8b76ec7feeb9e80b}} 
+static gboolean {\bfseries animation\+Handler} (Gtk\+Widget $\ast$)
+\item 
+\mbox{\Hypertarget{classTetreesUI_a80d2a8dc3841f2285eb22a5238600df7}\label{classTetreesUI_a80d2a8dc3841f2285eb22a5238600df7}} 
+static gboolean {\bfseries update\+Game\+Context} (Gtk\+Widget $\ast$)
+\item 
+\mbox{\Hypertarget{classTetreesUI_aecd0c6b7dad0f9524673711db8364cd6}\label{classTetreesUI_aecd0c6b7dad0f9524673711db8364cd6}} 
+static void {\bfseries context\+Handler} (gpointer)
+\item 
+\mbox{\Hypertarget{classTetreesUI_ad940ec71d761d3234ee3cef397434784}\label{classTetreesUI_ad940ec71d761d3234ee3cef397434784}} 
+static gboolean {\bfseries on\+Key\+Press} (Gtk\+Widget $\ast$, Gdk\+Event\+Key $\ast$, gpointer)
+\item 
+\mbox{\Hypertarget{classTetreesUI_a195806825b5469dcc99fbca5d14af94f}\label{classTetreesUI_a195806825b5469dcc99fbca5d14af94f}} 
+static void {\bfseries set\+U\+I\+State} (\hyperlink{TetreesDefs_8hpp_ab583135648b1264a9f7817709c4dbd3e}{ui\+\_\+state\+\_\+t})
+\item 
+\mbox{\Hypertarget{classTetreesUI_ac41bb9dc9af1d051c54dd5f2dcf224a9}\label{classTetreesUI_ac41bb9dc9af1d051c54dd5f2dcf224a9}} 
+static void {\bfseries update\+Score} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTetreesUI_a07faa56ea40b28beba7509fa7f65c897}\label{classTetreesUI_a07faa56ea40b28beba7509fa7f65c897}} 
+static \hyperlink{classTetreesEngine}{Tetrees\+Engine} $\ast$ {\bfseries game\+Engine}
+\item 
+\mbox{\Hypertarget{classTetreesUI_a80545840b2848938d01d7f85786ee141}\label{classTetreesUI_a80545840b2848938d01d7f85786ee141}} 
+static \hyperlink{classTetreesUtils}{Tetrees\+Utils} $\ast$ {\bfseries utils}
+\item 
+\mbox{\Hypertarget{classTetreesUI_a57300c1925cb5ae34c9220cd993e28b2}\label{classTetreesUI_a57300c1925cb5ae34c9220cd993e28b2}} 
+static \hyperlink{classMatrix2D}{Matrix2D}$<$ \hyperlink{structrgb__t}{rgb\+\_\+t} $>$ {\bfseries colors}
+\item 
+\mbox{\Hypertarget{classTetreesUI_a604cf4cecdbc93745eaf7733b3c33602}\label{classTetreesUI_a604cf4cecdbc93745eaf7733b3c33602}} 
+static \hyperlink{classMatrix2D}{Matrix2D}$<$ int $>$ {\bfseries game\+Scene}
+\item 
+\mbox{\Hypertarget{classTetreesUI_a6296ce8f3cde853cec110718c4b88540}\label{classTetreesUI_a6296ce8f3cde853cec110718c4b88540}} 
+static \hyperlink{structpiece__t}{piece\+\_\+t} {\bfseries next\+Tetromino}
+\item 
+\mbox{\Hypertarget{classTetreesUI_a128491041c6b77acec829fb5b1f4dafb}\label{classTetreesUI_a128491041c6b77acec829fb5b1f4dafb}} 
+static \hyperlink{structgame__score__t}{game\+\_\+score\+\_\+t} {\bfseries game\+Score}
+\item 
+\mbox{\Hypertarget{classTetreesUI_a700b75dbee9c324c69a18f34c5efdab9}\label{classTetreesUI_a700b75dbee9c324c69a18f34c5efdab9}} 
+static \hyperlink{structgame__level__t}{game\+\_\+level\+\_\+t} {\bfseries game\+Level}
+\item 
+\mbox{\Hypertarget{classTetreesUI_af3bd9b55da30d2b324c2dfe2d740d8a2}\label{classTetreesUI_af3bd9b55da30d2b324c2dfe2d740d8a2}} 
+static \hyperlink{TetreesDefs_8hpp_a10487f3bfa31fd7b7b8c20f403f8c947}{animation\+\_\+t} {\bfseries animation\+Mode}
+\item 
+\mbox{\Hypertarget{classTetreesUI_a06df6e44abd5d521448cf1299433b55c}\label{classTetreesUI_a06df6e44abd5d521448cf1299433b55c}} 
+static \hyperlink{structanimation__control__t}{animation\+\_\+control\+\_\+t} {\bfseries animation\+Control}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classTetreesUI_a492d68860089cfbe52c5756b2c3cd2ae}\label{classTetreesUI_a492d68860089cfbe52c5756b2c3cd2ae}} 
+\index{Tetrees\+UI@{Tetrees\+UI}!setup\+UI@{setup\+UI}}
+\index{setup\+UI@{setup\+UI}!Tetrees\+UI@{Tetrees\+UI}}
+\subsubsection{\texorpdfstring{setup\+U\+I()}{setupUI()}}
+{\footnotesize\ttfamily void Tetrees\+U\+I\+::setup\+UI (\begin{DoxyParamCaption}\item[{Gtk\+Application $\ast$}]{app,  }\item[{gpointer}]{user\+\_\+data }\end{DoxyParamCaption})}
+
+
+
+User interface (UI) assembly. 
+
+Create and put together all UI elements. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Headers/\hyperlink{TetreesUI_8hpp}{Tetrees\+U\+I.\+hpp}\item 
+Source/Tetrees\+U\+I.\+cpp\end{DoxyCompactItemize}

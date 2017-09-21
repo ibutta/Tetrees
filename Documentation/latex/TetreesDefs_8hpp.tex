@@ -1,0 +1,541 @@
+\hypertarget{TetreesDefs_8hpp}{}\section{Headers/\+Tetrees\+Defs.hpp File Reference}
+\label{TetreesDefs_8hpp}\index{Headers/\+Tetrees\+Defs.\+hpp@{Headers/\+Tetrees\+Defs.\+hpp}}
+
+
+Defs header file.  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classMatrix2D}{Matrix2\+D$<$ Type $>$}
+\begin{DoxyCompactList}\small\item\em A matrix/vector abstraction class. \end{DoxyCompactList}\item 
+struct \hyperlink{structpiece__t}{piece\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Struct representing a tetromino. \end{DoxyCompactList}\item 
+struct \hyperlink{structrgb__t}{rgb\+\_\+t}
+\begin{DoxyCompactList}\small\item\em R\+GB elements of a color. \end{DoxyCompactList}\item 
+struct \hyperlink{structgame__score__t}{game\+\_\+score\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Game score data type. \end{DoxyCompactList}\item 
+struct \hyperlink{structgame__level__t}{game\+\_\+level\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Game level data type. \end{DoxyCompactList}\item 
+struct \hyperlink{structgame__data__t}{game\+\_\+data\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Game data tyṕe. \end{DoxyCompactList}\item 
+struct \hyperlink{structanimation__control__t}{animation\+\_\+control\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Type to control UI animations. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{TetreesDefs_8hpp_ac0af1c5c642460534a8eb7827a37e7bf}{S\+C\+E\+N\+E\+\_\+X}(pos)~((pos $\ast$ \hyperlink{TetreesDefs_8hpp_ac64f01cd6fcb79752921aa3975ce8219}{B\+L\+O\+C\+K\+\_\+\+S\+I\+D\+E\+\_\+\+D\+IM}) -\/ \hyperlink{TetreesDefs_8hpp_af08f2c0ac93a84d1e98bd9e128bd0b65}{H\+I\+D\+D\+E\+N\+\_\+\+C\+E\+L\+L\+S\+\_\+\+O\+F\+F\+S\+ET} + (\hyperlink{TetreesDefs_8hpp_a4a163f66fa313addafa1afc8b6d196d3}{T\+E\+T\+R\+O\+M\+I\+N\+O\+\_\+\+L\+I\+N\+E\+\_\+\+W\+I\+D\+TH} / 2))
+\item 
+\#define \hyperlink{TetreesDefs_8hpp_ad9ec28c85f18edf52f01cf50c4b4e0b7}{S\+C\+E\+N\+E\+\_\+Y}(pos)~\hyperlink{TetreesDefs_8hpp_ac0af1c5c642460534a8eb7827a37e7bf}{S\+C\+E\+N\+E\+\_\+X}(pos)
+\item 
+\#define \hyperlink{TetreesDefs_8hpp_ad1ddcef8e7677afbdcc5f65190d5706e}{N\+E\+X\+T\+\_\+\+T\+E\+T\+R\+O\+M\+I\+N\+O\+\_\+X}(pos)~((pos $\ast$ \hyperlink{TetreesDefs_8hpp_ac64f01cd6fcb79752921aa3975ce8219}{B\+L\+O\+C\+K\+\_\+\+S\+I\+D\+E\+\_\+\+D\+IM}) + (\hyperlink{TetreesDefs_8hpp_a4a163f66fa313addafa1afc8b6d196d3}{T\+E\+T\+R\+O\+M\+I\+N\+O\+\_\+\+L\+I\+N\+E\+\_\+\+W\+I\+D\+TH} / 2))
+\item 
+\#define \hyperlink{TetreesDefs_8hpp_a57e9e7e1d5a6df49dbaf4e434281e8ba}{N\+E\+X\+T\+\_\+\+T\+E\+T\+R\+O\+M\+I\+N\+O\+\_\+Y}(pos)~\hyperlink{TetreesDefs_8hpp_ad1ddcef8e7677afbdcc5f65190d5706e}{N\+E\+X\+T\+\_\+\+T\+E\+T\+R\+O\+M\+I\+N\+O\+\_\+X}(pos)
+\item 
+\mbox{\Hypertarget{TetreesDefs_8hpp_ac47813d0b6b0d8f3cad116d21808cd8a}\label{TetreesDefs_8hpp_ac47813d0b6b0d8f3cad116d21808cd8a}} 
+\#define {\bfseries C\+S\+S\+\_\+\+F\+I\+L\+E\+\_\+\+P\+A\+TH}~\char`\"{}Misc/Tetrees\+Style.\+css\char`\"{}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{TetreesDefs_8hpp_a4d5a793092a473f85b4c1f7faf62afed}{step\+\_\+t} \{ {\bfseries S\+T\+E\+P\+\_\+\+D\+R\+OP} = 0, 
+{\bfseries S\+T\+E\+P\+\_\+\+R\+O\+T\+A\+TE}, 
+{\bfseries S\+T\+E\+P\+\_\+\+S\+W\+E\+R\+V\+E\+\_\+\+R\+I\+G\+HT}, 
+{\bfseries S\+T\+E\+P\+\_\+\+S\+W\+E\+R\+V\+E\+\_\+\+L\+E\+FT}
+ \}
+\begin{DoxyCompactList}\small\item\em Game steps. \end{DoxyCompactList}\item 
+enum \hyperlink{TetreesDefs_8hpp_acd279a62a49ecee418dd808ac39a1795}{tetromino\+\_\+t} \{ \newline
+{\bfseries T\+E\+T\+R\+O\+M\+I\+N\+O\+\_\+I} = 0, 
+{\bfseries T\+E\+T\+R\+O\+M\+I\+N\+O\+\_\+O}, 
+{\bfseries T\+E\+T\+R\+O\+M\+I\+N\+O\+\_\+T}, 
+{\bfseries T\+E\+T\+R\+O\+M\+I\+N\+O\+\_\+S}, 
+\newline
+{\bfseries T\+E\+T\+R\+O\+M\+I\+N\+O\+\_\+Z}, 
+{\bfseries T\+E\+T\+R\+O\+M\+I\+N\+O\+\_\+J}, 
+{\bfseries T\+E\+T\+R\+O\+M\+I\+N\+O\+\_\+L}
+ \}
+\begin{DoxyCompactList}\small\item\em Tetrominoes types. \end{DoxyCompactList}\item 
+enum \hyperlink{TetreesDefs_8hpp_ac7faaacc16f5e7962108661dfc411257}{level\+\_\+num\+\_\+t} \+: int \{ \newline
+{\bfseries L\+V\+L\+\_\+1} = 0, 
+{\bfseries L\+V\+L\+\_\+2}, 
+{\bfseries L\+V\+L\+\_\+3}, 
+{\bfseries L\+V\+L\+\_\+4}, 
+\newline
+{\bfseries L\+V\+L\+\_\+5}, 
+{\bfseries L\+V\+L\+\_\+6}, 
+{\bfseries L\+V\+L\+\_\+7}, 
+{\bfseries L\+V\+L\+\_\+8}, 
+\newline
+{\bfseries L\+V\+L\+\_\+9}, 
+{\bfseries L\+V\+L\+\_\+10}
+ \}
+\begin{DoxyCompactList}\small\item\em Game levels. \end{DoxyCompactList}\item 
+enum \hyperlink{TetreesDefs_8hpp_a56295b647dadb94aa1662b267e1c9b6e}{level\+\_\+speed\+\_\+t} \+: int \{ \newline
+{\bfseries L\+V\+L\+\_\+1\+\_\+\+S\+P\+E\+ED} = 900, 
+{\bfseries L\+V\+L\+\_\+2\+\_\+\+S\+P\+E\+ED} = 700, 
+{\bfseries L\+V\+L\+\_\+3\+\_\+\+S\+P\+E\+ED} = 700, 
+{\bfseries L\+V\+L\+\_\+4\+\_\+\+S\+P\+E\+ED} = 580, 
+\newline
+{\bfseries L\+V\+L\+\_\+5\+\_\+\+S\+P\+E\+ED} = 580, 
+{\bfseries L\+V\+L\+\_\+6\+\_\+\+S\+P\+E\+ED} = 400, 
+{\bfseries L\+V\+L\+\_\+7\+\_\+\+S\+P\+E\+ED} = 400, 
+{\bfseries L\+V\+L\+\_\+8\+\_\+\+S\+P\+E\+ED} = 300, 
+\newline
+{\bfseries L\+V\+L\+\_\+9\+\_\+\+S\+P\+E\+ED} = 300, 
+{\bfseries L\+V\+L\+\_\+10\+\_\+\+S\+P\+E\+ED} = 150
+ \}
+\begin{DoxyCompactList}\small\item\em Game speed per level. \end{DoxyCompactList}\item 
+enum \hyperlink{TetreesDefs_8hpp_adb9f7ea75cb8fca17c40bc2afbe399ca}{next\+\_\+lvl\+\_\+score\+\_\+t} \+: unsigned \{ \newline
+{\bfseries N\+E\+X\+T\+\_\+\+L\+V\+L\+\_\+\+S\+C\+O\+R\+E\+\_\+\+L\+V\+L1} = 20, 
+{\bfseries N\+E\+X\+T\+\_\+\+L\+V\+L\+\_\+\+S\+C\+O\+R\+E\+\_\+\+L\+V\+L2} = 40, 
+{\bfseries N\+E\+X\+T\+\_\+\+L\+V\+L\+\_\+\+S\+C\+O\+R\+E\+\_\+\+L\+V\+L3} = 60, 
+{\bfseries N\+E\+X\+T\+\_\+\+L\+V\+L\+\_\+\+S\+C\+O\+R\+E\+\_\+\+L\+V\+L4} = 90, 
+\newline
+{\bfseries N\+E\+X\+T\+\_\+\+L\+V\+L\+\_\+\+S\+C\+O\+R\+E\+\_\+\+L\+V\+L5} = 130, 
+{\bfseries N\+E\+X\+T\+\_\+\+L\+V\+L\+\_\+\+S\+C\+O\+R\+E\+\_\+\+L\+V\+L6} = 160, 
+{\bfseries N\+E\+X\+T\+\_\+\+L\+V\+L\+\_\+\+S\+C\+O\+R\+E\+\_\+\+L\+V\+L7} = 200, 
+{\bfseries N\+E\+X\+T\+\_\+\+L\+V\+L\+\_\+\+S\+C\+O\+R\+E\+\_\+\+L\+V\+L8} = 240, 
+\newline
+{\bfseries N\+E\+X\+T\+\_\+\+L\+V\+L\+\_\+\+S\+C\+O\+R\+E\+\_\+\+L\+V\+L9} = 300, 
+{\bfseries N\+E\+X\+T\+\_\+\+L\+V\+L\+\_\+\+S\+C\+O\+R\+E\+\_\+\+L\+V\+L10} = 0
+ \}
+\begin{DoxyCompactList}\small\item\em Scores thresholds. \end{DoxyCompactList}\item 
+enum \hyperlink{TetreesDefs_8hpp_a8ba5fbce2446135735693ab60c896bbd}{color\+\_\+t} \+: int \{ \newline
+{\bfseries C\+O\+L\+O\+R\+\_\+\+T\+R\+A\+N\+S\+P\+A\+R\+E\+NT} = 0, 
+{\bfseries C\+O\+L\+O\+R\+\_\+\+L\+I\+G\+H\+T\+\_\+\+B\+L\+UE}, 
+{\bfseries C\+O\+L\+O\+R\+\_\+\+Y\+E\+L\+L\+OW}, 
+{\bfseries C\+O\+L\+O\+R\+\_\+\+P\+U\+R\+P\+LE}, 
+\newline
+{\bfseries C\+O\+L\+O\+R\+\_\+\+G\+R\+E\+EN}, 
+{\bfseries C\+O\+L\+O\+R\+\_\+\+R\+ED}, 
+{\bfseries C\+O\+L\+O\+R\+\_\+\+B\+L\+UE}, 
+{\bfseries C\+O\+L\+O\+R\+\_\+\+O\+R\+A\+N\+GE}, 
+\newline
+{\bfseries C\+O\+L\+O\+R\+\_\+\+B\+A\+C\+K\+G\+R\+O\+U\+ND}, 
+{\bfseries C\+O\+L\+O\+R\+\_\+\+G\+A\+M\+E\+\_\+\+P\+A\+U\+S\+ED}, 
+{\bfseries C\+O\+L\+O\+R\+\_\+\+G\+A\+M\+E\+\_\+\+O\+V\+ER}
+ \}
+\begin{DoxyCompactList}\small\item\em UI possible colors. \end{DoxyCompactList}\item 
+enum \hyperlink{TetreesDefs_8hpp_a5dbb1ebfe8a9b95707ac161d3549ed8a}{limit\+\_\+t} \+: unsigned \{ \newline
+{\bfseries L\+I\+M\+I\+T\+\_\+\+R\+I\+G\+H\+T\+\_\+\+B\+O\+R\+D\+ER} = P\+L\+A\+Y\+\_\+\+F\+I\+E\+L\+D\+\_\+\+W\+I\+D\+TH -\/ 2, 
+{\bfseries L\+I\+M\+I\+T\+\_\+\+L\+E\+F\+T\+\_\+\+B\+O\+R\+D\+ER} = P\+L\+A\+Y\+\_\+\+F\+I\+E\+L\+D\+\_\+\+W\+I\+D\+TH -\/ (P\+L\+A\+Y\+\_\+\+F\+I\+E\+L\+D\+\_\+\+W\+I\+D\+TH -\/ 1), 
+{\bfseries L\+I\+M\+I\+T\+\_\+\+T\+O\+P\+\_\+\+B\+O\+R\+D\+ER} = P\+L\+A\+Y\+\_\+\+F\+I\+E\+L\+D\+\_\+\+H\+E\+I\+G\+HT -\/ (P\+L\+A\+Y\+\_\+\+F\+I\+E\+L\+D\+\_\+\+H\+E\+I\+G\+HT -\/ 1), 
+{\bfseries L\+I\+M\+I\+T\+\_\+\+B\+O\+T\+T\+O\+M\+\_\+\+B\+O\+R\+D\+ER} = P\+L\+A\+Y\+\_\+\+F\+I\+E\+L\+D\+\_\+\+H\+E\+I\+G\+HT -\/ 2, 
+\newline
+{\bfseries L\+I\+M\+I\+T\+\_\+\+P\+L\+A\+Y\+I\+N\+G\+\_\+\+A\+R\+E\+A\+\_\+\+H\+E\+I\+G\+HT} = P\+L\+A\+Y\+\_\+\+F\+I\+E\+L\+D\+\_\+\+H\+E\+I\+G\+HT -\/ 2, 
+{\bfseries L\+I\+M\+I\+T\+\_\+\+P\+L\+A\+Y\+I\+N\+G\+\_\+\+A\+R\+E\+A\+\_\+\+W\+I\+D\+TH} = P\+L\+A\+Y\+\_\+\+F\+I\+E\+L\+D\+\_\+\+W\+I\+D\+TH -\/ 2
+ \}
+\begin{DoxyCompactList}\small\item\em Game board limits. \end{DoxyCompactList}\item 
+enum \hyperlink{TetreesDefs_8hpp_ae8c3bf9765f183eabf1106110513afc6}{rpos\+\_\+t} \+: int \{ {\bfseries R\+P\+O\+S\+\_\+0} = 0, 
+{\bfseries R\+P\+O\+S\+\_\+1}, 
+{\bfseries R\+P\+O\+S\+\_\+2}, 
+{\bfseries R\+P\+O\+S\+\_\+3}
+ \}
+\begin{DoxyCompactList}\small\item\em Tetrominoes rotation positions. \end{DoxyCompactList}\item 
+enum \hyperlink{TetreesDefs_8hpp_aadc337e2620d6621659e63e87c45e79d}{cmd\+\_\+t} \+: int \{ {\bfseries C\+M\+D\+\_\+\+P\+L\+AY} = 0, 
+{\bfseries C\+M\+D\+\_\+\+P\+A\+U\+SE}, 
+{\bfseries C\+M\+D\+\_\+\+R\+E\+S\+ET}
+ \}
+\begin{DoxyCompactList}\small\item\em Game engine commands. \end{DoxyCompactList}\item 
+enum \hyperlink{TetreesDefs_8hpp_aebae08b2e3a36f1452b33acaf1eaab40}{game\+\_\+state\+\_\+t} \+: int \{ {\bfseries G\+A\+M\+E\+\_\+\+S\+T\+A\+T\+E\+\_\+\+N\+O\+T\+\_\+\+S\+T\+A\+R\+T\+ED} = 0, 
+{\bfseries G\+A\+M\+E\+\_\+\+S\+T\+A\+T\+E\+\_\+\+P\+L\+A\+Y\+I\+NG}, 
+{\bfseries G\+A\+M\+E\+\_\+\+S\+T\+A\+T\+E\+\_\+\+P\+A\+U\+S\+ED}, 
+{\bfseries G\+A\+M\+E\+\_\+\+S\+T\+A\+T\+E\+\_\+\+G\+A\+M\+E\+\_\+\+O\+V\+ER}
+ \}
+\begin{DoxyCompactList}\small\item\em Game states. \end{DoxyCompactList}\item 
+enum \hyperlink{TetreesDefs_8hpp_ab583135648b1264a9f7817709c4dbd3e}{ui\+\_\+state\+\_\+t} \+: int \{ {\bfseries U\+I\+\_\+\+S\+T\+A\+T\+E\+\_\+\+N\+O\+T\+\_\+\+S\+T\+A\+R\+T\+ED} = 0, 
+{\bfseries U\+I\+\_\+\+S\+T\+A\+T\+E\+\_\+\+P\+L\+A\+Y\+I\+NG}, 
+{\bfseries U\+I\+\_\+\+S\+T\+A\+T\+E\+\_\+\+P\+A\+U\+S\+ED}
+ \}
+\begin{DoxyCompactList}\small\item\em User interface states. \end{DoxyCompactList}\item 
+enum \hyperlink{TetreesDefs_8hpp_a5a3b4d94c69ae85b911a8dca1afedfe0}{score\+\_\+t} \+: unsigned \{ {\bfseries S\+C\+O\+R\+E\+\_\+\+R\+E\+S\+ET}, 
+{\bfseries S\+C\+O\+R\+E\+\_\+\+U\+P\+D\+A\+TE}
+ \}
+\begin{DoxyCompactList}\small\item\em Score commands. \end{DoxyCompactList}\item 
+enum \hyperlink{TetreesDefs_8hpp_a10487f3bfa31fd7b7b8c20f403f8c947}{animation\+\_\+t} \+: int \{ {\bfseries A\+N\+I\+M\+A\+T\+I\+O\+N\+\_\+\+N\+O\+NE} = 0, 
+{\bfseries A\+N\+I\+M\+A\+T\+I\+O\+N\+\_\+\+G\+A\+M\+E\+\_\+\+O\+V\+ER}, 
+{\bfseries A\+N\+I\+M\+A\+T\+I\+O\+N\+\_\+\+G\+A\+M\+E\+\_\+\+P\+A\+U\+S\+ED}
+ \}
+\begin{DoxyCompactList}\small\item\em UI animations. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{TetreesDefs_8hpp_ae4dc83f0300340b2c2c6337635ba455a}\label{TetreesDefs_8hpp_ae4dc83f0300340b2c2c6337635ba455a}} 
+const int {\bfseries \+\_\+\+R\+\_\+} = 0
+\item 
+\mbox{\Hypertarget{TetreesDefs_8hpp_af64be5cd386275aba99b9292116d600c}\label{TetreesDefs_8hpp_af64be5cd386275aba99b9292116d600c}} 
+const int {\bfseries \+\_\+\+G\+\_\+} = 1
+\item 
+\mbox{\Hypertarget{TetreesDefs_8hpp_a4a86068af9ed3704549ca2c828ba5d10}\label{TetreesDefs_8hpp_a4a86068af9ed3704549ca2c828ba5d10}} 
+const int {\bfseries \+\_\+\+B\+\_\+} = 2
+\item 
+\mbox{\Hypertarget{TetreesDefs_8hpp_a451beb53419d1193efecdb828600c6b0}\label{TetreesDefs_8hpp_a451beb53419d1193efecdb828600c6b0}} 
+const int {\bfseries E\+M\+P\+T\+Y\+\_\+\+C\+E\+LL} = 0
+\item 
+\mbox{\Hypertarget{TetreesDefs_8hpp_af0380e8edbdaff655a37ac1dcd0e3c38}\label{TetreesDefs_8hpp_af0380e8edbdaff655a37ac1dcd0e3c38}} 
+const int {\bfseries E\+M\+P\+TY} = 0
+\end{DoxyCompactItemize}
+\begin{Indent}\textbf{ Fundamental Values}\par
+\begin{DoxyCompactItemize}
+\item 
+const double \hyperlink{TetreesDefs_8hpp_ac64f01cd6fcb79752921aa3975ce8219}{B\+L\+O\+C\+K\+\_\+\+S\+I\+D\+E\+\_\+\+D\+IM} = 30
+\item 
+const double \hyperlink{TetreesDefs_8hpp_a4a163f66fa313addafa1afc8b6d196d3}{T\+E\+T\+R\+O\+M\+I\+N\+O\+\_\+\+L\+I\+N\+E\+\_\+\+W\+I\+D\+TH} = 4
+\item 
+const int \hyperlink{TetreesDefs_8hpp_a69fa4aa1afe74f7f9ec42bf1e07ddf28}{N\+U\+M\+\_\+\+O\+F\+\_\+\+T\+E\+T\+R\+O\+M\+I\+N\+O\+ES} = 7
+\item 
+const int \hyperlink{TetreesDefs_8hpp_a350a4204247d3562e237e289533cc31f}{N\+U\+M\+\_\+\+O\+F\+\_\+\+L\+E\+V\+E\+LS} = 10
+\item 
+const int \hyperlink{TetreesDefs_8hpp_abd45e889c47b3839d9e8b3c8fcb74aee}{N\+U\+M\+\_\+\+O\+F\+\_\+\+C\+O\+L\+O\+RS} = 11
+\item 
+const int \hyperlink{TetreesDefs_8hpp_ae7f1cd3f76dab2c9a46164c284935bd9}{P\+L\+A\+Y\+\_\+\+F\+I\+E\+L\+D\+\_\+\+W\+I\+D\+TH} = 12
+\item 
+const int \hyperlink{TetreesDefs_8hpp_a66d8daa3cada4086e55962b4042a5ce8}{P\+L\+A\+Y\+\_\+\+F\+I\+E\+L\+D\+\_\+\+H\+E\+I\+G\+HT} = 22
+\item 
+const int \hyperlink{TetreesDefs_8hpp_af08f2c0ac93a84d1e98bd9e128bd0b65}{H\+I\+D\+D\+E\+N\+\_\+\+C\+E\+L\+L\+S\+\_\+\+O\+F\+F\+S\+ET} = 1 $\ast$ \hyperlink{TetreesDefs_8hpp_ac64f01cd6fcb79752921aa3975ce8219}{B\+L\+O\+C\+K\+\_\+\+S\+I\+D\+E\+\_\+\+D\+IM}
+\item 
+const int \hyperlink{TetreesDefs_8hpp_ac4bbb48f6b41537847e24cf7dabc4e4d}{P\+L\+A\+Y\+\_\+\+F\+I\+E\+L\+D\+\_\+\+P\+I\+X\+E\+L\+\_\+\+W\+I\+D\+TH}
+\item 
+const int \hyperlink{TetreesDefs_8hpp_ae8713d267f1f2d2724c0976dfe71f59e}{P\+L\+A\+Y\+\_\+\+F\+I\+E\+L\+D\+\_\+\+P\+I\+X\+E\+L\+\_\+\+H\+E\+I\+G\+HT}
+\item 
+const int \hyperlink{TetreesDefs_8hpp_ac176e980e4e657c945ed656bd0b5eb73}{N\+E\+X\+T\+\_\+\+T\+E\+T\+R\+O\+M\+I\+N\+O\+\_\+\+F\+I\+E\+L\+D\+\_\+\+C\+E\+L\+L\+\_\+\+W\+I\+D\+TH} = 6 $\ast$ \hyperlink{TetreesDefs_8hpp_ac64f01cd6fcb79752921aa3975ce8219}{B\+L\+O\+C\+K\+\_\+\+S\+I\+D\+E\+\_\+\+D\+IM}
+\item 
+const int \hyperlink{TetreesDefs_8hpp_a67c83d74957fb33b804e920b3e16bfe6}{N\+E\+X\+T\+\_\+\+T\+E\+T\+R\+O\+M\+I\+N\+O\+\_\+\+F\+I\+E\+L\+D\+\_\+\+C\+E\+L\+L\+\_\+\+H\+E\+I\+G\+HT} = 4 $\ast$ \hyperlink{TetreesDefs_8hpp_ac64f01cd6fcb79752921aa3975ce8219}{B\+L\+O\+C\+K\+\_\+\+S\+I\+D\+E\+\_\+\+D\+IM}
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ T\+E\+T\+R\+O\+M\+I\+N\+O\+E\+S\+\_\+\+P\+R\+O\+P\+O\+R\+T\+I\+ON}\par
+{\em Tetrominoes spawning proportion per level where the elements within the arrays represent the amount of tetrominoes of each type to be spawned.
+
+\begin{DoxyRemark}{Remarks}
+The array follows the tetromino\+\_\+t sequence.~\newline
+E.\+g.\+:
+\begin{DoxyCode}
+\textcolor{comment}{//                                         I,O,T,S,Z,J,L}
+\textcolor{keyword}{const} \textcolor{keywordtype}{int} LVL1\_TETROMINOES\_PROPORTION[] = \{5,1,3,2,2,3,3\};
+\end{DoxyCode}
+ means the first level of the game will randomly spawn tetrominoes with the following proportion\+:
+\begin{DoxyItemize}
+\item 5 I-\/shaped tetrominoes;
+\item 1 O-\/shaped tetromino;
+\item 3 T-\/shaped tetrominoes;
+\item 2 S-\/shaped tetrominoes;
+\item 2 Z-\/shaped tetrominoes;
+\item 3 J-\/shaped tetrominoes;
+\item 3 L-\/shaped tetrominoes).
+\end{DoxyItemize}
+
+Zero-\/filled arrays means no proportion at all. Totally random spawning! 
+\end{DoxyRemark}
+}\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{TetreesDefs_8hpp_ad2954f5bac8e868a0dcf43509b5b7045}\label{TetreesDefs_8hpp_ad2954f5bac8e868a0dcf43509b5b7045}} 
+const int {\bfseries L\+V\+L1\+\_\+\+T\+E\+T\+R\+O\+M\+I\+N\+O\+E\+S\+\_\+\+P\+R\+O\+P\+O\+R\+T\+I\+ON} \mbox{[}$\,$\mbox{]} = \{5,1,3,2,2,3,3\}
+\item 
+\mbox{\Hypertarget{TetreesDefs_8hpp_a3c3ecf90dffda0d26855c40ac328be20}\label{TetreesDefs_8hpp_a3c3ecf90dffda0d26855c40ac328be20}} 
+const int {\bfseries L\+V\+L2\+\_\+\+T\+E\+T\+R\+O\+M\+I\+N\+O\+E\+S\+\_\+\+P\+R\+O\+P\+O\+R\+T\+I\+ON} \mbox{[}$\,$\mbox{]} = \{5,1,3,2,2,3,3\}
+\item 
+\mbox{\Hypertarget{TetreesDefs_8hpp_ae540d0e1e6be7d4b85da39cae3c91e91}\label{TetreesDefs_8hpp_ae540d0e1e6be7d4b85da39cae3c91e91}} 
+const int {\bfseries L\+V\+L3\+\_\+\+T\+E\+T\+R\+O\+M\+I\+N\+O\+E\+S\+\_\+\+P\+R\+O\+P\+O\+R\+T\+I\+ON} \mbox{[}$\,$\mbox{]} = \{4,3,2,3,3,3,3\}
+\item 
+\mbox{\Hypertarget{TetreesDefs_8hpp_ad1178e2a9950cd9e35035878a4975e7f}\label{TetreesDefs_8hpp_ad1178e2a9950cd9e35035878a4975e7f}} 
+const int {\bfseries L\+V\+L4\+\_\+\+T\+E\+T\+R\+O\+M\+I\+N\+O\+E\+S\+\_\+\+P\+R\+O\+P\+O\+R\+T\+I\+ON} \mbox{[}$\,$\mbox{]} = \{4,3,2,3,3,3,3\}
+\item 
+\mbox{\Hypertarget{TetreesDefs_8hpp_ab4acc5185c14239db5315db0f3341e9b}\label{TetreesDefs_8hpp_ab4acc5185c14239db5315db0f3341e9b}} 
+const int {\bfseries L\+V\+L5\+\_\+\+T\+E\+T\+R\+O\+M\+I\+N\+O\+E\+S\+\_\+\+P\+R\+O\+P\+O\+R\+T\+I\+ON} \mbox{[}$\,$\mbox{]} = \{3,3,2,4,4,2,2\}
+\item 
+\mbox{\Hypertarget{TetreesDefs_8hpp_a1f803d5d00b5d63f956db64759379369}\label{TetreesDefs_8hpp_a1f803d5d00b5d63f956db64759379369}} 
+const int {\bfseries L\+V\+L6\+\_\+\+T\+E\+T\+R\+O\+M\+I\+N\+O\+E\+S\+\_\+\+P\+R\+O\+P\+O\+R\+T\+I\+ON} \mbox{[}$\,$\mbox{]} = \{3,3,2,4,4,2,2\}
+\item 
+\mbox{\Hypertarget{TetreesDefs_8hpp_a9e982eb4293601dd5fabdc4145f66ef9}\label{TetreesDefs_8hpp_a9e982eb4293601dd5fabdc4145f66ef9}} 
+const int {\bfseries L\+V\+L7\+\_\+\+T\+E\+T\+R\+O\+M\+I\+N\+O\+E\+S\+\_\+\+P\+R\+O\+P\+O\+R\+T\+I\+ON} \mbox{[}$\,$\mbox{]} = \{2,3,0,3,3,6,6\}
+\item 
+\mbox{\Hypertarget{TetreesDefs_8hpp_ae56d8e18eb7f830966686973ca23de04}\label{TetreesDefs_8hpp_ae56d8e18eb7f830966686973ca23de04}} 
+const int {\bfseries L\+V\+L8\+\_\+\+T\+E\+T\+R\+O\+M\+I\+N\+O\+E\+S\+\_\+\+P\+R\+O\+P\+O\+R\+T\+I\+ON} \mbox{[}$\,$\mbox{]} = \{2,3,0,3,3,6,6\}
+\item 
+\mbox{\Hypertarget{TetreesDefs_8hpp_a75503d667fcb14d117b1d36a1217dcd3}\label{TetreesDefs_8hpp_a75503d667fcb14d117b1d36a1217dcd3}} 
+const int {\bfseries L\+V\+L9\+\_\+\+T\+E\+T\+R\+O\+M\+I\+N\+O\+E\+S\+\_\+\+P\+R\+O\+P\+O\+R\+T\+I\+ON} \mbox{[}$\,$\mbox{]} = \{0,1,1,8,8,0,0\}
+\item 
+\mbox{\Hypertarget{TetreesDefs_8hpp_ade2686c156665230a5ade2af1964ead4}\label{TetreesDefs_8hpp_ade2686c156665230a5ade2af1964ead4}} 
+const int {\bfseries L\+V\+L10\+\_\+\+T\+E\+T\+R\+O\+M\+I\+N\+O\+E\+S\+\_\+\+P\+R\+O\+P\+O\+R\+T\+I\+ON} \mbox{[}$\,$\mbox{]} = \{0,0,0,0,0,0,0\}
+\end{DoxyCompactItemize}
+\end{Indent}
+
+
+\subsection{Detailed Description}
+Defs header file. 
+
+A key header file that defines several global constants, macros, enums, structs, and a class. 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{TetreesDefs_8hpp_ad1ddcef8e7677afbdcc5f65190d5706e}\label{TetreesDefs_8hpp_ad1ddcef8e7677afbdcc5f65190d5706e}} 
+\index{Tetrees\+Defs.\+hpp@{Tetrees\+Defs.\+hpp}!N\+E\+X\+T\+\_\+\+T\+E\+T\+R\+O\+M\+I\+N\+O\+\_\+X@{N\+E\+X\+T\+\_\+\+T\+E\+T\+R\+O\+M\+I\+N\+O\+\_\+X}}
+\index{N\+E\+X\+T\+\_\+\+T\+E\+T\+R\+O\+M\+I\+N\+O\+\_\+X@{N\+E\+X\+T\+\_\+\+T\+E\+T\+R\+O\+M\+I\+N\+O\+\_\+X}!Tetrees\+Defs.\+hpp@{Tetrees\+Defs.\+hpp}}
+\subsubsection{\texorpdfstring{N\+E\+X\+T\+\_\+\+T\+E\+T\+R\+O\+M\+I\+N\+O\+\_\+X}{NEXT\_TETROMINO\_X}}
+{\footnotesize\ttfamily \#define N\+E\+X\+T\+\_\+\+T\+E\+T\+R\+O\+M\+I\+N\+O\+\_\+X(\begin{DoxyParamCaption}\item[{}]{pos }\end{DoxyParamCaption})~((pos $\ast$ \hyperlink{TetreesDefs_8hpp_ac64f01cd6fcb79752921aa3975ce8219}{B\+L\+O\+C\+K\+\_\+\+S\+I\+D\+E\+\_\+\+D\+IM}) + (\hyperlink{TetreesDefs_8hpp_a4a163f66fa313addafa1afc8b6d196d3}{T\+E\+T\+R\+O\+M\+I\+N\+O\+\_\+\+L\+I\+N\+E\+\_\+\+W\+I\+D\+TH} / 2))}
+
+A function to find the exact X = 0 position (in pixels) of a given position (\hyperlink{TetreesDefs_8hpp_ae7f1cd3f76dab2c9a46164c284935bd9}{cell}) in the next tetromino field. \begin{DoxyWarning}{Warning}
+This function uses screen coordinates. 
+\end{DoxyWarning}
+\mbox{\Hypertarget{TetreesDefs_8hpp_a57e9e7e1d5a6df49dbaf4e434281e8ba}\label{TetreesDefs_8hpp_a57e9e7e1d5a6df49dbaf4e434281e8ba}} 
+\index{Tetrees\+Defs.\+hpp@{Tetrees\+Defs.\+hpp}!N\+E\+X\+T\+\_\+\+T\+E\+T\+R\+O\+M\+I\+N\+O\+\_\+Y@{N\+E\+X\+T\+\_\+\+T\+E\+T\+R\+O\+M\+I\+N\+O\+\_\+Y}}
+\index{N\+E\+X\+T\+\_\+\+T\+E\+T\+R\+O\+M\+I\+N\+O\+\_\+Y@{N\+E\+X\+T\+\_\+\+T\+E\+T\+R\+O\+M\+I\+N\+O\+\_\+Y}!Tetrees\+Defs.\+hpp@{Tetrees\+Defs.\+hpp}}
+\subsubsection{\texorpdfstring{N\+E\+X\+T\+\_\+\+T\+E\+T\+R\+O\+M\+I\+N\+O\+\_\+Y}{NEXT\_TETROMINO\_Y}}
+{\footnotesize\ttfamily \#define N\+E\+X\+T\+\_\+\+T\+E\+T\+R\+O\+M\+I\+N\+O\+\_\+Y(\begin{DoxyParamCaption}\item[{}]{pos }\end{DoxyParamCaption})~\hyperlink{TetreesDefs_8hpp_ad1ddcef8e7677afbdcc5f65190d5706e}{N\+E\+X\+T\+\_\+\+T\+E\+T\+R\+O\+M\+I\+N\+O\+\_\+X}(pos)}
+
+A function to find the exact Y = 0 position (in pixels) of a given position (\hyperlink{TetreesDefs_8hpp_ae7f1cd3f76dab2c9a46164c284935bd9}{cell}) in the next tetromino field. \begin{DoxyWarning}{Warning}
+This function uses screen coordinates. 
+\end{DoxyWarning}
+\mbox{\Hypertarget{TetreesDefs_8hpp_ac0af1c5c642460534a8eb7827a37e7bf}\label{TetreesDefs_8hpp_ac0af1c5c642460534a8eb7827a37e7bf}} 
+\index{Tetrees\+Defs.\+hpp@{Tetrees\+Defs.\+hpp}!S\+C\+E\+N\+E\+\_\+X@{S\+C\+E\+N\+E\+\_\+X}}
+\index{S\+C\+E\+N\+E\+\_\+X@{S\+C\+E\+N\+E\+\_\+X}!Tetrees\+Defs.\+hpp@{Tetrees\+Defs.\+hpp}}
+\subsubsection{\texorpdfstring{S\+C\+E\+N\+E\+\_\+X}{SCENE\_X}}
+{\footnotesize\ttfamily \#define S\+C\+E\+N\+E\+\_\+X(\begin{DoxyParamCaption}\item[{}]{pos }\end{DoxyParamCaption})~((pos $\ast$ \hyperlink{TetreesDefs_8hpp_ac64f01cd6fcb79752921aa3975ce8219}{B\+L\+O\+C\+K\+\_\+\+S\+I\+D\+E\+\_\+\+D\+IM}) -\/ \hyperlink{TetreesDefs_8hpp_af08f2c0ac93a84d1e98bd9e128bd0b65}{H\+I\+D\+D\+E\+N\+\_\+\+C\+E\+L\+L\+S\+\_\+\+O\+F\+F\+S\+ET} + (\hyperlink{TetreesDefs_8hpp_a4a163f66fa313addafa1afc8b6d196d3}{T\+E\+T\+R\+O\+M\+I\+N\+O\+\_\+\+L\+I\+N\+E\+\_\+\+W\+I\+D\+TH} / 2))}
+
+A function to find the exact X = 0 position (in pixels) of a given position (\hyperlink{TetreesDefs_8hpp_ae7f1cd3f76dab2c9a46164c284935bd9}{cell}) in the playing field. \begin{DoxyWarning}{Warning}
+This function uses screen coordinates. 
+\end{DoxyWarning}
+\mbox{\Hypertarget{TetreesDefs_8hpp_ad9ec28c85f18edf52f01cf50c4b4e0b7}\label{TetreesDefs_8hpp_ad9ec28c85f18edf52f01cf50c4b4e0b7}} 
+\index{Tetrees\+Defs.\+hpp@{Tetrees\+Defs.\+hpp}!S\+C\+E\+N\+E\+\_\+Y@{S\+C\+E\+N\+E\+\_\+Y}}
+\index{S\+C\+E\+N\+E\+\_\+Y@{S\+C\+E\+N\+E\+\_\+Y}!Tetrees\+Defs.\+hpp@{Tetrees\+Defs.\+hpp}}
+\subsubsection{\texorpdfstring{S\+C\+E\+N\+E\+\_\+Y}{SCENE\_Y}}
+{\footnotesize\ttfamily \#define S\+C\+E\+N\+E\+\_\+Y(\begin{DoxyParamCaption}\item[{}]{pos }\end{DoxyParamCaption})~\hyperlink{TetreesDefs_8hpp_ac0af1c5c642460534a8eb7827a37e7bf}{S\+C\+E\+N\+E\+\_\+X}(pos)}
+
+A function to find the exact Y = 0 position (in pixels) of a given position (\hyperlink{TetreesDefs_8hpp_ae7f1cd3f76dab2c9a46164c284935bd9}{cell}) in the playing field. \begin{DoxyWarning}{Warning}
+This function uses screen coordinates. 
+\end{DoxyWarning}
+
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{TetreesDefs_8hpp_a10487f3bfa31fd7b7b8c20f403f8c947}\label{TetreesDefs_8hpp_a10487f3bfa31fd7b7b8c20f403f8c947}} 
+\index{Tetrees\+Defs.\+hpp@{Tetrees\+Defs.\+hpp}!animation\+\_\+t@{animation\+\_\+t}}
+\index{animation\+\_\+t@{animation\+\_\+t}!Tetrees\+Defs.\+hpp@{Tetrees\+Defs.\+hpp}}
+\subsubsection{\texorpdfstring{animation\+\_\+t}{animation\_t}}
+{\footnotesize\ttfamily enum \hyperlink{TetreesDefs_8hpp_a10487f3bfa31fd7b7b8c20f403f8c947}{animation\+\_\+t} \+: int}
+
+
+
+UI animations. 
+
+Used by UI to keep track of which animation is going on. \mbox{\Hypertarget{TetreesDefs_8hpp_aadc337e2620d6621659e63e87c45e79d}\label{TetreesDefs_8hpp_aadc337e2620d6621659e63e87c45e79d}} 
+\index{Tetrees\+Defs.\+hpp@{Tetrees\+Defs.\+hpp}!cmd\+\_\+t@{cmd\+\_\+t}}
+\index{cmd\+\_\+t@{cmd\+\_\+t}!Tetrees\+Defs.\+hpp@{Tetrees\+Defs.\+hpp}}
+\subsubsection{\texorpdfstring{cmd\+\_\+t}{cmd\_t}}
+{\footnotesize\ttfamily enum \hyperlink{TetreesDefs_8hpp_aadc337e2620d6621659e63e87c45e79d}{cmd\+\_\+t} \+: int}
+
+
+
+Game engine commands. 
+
+Available commands to be issued to the game engine. \mbox{\Hypertarget{TetreesDefs_8hpp_a8ba5fbce2446135735693ab60c896bbd}\label{TetreesDefs_8hpp_a8ba5fbce2446135735693ab60c896bbd}} 
+\index{Tetrees\+Defs.\+hpp@{Tetrees\+Defs.\+hpp}!color\+\_\+t@{color\+\_\+t}}
+\index{color\+\_\+t@{color\+\_\+t}!Tetrees\+Defs.\+hpp@{Tetrees\+Defs.\+hpp}}
+\subsubsection{\texorpdfstring{color\+\_\+t}{color\_t}}
+{\footnotesize\ttfamily enum \hyperlink{TetreesDefs_8hpp_a8ba5fbce2446135735693ab60c896bbd}{color\+\_\+t} \+: int}
+
+
+
+UI possible colors. 
+
+Available colors to be used in UI assembling. \mbox{\Hypertarget{TetreesDefs_8hpp_aebae08b2e3a36f1452b33acaf1eaab40}\label{TetreesDefs_8hpp_aebae08b2e3a36f1452b33acaf1eaab40}} 
+\index{Tetrees\+Defs.\+hpp@{Tetrees\+Defs.\+hpp}!game\+\_\+state\+\_\+t@{game\+\_\+state\+\_\+t}}
+\index{game\+\_\+state\+\_\+t@{game\+\_\+state\+\_\+t}!Tetrees\+Defs.\+hpp@{Tetrees\+Defs.\+hpp}}
+\subsubsection{\texorpdfstring{game\+\_\+state\+\_\+t}{game\_state\_t}}
+{\footnotesize\ttfamily enum \hyperlink{TetreesDefs_8hpp_aebae08b2e3a36f1452b33acaf1eaab40}{game\+\_\+state\+\_\+t} \+: int}
+
+
+
+Game states. 
+
+Game states used to control several aspects of the interaction between the game engine and the UI. \mbox{\Hypertarget{TetreesDefs_8hpp_ac7faaacc16f5e7962108661dfc411257}\label{TetreesDefs_8hpp_ac7faaacc16f5e7962108661dfc411257}} 
+\index{Tetrees\+Defs.\+hpp@{Tetrees\+Defs.\+hpp}!level\+\_\+num\+\_\+t@{level\+\_\+num\+\_\+t}}
+\index{level\+\_\+num\+\_\+t@{level\+\_\+num\+\_\+t}!Tetrees\+Defs.\+hpp@{Tetrees\+Defs.\+hpp}}
+\subsubsection{\texorpdfstring{level\+\_\+num\+\_\+t}{level\_num\_t}}
+{\footnotesize\ttfamily enum \hyperlink{TetreesDefs_8hpp_ac7faaacc16f5e7962108661dfc411257}{level\+\_\+num\+\_\+t} \+: int}
+
+
+
+Game levels. 
+
+All possible game levels. Beat them all and you\textquotesingle{}re done! \mbox{\Hypertarget{TetreesDefs_8hpp_a56295b647dadb94aa1662b267e1c9b6e}\label{TetreesDefs_8hpp_a56295b647dadb94aa1662b267e1c9b6e}} 
+\index{Tetrees\+Defs.\+hpp@{Tetrees\+Defs.\+hpp}!level\+\_\+speed\+\_\+t@{level\+\_\+speed\+\_\+t}}
+\index{level\+\_\+speed\+\_\+t@{level\+\_\+speed\+\_\+t}!Tetrees\+Defs.\+hpp@{Tetrees\+Defs.\+hpp}}
+\subsubsection{\texorpdfstring{level\+\_\+speed\+\_\+t}{level\_speed\_t}}
+{\footnotesize\ttfamily enum \hyperlink{TetreesDefs_8hpp_a56295b647dadb94aa1662b267e1c9b6e}{level\+\_\+speed\+\_\+t} \+: int}
+
+
+
+Game speed per level. 
+
+Game speed (in milliseconds) related to each game level.
+
+Each game level increases the difficulty and one way to make the game more difficult is by speeding it up. \mbox{\Hypertarget{TetreesDefs_8hpp_a5dbb1ebfe8a9b95707ac161d3549ed8a}\label{TetreesDefs_8hpp_a5dbb1ebfe8a9b95707ac161d3549ed8a}} 
+\index{Tetrees\+Defs.\+hpp@{Tetrees\+Defs.\+hpp}!limit\+\_\+t@{limit\+\_\+t}}
+\index{limit\+\_\+t@{limit\+\_\+t}!Tetrees\+Defs.\+hpp@{Tetrees\+Defs.\+hpp}}
+\subsubsection{\texorpdfstring{limit\+\_\+t}{limit\_t}}
+{\footnotesize\ttfamily enum \hyperlink{TetreesDefs_8hpp_a5dbb1ebfe8a9b95707ac161d3549ed8a}{limit\+\_\+t} \+: unsigned}
+
+
+
+Game board limits. 
+
+The game board is divided into cells. This enum holds game board\textquotesingle{}s border limits (in cells), which are widely used by game engine (and UI as well) during the the whole game processing. \mbox{\Hypertarget{TetreesDefs_8hpp_adb9f7ea75cb8fca17c40bc2afbe399ca}\label{TetreesDefs_8hpp_adb9f7ea75cb8fca17c40bc2afbe399ca}} 
+\index{Tetrees\+Defs.\+hpp@{Tetrees\+Defs.\+hpp}!next\+\_\+lvl\+\_\+score\+\_\+t@{next\+\_\+lvl\+\_\+score\+\_\+t}}
+\index{next\+\_\+lvl\+\_\+score\+\_\+t@{next\+\_\+lvl\+\_\+score\+\_\+t}!Tetrees\+Defs.\+hpp@{Tetrees\+Defs.\+hpp}}
+\subsubsection{\texorpdfstring{next\+\_\+lvl\+\_\+score\+\_\+t}{next\_lvl\_score\_t}}
+{\footnotesize\ttfamily enum \hyperlink{TetreesDefs_8hpp_adb9f7ea75cb8fca17c40bc2afbe399ca}{next\+\_\+lvl\+\_\+score\+\_\+t} \+: unsigned}
+
+
+
+Scores thresholds. 
+
+The score to be beaten per level before reaching next one. \mbox{\Hypertarget{TetreesDefs_8hpp_ae8c3bf9765f183eabf1106110513afc6}\label{TetreesDefs_8hpp_ae8c3bf9765f183eabf1106110513afc6}} 
+\index{Tetrees\+Defs.\+hpp@{Tetrees\+Defs.\+hpp}!rpos\+\_\+t@{rpos\+\_\+t}}
+\index{rpos\+\_\+t@{rpos\+\_\+t}!Tetrees\+Defs.\+hpp@{Tetrees\+Defs.\+hpp}}
+\subsubsection{\texorpdfstring{rpos\+\_\+t}{rpos\_t}}
+{\footnotesize\ttfamily enum \hyperlink{TetreesDefs_8hpp_ae8c3bf9765f183eabf1106110513afc6}{rpos\+\_\+t} \+: int}
+
+
+
+Tetrominoes rotation positions. 
+
+Used to track the exact rotation position in which the falling tetromino finds itself. It enables game engine to know exactly which is the next rotation to be applied to the tetromino when/if the rotation key (K\+E\+Y\+\_\+\+UP) is pressed. \mbox{\Hypertarget{TetreesDefs_8hpp_a5a3b4d94c69ae85b911a8dca1afedfe0}\label{TetreesDefs_8hpp_a5a3b4d94c69ae85b911a8dca1afedfe0}} 
+\index{Tetrees\+Defs.\+hpp@{Tetrees\+Defs.\+hpp}!score\+\_\+t@{score\+\_\+t}}
+\index{score\+\_\+t@{score\+\_\+t}!Tetrees\+Defs.\+hpp@{Tetrees\+Defs.\+hpp}}
+\subsubsection{\texorpdfstring{score\+\_\+t}{score\_t}}
+{\footnotesize\ttfamily enum \hyperlink{TetreesDefs_8hpp_a5a3b4d94c69ae85b911a8dca1afedfe0}{score\+\_\+t} \+: unsigned}
+
+
+
+Score commands. 
+
+Used by game engine to control the score. \mbox{\Hypertarget{TetreesDefs_8hpp_a4d5a793092a473f85b4c1f7faf62afed}\label{TetreesDefs_8hpp_a4d5a793092a473f85b4c1f7faf62afed}} 
+\index{Tetrees\+Defs.\+hpp@{Tetrees\+Defs.\+hpp}!step\+\_\+t@{step\+\_\+t}}
+\index{step\+\_\+t@{step\+\_\+t}!Tetrees\+Defs.\+hpp@{Tetrees\+Defs.\+hpp}}
+\subsubsection{\texorpdfstring{step\+\_\+t}{step\_t}}
+{\footnotesize\ttfamily enum \hyperlink{TetreesDefs_8hpp_a4d5a793092a473f85b4c1f7faf62afed}{step\+\_\+t}}
+
+
+
+Game steps. 
+
+Available commands to be sent by user to the game engine by pressing a key during gameplay. \mbox{\Hypertarget{TetreesDefs_8hpp_acd279a62a49ecee418dd808ac39a1795}\label{TetreesDefs_8hpp_acd279a62a49ecee418dd808ac39a1795}} 
+\index{Tetrees\+Defs.\+hpp@{Tetrees\+Defs.\+hpp}!tetromino\+\_\+t@{tetromino\+\_\+t}}
+\index{tetromino\+\_\+t@{tetromino\+\_\+t}!Tetrees\+Defs.\+hpp@{Tetrees\+Defs.\+hpp}}
+\subsubsection{\texorpdfstring{tetromino\+\_\+t}{tetromino\_t}}
+{\footnotesize\ttfamily enum \hyperlink{TetreesDefs_8hpp_acd279a62a49ecee418dd808ac39a1795}{tetromino\+\_\+t}}
+
+
+
+Tetrominoes types. 
+
+An enum to represent each one of the fundamental elements of the game\+: the tetrominoes. \mbox{\Hypertarget{TetreesDefs_8hpp_ab583135648b1264a9f7817709c4dbd3e}\label{TetreesDefs_8hpp_ab583135648b1264a9f7817709c4dbd3e}} 
+\index{Tetrees\+Defs.\+hpp@{Tetrees\+Defs.\+hpp}!ui\+\_\+state\+\_\+t@{ui\+\_\+state\+\_\+t}}
+\index{ui\+\_\+state\+\_\+t@{ui\+\_\+state\+\_\+t}!Tetrees\+Defs.\+hpp@{Tetrees\+Defs.\+hpp}}
+\subsubsection{\texorpdfstring{ui\+\_\+state\+\_\+t}{ui\_state\_t}}
+{\footnotesize\ttfamily enum \hyperlink{TetreesDefs_8hpp_ab583135648b1264a9f7817709c4dbd3e}{ui\+\_\+state\+\_\+t} \+: int}
+
+
+
+User interface states. 
+
+Used to control UI\textquotesingle{}s elements behavior based on game current state. 
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{TetreesDefs_8hpp_ac64f01cd6fcb79752921aa3975ce8219}\label{TetreesDefs_8hpp_ac64f01cd6fcb79752921aa3975ce8219}} 
+\index{Tetrees\+Defs.\+hpp@{Tetrees\+Defs.\+hpp}!B\+L\+O\+C\+K\+\_\+\+S\+I\+D\+E\+\_\+\+D\+IM@{B\+L\+O\+C\+K\+\_\+\+S\+I\+D\+E\+\_\+\+D\+IM}}
+\index{B\+L\+O\+C\+K\+\_\+\+S\+I\+D\+E\+\_\+\+D\+IM@{B\+L\+O\+C\+K\+\_\+\+S\+I\+D\+E\+\_\+\+D\+IM}!Tetrees\+Defs.\+hpp@{Tetrees\+Defs.\+hpp}}
+\subsubsection{\texorpdfstring{B\+L\+O\+C\+K\+\_\+\+S\+I\+D\+E\+\_\+\+D\+IM}{BLOCK\_SIDE\_DIM}}
+{\footnotesize\ttfamily const double B\+L\+O\+C\+K\+\_\+\+S\+I\+D\+E\+\_\+\+D\+IM = 30}
+
+The size (in pixels) of each side of a block. \begin{DoxyRemark}{Remarks}
+Blocks are the smaller cubes that together compose a tetromino. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{TetreesDefs_8hpp_af08f2c0ac93a84d1e98bd9e128bd0b65}\label{TetreesDefs_8hpp_af08f2c0ac93a84d1e98bd9e128bd0b65}} 
+\index{Tetrees\+Defs.\+hpp@{Tetrees\+Defs.\+hpp}!H\+I\+D\+D\+E\+N\+\_\+\+C\+E\+L\+L\+S\+\_\+\+O\+F\+F\+S\+ET@{H\+I\+D\+D\+E\+N\+\_\+\+C\+E\+L\+L\+S\+\_\+\+O\+F\+F\+S\+ET}}
+\index{H\+I\+D\+D\+E\+N\+\_\+\+C\+E\+L\+L\+S\+\_\+\+O\+F\+F\+S\+ET@{H\+I\+D\+D\+E\+N\+\_\+\+C\+E\+L\+L\+S\+\_\+\+O\+F\+F\+S\+ET}!Tetrees\+Defs.\+hpp@{Tetrees\+Defs.\+hpp}}
+\subsubsection{\texorpdfstring{H\+I\+D\+D\+E\+N\+\_\+\+C\+E\+L\+L\+S\+\_\+\+O\+F\+F\+S\+ET}{HIDDEN\_CELLS\_OFFSET}}
+{\footnotesize\ttfamily const int H\+I\+D\+D\+E\+N\+\_\+\+C\+E\+L\+L\+S\+\_\+\+O\+F\+F\+S\+ET = 1 $\ast$ \hyperlink{TetreesDefs_8hpp_ac64f01cd6fcb79752921aa3975ce8219}{B\+L\+O\+C\+K\+\_\+\+S\+I\+D\+E\+\_\+\+D\+IM}}
+
+An offset function to compensate the \hyperlink{TetreesDefs_8hpp_ae7f1cd3f76dab2c9a46164c284935bd9}{cells} that are outside the boundaries of the game board\textquotesingle{}s visible playing area. \mbox{\Hypertarget{TetreesDefs_8hpp_a67c83d74957fb33b804e920b3e16bfe6}\label{TetreesDefs_8hpp_a67c83d74957fb33b804e920b3e16bfe6}} 
+\index{Tetrees\+Defs.\+hpp@{Tetrees\+Defs.\+hpp}!N\+E\+X\+T\+\_\+\+T\+E\+T\+R\+O\+M\+I\+N\+O\+\_\+\+F\+I\+E\+L\+D\+\_\+\+C\+E\+L\+L\+\_\+\+H\+E\+I\+G\+HT@{N\+E\+X\+T\+\_\+\+T\+E\+T\+R\+O\+M\+I\+N\+O\+\_\+\+F\+I\+E\+L\+D\+\_\+\+C\+E\+L\+L\+\_\+\+H\+E\+I\+G\+HT}}
+\index{N\+E\+X\+T\+\_\+\+T\+E\+T\+R\+O\+M\+I\+N\+O\+\_\+\+F\+I\+E\+L\+D\+\_\+\+C\+E\+L\+L\+\_\+\+H\+E\+I\+G\+HT@{N\+E\+X\+T\+\_\+\+T\+E\+T\+R\+O\+M\+I\+N\+O\+\_\+\+F\+I\+E\+L\+D\+\_\+\+C\+E\+L\+L\+\_\+\+H\+E\+I\+G\+HT}!Tetrees\+Defs.\+hpp@{Tetrees\+Defs.\+hpp}}
+\subsubsection{\texorpdfstring{N\+E\+X\+T\+\_\+\+T\+E\+T\+R\+O\+M\+I\+N\+O\+\_\+\+F\+I\+E\+L\+D\+\_\+\+C\+E\+L\+L\+\_\+\+H\+E\+I\+G\+HT}{NEXT\_TETROMINO\_FIELD\_CELL\_HEIGHT}}
+{\footnotesize\ttfamily const int N\+E\+X\+T\+\_\+\+T\+E\+T\+R\+O\+M\+I\+N\+O\+\_\+\+F\+I\+E\+L\+D\+\_\+\+C\+E\+L\+L\+\_\+\+H\+E\+I\+G\+HT = 4 $\ast$ \hyperlink{TetreesDefs_8hpp_ac64f01cd6fcb79752921aa3975ce8219}{B\+L\+O\+C\+K\+\_\+\+S\+I\+D\+E\+\_\+\+D\+IM}}
+
+Calculates the next tetromino field height (in pixels) \mbox{\Hypertarget{TetreesDefs_8hpp_ac176e980e4e657c945ed656bd0b5eb73}\label{TetreesDefs_8hpp_ac176e980e4e657c945ed656bd0b5eb73}} 
+\index{Tetrees\+Defs.\+hpp@{Tetrees\+Defs.\+hpp}!N\+E\+X\+T\+\_\+\+T\+E\+T\+R\+O\+M\+I\+N\+O\+\_\+\+F\+I\+E\+L\+D\+\_\+\+C\+E\+L\+L\+\_\+\+W\+I\+D\+TH@{N\+E\+X\+T\+\_\+\+T\+E\+T\+R\+O\+M\+I\+N\+O\+\_\+\+F\+I\+E\+L\+D\+\_\+\+C\+E\+L\+L\+\_\+\+W\+I\+D\+TH}}
+\index{N\+E\+X\+T\+\_\+\+T\+E\+T\+R\+O\+M\+I\+N\+O\+\_\+\+F\+I\+E\+L\+D\+\_\+\+C\+E\+L\+L\+\_\+\+W\+I\+D\+TH@{N\+E\+X\+T\+\_\+\+T\+E\+T\+R\+O\+M\+I\+N\+O\+\_\+\+F\+I\+E\+L\+D\+\_\+\+C\+E\+L\+L\+\_\+\+W\+I\+D\+TH}!Tetrees\+Defs.\+hpp@{Tetrees\+Defs.\+hpp}}
+\subsubsection{\texorpdfstring{N\+E\+X\+T\+\_\+\+T\+E\+T\+R\+O\+M\+I\+N\+O\+\_\+\+F\+I\+E\+L\+D\+\_\+\+C\+E\+L\+L\+\_\+\+W\+I\+D\+TH}{NEXT\_TETROMINO\_FIELD\_CELL\_WIDTH}}
+{\footnotesize\ttfamily const int N\+E\+X\+T\+\_\+\+T\+E\+T\+R\+O\+M\+I\+N\+O\+\_\+\+F\+I\+E\+L\+D\+\_\+\+C\+E\+L\+L\+\_\+\+W\+I\+D\+TH = 6 $\ast$ \hyperlink{TetreesDefs_8hpp_ac64f01cd6fcb79752921aa3975ce8219}{B\+L\+O\+C\+K\+\_\+\+S\+I\+D\+E\+\_\+\+D\+IM}}
+
+Calculates the next tetromino field width (in pixels) \mbox{\Hypertarget{TetreesDefs_8hpp_abd45e889c47b3839d9e8b3c8fcb74aee}\label{TetreesDefs_8hpp_abd45e889c47b3839d9e8b3c8fcb74aee}} 
+\index{Tetrees\+Defs.\+hpp@{Tetrees\+Defs.\+hpp}!N\+U\+M\+\_\+\+O\+F\+\_\+\+C\+O\+L\+O\+RS@{N\+U\+M\+\_\+\+O\+F\+\_\+\+C\+O\+L\+O\+RS}}
+\index{N\+U\+M\+\_\+\+O\+F\+\_\+\+C\+O\+L\+O\+RS@{N\+U\+M\+\_\+\+O\+F\+\_\+\+C\+O\+L\+O\+RS}!Tetrees\+Defs.\+hpp@{Tetrees\+Defs.\+hpp}}
+\subsubsection{\texorpdfstring{N\+U\+M\+\_\+\+O\+F\+\_\+\+C\+O\+L\+O\+RS}{NUM\_OF\_COLORS}}
+{\footnotesize\ttfamily const int N\+U\+M\+\_\+\+O\+F\+\_\+\+C\+O\+L\+O\+RS = 11}
+
+Number of colors mapped to \hyperlink{structrgb__t}{rgb\+\_\+t}. \mbox{\Hypertarget{TetreesDefs_8hpp_a350a4204247d3562e237e289533cc31f}\label{TetreesDefs_8hpp_a350a4204247d3562e237e289533cc31f}} 
+\index{Tetrees\+Defs.\+hpp@{Tetrees\+Defs.\+hpp}!N\+U\+M\+\_\+\+O\+F\+\_\+\+L\+E\+V\+E\+LS@{N\+U\+M\+\_\+\+O\+F\+\_\+\+L\+E\+V\+E\+LS}}
+\index{N\+U\+M\+\_\+\+O\+F\+\_\+\+L\+E\+V\+E\+LS@{N\+U\+M\+\_\+\+O\+F\+\_\+\+L\+E\+V\+E\+LS}!Tetrees\+Defs.\+hpp@{Tetrees\+Defs.\+hpp}}
+\subsubsection{\texorpdfstring{N\+U\+M\+\_\+\+O\+F\+\_\+\+L\+E\+V\+E\+LS}{NUM\_OF\_LEVELS}}
+{\footnotesize\ttfamily const int N\+U\+M\+\_\+\+O\+F\+\_\+\+L\+E\+V\+E\+LS = 10}
+
+Number of game levels. \mbox{\Hypertarget{TetreesDefs_8hpp_a69fa4aa1afe74f7f9ec42bf1e07ddf28}\label{TetreesDefs_8hpp_a69fa4aa1afe74f7f9ec42bf1e07ddf28}} 
+\index{Tetrees\+Defs.\+hpp@{Tetrees\+Defs.\+hpp}!N\+U\+M\+\_\+\+O\+F\+\_\+\+T\+E\+T\+R\+O\+M\+I\+N\+O\+ES@{N\+U\+M\+\_\+\+O\+F\+\_\+\+T\+E\+T\+R\+O\+M\+I\+N\+O\+ES}}
+\index{N\+U\+M\+\_\+\+O\+F\+\_\+\+T\+E\+T\+R\+O\+M\+I\+N\+O\+ES@{N\+U\+M\+\_\+\+O\+F\+\_\+\+T\+E\+T\+R\+O\+M\+I\+N\+O\+ES}!Tetrees\+Defs.\+hpp@{Tetrees\+Defs.\+hpp}}
+\subsubsection{\texorpdfstring{N\+U\+M\+\_\+\+O\+F\+\_\+\+T\+E\+T\+R\+O\+M\+I\+N\+O\+ES}{NUM\_OF\_TETROMINOES}}
+{\footnotesize\ttfamily const int N\+U\+M\+\_\+\+O\+F\+\_\+\+T\+E\+T\+R\+O\+M\+I\+N\+O\+ES = 7}
+
+The seven tetrominoes\textquotesingle{} shapes\+: I, O, T, S, Z, J and L. \mbox{\Hypertarget{TetreesDefs_8hpp_a66d8daa3cada4086e55962b4042a5ce8}\label{TetreesDefs_8hpp_a66d8daa3cada4086e55962b4042a5ce8}} 
+\index{Tetrees\+Defs.\+hpp@{Tetrees\+Defs.\+hpp}!P\+L\+A\+Y\+\_\+\+F\+I\+E\+L\+D\+\_\+\+H\+E\+I\+G\+HT@{P\+L\+A\+Y\+\_\+\+F\+I\+E\+L\+D\+\_\+\+H\+E\+I\+G\+HT}}
+\index{P\+L\+A\+Y\+\_\+\+F\+I\+E\+L\+D\+\_\+\+H\+E\+I\+G\+HT@{P\+L\+A\+Y\+\_\+\+F\+I\+E\+L\+D\+\_\+\+H\+E\+I\+G\+HT}!Tetrees\+Defs.\+hpp@{Tetrees\+Defs.\+hpp}}
+\subsubsection{\texorpdfstring{P\+L\+A\+Y\+\_\+\+F\+I\+E\+L\+D\+\_\+\+H\+E\+I\+G\+HT}{PLAY\_FIELD\_HEIGHT}}
+{\footnotesize\ttfamily const int P\+L\+A\+Y\+\_\+\+F\+I\+E\+L\+D\+\_\+\+H\+E\+I\+G\+HT = 22}
+
+The playing area height (in cells). \begin{DoxyRemark}{Remarks}
+A cell is the space occupied by a \hyperlink{TetreesDefs_8hpp_ac64f01cd6fcb79752921aa3975ce8219}{block}. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{TetreesDefs_8hpp_ae8713d267f1f2d2724c0976dfe71f59e}\label{TetreesDefs_8hpp_ae8713d267f1f2d2724c0976dfe71f59e}} 
+\index{Tetrees\+Defs.\+hpp@{Tetrees\+Defs.\+hpp}!P\+L\+A\+Y\+\_\+\+F\+I\+E\+L\+D\+\_\+\+P\+I\+X\+E\+L\+\_\+\+H\+E\+I\+G\+HT@{P\+L\+A\+Y\+\_\+\+F\+I\+E\+L\+D\+\_\+\+P\+I\+X\+E\+L\+\_\+\+H\+E\+I\+G\+HT}}
+\index{P\+L\+A\+Y\+\_\+\+F\+I\+E\+L\+D\+\_\+\+P\+I\+X\+E\+L\+\_\+\+H\+E\+I\+G\+HT@{P\+L\+A\+Y\+\_\+\+F\+I\+E\+L\+D\+\_\+\+P\+I\+X\+E\+L\+\_\+\+H\+E\+I\+G\+HT}!Tetrees\+Defs.\+hpp@{Tetrees\+Defs.\+hpp}}
+\subsubsection{\texorpdfstring{P\+L\+A\+Y\+\_\+\+F\+I\+E\+L\+D\+\_\+\+P\+I\+X\+E\+L\+\_\+\+H\+E\+I\+G\+HT}{PLAY\_FIELD\_PIXEL\_HEIGHT}}
+{\footnotesize\ttfamily const int P\+L\+A\+Y\+\_\+\+F\+I\+E\+L\+D\+\_\+\+P\+I\+X\+E\+L\+\_\+\+H\+E\+I\+G\+HT}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+=
+        ((\hyperlink{TetreesDefs_8hpp_ac64f01cd6fcb79752921aa3975ce8219}{BLOCK\_SIDE\_DIM} * (\hyperlink{TetreesDefs_8hpp_a66d8daa3cada4086e55962b4042a5ce8}{PLAY\_FIELD\_HEIGHT} - 2))
+                + (\hyperlink{TetreesDefs_8hpp_a4a163f66fa313addafa1afc8b6d196d3}{TETROMINO\_LINE\_WIDTH} / 2))
+\end{DoxyCode}
+Calculates the playing field height (in pixels) \mbox{\Hypertarget{TetreesDefs_8hpp_ac4bbb48f6b41537847e24cf7dabc4e4d}\label{TetreesDefs_8hpp_ac4bbb48f6b41537847e24cf7dabc4e4d}} 
+\index{Tetrees\+Defs.\+hpp@{Tetrees\+Defs.\+hpp}!P\+L\+A\+Y\+\_\+\+F\+I\+E\+L\+D\+\_\+\+P\+I\+X\+E\+L\+\_\+\+W\+I\+D\+TH@{P\+L\+A\+Y\+\_\+\+F\+I\+E\+L\+D\+\_\+\+P\+I\+X\+E\+L\+\_\+\+W\+I\+D\+TH}}
+\index{P\+L\+A\+Y\+\_\+\+F\+I\+E\+L\+D\+\_\+\+P\+I\+X\+E\+L\+\_\+\+W\+I\+D\+TH@{P\+L\+A\+Y\+\_\+\+F\+I\+E\+L\+D\+\_\+\+P\+I\+X\+E\+L\+\_\+\+W\+I\+D\+TH}!Tetrees\+Defs.\+hpp@{Tetrees\+Defs.\+hpp}}
+\subsubsection{\texorpdfstring{P\+L\+A\+Y\+\_\+\+F\+I\+E\+L\+D\+\_\+\+P\+I\+X\+E\+L\+\_\+\+W\+I\+D\+TH}{PLAY\_FIELD\_PIXEL\_WIDTH}}
+{\footnotesize\ttfamily const int P\+L\+A\+Y\+\_\+\+F\+I\+E\+L\+D\+\_\+\+P\+I\+X\+E\+L\+\_\+\+W\+I\+D\+TH}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+=
+        ((\hyperlink{TetreesDefs_8hpp_ac64f01cd6fcb79752921aa3975ce8219}{BLOCK\_SIDE\_DIM} * (\hyperlink{TetreesDefs_8hpp_ae7f1cd3f76dab2c9a46164c284935bd9}{PLAY\_FIELD\_WIDTH} - 2))
+                + (\hyperlink{TetreesDefs_8hpp_a4a163f66fa313addafa1afc8b6d196d3}{TETROMINO\_LINE\_WIDTH} / 2))
+\end{DoxyCode}
+Calculates the playing field width (in pixels) \mbox{\Hypertarget{TetreesDefs_8hpp_ae7f1cd3f76dab2c9a46164c284935bd9}\label{TetreesDefs_8hpp_ae7f1cd3f76dab2c9a46164c284935bd9}} 
+\index{Tetrees\+Defs.\+hpp@{Tetrees\+Defs.\+hpp}!P\+L\+A\+Y\+\_\+\+F\+I\+E\+L\+D\+\_\+\+W\+I\+D\+TH@{P\+L\+A\+Y\+\_\+\+F\+I\+E\+L\+D\+\_\+\+W\+I\+D\+TH}}
+\index{P\+L\+A\+Y\+\_\+\+F\+I\+E\+L\+D\+\_\+\+W\+I\+D\+TH@{P\+L\+A\+Y\+\_\+\+F\+I\+E\+L\+D\+\_\+\+W\+I\+D\+TH}!Tetrees\+Defs.\+hpp@{Tetrees\+Defs.\+hpp}}
+\subsubsection{\texorpdfstring{P\+L\+A\+Y\+\_\+\+F\+I\+E\+L\+D\+\_\+\+W\+I\+D\+TH}{PLAY\_FIELD\_WIDTH}}
+{\footnotesize\ttfamily const int P\+L\+A\+Y\+\_\+\+F\+I\+E\+L\+D\+\_\+\+W\+I\+D\+TH = 12}
+
+The playing area width (in cells). \begin{DoxyRemark}{Remarks}
+A cell is the space occupied by a \hyperlink{TetreesDefs_8hpp_ac64f01cd6fcb79752921aa3975ce8219}{block}. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{TetreesDefs_8hpp_a4a163f66fa313addafa1afc8b6d196d3}\label{TetreesDefs_8hpp_a4a163f66fa313addafa1afc8b6d196d3}} 
+\index{Tetrees\+Defs.\+hpp@{Tetrees\+Defs.\+hpp}!T\+E\+T\+R\+O\+M\+I\+N\+O\+\_\+\+L\+I\+N\+E\+\_\+\+W\+I\+D\+TH@{T\+E\+T\+R\+O\+M\+I\+N\+O\+\_\+\+L\+I\+N\+E\+\_\+\+W\+I\+D\+TH}}
+\index{T\+E\+T\+R\+O\+M\+I\+N\+O\+\_\+\+L\+I\+N\+E\+\_\+\+W\+I\+D\+TH@{T\+E\+T\+R\+O\+M\+I\+N\+O\+\_\+\+L\+I\+N\+E\+\_\+\+W\+I\+D\+TH}!Tetrees\+Defs.\+hpp@{Tetrees\+Defs.\+hpp}}
+\subsubsection{\texorpdfstring{T\+E\+T\+R\+O\+M\+I\+N\+O\+\_\+\+L\+I\+N\+E\+\_\+\+W\+I\+D\+TH}{TETROMINO\_LINE\_WIDTH}}
+{\footnotesize\ttfamily const double T\+E\+T\+R\+O\+M\+I\+N\+O\+\_\+\+L\+I\+N\+E\+\_\+\+W\+I\+D\+TH = 4}
+
+Tetromino\textquotesingle{}s line thickness (in pixels). 
