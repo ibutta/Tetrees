@@ -16,7 +16,7 @@ There is a 1.0 version ("Tetrees 1.0" executable) right off the bat in the main 
 AND OTHER FILES PRESENT INSIDE "Misc" DIRECTORY***
 
 For now, it'll only compile in Linux systems since IT'S THE BEST AND UNIQUE REAL O.S.!!!... Just kidding... I love to develop
-under Linux O.S. because it's free, beautiful, and it also allows to put REAL computer science in action! I'll work to develop
+under Linux O.S. because it's free, beautiful, and it also allows you to put REAL computer science in action! I'll work to develop
 a version for Windows (sooner) and MacOS (only when I get one...).
 
 This project uses: 
