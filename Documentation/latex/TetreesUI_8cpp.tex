@@ -1,0 +1,101 @@
+\hypertarget{TetreesUI_8cpp}{}\section{Source/\+Tetrees\+UI.cpp File Reference}
+\label{TetreesUI_8cpp}\index{Source/\+Tetrees\+U\+I.\+cpp@{Source/\+Tetrees\+U\+I.\+cpp}}
+
+
+The source file containing the \hyperlink{classTetreesUI}{Tetrees\+UI} class\textquotesingle{} member functions implementation.  
+
+
+{\ttfamily \#include $<$Tetrees\+Engine.\+hpp$>$}\newline
+{\ttfamily \#include $<$Tetrees\+U\+I.\+hpp$>$}\newline
+{\ttfamily \#include $<$Tetrees\+Utils.\+hpp$>$}\newline
+{\ttfamily \#include $<$fontconfig/fontconfig.\+h$>$}\newline
+{\ttfamily \#include $<$Tetrees\+Strings.\+hpp$>$}\newline
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{TetreesUI_8cpp_a528e7c6e0e9e2f526f6fc0c64597112d}\label{TetreesUI_8cpp_a528e7c6e0e9e2f526f6fc0c64597112d}} 
+cairo\+\_\+surface\+\_\+t $\ast$ {\bfseries playing\+Surface}
+\item 
+\mbox{\Hypertarget{TetreesUI_8cpp_a929776169582ba270fc197a352f288e8}\label{TetreesUI_8cpp_a929776169582ba270fc197a352f288e8}} 
+Gtk\+Widget $\ast$ {\bfseries main\+Window}
+\item 
+\mbox{\Hypertarget{TetreesUI_8cpp_a98d2477cef8ca3a919a3e0af02da0a0d}\label{TetreesUI_8cpp_a98d2477cef8ca3a919a3e0af02da0a0d}} 
+Gtk\+Widget $\ast$ {\bfseries playing\+Field\+Frame}
+\item 
+\mbox{\Hypertarget{TetreesUI_8cpp_aa28e1158cd1473e8640bc421f0fc7340}\label{TetreesUI_8cpp_aa28e1158cd1473e8640bc421f0fc7340}} 
+Gtk\+Widget $\ast$ {\bfseries next\+Tetromino\+Frame}
+\item 
+\mbox{\Hypertarget{TetreesUI_8cpp_abb2e6a9f558c00289268dc07c341c50f}\label{TetreesUI_8cpp_abb2e6a9f558c00289268dc07c341c50f}} 
+Gtk\+Widget $\ast$ {\bfseries main\+Grid}
+\item 
+\mbox{\Hypertarget{TetreesUI_8cpp_ac781c7f7f1667b12c3e26b8cb2622bf5}\label{TetreesUI_8cpp_ac781c7f7f1667b12c3e26b8cb2622bf5}} 
+Gtk\+Widget $\ast$ {\bfseries box01}
+\item 
+\mbox{\Hypertarget{TetreesUI_8cpp_a587a173ec1b3ab1a2db7155f0f9322ef}\label{TetreesUI_8cpp_a587a173ec1b3ab1a2db7155f0f9322ef}} 
+Gtk\+Widget $\ast$ {\bfseries button\+Box}
+\item 
+\mbox{\Hypertarget{TetreesUI_8cpp_a93e046be1258b131010c58072aab2ead}\label{TetreesUI_8cpp_a93e046be1258b131010c58072aab2ead}} 
+Gtk\+Widget $\ast$ {\bfseries play\+Button}
+\item 
+\mbox{\Hypertarget{TetreesUI_8cpp_a119f809cb832f3e370c60c75d766e473}\label{TetreesUI_8cpp_a119f809cb832f3e370c60c75d766e473}} 
+Gtk\+Widget $\ast$ {\bfseries pause\+Button}
+\item 
+\mbox{\Hypertarget{TetreesUI_8cpp_a7ac3df3e3d13ae5bd16828389ba56461}\label{TetreesUI_8cpp_a7ac3df3e3d13ae5bd16828389ba56461}} 
+Gtk\+Widget $\ast$ {\bfseries reset\+Button}
+\item 
+\mbox{\Hypertarget{TetreesUI_8cpp_af900bffe25b932fb86dc61cfdf839e95}\label{TetreesUI_8cpp_af900bffe25b932fb86dc61cfdf839e95}} 
+Gtk\+Widget $\ast$ {\bfseries playing\+Field\+Drawing\+Area}
+\item 
+\mbox{\Hypertarget{TetreesUI_8cpp_ae067b2d6b08b38aa73b035c82d9e14b0}\label{TetreesUI_8cpp_ae067b2d6b08b38aa73b035c82d9e14b0}} 
+Gtk\+Widget $\ast$ {\bfseries score\+Label}
+\item 
+\mbox{\Hypertarget{TetreesUI_8cpp_a8d867e3855c9142a39c9314c758e9990}\label{TetreesUI_8cpp_a8d867e3855c9142a39c9314c758e9990}} 
+Gtk\+Widget $\ast$ {\bfseries score\+Frame}
+\item 
+\mbox{\Hypertarget{TetreesUI_8cpp_aacb77432f2785bad4cb2dd55899b5336}\label{TetreesUI_8cpp_aacb77432f2785bad4cb2dd55899b5336}} 
+Gtk\+Widget $\ast$ {\bfseries score\+Text\+View}
+\item 
+\mbox{\Hypertarget{TetreesUI_8cpp_a5105cbc816245ddca29759f153415653}\label{TetreesUI_8cpp_a5105cbc816245ddca29759f153415653}} 
+Gtk\+Widget $\ast$ {\bfseries lvl\+Label}
+\item 
+Gtk\+Widget $\ast$ \hyperlink{TetreesUI_8cpp_aac997784ac88b494498d6e08d6fe62d5}{next\+Tetromino\+Drawing\+Area}
+\item 
+\mbox{\Hypertarget{TetreesUI_8cpp_a987e52b6afd77146d28d866324936333}\label{TetreesUI_8cpp_a987e52b6afd77146d28d866324936333}} 
+Gtk\+Text\+Buffer $\ast$ {\bfseries score\+Text\+Buf}
+\item 
+\mbox{\Hypertarget{TetreesUI_8cpp_adc132ad6d9929e2a33e24d4cd6d35322}\label{TetreesUI_8cpp_adc132ad6d9929e2a33e24d4cd6d35322}} 
+Gtk\+Text\+Iter {\bfseries score\+Iter}
+\item 
+\mbox{\Hypertarget{TetreesUI_8cpp_af8ddf64c2ced2048a5de5626a796c43c}\label{TetreesUI_8cpp_af8ddf64c2ced2048a5de5626a796c43c}} 
+Gdk\+Display $\ast$ {\bfseries display}
+\item 
+\mbox{\Hypertarget{TetreesUI_8cpp_ae721ea915e8dc917e4474171757a230e}\label{TetreesUI_8cpp_ae721ea915e8dc917e4474171757a230e}} 
+Gdk\+Screen $\ast$ {\bfseries screen}
+\item 
+\mbox{\Hypertarget{TetreesUI_8cpp_abc4f181f9f1390698df2a37f459418fe}\label{TetreesUI_8cpp_abc4f181f9f1390698df2a37f459418fe}} 
+Gtk\+Css\+Provider $\ast$ {\bfseries css\+Provider}
+\item 
+\mbox{\Hypertarget{TetreesUI_8cpp_a10408b8935c73e0f669f6268f22f1de3}\label{TetreesUI_8cpp_a10408b8935c73e0f669f6268f22f1de3}} 
+guint {\bfseries update\+Event\+ID}
+\item 
+\mbox{\Hypertarget{TetreesUI_8cpp_a816e612f85e91ff77ce93b10f5b9ec2e}\label{TetreesUI_8cpp_a816e612f85e91ff77ce93b10f5b9ec2e}} 
+std\+::string {\bfseries file\+Path\+\_\+8bit\+Font} = \char`\"{}Misc/Press\+Start2\+P.\+ttf\char`\"{}
+\item 
+\mbox{\Hypertarget{TetreesUI_8cpp_a72251ac20f5ac4b09eccfff3e2687252}\label{TetreesUI_8cpp_a72251ac20f5ac4b09eccfff3e2687252}} 
+const Fc\+Char8 $\ast$ {\bfseries file} = (const Fc\+Char8$\ast$)file\+Path\+\_\+8bit\+Font.\+c\+\_\+str()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The source file containing the \hyperlink{classTetreesUI}{Tetrees\+UI} class\textquotesingle{} member functions implementation. 
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{TetreesUI_8cpp_aac997784ac88b494498d6e08d6fe62d5}\label{TetreesUI_8cpp_aac997784ac88b494498d6e08d6fe62d5}} 
+\index{Tetrees\+U\+I.\+cpp@{Tetrees\+U\+I.\+cpp}!next\+Tetromino\+Drawing\+Area@{next\+Tetromino\+Drawing\+Area}}
+\index{next\+Tetromino\+Drawing\+Area@{next\+Tetromino\+Drawing\+Area}!Tetrees\+U\+I.\+cpp@{Tetrees\+U\+I.\+cpp}}
+\subsubsection{\texorpdfstring{next\+Tetromino\+Drawing\+Area}{nextTetrominoDrawingArea}}
+{\footnotesize\ttfamily Gtk\+Widget$\ast$ next\+Tetromino\+Drawing\+Area}
+
+Shows the \hyperlink{classTetreesEngine_a44c902481f5d8a72ca8a78d24f5c3a33}{next tetromino} to be spawned. 

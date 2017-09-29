@@ -30,6 +30,7 @@ public:
 
 	//Engine utility member functions
 	//========================================================
+	/// Assembles all data related to each of the 7 types of tetrominoes.
 	void startTetrominoesArray(piece_t tetrominoesArray[NUM_OF_TETROMINOES]);
 	void startGameLevelsArray(game_level_t levelsArray[NUM_OF_LEVELS]);
 	//========================================================

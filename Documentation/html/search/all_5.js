@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['issuecommand',['issueCommand',['../classTetreesEngine.html#aa2a283d09b0b6ab7c03ea2265a2e3438',1,'TetreesEngine']]]
+  ['empty',['EMPTY',['../TetreesDefs_8hpp.html#af0380e8edbdaff655a37ac1dcd0e3c38',1,'TetreesDefs.hpp']]],
+  ['empty_5fcell',['EMPTY_CELL',['../TetreesDefs_8hpp.html#a451beb53419d1193efecdb828600c6b0',1,'TetreesDefs.hpp']]]
 ];

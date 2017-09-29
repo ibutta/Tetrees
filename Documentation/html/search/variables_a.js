@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['tetromino_5fline_5fwidth',['TETROMINO_LINE_WIDTH',['../TetreesDefs_8hpp.html#a4a163f66fa313addafa1afc8b6d196d3',1,'TetreesDefs.hpp']]],
-  ['tetrominoesproportionarray',['tetrominoesProportionArray',['../structgame__level__t.html#abcef20ad8f4df7d270a4d5111ac8d85a',1,'game_level_t']]],
-  ['type',['type',['../structpiece__t.html#ac5cbbdb5ff335128af8ca9f491a4f543',1,'piece_t']]]
+  ['scene',['scene',['../classTetreesEngine.html#aeade477c0bc2eaaa894ebbdaca93584e',1,'TetreesEngine']]],
+  ['score',['score',['../structgame__score__t.html#ad31c74c891223f5649797cbd13a86de8',1,'game_score_t']]],
+  ['shape',['shape',['../structpiece__t.html#a3c8f9c2e51c6bab728e564143c439746',1,'piece_t']]],
+  ['spawnedtetromino',['spawnedTetromino',['../classTetreesEngine.html#a26435ee2f02d9ba70d9e359745114f6e',1,'TetreesEngine']]]
 ];

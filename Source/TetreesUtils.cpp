@@ -5,6 +5,11 @@
  *      Author: Igor S. Buttarello
  */
 
+/**
+ * @file TetreesUtils.cpp
+ * @brief The source file containing the TetreesUtils class' member functions implementation.
+ */
+
 #include <TetreesUtils.hpp>
 
 TetreesUtils::TetreesUtils()
@@ -129,6 +134,9 @@ std::string TetreesUtils::intToStr(unsigned num)
 
 }
 
+/**
+ *
+ */
 void TetreesUtils::startTetrominoesArray(piece_t tetrominoes[NUM_OF_TETROMINOES])
 {
 

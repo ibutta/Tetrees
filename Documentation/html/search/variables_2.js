@@ -1,9 +1,5 @@
 var searchData=
 [
-  ['g',['g',['../structrgb__t.html#a626bf50c035e97070dcd72f3717ee64f',1,'rgb_t']]],
-  ['gamespeed',['gameSpeed',['../structgame__level__t.html#a2501f9b624ec9cf7788649127e111a33',1,'game_level_t']]],
-  ['gameui',['gameUI',['../classTetreesEngine.html#a01bf1d438236d5f57129ffb22adf59ce',1,'TetreesEngine']]],
-  ['glevel',['gLevel',['../structgame__data__t.html#a7918ec335ac715bcf7ec197920afe56b',1,'game_data_t']]],
-  ['gscore',['gScore',['../structgame__data__t.html#a70e04b66160685cc84bcdd30edb97e46',1,'game_data_t']]],
-  ['gstate',['gState',['../structgame__data__t.html#a48253f7b6212e0ff99d5d5960b79476d',1,'game_data_t']]]
+  ['empty',['EMPTY',['../TetreesDefs_8hpp.html#af0380e8edbdaff655a37ac1dcd0e3c38',1,'TetreesDefs.hpp']]],
+  ['empty_5fcell',['EMPTY_CELL',['../TetreesDefs_8hpp.html#a451beb53419d1193efecdb828600c6b0',1,'TetreesDefs.hpp']]]
 ];

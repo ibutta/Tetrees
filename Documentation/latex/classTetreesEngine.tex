@@ -14,124 +14,87 @@ The game engine.
 \item 
 \mbox{\Hypertarget{classTetreesEngine_ada1775237223604c895a50625eda1d49}\label{classTetreesEngine_ada1775237223604c895a50625eda1d49}} 
 \hyperlink{classTetreesEngine_ada1775237223604c895a50625eda1d49}{Tetrees\+Engine} ()
-\begin{DoxyCompactList}\small\item\em The object constructor. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em The class constructor. \end{DoxyCompactList}\item 
 void \hyperlink{classTetreesEngine_a85e0da200fb3e17745f1978d24acca2f}{gtk\+Setup} (Gtk\+Application $\ast$app, gpointer user\+\_\+data)
 \begin{DoxyCompactList}\small\item\em Set up UI environment. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classTetreesEngine_aa2a283d09b0b6ab7c03ea2265a2e3438}\label{classTetreesEngine_aa2a283d09b0b6ab7c03ea2265a2e3438}} 
 void \hyperlink{classTetreesEngine_aa2a283d09b0b6ab7c03ea2265a2e3438}{issue\+Command} (\hyperlink{TetreesDefs_8hpp_aadc337e2620d6621659e63e87c45e79d}{cmd\+\_\+t} command)
 \begin{DoxyCompactList}\small\item\em Send game engine a command. \end{DoxyCompactList}\item 
 void \hyperlink{classTetreesEngine_a33e9983a618b3538640b6bd987304b8b}{game\+Step} (\hyperlink{TetreesDefs_8hpp_a4d5a793092a473f85b4c1f7faf62afed}{step\+\_\+t} step)
 \begin{DoxyCompactList}\small\item\em Changes game state. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classTetreesEngine_a36e231a33457f87875f19d308984b0b8}\label{classTetreesEngine_a36e231a33457f87875f19d308984b0b8}} 
-\hyperlink{TetreesDefs_8hpp_aebae08b2e3a36f1452b33acaf1eaab40}{game\+\_\+state\+\_\+t} {\bfseries get\+Game\+State} ()
+\hyperlink{TetreesDefs_8hpp_aebae08b2e3a36f1452b33acaf1eaab40}{game\+\_\+state\+\_\+t} \hyperlink{classTetreesEngine_a36e231a33457f87875f19d308984b0b8}{get\+Game\+State} ()
 \item 
-\mbox{\Hypertarget{classTetreesEngine_a46108b9a7ea4ab8ebd27323f9752e208}\label{classTetreesEngine_a46108b9a7ea4ab8ebd27323f9752e208}} 
-\hyperlink{structgame__score__t}{game\+\_\+score\+\_\+t} {\bfseries get\+Game\+Score} ()
+\hyperlink{structgame__score__t}{game\+\_\+score\+\_\+t} \hyperlink{classTetreesEngine_a46108b9a7ea4ab8ebd27323f9752e208}{get\+Game\+Score} ()
 \item 
-\mbox{\Hypertarget{classTetreesEngine_a7ad503b48ba753c446e5438ca67aa4e3}\label{classTetreesEngine_a7ad503b48ba753c446e5438ca67aa4e3}} 
-\hyperlink{structgame__level__t}{game\+\_\+level\+\_\+t} {\bfseries get\+Game\+Level} ()
+\hyperlink{structgame__level__t}{game\+\_\+level\+\_\+t} \hyperlink{classTetreesEngine_a7ad503b48ba753c446e5438ca67aa4e3}{get\+Game\+Level} ()
 \item 
-\mbox{\Hypertarget{classTetreesEngine_a66c89592e0da98bd26c934ee9b039792}\label{classTetreesEngine_a66c89592e0da98bd26c934ee9b039792}} 
-\hyperlink{classMatrix2D}{Matrix2D}$<$ int $>$ {\bfseries get\+Game\+Board} ()
+\hyperlink{classMatrix2D}{Matrix2D}$<$ int $>$ \hyperlink{classTetreesEngine_a1f167b42fc077d496449a2cc959989ac}{get\+Scene} ()
 \item 
-\mbox{\Hypertarget{classTetreesEngine_a1f167b42fc077d496449a2cc959989ac}\label{classTetreesEngine_a1f167b42fc077d496449a2cc959989ac}} 
-\hyperlink{classMatrix2D}{Matrix2D}$<$ int $>$ {\bfseries get\+Scene} ()
-\item 
-\mbox{\Hypertarget{classTetreesEngine_a78698174a309f2a4d74da9fd47167f56}\label{classTetreesEngine_a78698174a309f2a4d74da9fd47167f56}} 
-\hyperlink{structpiece__t}{piece\+\_\+t} {\bfseries get\+Next\+Tetromino} ()
+\hyperlink{structpiece__t}{piece\+\_\+t} \hyperlink{classTetreesEngine_a78698174a309f2a4d74da9fd47167f56}{get\+Next\+Tetromino} ()
 \end{DoxyCompactItemize}
 \subsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classTetreesEngine_ad28ed83be446f74c87d55d79cc64e6ef}\label{classTetreesEngine_ad28ed83be446f74c87d55d79cc64e6ef}} 
-void {\bfseries game\+Board\+Reset} ()
-\item 
-\mbox{\Hypertarget{classTetreesEngine_acb719449a68465839ebb0a5e7724cc34}\label{classTetreesEngine_acb719449a68465839ebb0a5e7724cc34}} 
-void {\bfseries scene\+Reset} ()
-\item 
-\mbox{\Hypertarget{classTetreesEngine_a087f12761b955478bff1d4e70e6c0549}\label{classTetreesEngine_a087f12761b955478bff1d4e70e6c0549}} 
-unsigned {\bfseries get\+Pascal\+Triangle\+Element} (unsigned row, unsigned col)
-\item 
-\mbox{\Hypertarget{classTetreesEngine_a626d60fa8adb2dd024016b5cfed4f6ee}\label{classTetreesEngine_a626d60fa8adb2dd024016b5cfed4f6ee}} 
-void {\bfseries step\+\_\+\+Spawned\+Tetromino\+\_\+\+Drop} ()
-\item 
-\mbox{\Hypertarget{classTetreesEngine_a90d1d65e12fb37850962305d8bc3b7a3}\label{classTetreesEngine_a90d1d65e12fb37850962305d8bc3b7a3}} 
-void {\bfseries step\+\_\+\+Spawned\+Tetromino\+\_\+\+Rotate} ()
-\item 
-\mbox{\Hypertarget{classTetreesEngine_a46e1950877c8b8aa7e988ca3de14ad18}\label{classTetreesEngine_a46e1950877c8b8aa7e988ca3de14ad18}} 
-void {\bfseries step\+\_\+\+Spawned\+Tetromino\+\_\+\+Swerve\+Right} ()
-\item 
-\mbox{\Hypertarget{classTetreesEngine_ab7169a28a06a867ada69a01a580fb2ad}\label{classTetreesEngine_ab7169a28a06a867ada69a01a580fb2ad}} 
-void {\bfseries step\+\_\+\+Spawned\+Tetromino\+\_\+\+Swerve\+Left} ()
-\item 
-\mbox{\Hypertarget{classTetreesEngine_a0978ef1f287f00a8ed5a4af2d680b943}\label{classTetreesEngine_a0978ef1f287f00a8ed5a4af2d680b943}} 
+void \hyperlink{classTetreesEngine_ad28ed83be446f74c87d55d79cc64e6ef}{game\+Board\+Reset} ()
+\begin{DoxyCompactList}\small\item\em Reset game board. \end{DoxyCompactList}\item 
+void \hyperlink{classTetreesEngine_acb719449a68465839ebb0a5e7724cc34}{scene\+Reset} ()
+\begin{DoxyCompactList}\small\item\em Reset game scene/frame. \end{DoxyCompactList}\item 
+void \hyperlink{classTetreesEngine_a9aa3eec9561623f77eab13298ddad13c}{update\+Scene} ()
+\begin{DoxyCompactList}\small\item\em Update game scene/frame. \end{DoxyCompactList}\item 
+unsigned \hyperlink{classTetreesEngine_a087f12761b955478bff1d4e70e6c0549}{get\+Pascal\+Triangle\+Element} (unsigned row, unsigned col)
+\begin{DoxyCompactList}\small\item\em Fetch Pascal\textquotesingle{}s triangle for a specific element. \end{DoxyCompactList}\item 
+void \hyperlink{classTetreesEngine_a626d60fa8adb2dd024016b5cfed4f6ee}{step\+\_\+\+Spawned\+Tetromino\+\_\+\+Drop} ()
+\begin{DoxyCompactList}\small\item\em Execute a \hyperlink{TetreesDefs_8hpp_a4d5a793092a473f85b4c1f7faf62afeda6df5f4c213c30a4ad91af7a5d10daa8e}{drop step}. \end{DoxyCompactList}\item 
+void \hyperlink{classTetreesEngine_a90d1d65e12fb37850962305d8bc3b7a3}{step\+\_\+\+Spawned\+Tetromino\+\_\+\+Rotate} ()
+\begin{DoxyCompactList}\small\item\em Execute a \hyperlink{TetreesDefs_8hpp_a4d5a793092a473f85b4c1f7faf62afeda22387bf41fe41a5ac2b7b74ab8f5c342}{rotate step}. \end{DoxyCompactList}\item 
+void \hyperlink{classTetreesEngine_a46e1950877c8b8aa7e988ca3de14ad18}{step\+\_\+\+Spawned\+Tetromino\+\_\+\+Swerve\+Right} ()
+\begin{DoxyCompactList}\small\item\em Execute a \hyperlink{TetreesDefs_8hpp_a4d5a793092a473f85b4c1f7faf62afeda86fdea6e730f10b7d265b067552624d3}{right swerve step}. \end{DoxyCompactList}\item 
+void \hyperlink{classTetreesEngine_ab7169a28a06a867ada69a01a580fb2ad}{step\+\_\+\+Spawned\+Tetromino\+\_\+\+Swerve\+Left} ()
+\begin{DoxyCompactList}\small\item\em Execute a \hyperlink{TetreesDefs_8hpp_a4d5a793092a473f85b4c1f7faf62afeda3b27946656fc3bf9470a8b7761cfa8e1}{left swerve step}. \end{DoxyCompactList}\item 
 void \hyperlink{classTetreesEngine_a0978ef1f287f00a8ed5a4af2d680b943}{step\+\_\+\+Block\+Spawned\+Tetromino} ()
 \begin{DoxyCompactList}\small\item\em Blocks the falling piece. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classTetreesEngine_a25f8b896240ce2d2a34b1d968e75b5b6}\label{classTetreesEngine_a25f8b896240ce2d2a34b1d968e75b5b6}} 
-bool {\bfseries step\+\_\+\+Detect\+Collision} (\hyperlink{TetreesDefs_8hpp_a4d5a793092a473f85b4c1f7faf62afed}{step\+\_\+t} step)
-\item 
-\mbox{\Hypertarget{classTetreesEngine_a270b227c9dfbfb72513c6cdfdd910d1b}\label{classTetreesEngine_a270b227c9dfbfb72513c6cdfdd910d1b}} 
-bool {\bfseries step\+\_\+\+Overlapping\+Check} (unsigned board\+Row, unsigned board\+Col)
-\item 
-\mbox{\Hypertarget{classTetreesEngine_aa593f5f688e984a2cdbbf83b162d00a2}\label{classTetreesEngine_aa593f5f688e984a2cdbbf83b162d00a2}} 
-bool {\bfseries step\+\_\+\+Border\+Trespassing\+Check} (\hyperlink{TetreesDefs_8hpp_a5dbb1ebfe8a9b95707ac161d3549ed8a}{limit\+\_\+t} border\+Side)
-\item 
-\mbox{\Hypertarget{classTetreesEngine_a446196c2260e2ce2ac0d18848ee6b636}\label{classTetreesEngine_a446196c2260e2ce2ac0d18848ee6b636}} 
-void {\bfseries step\+\_\+\+Spawn\+Next\+Tetromino} ()
-\item 
-\mbox{\Hypertarget{classTetreesEngine_a94d5fd25eec05994f02bb514496ec66d}\label{classTetreesEngine_a94d5fd25eec05994f02bb514496ec66d}} 
-\hyperlink{structpiece__t}{piece\+\_\+t} {\bfseries step\+\_\+\+Get\+Tetromino} ()
-\item 
-\mbox{\Hypertarget{classTetreesEngine_ad379bf5d98a182411d4d91b12b6ef5ba}\label{classTetreesEngine_ad379bf5d98a182411d4d91b12b6ef5ba}} 
-void {\bfseries score\+\_\+\+Handle\+Filled\+Rows} ()
-\item 
-\mbox{\Hypertarget{classTetreesEngine_a31898b1228f8b0381a82871669503b34}\label{classTetreesEngine_a31898b1228f8b0381a82871669503b34}} 
-bool {\bfseries score\+\_\+\+Handle\+Game\+Over} ()
-\item 
-\mbox{\Hypertarget{classTetreesEngine_aa7d501cb6f73111321e1dadbc140ebc8}\label{classTetreesEngine_aa7d501cb6f73111321e1dadbc140ebc8}} 
-void {\bfseries score\+\_\+\+Handle\+Lvl\+Completion} ()
-\item 
-\mbox{\Hypertarget{classTetreesEngine_a856a9de6a79138a19b638d9287d7bc72}\label{classTetreesEngine_a856a9de6a79138a19b638d9287d7bc72}} 
-void {\bfseries score\+\_\+\+Update\+Score} (\hyperlink{TetreesDefs_8hpp_a5a3b4d94c69ae85b911a8dca1afedfe0}{score\+\_\+t} score\+Action)
-\item 
-\mbox{\Hypertarget{classTetreesEngine_a848fc0ff4003f3c4d74c11efdc91f0cb}\label{classTetreesEngine_a848fc0ff4003f3c4d74c11efdc91f0cb}} 
-unsigned {\bfseries score\+\_\+\+Get\+Points\+From\+Multiplier} ()
-\item 
-\mbox{\Hypertarget{classTetreesEngine_a9aa3eec9561623f77eab13298ddad13c}\label{classTetreesEngine_a9aa3eec9561623f77eab13298ddad13c}} 
-void {\bfseries update\+Scene} ()
-\end{DoxyCompactItemize}
+bool \hyperlink{classTetreesEngine_a25f8b896240ce2d2a34b1d968e75b5b6}{step\+\_\+\+Detect\+Collision} (\hyperlink{TetreesDefs_8hpp_a4d5a793092a473f85b4c1f7faf62afed}{step\+\_\+t} step)
+\begin{DoxyCompactList}\small\item\em Detects possible collisions when \hyperlink{classTetreesEngine_a26435ee2f02d9ba70d9e359745114f6e}{spawned tetromino}\textquotesingle{}s position changes. \end{DoxyCompactList}\item 
+bool \hyperlink{classTetreesEngine_a270b227c9dfbfb72513c6cdfdd910d1b}{step\+\_\+\+Overlapping\+Check} (unsigned board\+Row, unsigned board\+Col)
+\begin{DoxyCompactList}\small\item\em Detects possible overlapping. \end{DoxyCompactList}\item 
+bool \hyperlink{classTetreesEngine_aa593f5f688e984a2cdbbf83b162d00a2}{step\+\_\+\+Border\+Trespassing\+Check} (\hyperlink{TetreesDefs_8hpp_a5dbb1ebfe8a9b95707ac161d3549ed8a}{limit\+\_\+t} border\+Side)
+\begin{DoxyCompactList}\small\item\em Detects if a movement infringes game board\textquotesingle{}s border limits. \end{DoxyCompactList}\item 
+void \hyperlink{classTetreesEngine_a446196c2260e2ce2ac0d18848ee6b636}{step\+\_\+\+Spawn\+Next\+Tetromino} ()
+\begin{DoxyCompactList}\small\item\em Drops the next tetromino. \end{DoxyCompactList}\item 
+\hyperlink{structpiece__t}{piece\+\_\+t} \hyperlink{classTetreesEngine_a94d5fd25eec05994f02bb514496ec66d}{step\+\_\+\+Get\+Tetromino} ()
+\begin{DoxyCompactList}\small\item\em Generates a random tetromino. \end{DoxyCompactList}\item 
+void \hyperlink{classTetreesEngine_ad379bf5d98a182411d4d91b12b6ef5ba}{score\+\_\+\+Handle\+Filled\+Rows} ()
+\begin{DoxyCompactList}\small\item\em Looks for rows filled with \hyperlink{TetreesDefs_8hpp_ad8f0654cf997b7ea7eb14924d0b1ea33}{blocks}. \end{DoxyCompactList}\item 
+void \hyperlink{classTetreesEngine_aa7d501cb6f73111321e1dadbc140ebc8}{score\+\_\+\+Handle\+Lvl\+Completion} ()
+\begin{DoxyCompactList}\small\item\em Checks if the level is completed. \end{DoxyCompactList}\item 
+bool \hyperlink{classTetreesEngine_a31898b1228f8b0381a82871669503b34}{score\+\_\+\+Handle\+Game\+Over} ()
+\begin{DoxyCompactList}\small\item\em Checks game over conditions. \end{DoxyCompactList}\item 
+void \hyperlink{classTetreesEngine_a856a9de6a79138a19b638d9287d7bc72}{score\+\_\+\+Update\+Score} (\hyperlink{TetreesDefs_8hpp_a5a3b4d94c69ae85b911a8dca1afedfe0}{score\+\_\+t} score\+Action)
+\begin{DoxyCompactList}\small\item\em Updates game\textquotesingle{}s score. \end{DoxyCompactList}\item 
+unsigned \hyperlink{classTetreesEngine_a848fc0ff4003f3c4d74c11efdc91f0cb}{score\+\_\+\+Get\+Points\+From\+Multiplier} ()
+\begin{DoxyCompactList}\small\item\em Provides a value to update game score. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classTetreesEngine_a01bf1d438236d5f57129ffb22adf59ce}\label{classTetreesEngine_a01bf1d438236d5f57129ffb22adf59ce}} 
 \hyperlink{classTetreesUI}{Tetrees\+UI} $\ast$ \hyperlink{classTetreesEngine_a01bf1d438236d5f57129ffb22adf59ce}{game\+UI}
-\begin{DoxyCompactList}\small\item\em \hyperlink{classTetreesUI}{Tetrees\+UI} object for controlling user interface and other games elements. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classTetreesEngine_ac4d6256982306ab8a02e18793cb803c0}\label{classTetreesEngine_ac4d6256982306ab8a02e18793cb803c0}} 
-\hyperlink{classTetreesUtils}{Tetrees\+Utils} $\ast$ {\bfseries utils}
+\item 
+\hyperlink{classTetreesUtils}{Tetrees\+Utils} $\ast$ \hyperlink{classTetreesEngine_ac4d6256982306ab8a02e18793cb803c0}{utils}
 \end{DoxyCompactItemize}
 \subsection*{Static Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classTetreesEngine_a37d082a7816d6731b2703dd6d1a1cb97}\label{classTetreesEngine_a37d082a7816d6731b2703dd6d1a1cb97}} 
-static \hyperlink{classMatrix2D}{Matrix2D}$<$ int $>$ {\bfseries game\+Board}
+static \hyperlink{classMatrix2D}{Matrix2D}$<$ int $>$ \hyperlink{classTetreesEngine_a37d082a7816d6731b2703dd6d1a1cb97}{game\+Board}
 \item 
-\mbox{\Hypertarget{classTetreesEngine_aeade477c0bc2eaaa894ebbdaca93584e}\label{classTetreesEngine_aeade477c0bc2eaaa894ebbdaca93584e}} 
-static \hyperlink{classMatrix2D}{Matrix2D}$<$ int $>$ {\bfseries scene}
+static \hyperlink{classMatrix2D}{Matrix2D}$<$ int $>$ \hyperlink{classTetreesEngine_aeade477c0bc2eaaa894ebbdaca93584e}{scene}
 \item 
-\mbox{\Hypertarget{classTetreesEngine_a26435ee2f02d9ba70d9e359745114f6e}\label{classTetreesEngine_a26435ee2f02d9ba70d9e359745114f6e}} 
-static \hyperlink{structpiece__t}{piece\+\_\+t} {\bfseries spawned\+Tetromino}
+static \hyperlink{structpiece__t}{piece\+\_\+t} \hyperlink{classTetreesEngine_a26435ee2f02d9ba70d9e359745114f6e}{spawned\+Tetromino}
 \item 
-\mbox{\Hypertarget{classTetreesEngine_a44c902481f5d8a72ca8a78d24f5c3a33}\label{classTetreesEngine_a44c902481f5d8a72ca8a78d24f5c3a33}} 
-static \hyperlink{structpiece__t}{piece\+\_\+t} {\bfseries next\+Tetromino}
+static \hyperlink{structpiece__t}{piece\+\_\+t} \hyperlink{classTetreesEngine_a44c902481f5d8a72ca8a78d24f5c3a33}{next\+Tetromino}
 \item 
-\mbox{\Hypertarget{classTetreesEngine_a07ae13fb62e86b45c834947243a913df}\label{classTetreesEngine_a07ae13fb62e86b45c834947243a913df}} 
-static \hyperlink{structpiece__t}{piece\+\_\+t} {\bfseries tetrominoes} \mbox{[}\hyperlink{TetreesDefs_8hpp_a69fa4aa1afe74f7f9ec42bf1e07ddf28}{N\+U\+M\+\_\+\+O\+F\+\_\+\+T\+E\+T\+R\+O\+M\+I\+N\+O\+ES}\mbox{]}
+static \hyperlink{structpiece__t}{piece\+\_\+t} \hyperlink{classTetreesEngine_a07ae13fb62e86b45c834947243a913df}{tetrominoes} \mbox{[}\hyperlink{TetreesDefs_8hpp_a69fa4aa1afe74f7f9ec42bf1e07ddf28}{N\+U\+M\+\_\+\+O\+F\+\_\+\+T\+E\+T\+R\+O\+M\+I\+N\+O\+ES}\mbox{]}
 \item 
-\mbox{\Hypertarget{classTetreesEngine_afa356b8bb38e8918400e7175d6fbbd2e}\label{classTetreesEngine_afa356b8bb38e8918400e7175d6fbbd2e}} 
-static \hyperlink{structgame__data__t}{game\+\_\+data\+\_\+t} {\bfseries game\+Data}
+static \hyperlink{structgame__data__t}{game\+\_\+data\+\_\+t} \hyperlink{classTetreesEngine_afa356b8bb38e8918400e7175d6fbbd2e}{game\+Data}
 \item 
-\mbox{\Hypertarget{classTetreesEngine_a03ea87d7cefe7b216977c9123fc6ef60}\label{classTetreesEngine_a03ea87d7cefe7b216977c9123fc6ef60}} 
-static \hyperlink{structgame__level__t}{game\+\_\+level\+\_\+t} {\bfseries game\+Levels} \mbox{[}\hyperlink{TetreesDefs_8hpp_a350a4204247d3562e237e289533cc31f}{N\+U\+M\+\_\+\+O\+F\+\_\+\+L\+E\+V\+E\+LS}\mbox{]}
+static \hyperlink{structgame__level__t}{game\+\_\+level\+\_\+t} \hyperlink{classTetreesEngine_a03ea87d7cefe7b216977c9123fc6ef60}{game\+Levels} \mbox{[}\hyperlink{TetreesDefs_8hpp_a350a4204247d3562e237e289533cc31f}{N\+U\+M\+\_\+\+O\+F\+\_\+\+L\+E\+V\+E\+LS}\mbox{]}
 \end{DoxyCompactItemize}
 
 
@@ -139,7 +102,17 @@ static \hyperlink{structgame__level__t}{game\+\_\+level\+\_\+t} {\bfseries game\
 The game engine. 
 
 \subsection{Member Function Documentation}
-\mbox{\Hypertarget{classTetreesEngine_a33e9983a618b3538640b6bd987304b8b}\label{classTetreesEngine_a33e9983a618b3538640b6bd987304b8b}} 
+\mbox{\Hypertarget{classTetreesEngine_ad28ed83be446f74c87d55d79cc64e6ef}\label{classTetreesEngine_ad28ed83be446f74c87d55d79cc64e6ef}} 
+\index{Tetrees\+Engine@{Tetrees\+Engine}!game\+Board\+Reset@{game\+Board\+Reset}}
+\index{game\+Board\+Reset@{game\+Board\+Reset}!Tetrees\+Engine@{Tetrees\+Engine}}
+\subsubsection{\texorpdfstring{game\+Board\+Reset()}{gameBoardReset()}}
+{\footnotesize\ttfamily void Tetrees\+Engine\+::game\+Board\+Reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Reset game board. 
+
+Set all elements of \hyperlink{classTetreesEngine_a37d082a7816d6731b2703dd6d1a1cb97}{game\+Board} to zero. \mbox{\Hypertarget{classTetreesEngine_a33e9983a618b3538640b6bd987304b8b}\label{classTetreesEngine_a33e9983a618b3538640b6bd987304b8b}} 
 \index{Tetrees\+Engine@{Tetrees\+Engine}!game\+Step@{game\+Step}}
 \index{game\+Step@{game\+Step}!Tetrees\+Engine@{Tetrees\+Engine}}
 \subsubsection{\texorpdfstring{game\+Step()}{gameStep()}}
@@ -149,14 +122,79 @@ The game engine.
 
 Changes game state. 
 
-Changes game state accordingly to the key pressed by the user during gameplay OR a \hyperlink{TetreesDefs_8hpp_a4d5a793092a473f85b4c1f7faf62afed}{S\+T\+E\+P\+\_\+\+D\+R\+OP} issued by the update event, which is managed by the \hyperlink{classTetreesUI}{Tetrees\+UI} class. \begin{DoxySeeAlso}{See also}
+Changes game scene by applying one of the \hyperlink{TetreesDefs_8hpp_a4d5a793092a473f85b4c1f7faf62afed}{gameplay\textquotesingle{}s steps} accordingly to the key pressed by player OR a \hyperlink{TetreesDefs_8hpp_a4d5a793092a473f85b4c1f7faf62afed}{S\+T\+E\+P\+\_\+\+D\+R\+OP} issued by the \hyperlink{classTetreesEngine_a01bf1d438236d5f57129ffb22adf59ce}{game\+UI\textquotesingle{}s} update event. \begin{DoxySeeAlso}{See also}
 Tetrees\+U\+I\+::on\+Play\+Clicked 
 \end{DoxySeeAlso}
 
 \begin{DoxyParams}{Parameters}
-{\em step} & A \hyperlink{TetreesDefs_8hpp_a4d5a793092a473f85b4c1f7faf62afed}{step\+\_\+t} that will change game actual state. \\
+{\em step} & A \hyperlink{TetreesDefs_8hpp_a4d5a793092a473f85b4c1f7faf62afed}{step\+\_\+t} that will somehow modify game scene. \\
 \hline
 \end{DoxyParams}
+\mbox{\Hypertarget{classTetreesEngine_a7ad503b48ba753c446e5438ca67aa4e3}\label{classTetreesEngine_a7ad503b48ba753c446e5438ca67aa4e3}} 
+\index{Tetrees\+Engine@{Tetrees\+Engine}!get\+Game\+Level@{get\+Game\+Level}}
+\index{get\+Game\+Level@{get\+Game\+Level}!Tetrees\+Engine@{Tetrees\+Engine}}
+\subsubsection{\texorpdfstring{get\+Game\+Level()}{getGameLevel()}}
+{\footnotesize\ttfamily \hyperlink{structgame__level__t}{game\+\_\+level\+\_\+t} Tetrees\+Engine\+::get\+Game\+Level (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+A getter for \hyperlink{TetreesDefs_8hpp_aebae08b2e3a36f1452b33acaf1eaab40}{game\+Data.g\+Level}. \begin{DoxyReturn}{Returns}
+The data stored by \hyperlink{TetreesDefs_8hpp_aebae08b2e3a36f1452b33acaf1eaab40}{game\+Data.g\+Level}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTetreesEngine_a46108b9a7ea4ab8ebd27323f9752e208}\label{classTetreesEngine_a46108b9a7ea4ab8ebd27323f9752e208}} 
+\index{Tetrees\+Engine@{Tetrees\+Engine}!get\+Game\+Score@{get\+Game\+Score}}
+\index{get\+Game\+Score@{get\+Game\+Score}!Tetrees\+Engine@{Tetrees\+Engine}}
+\subsubsection{\texorpdfstring{get\+Game\+Score()}{getGameScore()}}
+{\footnotesize\ttfamily \hyperlink{structgame__score__t}{game\+\_\+score\+\_\+t} Tetrees\+Engine\+::get\+Game\+Score (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+A getter for \hyperlink{TetreesDefs_8hpp_aebae08b2e3a36f1452b33acaf1eaab40}{game\+Data.g\+Score}. \begin{DoxyReturn}{Returns}
+The data stored by \hyperlink{TetreesDefs_8hpp_aebae08b2e3a36f1452b33acaf1eaab40}{game\+Data.g\+Score}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTetreesEngine_a36e231a33457f87875f19d308984b0b8}\label{classTetreesEngine_a36e231a33457f87875f19d308984b0b8}} 
+\index{Tetrees\+Engine@{Tetrees\+Engine}!get\+Game\+State@{get\+Game\+State}}
+\index{get\+Game\+State@{get\+Game\+State}!Tetrees\+Engine@{Tetrees\+Engine}}
+\subsubsection{\texorpdfstring{get\+Game\+State()}{getGameState()}}
+{\footnotesize\ttfamily \hyperlink{TetreesDefs_8hpp_aebae08b2e3a36f1452b33acaf1eaab40}{game\+\_\+state\+\_\+t} Tetrees\+Engine\+::get\+Game\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+A getter for \hyperlink{TetreesDefs_8hpp_aebae08b2e3a36f1452b33acaf1eaab40}{game\+Data.g\+State}. \begin{DoxyReturn}{Returns}
+The data stored by \hyperlink{TetreesDefs_8hpp_aebae08b2e3a36f1452b33acaf1eaab40}{game\+Data.g\+State}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTetreesEngine_a78698174a309f2a4d74da9fd47167f56}\label{classTetreesEngine_a78698174a309f2a4d74da9fd47167f56}} 
+\index{Tetrees\+Engine@{Tetrees\+Engine}!get\+Next\+Tetromino@{get\+Next\+Tetromino}}
+\index{get\+Next\+Tetromino@{get\+Next\+Tetromino}!Tetrees\+Engine@{Tetrees\+Engine}}
+\subsubsection{\texorpdfstring{get\+Next\+Tetromino()}{getNextTetromino()}}
+{\footnotesize\ttfamily \hyperlink{structpiece__t}{piece\+\_\+t} Tetrees\+Engine\+::get\+Next\+Tetromino (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+A getter for \hyperlink{classTetreesEngine_a44c902481f5d8a72ca8a78d24f5c3a33}{next\+Tetromino}. \begin{DoxyReturn}{Returns}
+The data stored by \hyperlink{classTetreesEngine_a44c902481f5d8a72ca8a78d24f5c3a33}{next\+Tetromino}. The next tetromino to be spawned. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTetreesEngine_a087f12761b955478bff1d4e70e6c0549}\label{classTetreesEngine_a087f12761b955478bff1d4e70e6c0549}} 
+\index{Tetrees\+Engine@{Tetrees\+Engine}!get\+Pascal\+Triangle\+Element@{get\+Pascal\+Triangle\+Element}}
+\index{get\+Pascal\+Triangle\+Element@{get\+Pascal\+Triangle\+Element}!Tetrees\+Engine@{Tetrees\+Engine}}
+\subsubsection{\texorpdfstring{get\+Pascal\+Triangle\+Element()}{getPascalTriangleElement()}}
+{\footnotesize\ttfamily unsigned Tetrees\+Engine\+::get\+Pascal\+Triangle\+Element (\begin{DoxyParamCaption}\item[{unsigned}]{row,  }\item[{unsigned}]{col }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Fetch Pascal\textquotesingle{}s triangle for a specific element. 
+
+A recursive function that returns a specific element of Pascal\textquotesingle{}s triangle based on the row and column specified. 
+\begin{DoxyParams}{Parameters}
+{\em row} & A row of Pascal\textquotesingle{}s triangle. \\
+\hline
+{\em col} & A column of Pascal\textquotesingle{}s triangle. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number in Pascal\textquotesingle{}s triangle pointed by the pair (row, column). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTetreesEngine_a1f167b42fc077d496449a2cc959989ac}\label{classTetreesEngine_a1f167b42fc077d496449a2cc959989ac}} 
+\index{Tetrees\+Engine@{Tetrees\+Engine}!get\+Scene@{get\+Scene}}
+\index{get\+Scene@{get\+Scene}!Tetrees\+Engine@{Tetrees\+Engine}}
+\subsubsection{\texorpdfstring{get\+Scene()}{getScene()}}
+{\footnotesize\ttfamily \hyperlink{classMatrix2D}{Matrix2D}$<$ int $>$ Tetrees\+Engine\+::get\+Scene (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+A getter for \hyperlink{classTetreesEngine_aeade477c0bc2eaaa894ebbdaca93584e}{scene}. \begin{DoxyReturn}{Returns}
+The data stored by \hyperlink{classTetreesEngine_aeade477c0bc2eaaa894ebbdaca93584e}{scene}. 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classTetreesEngine_a85e0da200fb3e17745f1978d24acca2f}\label{classTetreesEngine_a85e0da200fb3e17745f1978d24acca2f}} 
 \index{Tetrees\+Engine@{Tetrees\+Engine}!gtk\+Setup@{gtk\+Setup}}
 \index{gtk\+Setup@{gtk\+Setup}!Tetrees\+Engine@{Tetrees\+Engine}}
@@ -167,9 +205,320 @@ Tetrees\+U\+I\+::on\+Play\+Clicked
 
 Set up UI environment. 
 
-This function simply calls the member function setup\+UI from member object \hyperlink{classTetreesEngine_a01bf1d438236d5f57129ffb22adf59ce}{game\+UI}. 
+This function simply calls the member function \hyperlink{classTetreesUI_a492d68860089cfbe52c5756b2c3cd2ae}{setup\+UI} from member object \hyperlink{classTetreesEngine_a01bf1d438236d5f57129ffb22adf59ce}{game\+UI}. \mbox{\Hypertarget{classTetreesEngine_aa2a283d09b0b6ab7c03ea2265a2e3438}\label{classTetreesEngine_aa2a283d09b0b6ab7c03ea2265a2e3438}} 
+\index{Tetrees\+Engine@{Tetrees\+Engine}!issue\+Command@{issue\+Command}}
+\index{issue\+Command@{issue\+Command}!Tetrees\+Engine@{Tetrees\+Engine}}
+\subsubsection{\texorpdfstring{issue\+Command()}{issueCommand()}}
+{\footnotesize\ttfamily void Tetrees\+Engine\+::issue\+Command (\begin{DoxyParamCaption}\item[{\hyperlink{TetreesDefs_8hpp_aadc337e2620d6621659e63e87c45e79d}{cmd\+\_\+t}}]{c }\end{DoxyParamCaption})}
+
+
+
+Send game engine a command. 
+
+A communication channel between user interface and game engine that handles \hyperlink{TetreesDefs_8hpp_aadc337e2620d6621659e63e87c45e79d}{commands} sent to the engine related to what \hyperlink{TetreesDefs_8hpp_aebae08b2e3a36f1452b33acaf1eaab40}{game state} should be set that moment. 
+\begin{DoxyParams}{Parameters}
+{\em c} & The \hyperlink{TetreesDefs_8hpp_aadc337e2620d6621659e63e87c45e79d}{command} received. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTetreesEngine_acb719449a68465839ebb0a5e7724cc34}\label{classTetreesEngine_acb719449a68465839ebb0a5e7724cc34}} 
+\index{Tetrees\+Engine@{Tetrees\+Engine}!scene\+Reset@{scene\+Reset}}
+\index{scene\+Reset@{scene\+Reset}!Tetrees\+Engine@{Tetrees\+Engine}}
+\subsubsection{\texorpdfstring{scene\+Reset()}{sceneReset()}}
+{\footnotesize\ttfamily void Tetrees\+Engine\+::scene\+Reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Reset game scene/frame. 
+
+Set all elements of game\+Scene to zero. \mbox{\Hypertarget{classTetreesEngine_a848fc0ff4003f3c4d74c11efdc91f0cb}\label{classTetreesEngine_a848fc0ff4003f3c4d74c11efdc91f0cb}} 
+\index{Tetrees\+Engine@{Tetrees\+Engine}!score\+\_\+\+Get\+Points\+From\+Multiplier@{score\+\_\+\+Get\+Points\+From\+Multiplier}}
+\index{score\+\_\+\+Get\+Points\+From\+Multiplier@{score\+\_\+\+Get\+Points\+From\+Multiplier}!Tetrees\+Engine@{Tetrees\+Engine}}
+\subsubsection{\texorpdfstring{score\+\_\+\+Get\+Points\+From\+Multiplier()}{score\_GetPointsFromMultiplier()}}
+{\footnotesize\ttfamily unsigned Tetrees\+Engine\+::score\+\_\+\+Get\+Points\+From\+Multiplier (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Provides a value to update game score. 
+
+The value returned by this function is a sum of all elements of a Pascal\textquotesingle{}s Triangle row. The row to be chosen within Pascal\textquotesingle{}s Triangle is indicated by the value stored in \hyperlink{structgame__score__t}{game\+Data.g\+Score.multiplier} variable (e.\+g. row\+\_\+2 == 4, row\+\_\+3 == 8, row\+\_\+4 == 16, and so on). \begin{DoxyNote}{Note}
+Multiplier == 0\+:~~$\vert$ 1 $\vert$~~~~~~--$>$ N\+OT A\+P\+P\+L\+I\+C\+A\+B\+LE~\newline
+ Multiplier == 1\+:~~$\vert$ 1 $\vert$ 1 $\vert$~~~~~~--$>$ N\+OT A\+P\+P\+L\+I\+C\+A\+B\+LE~\newline
+ Multiplier == 2\+:~~$\vert$ 1 $\vert$ 2 $\vert$ 1 $\vert$~~~~~~--$>$ 1 + 2 + 1 = 4~\newline
+ Multiplier == 3\+:~~$\vert$ 1 $\vert$ 3 $\vert$ 3 $\vert$ 1 $\vert$~~~~~~--$>$ 1 + 3 + 3 + 1 = 8~\newline
+ Multiplier == 4\+:~~$\vert$ 1 $\vert$ 4 $\vert$ 6 $\vert$ 4 $\vert$ 1 $\vert$~~~~~~--$>$ 1 + 4 + 6 + 4 + 1 = 16~\newline
+
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+The sum of all elements from the specified row within Pascal\textquotesingle{}s Triangle. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTetreesEngine_ad379bf5d98a182411d4d91b12b6ef5ba}\label{classTetreesEngine_ad379bf5d98a182411d4d91b12b6ef5ba}} 
+\index{Tetrees\+Engine@{Tetrees\+Engine}!score\+\_\+\+Handle\+Filled\+Rows@{score\+\_\+\+Handle\+Filled\+Rows}}
+\index{score\+\_\+\+Handle\+Filled\+Rows@{score\+\_\+\+Handle\+Filled\+Rows}!Tetrees\+Engine@{Tetrees\+Engine}}
+\subsubsection{\texorpdfstring{score\+\_\+\+Handle\+Filled\+Rows()}{score\_HandleFilledRows()}}
+{\footnotesize\ttfamily void Tetrees\+Engine\+::score\+\_\+\+Handle\+Filled\+Rows (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Looks for rows filled with \hyperlink{TetreesDefs_8hpp_ad8f0654cf997b7ea7eb14924d0b1ea33}{blocks}. 
+
+Looks for rows completely filled with \hyperlink{TetreesDefs_8hpp_ad8f0654cf997b7ea7eb14924d0b1ea33}{blocks}, marks the filled ones, removes it/them, and increments \hyperlink{structgame__score__t}{game score multiplier}.
+
+\begin{DoxyRemark}{Remarks}
+Accordingly game\textquotesingle{}s rules, all filled lines should be removed and that is the role of this function. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{classTetreesEngine_a31898b1228f8b0381a82871669503b34}\label{classTetreesEngine_a31898b1228f8b0381a82871669503b34}} 
+\index{Tetrees\+Engine@{Tetrees\+Engine}!score\+\_\+\+Handle\+Game\+Over@{score\+\_\+\+Handle\+Game\+Over}}
+\index{score\+\_\+\+Handle\+Game\+Over@{score\+\_\+\+Handle\+Game\+Over}!Tetrees\+Engine@{Tetrees\+Engine}}
+\subsubsection{\texorpdfstring{score\+\_\+\+Handle\+Game\+Over()}{score\_HandleGameOver()}}
+{\footnotesize\ttfamily bool Tetrees\+Engine\+::score\+\_\+\+Handle\+Game\+Over (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Checks game over conditions. 
+
+Checks if the game has reached a state where it can no longer proceed.
+
+The game will be over whenever the pile of \hyperlink{classTetreesEngine_a0978ef1f287f00a8ed5a4af2d680b943}{blocked tetrominoes} reaches the top of the game board. \begin{DoxyReturn}{Returns}
+\textquotesingle{}T\+R\+UE\textquotesingle{} if the game is over. \textquotesingle{}F\+A\+L\+SE\textquotesingle{} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTetreesEngine_aa7d501cb6f73111321e1dadbc140ebc8}\label{classTetreesEngine_aa7d501cb6f73111321e1dadbc140ebc8}} 
+\index{Tetrees\+Engine@{Tetrees\+Engine}!score\+\_\+\+Handle\+Lvl\+Completion@{score\+\_\+\+Handle\+Lvl\+Completion}}
+\index{score\+\_\+\+Handle\+Lvl\+Completion@{score\+\_\+\+Handle\+Lvl\+Completion}!Tetrees\+Engine@{Tetrees\+Engine}}
+\subsubsection{\texorpdfstring{score\+\_\+\+Handle\+Lvl\+Completion()}{score\_HandleLvlCompletion()}}
+{\footnotesize\ttfamily void Tetrees\+Engine\+::score\+\_\+\+Handle\+Lvl\+Completion (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Checks if the level is completed. 
+
+Checks whether the level was completed or not by verifying the actual score and comparing it with the minimum score required to reach the next of the game level (see also \hyperlink{TetreesDefs_8hpp_adb9f7ea75cb8fca17c40bc2afbe399ca}{next\+\_\+lvl\+\_\+score\+\_\+t}). In case minimum score for next level was reached, the function also increments the game level. \begin{DoxyRemark}{Remarks}
+{\bfseries Level 10} is the last and hardest level of the game, thus it won\textquotesingle{}t be incremented. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{classTetreesEngine_a856a9de6a79138a19b638d9287d7bc72}\label{classTetreesEngine_a856a9de6a79138a19b638d9287d7bc72}} 
+\index{Tetrees\+Engine@{Tetrees\+Engine}!score\+\_\+\+Update\+Score@{score\+\_\+\+Update\+Score}}
+\index{score\+\_\+\+Update\+Score@{score\+\_\+\+Update\+Score}!Tetrees\+Engine@{Tetrees\+Engine}}
+\subsubsection{\texorpdfstring{score\+\_\+\+Update\+Score()}{score\_UpdateScore()}}
+{\footnotesize\ttfamily void Tetrees\+Engine\+::score\+\_\+\+Update\+Score (\begin{DoxyParamCaption}\item[{\hyperlink{TetreesDefs_8hpp_a5a3b4d94c69ae85b911a8dca1afedfe0}{score\+\_\+t}}]{cmd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Updates game\textquotesingle{}s score. 
+
+Updates game\textquotesingle{}s score either by resetting or incrementing it. 
+\begin{DoxyParams}{Parameters}
+{\em cmd} & A \hyperlink{TetreesDefs_8hpp_a5a3b4d94c69ae85b911a8dca1afedfe0}{score\+\_\+t} command type dictating in which way the score should be updated. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTetreesEngine_a0978ef1f287f00a8ed5a4af2d680b943}\label{classTetreesEngine_a0978ef1f287f00a8ed5a4af2d680b943}} 
+\index{Tetrees\+Engine@{Tetrees\+Engine}!step\+\_\+\+Block\+Spawned\+Tetromino@{step\+\_\+\+Block\+Spawned\+Tetromino}}
+\index{step\+\_\+\+Block\+Spawned\+Tetromino@{step\+\_\+\+Block\+Spawned\+Tetromino}!Tetrees\+Engine@{Tetrees\+Engine}}
+\subsubsection{\texorpdfstring{step\+\_\+\+Block\+Spawned\+Tetromino()}{step\_BlockSpawnedTetromino()}}
+{\footnotesize\ttfamily void Tetrees\+Engine\+::step\+\_\+\+Block\+Spawned\+Tetromino (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Blocks the falling piece. 
+
+When the \hyperlink{classTetreesEngine_a26435ee2f02d9ba70d9e359745114f6e}{spawned tetromino} reaches a position on game\textquotesingle{}s board where there are no further \hyperlink{TetreesDefs_8hpp_a4d5a793092a473f85b4c1f7faf62afed}{movements} allowed, this function is called blocking the \hyperlink{classTetreesEngine_a26435ee2f02d9ba70d9e359745114f6e}{spawned tetromino} by making it part of the blocked tetrominoes pile within game board, hence it\textquotesingle{}s no longer controllable by the player. \begin{DoxyRemark}{Remarks}
+Moving the \hyperlink{classTetreesEngine_a26435ee2f02d9ba70d9e359745114f6e}{falling piece} is allowed while it doesn\textquotesingle{}t reaches the bottom of the game board or collides with the pile of previously blocked tetrominoes. 
+\end{DoxyRemark}
+\mbox{\Hypertarget{classTetreesEngine_aa593f5f688e984a2cdbbf83b162d00a2}\label{classTetreesEngine_aa593f5f688e984a2cdbbf83b162d00a2}} 
+\index{Tetrees\+Engine@{Tetrees\+Engine}!step\+\_\+\+Border\+Trespassing\+Check@{step\+\_\+\+Border\+Trespassing\+Check}}
+\index{step\+\_\+\+Border\+Trespassing\+Check@{step\+\_\+\+Border\+Trespassing\+Check}!Tetrees\+Engine@{Tetrees\+Engine}}
+\subsubsection{\texorpdfstring{step\+\_\+\+Border\+Trespassing\+Check()}{step\_BorderTrespassingCheck()}}
+{\footnotesize\ttfamily bool Tetrees\+Engine\+::step\+\_\+\+Border\+Trespassing\+Check (\begin{DoxyParamCaption}\item[{\hyperlink{TetreesDefs_8hpp_a5dbb1ebfe8a9b95707ac161d3549ed8a}{limit\+\_\+t}}]{border }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Detects if a movement infringes game board\textquotesingle{}s border limits. 
+
+Checks if the movement to be performed by the \hyperlink{classTetreesEngine_a26435ee2f02d9ba70d9e359745114f6e}{spawned tetromino} won\textquotesingle{}t trespass the \hyperlink{classTetreesEngine_a37d082a7816d6731b2703dd6d1a1cb97}{game board\textquotesingle{}s} borders limits, i.\+e. if it won\textquotesingle{}t go off the visible playing field area.
+
+A border trespass happens when any of the \hyperlink{TetreesDefs_8hpp_ad8f0654cf997b7ea7eb14924d0b1ea33}{blocks} composing the \hyperlink{classTetreesEngine_a26435ee2f02d9ba70d9e359745114f6e}{spawned tetromino} goes beyond one of the \hyperlink{TetreesDefs_8hpp_a5dbb1ebfe8a9b95707ac161d3549ed8a}{border limits} of the \hyperlink{classTetreesEngine_a37d082a7816d6731b2703dd6d1a1cb97}{game board}. 
+\begin{DoxyParams}{Parameters}
+{\em border} & The \hyperlink{TetreesDefs_8hpp_a5dbb1ebfe8a9b95707ac161d3549ed8a}{border limit} side to be checked. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily T\+R\+UE} if a trespass occurs. {\ttfamily F\+A\+L\+SE} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTetreesEngine_a25f8b896240ce2d2a34b1d968e75b5b6}\label{classTetreesEngine_a25f8b896240ce2d2a34b1d968e75b5b6}} 
+\index{Tetrees\+Engine@{Tetrees\+Engine}!step\+\_\+\+Detect\+Collision@{step\+\_\+\+Detect\+Collision}}
+\index{step\+\_\+\+Detect\+Collision@{step\+\_\+\+Detect\+Collision}!Tetrees\+Engine@{Tetrees\+Engine}}
+\subsubsection{\texorpdfstring{step\+\_\+\+Detect\+Collision()}{step\_DetectCollision()}}
+{\footnotesize\ttfamily bool Tetrees\+Engine\+::step\+\_\+\+Detect\+Collision (\begin{DoxyParamCaption}\item[{\hyperlink{TetreesDefs_8hpp_a4d5a793092a473f85b4c1f7faf62afed}{step\+\_\+t}}]{step }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Detects possible collisions when \hyperlink{classTetreesEngine_a26435ee2f02d9ba70d9e359745114f6e}{spawned tetromino}\textquotesingle{}s position changes. 
+
+As a key piece of code to the \hyperlink{classTetreesEngine}{Tetrees\+Engine} class, this function analyzes whether a movement to be made by the \hyperlink{classTetreesEngine_a26435ee2f02d9ba70d9e359745114f6e}{spawned tetromino} will or will not result in a collision.
+
+When player tries to execute one of the \hyperlink{TetreesDefs_8hpp_a4d5a793092a473f85b4c1f7faf62afed}{steps} on the \hyperlink{classTetreesEngine_a26435ee2f02d9ba70d9e359745114f6e}{spawned tetromino}, this function is called in order to prevent any illegal movement like an overlapping or a moving beyond game board\textquotesingle{}s border limits. 
+\begin{DoxyParams}{Parameters}
+{\em step} & The \hyperlink{TetreesDefs_8hpp_a4d5a793092a473f85b4c1f7faf62afed}{step\+\_\+t} to be validated. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily T\+R\+UE} if the movement is allowed. {\ttfamily F\+A\+L\+SE} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTetreesEngine_a94d5fd25eec05994f02bb514496ec66d}\label{classTetreesEngine_a94d5fd25eec05994f02bb514496ec66d}} 
+\index{Tetrees\+Engine@{Tetrees\+Engine}!step\+\_\+\+Get\+Tetromino@{step\+\_\+\+Get\+Tetromino}}
+\index{step\+\_\+\+Get\+Tetromino@{step\+\_\+\+Get\+Tetromino}!Tetrees\+Engine@{Tetrees\+Engine}}
+\subsubsection{\texorpdfstring{step\+\_\+\+Get\+Tetromino()}{step\_GetTetromino()}}
+{\footnotesize\ttfamily \hyperlink{structpiece__t}{piece\+\_\+t} Tetrees\+Engine\+::step\+\_\+\+Get\+Tetromino (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Generates a random tetromino. 
+
+Randomly generates a \hyperlink{structpiece__t}{tetromino} accordingly to the \hyperlink{TetreesDefs_8hpp_t_prop}{spawn proportion} per level. \begin{DoxyReturn}{Returns}
+A random \hyperlink{structpiece__t}{tetromino} to be stored as the \hyperlink{classTetreesEngine_a44c902481f5d8a72ca8a78d24f5c3a33}{next tetromino} to spawn. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTetreesEngine_a270b227c9dfbfb72513c6cdfdd910d1b}\label{classTetreesEngine_a270b227c9dfbfb72513c6cdfdd910d1b}} 
+\index{Tetrees\+Engine@{Tetrees\+Engine}!step\+\_\+\+Overlapping\+Check@{step\+\_\+\+Overlapping\+Check}}
+\index{step\+\_\+\+Overlapping\+Check@{step\+\_\+\+Overlapping\+Check}!Tetrees\+Engine@{Tetrees\+Engine}}
+\subsubsection{\texorpdfstring{step\+\_\+\+Overlapping\+Check()}{step\_OverlappingCheck()}}
+{\footnotesize\ttfamily bool Tetrees\+Engine\+::step\+\_\+\+Overlapping\+Check (\begin{DoxyParamCaption}\item[{unsigned}]{board\+Pos\+Row,  }\item[{unsigned}]{board\+Pos\+Col }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Detects possible overlapping. 
+
+Checks if the \hyperlink{classTetreesEngine_a26435ee2f02d9ba70d9e359745114f6e}{spawned tetromino} will somehow collide with another tetromino already blocked on the game board.
+
+A possible collision is verified by using the given position at \hyperlink{classTetreesEngine_a37d082a7816d6731b2703dd6d1a1cb97}{game board} (board\+Pos\+Row and board\+Pos\+Col) as the start point (0,0) and, from this point on, comparing the surrounding area (\hyperlink{TetreesDefs_8hpp_a7c8699d7ca48189b748ba8f94eb9d515}{cells}) with \hyperlink{classTetreesEngine_a26435ee2f02d9ba70d9e359745114f6e}{spawned tetromino} position in the \hyperlink{classTetreesEngine_a37d082a7816d6731b2703dd6d1a1cb97}{game board}. 
+\begin{DoxyParams}{Parameters}
+{\em board\+Pos\+Row} & The row at the \hyperlink{classTetreesEngine_a37d082a7816d6731b2703dd6d1a1cb97}{game board} to be used as start point ({\itshape {\bfseries Y-\/axis}}). \\
+\hline
+{\em board\+Pos\+Col} & The column at the \hyperlink{classTetreesEngine_a37d082a7816d6731b2703dd6d1a1cb97}{game board} to be used as start point ({\itshape {\bfseries X-\/axis}}). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily T\+R\+UE} if a collision occurs. {\ttfamily F\+A\+L\+SE} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTetreesEngine_a626d60fa8adb2dd024016b5cfed4f6ee}\label{classTetreesEngine_a626d60fa8adb2dd024016b5cfed4f6ee}} 
+\index{Tetrees\+Engine@{Tetrees\+Engine}!step\+\_\+\+Spawned\+Tetromino\+\_\+\+Drop@{step\+\_\+\+Spawned\+Tetromino\+\_\+\+Drop}}
+\index{step\+\_\+\+Spawned\+Tetromino\+\_\+\+Drop@{step\+\_\+\+Spawned\+Tetromino\+\_\+\+Drop}!Tetrees\+Engine@{Tetrees\+Engine}}
+\subsubsection{\texorpdfstring{step\+\_\+\+Spawned\+Tetromino\+\_\+\+Drop()}{step\_SpawnedTetromino\_Drop()}}
+{\footnotesize\ttfamily void Tetrees\+Engine\+::step\+\_\+\+Spawned\+Tetromino\+\_\+\+Drop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Execute a \hyperlink{TetreesDefs_8hpp_a4d5a793092a473f85b4c1f7faf62afeda6df5f4c213c30a4ad91af7a5d10daa8e}{drop step}. 
+
+Move down the \hyperlink{classTetreesEngine_a26435ee2f02d9ba70d9e359745114f6e}{spawned tetromino}, incrementing \hyperlink{structpiece__t}{spawned\+Tetromino.board\+Row} by one. \mbox{\Hypertarget{classTetreesEngine_a90d1d65e12fb37850962305d8bc3b7a3}\label{classTetreesEngine_a90d1d65e12fb37850962305d8bc3b7a3}} 
+\index{Tetrees\+Engine@{Tetrees\+Engine}!step\+\_\+\+Spawned\+Tetromino\+\_\+\+Rotate@{step\+\_\+\+Spawned\+Tetromino\+\_\+\+Rotate}}
+\index{step\+\_\+\+Spawned\+Tetromino\+\_\+\+Rotate@{step\+\_\+\+Spawned\+Tetromino\+\_\+\+Rotate}!Tetrees\+Engine@{Tetrees\+Engine}}
+\subsubsection{\texorpdfstring{step\+\_\+\+Spawned\+Tetromino\+\_\+\+Rotate()}{step\_SpawnedTetromino\_Rotate()}}
+{\footnotesize\ttfamily void Tetrees\+Engine\+::step\+\_\+\+Spawned\+Tetromino\+\_\+\+Rotate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Execute a \hyperlink{TetreesDefs_8hpp_a4d5a793092a473f85b4c1f7faf62afeda22387bf41fe41a5ac2b7b74ab8f5c342}{rotate step}. 
+
+Rotates the \hyperlink{classTetreesEngine_a26435ee2f02d9ba70d9e359745114f6e}{spawned tetromino} by applying matrix-\/related operations (\hyperlink{classMatrix2D_a788abe5e1fbd6a1fbd0d445aca4f8300}{transposing} and \hyperlink{classMatrix2D_a2845ff86d7f24ccd338b42b2a9cbe017}{rotating}) to the tetromino\textquotesingle{}s \hyperlink{structpiece__t_a3c8f9c2e51c6bab728e564143c439746}{shape}. \mbox{\Hypertarget{classTetreesEngine_ab7169a28a06a867ada69a01a580fb2ad}\label{classTetreesEngine_ab7169a28a06a867ada69a01a580fb2ad}} 
+\index{Tetrees\+Engine@{Tetrees\+Engine}!step\+\_\+\+Spawned\+Tetromino\+\_\+\+Swerve\+Left@{step\+\_\+\+Spawned\+Tetromino\+\_\+\+Swerve\+Left}}
+\index{step\+\_\+\+Spawned\+Tetromino\+\_\+\+Swerve\+Left@{step\+\_\+\+Spawned\+Tetromino\+\_\+\+Swerve\+Left}!Tetrees\+Engine@{Tetrees\+Engine}}
+\subsubsection{\texorpdfstring{step\+\_\+\+Spawned\+Tetromino\+\_\+\+Swerve\+Left()}{step\_SpawnedTetromino\_SwerveLeft()}}
+{\footnotesize\ttfamily void Tetrees\+Engine\+::step\+\_\+\+Spawned\+Tetromino\+\_\+\+Swerve\+Left (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Execute a \hyperlink{TetreesDefs_8hpp_a4d5a793092a473f85b4c1f7faf62afeda3b27946656fc3bf9470a8b7761cfa8e1}{left swerve step}. 
+
+Moves the \hyperlink{classTetreesEngine_a26435ee2f02d9ba70d9e359745114f6e}{spawned tetromino} to the left, decrementing \hyperlink{structpiece__t}{spawned\+Tetromino.board\+Col} by one. \mbox{\Hypertarget{classTetreesEngine_a46e1950877c8b8aa7e988ca3de14ad18}\label{classTetreesEngine_a46e1950877c8b8aa7e988ca3de14ad18}} 
+\index{Tetrees\+Engine@{Tetrees\+Engine}!step\+\_\+\+Spawned\+Tetromino\+\_\+\+Swerve\+Right@{step\+\_\+\+Spawned\+Tetromino\+\_\+\+Swerve\+Right}}
+\index{step\+\_\+\+Spawned\+Tetromino\+\_\+\+Swerve\+Right@{step\+\_\+\+Spawned\+Tetromino\+\_\+\+Swerve\+Right}!Tetrees\+Engine@{Tetrees\+Engine}}
+\subsubsection{\texorpdfstring{step\+\_\+\+Spawned\+Tetromino\+\_\+\+Swerve\+Right()}{step\_SpawnedTetromino\_SwerveRight()}}
+{\footnotesize\ttfamily void Tetrees\+Engine\+::step\+\_\+\+Spawned\+Tetromino\+\_\+\+Swerve\+Right (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Execute a \hyperlink{TetreesDefs_8hpp_a4d5a793092a473f85b4c1f7faf62afeda86fdea6e730f10b7d265b067552624d3}{right swerve step}. 
+
+Moves the \hyperlink{classTetreesEngine_a26435ee2f02d9ba70d9e359745114f6e}{spawned tetromino} to the right, incrementing \hyperlink{structpiece__t}{spawned\+Tetromino.board\+Col} by one. \mbox{\Hypertarget{classTetreesEngine_a446196c2260e2ce2ac0d18848ee6b636}\label{classTetreesEngine_a446196c2260e2ce2ac0d18848ee6b636}} 
+\index{Tetrees\+Engine@{Tetrees\+Engine}!step\+\_\+\+Spawn\+Next\+Tetromino@{step\+\_\+\+Spawn\+Next\+Tetromino}}
+\index{step\+\_\+\+Spawn\+Next\+Tetromino@{step\+\_\+\+Spawn\+Next\+Tetromino}!Tetrees\+Engine@{Tetrees\+Engine}}
+\subsubsection{\texorpdfstring{step\+\_\+\+Spawn\+Next\+Tetromino()}{step\_SpawnNextTetromino()}}
+{\footnotesize\ttfamily void Tetrees\+Engine\+::step\+\_\+\+Spawn\+Next\+Tetromino (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Drops the next tetromino. 
+
+Drops the next tetromino. The one that appears inside the \hyperlink{TetreesUI_8cpp_aac997784ac88b494498d6e08d6fe62d5}{next tetromino area}.
+
+This function simply updates the data stored in \hyperlink{classTetreesEngine_a26435ee2f02d9ba70d9e359745114f6e}{spawned\+Tetromino} with the one stored in \hyperlink{classTetreesEngine_a44c902481f5d8a72ca8a78d24f5c3a33}{next\+Tetromino}, then it generates another tetromino data to be stored in \hyperlink{classTetreesEngine_a44c902481f5d8a72ca8a78d24f5c3a33}{next\+Tetromino}. \mbox{\Hypertarget{classTetreesEngine_a9aa3eec9561623f77eab13298ddad13c}\label{classTetreesEngine_a9aa3eec9561623f77eab13298ddad13c}} 
+\index{Tetrees\+Engine@{Tetrees\+Engine}!update\+Scene@{update\+Scene}}
+\index{update\+Scene@{update\+Scene}!Tetrees\+Engine@{Tetrees\+Engine}}
+\subsubsection{\texorpdfstring{update\+Scene()}{updateScene()}}
+{\footnotesize\ttfamily void Tetrees\+Engine\+::update\+Scene (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Update game scene/frame. 
+
+Updates the color data within \hyperlink{classTetreesEngine_aeade477c0bc2eaaa894ebbdaca93584e}{scene} by copying the color data from \hyperlink{classTetreesEngine_a37d082a7816d6731b2703dd6d1a1cb97}{game\+Board} P\+L\+US color data from \hyperlink{classTetreesEngine_a26435ee2f02d9ba70d9e359745114f6e}{spawned\+Tetromino}, reuniting this way the necessary data to \hyperlink{classTetreesUI_a357ae7240cc5f35b5d61244e7a6bcfe3}{draw} a game scene on the screen. 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classTetreesEngine_a37d082a7816d6731b2703dd6d1a1cb97}\label{classTetreesEngine_a37d082a7816d6731b2703dd6d1a1cb97}} 
+\index{Tetrees\+Engine@{Tetrees\+Engine}!game\+Board@{game\+Board}}
+\index{game\+Board@{game\+Board}!Tetrees\+Engine@{Tetrees\+Engine}}
+\subsubsection{\texorpdfstring{game\+Board}{gameBoard}}
+{\footnotesize\ttfamily \hyperlink{classMatrix2D}{Matrix2D}$<$ int $>$ Tetrees\+Engine\+::game\+Board\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+A \hyperlink{classMatrix2D}{Matrix2D} that represents the game\+Board containing O\+N\+LY the already \hyperlink{classTetreesEngine_a0978ef1f287f00a8ed5a4af2d680b943}{blocked tetrominoes}. Each {\bfseries B\+L\+O\+CK} \char`\"{}element\char`\"{} of this matrix contains data that refers to a \hyperlink{TetreesDefs_8hpp_a8ba5fbce2446135735693ab60c896bbd}{color}. \mbox{\Hypertarget{classTetreesEngine_afa356b8bb38e8918400e7175d6fbbd2e}\label{classTetreesEngine_afa356b8bb38e8918400e7175d6fbbd2e}} 
+\index{Tetrees\+Engine@{Tetrees\+Engine}!game\+Data@{game\+Data}}
+\index{game\+Data@{game\+Data}!Tetrees\+Engine@{Tetrees\+Engine}}
+\subsubsection{\texorpdfstring{game\+Data}{gameData}}
+{\footnotesize\ttfamily \hyperlink{structgame__data__t}{game\+\_\+data\+\_\+t} Tetrees\+Engine\+::game\+Data\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+A struct containing several data related to the game. \mbox{\Hypertarget{classTetreesEngine_a03ea87d7cefe7b216977c9123fc6ef60}\label{classTetreesEngine_a03ea87d7cefe7b216977c9123fc6ef60}} 
+\index{Tetrees\+Engine@{Tetrees\+Engine}!game\+Levels@{game\+Levels}}
+\index{game\+Levels@{game\+Levels}!Tetrees\+Engine@{Tetrees\+Engine}}
+\subsubsection{\texorpdfstring{game\+Levels}{gameLevels}}
+{\footnotesize\ttfamily \hyperlink{structgame__level__t}{game\+\_\+level\+\_\+t} Tetrees\+Engine\+::game\+Levels\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+An array of \hyperlink{structgame__level__t}{game\+\_\+level\+\_\+t} containing a sample of each level and related info. \mbox{\Hypertarget{classTetreesEngine_a01bf1d438236d5f57129ffb22adf59ce}\label{classTetreesEngine_a01bf1d438236d5f57129ffb22adf59ce}} 
+\index{Tetrees\+Engine@{Tetrees\+Engine}!game\+UI@{game\+UI}}
+\index{game\+UI@{game\+UI}!Tetrees\+Engine@{Tetrees\+Engine}}
+\subsubsection{\texorpdfstring{game\+UI}{gameUI}}
+{\footnotesize\ttfamily \hyperlink{classTetreesUI}{Tetrees\+UI}$\ast$ Tetrees\+Engine\+::game\+UI\hspace{0.3cm}{\ttfamily [private]}}
+
+A \hyperlink{classTetreesUI}{Tetrees\+UI} object for controlling user interface and other games elements. \mbox{\Hypertarget{classTetreesEngine_a44c902481f5d8a72ca8a78d24f5c3a33}\label{classTetreesEngine_a44c902481f5d8a72ca8a78d24f5c3a33}} 
+\index{Tetrees\+Engine@{Tetrees\+Engine}!next\+Tetromino@{next\+Tetromino}}
+\index{next\+Tetromino@{next\+Tetromino}!Tetrees\+Engine@{Tetrees\+Engine}}
+\subsubsection{\texorpdfstring{next\+Tetromino}{nextTetromino}}
+{\footnotesize\ttfamily \hyperlink{structpiece__t}{piece\+\_\+t} Tetrees\+Engine\+::next\+Tetromino\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+The next piece to be spawned. It is showed inside the small \hyperlink{TetreesUI_8cpp_aac997784ac88b494498d6e08d6fe62d5}{rectangular area} upper right the playing field. \mbox{\Hypertarget{classTetreesEngine_aeade477c0bc2eaaa894ebbdaca93584e}\label{classTetreesEngine_aeade477c0bc2eaaa894ebbdaca93584e}} 
+\index{Tetrees\+Engine@{Tetrees\+Engine}!scene@{scene}}
+\index{scene@{scene}!Tetrees\+Engine@{Tetrees\+Engine}}
+\subsubsection{\texorpdfstring{scene}{scene}}
+{\footnotesize\ttfamily \hyperlink{classMatrix2D}{Matrix2D}$<$ int $>$ Tetrees\+Engine\+::scene\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+A \hyperlink{classMatrix2D}{Matrix2D} containing all data present at \hyperlink{classTetreesEngine_a37d082a7816d6731b2703dd6d1a1cb97}{game\+Board}, P\+L\+US the \hyperlink{TetreesDefs_8hpp_a8ba5fbce2446135735693ab60c896bbd}{color} data related to the \hyperlink{classTetreesEngine_a26435ee2f02d9ba70d9e359745114f6e}{falling tetromino}. A frame to be \hyperlink{classTetreesUI_a357ae7240cc5f35b5d61244e7a6bcfe3}{drew} on screen. \mbox{\Hypertarget{classTetreesEngine_a26435ee2f02d9ba70d9e359745114f6e}\label{classTetreesEngine_a26435ee2f02d9ba70d9e359745114f6e}} 
+\index{Tetrees\+Engine@{Tetrees\+Engine}!spawned\+Tetromino@{spawned\+Tetromino}}
+\index{spawned\+Tetromino@{spawned\+Tetromino}!Tetrees\+Engine@{Tetrees\+Engine}}
+\subsubsection{\texorpdfstring{spawned\+Tetromino}{spawnedTetromino}}
+{\footnotesize\ttfamily \hyperlink{structpiece__t}{piece\+\_\+t} Tetrees\+Engine\+::spawned\+Tetromino\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+The piece that is being controlled by player while falls. \mbox{\Hypertarget{classTetreesEngine_a07ae13fb62e86b45c834947243a913df}\label{classTetreesEngine_a07ae13fb62e86b45c834947243a913df}} 
+\index{Tetrees\+Engine@{Tetrees\+Engine}!tetrominoes@{tetrominoes}}
+\index{tetrominoes@{tetrominoes}!Tetrees\+Engine@{Tetrees\+Engine}}
+\subsubsection{\texorpdfstring{tetrominoes}{tetrominoes}}
+{\footnotesize\ttfamily \hyperlink{structpiece__t}{piece\+\_\+t} Tetrees\+Engine\+::tetrominoes\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+An array of \hyperlink{structpiece__t}{piece\+\_\+t} containing a sample of each of the 7 tetrominoes. \mbox{\Hypertarget{classTetreesEngine_ac4d6256982306ab8a02e18793cb803c0}\label{classTetreesEngine_ac4d6256982306ab8a02e18793cb803c0}} 
+\index{Tetrees\+Engine@{Tetrees\+Engine}!utils@{utils}}
+\index{utils@{utils}!Tetrees\+Engine@{Tetrees\+Engine}}
+\subsubsection{\texorpdfstring{utils}{utils}}
+{\footnotesize\ttfamily \hyperlink{classTetreesUtils}{Tetrees\+Utils}$\ast$ Tetrees\+Engine\+::utils\hspace{0.3cm}{\ttfamily [private]}}
+
+A \hyperlink{classTetreesUtils}{Tetrees\+Utils} object that provides utility functions. 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
 Headers/\hyperlink{TetreesEngine_8hpp}{Tetrees\+Engine.\+hpp}\item 
-Source/Tetrees\+Engine.\+cpp\end{DoxyCompactItemize}
+Source/\hyperlink{TetreesEngine_8cpp}{Tetrees\+Engine.\+cpp}\end{DoxyCompactItemize}

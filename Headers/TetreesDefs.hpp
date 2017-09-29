@@ -27,22 +27,22 @@
  * @name Fundamental Values
  * @{
  */
+#define __CELL__ /**< A cell is the space occupied by a @ref TetreesDefs.__BLOCK__ "block".*/
+#define __BLOCK__ /**< Blocks are the smallest four-sided polygon units that compose a @ref tetromino_t "tetromino".*/
 const double BLOCK_SIDE_DIM = 30; /**<
- * The size (in pixels) of each side of a block.
- * @remark Blocks are the smaller cubes that
- * together compose a tetromino.*/
+ * The size (in pixels) of each side of a block.*/
 const double TETROMINO_LINE_WIDTH = 4; 	/**< Tetromino's line thickness (in pixels).*/
-const int NUM_OF_TETROMINOES = 7; 		/**< The seven tetrominoes' shapes: I, O, T, S, Z, J and L.*/
+const int NUM_OF_TETROMINOES = 7; 		/**< The seven tetrominoes fundamental shapes: I, O, T, S, Z, J and L.*/
 const int NUM_OF_LEVELS = 10; 			/**< Number of game levels.*/
 const int NUM_OF_COLORS = 11; 			/**< Number of colors mapped to @ref rgb_t.*/
-const int PLAY_FIELD_WIDTH = 12; 		/**< The playing area width (in cells). @remark A cell is the space occupied by a @ref BLOCK_SIDE_DIM "block".*/
+const int PLAY_FIELD_WIDTH = 12; 		/**< The playing area width (in cells).*/
 const int PLAY_FIELD_HEIGHT = 22; /**<
  * The playing area height (in cells).
  * @remark A cell is the space occupied
- * by a @ref BLOCK_SIDE_DIM "block".*/
+ * by a @ref TetreesDefs.__BLOCK__ "block".*/
 const int HIDDEN_CELLS_OFFSET = 1 * BLOCK_SIDE_DIM;	/**<
  * An offset function to compensate the
- * @ref PLAY_FIELD_WIDTH "cells" that are
+ * @ref TetreesDefs.__CELL__ "cells" that are
  * outside the boundaries of the game board's
  * visible playing area.
  */
@@ -59,22 +59,22 @@ const int NEXT_TETROMINO_FIELD_CELL_HEIGHT = 4 * BLOCK_SIDE_DIM;	/**< Calculates
 //MACROS
 #define SCENE_X(pos) ((pos * BLOCK_SIDE_DIM) - HIDDEN_CELLS_OFFSET + (TETROMINO_LINE_WIDTH / 2)) /**<
  * A function to find the exact X = 0 position (in pixels) of
- * a given position (@ref PLAY_FIELD_WIDTH "cell") in the playing field.
+ * a given position (@ref TetreesDefs.__CELL__ "cell") in the playing field.
  * @warning This function uses screen coordinates.
  */
 #define SCENE_Y(pos) SCENE_X(pos) /**<
  * A function to find the exact Y = 0 position (in pixels) of
- * a given position (@ref PLAY_FIELD_WIDTH "cell") in the playing field.
+ * a given position (@ref TetreesDefs.__CELL__ "cell") in the playing field.
  * @warning This function uses screen coordinates.
  */
 #define NEXT_TETROMINO_X(pos) ((pos * BLOCK_SIDE_DIM) + (TETROMINO_LINE_WIDTH / 2)) /**<
  * A function to find the exact X = 0 position (in pixels) of
- * a given position (@ref PLAY_FIELD_WIDTH "cell") in the next tetromino field.
+ * a given position (@ref TetreesDefs.__CELL__ "cell") in the next tetromino field.
  * @warning This function uses screen coordinates.
  */
 #define NEXT_TETROMINO_Y(pos) NEXT_TETROMINO_X(pos) /**<
  * A function to find the exact Y = 0 position (in pixels) of
- * a given position (@ref PLAY_FIELD_WIDTH "cell") in the next tetromino field.
+ * a given position (@ref TetreesDefs.__CELL__ "cell") in the next tetromino field.
  * @warning This function uses screen coordinates.
  */
 #define CSS_FILE_PATH "Misc/TetreesStyle.css"
@@ -83,19 +83,19 @@ const int _R_ = 0;
 const int _G_ = 1;
 const int _B_ = 2;
 
-const int EMPTY_CELL = 0;
-const int EMPTY = 0;
+const int EMPTY_CELL = 0; /**< Used to represent a free @ref TetreesDefs.__CELL__ within @ref TetreesEngine.gameBoard "game board".*/
+const int EMPTY = 0; /**< Used to represent a position within a @ref piece_t.shape "tetromino's shape" not filled by a @ref TetreesDefs.__BLOCK__ "block".*/
 
 /// Game steps.
 /**
- * Available commands to be sent by user to the
- * game engine by pressing a key during gameplay.
+ * Commands issued to game engine in order to
+ * modify the game scene.
  */
 enum step_t{
-	STEP_DROP = 0,
-	STEP_ROTATE,
-	STEP_SWERVE_RIGHT,
-	STEP_SWERVE_LEFT
+	STEP_DROP = 0, /**< Increment the @ref TetreesEngine::spawnedTetromino "spawned tetromino" position by one @ref TetreesDefs.__BLOCK__ "block" downwards.*/
+	STEP_ROTATE, /**< Rotate the @ref TetreesEngine::spawnedTetromino "spawned tetromino".*/
+	STEP_SWERVE_RIGHT, /**< Increment the @ref TetreesEngine::spawnedTetromino "spawned tetromino" position by one @ref TetreesDefs.__BLOCK__ "block" rightwards.*/
+	STEP_SWERVE_LEFT /**< Increment the @ref TetreesEngine::spawnedTetromino "spawned tetromino" position by one @ref TetreesDefs.__BLOCK__ "block" leftwards.*/
 };
 
 /// Tetrominoes types.
@@ -151,8 +151,8 @@ enum level_speed_t : int{
 	LVL_10_SPEED = 150
 };
 
-/**@{*/
 /**
+ * @anchor t_prop
  * @name TETROMINOES_PROPORTION
  *
  * Tetrominoes spawning proportion per level where the
@@ -175,6 +175,7 @@ enum level_speed_t : int{
  *
  * @remark Zero-filled arrays means no proportion at all. Totally
  * random spawning!
+ * @{
  */
 
 //											 I,O,T,S,Z,J,L
@@ -228,8 +229,8 @@ enum color_t : int{
 
 /// Game board limits.
 /**
- * The game board is divided into cells. This enum
- * holds game board's border limits (in cells), which are
+ * The game board is divided into cells (same as @ref TetreesDefs.__BLOCK__ "blocks").
+ * This enum holds game board's border limits (in cells), which are
  * widely used by game engine (and UI as well) during the
  * the whole game processing.
  */
@@ -245,9 +246,9 @@ enum limit_t : unsigned{
 /// Tetrominoes rotation positions.
 /**
  * Used to track the exact rotation position in which the
- * falling tetromino finds itself. It enables game engine to
- * know exactly which is the next rotation to be applied to
- * the tetromino when/if the rotation key (KEY_UP) is pressed.
+ * @ref TetreesEngine::spawnedTetromino "spawned tetromino" finds itself.
+ * It enables game engine to know exactly which is the next rotation
+ * to be performed in case the rotation command (@ref STEP_ROTATE) is issued.
  */
 enum rpos_t: int{
 	RPOS_0 = 0,
@@ -272,10 +273,13 @@ enum cmd_t: int{
  * interaction between the game engine and the UI.
  */
 enum game_state_t: int{
-	GAME_STATE_NOT_STARTED = 0,
-	GAME_STATE_PLAYING,
- 	GAME_STATE_PAUSED,
-	GAME_STATE_GAME_OVER,
+	GAME_STATE_NOT_STARTED = 0, /**< When game hasn't started yet, either if it has
+										just been executed or if user reseted it.*/
+	GAME_STATE_PLAYING, /**< When the game is actually being played. A gameplay state.*/
+ 	GAME_STATE_PAUSED, /**< When the game is paused.*/
+	GAME_STATE_GAME_OVER, /**< When the game is over, i.e. when the pile of
+						tetrominoes has reached the top of the game's
+						@ref TetreesEngine::gameBoard "playing area".*/
 };
 
 /// User interface states.
@@ -598,10 +602,10 @@ struct piece_t{
 	color_t color; 			/**< The tetromino color.*/
 	tetromino_t type; 		/**< The tetromino type/shape.*/
 	rpos_t rpos;			/**< The tetromino rotation position.*/
-	unsigned boardCol;		/**< Column position of the tetromino on the game board.*/
-	unsigned boardRow;		/**< Row position of the tetromino on the game board */
+	unsigned boardCol;		/**< Column position of tetromino's shape first element (0,0) within the game board.*/
+	unsigned boardRow;		/**< Row position of tetromino's shape first element (0,0) within the game board */
 	bool reachedBottom;		/**< True when the tetromino is blocked at game board's bottom.*/
-	Matrix2D<int> shape;	/**< Tetromino's shape data.*/
+	Matrix2D<int> shape;	/**< Tetromino's shape related @ref TetreesUtils::startTetrominoesArray "data".*/
 };
 
 /// RGB elements of a color.
@@ -621,8 +625,9 @@ struct rgb_t{
  * score system.
  */
 struct game_score_t{
-	unsigned score;         /**< Game score.*/
-	unsigned multiplier;    /**< Score multiplier.*/
+	unsigned score;         /**< The game score. Earn more. Beat your friends. Beat the game (if you're think you are up to the challenge)!*/
+	unsigned multiplier;    /**< Score multiplier. The higher the multiplier the more points you will earn.
+	@note The multiplier is increased by removing multiple lines of tetrominoes simultaneously.*/
 };
 
 /// Game level data type.
@@ -641,9 +646,9 @@ struct game_level_t{
  * Stores several data related to game itself.
  */
 struct game_data_t{
-	game_state_t gState;	/**< Current game state (@see game_state_t).*/
-	game_score_t gScore;	/**< Current game score related data (@see game_score_t).*/
-	game_level_t gLevel;	/**< Current game level related data (@see game_level_t).*/
+	game_state_t gState;	/**< Current game state. @see game_state_t.*/
+	game_score_t gScore;	/**< Current game score related data. @see game_score_t.*/
+	game_level_t gLevel;	/**< Current game level related data. @see game_level_t.*/
 };
 
 /// Type to control UI animations.

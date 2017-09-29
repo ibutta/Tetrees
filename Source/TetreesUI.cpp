@@ -5,6 +5,11 @@
  *      Author: Igor S. Buttarello
  */
 
+/**
+ * @file TetreesUI.cpp
+ * @brief The source file containing the TetreesUI class' member functions implementation.
+ */
+
 #include <TetreesEngine.hpp>
 #include <TetreesUI.hpp>
 #include <TetreesUtils.hpp>
@@ -27,7 +32,7 @@ GtkWidget *scoreLabel;
 GtkWidget *scoreFrame;
 GtkWidget *scoreTextView;
 GtkWidget *lvlLabel;
-GtkWidget *nextTetrominoDrawingArea;
+GtkWidget *nextTetrominoDrawingArea; /**< Shows the @ref TetreesEngine::nextTetromino "next tetromino" to be spawned.*/
 
 GtkTextBuffer 	*scoreTextBuf;
 GtkTextIter		scoreIter;
@@ -107,6 +112,9 @@ gboolean TetreesUI::onDrawNextTetrominoDrawingArea(
 
 }
 
+/**
+ * Draw the scene.
+ */
 void TetreesUI::drawScene(cairo_t* cr)
 {
 

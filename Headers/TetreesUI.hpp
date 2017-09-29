@@ -45,6 +45,7 @@ private:
 	static void onPlayClicked(GtkButton*);
 	static void onPauseClicked(GtkButton*);
 	static void onResetClicked(GtkButton*);
+	/// Draws gameplay actual scene.
 	static void drawScene(cairo_t*);
 	static void drawPausedScene(cairo_t*);
 	static void drawNextTetromino(cairo_t*);

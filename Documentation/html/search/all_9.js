@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['operator_28_29',['operator()',['../classMatrix2D.html#aa9a6df1e7cc653d635baedc659ea00f7',1,'Matrix2D::operator()(unsigned r, unsigned c) const'],['../classMatrix2D.html#a448fd38c905dd2879244ac345c76b14e',1,'Matrix2D::operator()(unsigned r, unsigned c)'],['../classMatrix2D.html#ac5b60589d9d867150e045887aaebe5b0',1,'Matrix2D::operator()(unsigned i) const'],['../classMatrix2D.html#afebec0a3fc73a157fe8044416fb6d0b3',1,'Matrix2D::operator()(unsigned i)']]],
-  ['operator_3d',['operator=',['../classMatrix2D.html#a9c51e9afbf286db8aa8c08a523bbb46c',1,'Matrix2D']]]
+  ['level_5fnum_5ft',['level_num_t',['../TetreesDefs_8hpp.html#ac7faaacc16f5e7962108661dfc411257',1,'TetreesDefs.hpp']]],
+  ['level_5fspeed_5ft',['level_speed_t',['../TetreesDefs_8hpp.html#a56295b647dadb94aa1662b267e1c9b6e',1,'TetreesDefs.hpp']]],
+  ['limit_5ft',['limit_t',['../TetreesDefs_8hpp.html#a5dbb1ebfe8a9b95707ac161d3549ed8a',1,'TetreesDefs.hpp']]],
+  ['lvl',['lvl',['../structgame__level__t.html#ab80383a9c51e3ad25cda4df0a7df8df2',1,'game_level_t']]]
 ];

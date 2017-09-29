@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['lvl',['lvl',['../structgame__level__t.html#ab80383a9c51e3ad25cda4df0a7df8df2',1,'game_level_t']]]
+  ['hidden_5fcells_5foffset',['HIDDEN_CELLS_OFFSET',['../TetreesDefs_8hpp.html#af08f2c0ac93a84d1e98bd9e128bd0b65',1,'TetreesDefs.hpp']]]
 ];
