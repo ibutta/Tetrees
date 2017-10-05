@@ -41,7 +41,7 @@ public:
 
 private:
 
-	TetreesUI *gameUI; /**< A TetreesUI object for controlling user interface and other games elements.*/
+	TetreesUI *gameUI; /**< A TetreesUI object for controlling user interface and other game's elements.*/
 	TetreesUtils *utils; /**< A TetreesUtils object that provides utility functions.*/
 	static Matrix2D<int> gameBoard; /**< A Matrix2D that represents the gameBoard containing ONLY the
 											already @ref step_BlockSpawnedTetromino "blocked tetrominoes".

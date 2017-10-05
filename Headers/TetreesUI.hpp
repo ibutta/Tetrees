@@ -24,15 +24,16 @@ class TetreesUI
 
 public:
 
+	/// The class constructor.
 	TetreesUI(TetreesEngine);
 	/// User interface (UI) assembly.
 	void setupUI(GtkApplication*, gpointer);
 
 private:
 
-	static TetreesEngine *gameEngine;
-	static TetreesUtils *utils;
-	static Matrix2D<rgb_t> colors;
+	static TetreesEngine *gameEngine; /**< A @ref TetreesEngine object that controls all game's rules during gameplay.*/
+	static TetreesUtils *utils; /**< A TetreesUtils object that provides utility functions.*/
+	static Matrix2D<rgb_t> colors; /**< An array containing data related to all colors.*/
 	static Matrix2D<int> gameScene;
 	static piece_t nextTetromino;
 	static game_score_t gameScore;

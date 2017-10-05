@@ -57,6 +57,10 @@ piece_t 		TetreesEngine::tetrominoes[NUM_OF_TETROMINOES];
 game_data_t 	TetreesEngine::gameData;
 game_level_t	TetreesEngine::gameLevels[NUM_OF_LEVELS];
 
+/**
+ * Creates an object of the TetreesEngine class and initiates
+ * its member variables.
+ */
 TetreesEngine::TetreesEngine()
 {
 

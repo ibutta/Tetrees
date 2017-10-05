@@ -55,6 +55,11 @@ game_level_t		TetreesUI::gameLevel;
 animation_t			TetreesUI::animationMode;
 animation_control_t TetreesUI::animationControl;
 
+/**
+ * Creates an object of the TetreesUI class and initiates
+ * its member variables.
+ * @param engine The @ref TetreesEngine "game engine" to be used by this UI object.
+ */
 TetreesUI::TetreesUI(TetreesEngine engine)
 {
 
@@ -626,7 +631,10 @@ void TetreesUI::contextHandler(gpointer data)
 }
 
 /**
- * Create and put together all UI elements.
+ * Create and put together all UI elements. By using the GTK+ toolkit,
+ * this function creates several widgets from different types and hierarchically
+ * displace them to properly assemble a graphical interface for the user
+ * (player) to interact with.
  */
 void TetreesUI::setupUI(GtkApplication *app, gpointer user_data)
 {
