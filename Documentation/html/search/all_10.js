@@ -6,7 +6,7 @@ var searchData=
   ['tetreesengine_2ehpp',['TetreesEngine.hpp',['../TetreesEngine_8hpp.html',1,'']]],
   ['tetreesmainapp_2ecpp',['TetreesMainApp.cpp',['../TetreesMainApp_8cpp.html',1,'']]],
   ['tetreesstrings_2ehpp',['TetreesStrings.hpp',['../TetreesStrings_8hpp.html',1,'']]],
-  ['tetreesui',['TetreesUI',['../classTetreesUI.html',1,'']]],
+  ['tetreesui',['TetreesUI',['../classTetreesUI.html',1,'TetreesUI'],['../classTetreesUI.html#ad6a5b91b1574c25c2bcd48601142013c',1,'TetreesUI::TetreesUI()']]],
   ['tetreesui_2ecpp',['TetreesUI.cpp',['../TetreesUI_8cpp.html',1,'']]],
   ['tetreesui_2ehpp',['TetreesUI.hpp',['../TetreesUI_8hpp.html',1,'']]],
   ['tetreesutils',['TetreesUtils',['../classTetreesUtils.html',1,'']]],

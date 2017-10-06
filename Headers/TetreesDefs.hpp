@@ -610,13 +610,13 @@ struct piece_t{
 
 /// RGB elements of a color.
 /**
- * Stores each RGB element of a color.
+ * Stores data related to RGB components of a color.
  */
 struct rgb_t{
 	color_t name; 	/**< The color name.*/
-	double r;		/**< Color's red element.*/
-	double g;		/**< Color's green element.*/
-	double b;		/**< Color's blue element.*/
+	double r;		/**< Red component value.*/
+	double g;		/**< Green component value.*/
+	double b;		/**< Blue component value.*/
 };
 
 /// Game score data type.

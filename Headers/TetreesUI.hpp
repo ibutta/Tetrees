@@ -33,8 +33,8 @@ private:
 
 	static TetreesEngine *gameEngine; /**< A @ref TetreesEngine object that controls all game's rules during gameplay.*/
 	static TetreesUtils *utils; /**< A TetreesUtils object that provides utility functions.*/
-	static Matrix2D<rgb_t> colors; /**< An array containing data related to all colors.*/
-	static Matrix2D<int> gameScene;
+	static Matrix2D<rgb_t> colors; /**< An array containing @ref rgb_t "data" related to all colors available to be used by UI.*/
+	static Matrix2D<int> gameScene; /**< Stores the actual @ref TetreesEngine::scene "game scene" to be drawn on screen.*/
 	static piece_t nextTetromino;
 	static game_score_t gameScore;
 	static game_level_t gameLevel;
