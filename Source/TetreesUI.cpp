@@ -16,34 +16,64 @@
 #include <fontconfig/fontconfig.h>
 #include <TetreesStrings.hpp>
 
-cairo_surface_t *playingSurface;
+GtkWidget *mainWindow; 												/**< A <a href="https://developer.gnome.org/gtk3/stable/GtkWindow.html">
+																	GTK Window</a> widget which is the top level <a href="https://developer.gnome.org/gtk3/stable/GtkContainer.html">
+																	container</a> to all other widgets within this application.*/
+GtkWidget *playingFieldFrame; 										/**< A <a href="https://developer.gnome.org/gtk3/stable/GtkFrame.html">GTK Frame</a>.
+																	Just a secondary widget to properly arrange the @ref playingFieldDrawingArea "playing field"
+																	within the @ref mainWindow "main window".*/
+GtkWidget *nextTetrominoFrame; 										/**< A <a href="https://developer.gnome.org/gtk3/stable/GtkFrame.html">GTK Frame</a>.
+																	Just a secondary widget to properly arrange the @ref nextTetrominoDrawingArea "next tetromino field"
+																	within the @ref mainWindow "main window".*/
+GtkWidget *mainGrid; 												/**< A <a href="https://developer.gnome.org/gtk3/stable/GtkGrid">GTK Grid</a> used to arrange children widgets in rows and
+																	columns within the @ref mainWindow "main window".*/
+GtkWidget *box01; 													/**< A <a href="https://developer.gnome.org/gtk3/stable/GtkBox">GTK Box</a> used to pack widgets. Named this way because
+ 																	of its position within the @ref mainGrid "main grid", i.e row 0 and column 1.*/
+GtkWidget *buttonBox; 												/**< A <a href="https://developer.gnome.org/gtk3/stable/GtkButtonBox">GTK Button Box</a> to pack the buttons widgets
+																	(@ref playButton "Play", @ref pauseButton "Pause", and @ref resetButton "Reset" buttons).*/
+GtkWidget *playButton; 												/**< A <a href="https://developer.gnome.org/gtk3/stable/GtkButton">GTK Button</a> widget that starts the game
+																	when @ref TetreesUI::onPlayClicked "clicked".*/
+GtkWidget *pauseButton; 											/**< A <a href="https://developer.gnome.org/gtk3/stable/GtkButton">GTK Button</a> widget that pauses/resumes the game
+																	when @ref TetreesUI::onPlayClicked "clicked" during gameplay.*/
+GtkWidget *resetButton; 											/**< A <a href="https://developer.gnome.org/gtk3/stable/GtkButton">GTK Button</a> widget that when @ref TetreesUI::onPlayClicked "clicked"
+																	resets the game to its initial state.*/
+GtkWidget *playingFieldDrawingArea; 								/**< A <a href="https://developer.gnome.org/gtk3/stable/GtkDrawingArea.html">GTK Drawing Area</a>
+																	widget used to display the actual state of the @ref TetreesEngine::gameBoard "game board"
+																	(namely, a @ref TetreesEngine::scene "scene").*/
+GtkWidget *scoreLabel; 												/**< A <a href="https://developer.gnome.org/gtk3/stable/GtkLabel.html">GTK Label</a> that displays
+																	the word "Score".*/
+GtkWidget *scoreFrame; 												/**< A <a href="https://developer.gnome.org/gtk3/stable/GtkFrame.html">GTK Frame</a> Just a secondary widget
+																	to properly arrange the @ref scoreTextView "game score's displaying area" within the @ref mainWindow "main window".*/
+GtkWidget *scoreTextView; 											/**< A <a href="https://developer.gnome.org/gtk3/stable/GtkTextView.html">GTK Text View</a> that displays
+																	stylized text informing the @ref TetreesUI::gameScore "game score".*/
+GtkWidget *lvlLabel; 												/**< A <a href="https://developer.gnome.org/gtk3/stable/GtkLabel.html">GTK Label</a> that displays
+																	the actual @ref TetreesUI::gameLevel "game level".*/
+GtkWidget *nextTetrominoDrawingArea; 								/**< A <a href="https://developer.gnome.org/gtk3/stable/GtkDrawingArea.html">GTK Drawing Area</a>
+																	widget used to show the @ref TetreesEngine::nextTetromino "next tetromino" to be spawned.*/
 
-GtkWidget *mainWindow;
-GtkWidget *playingFieldFrame;
-GtkWidget *nextTetrominoFrame;
-GtkWidget *mainGrid;
-GtkWidget *box01;	//row 0, column 1 of mainGrid
-GtkWidget *buttonBox;
-GtkWidget *playButton;
-GtkWidget *pauseButton;
-GtkWidget *resetButton;
-GtkWidget *playingFieldDrawingArea;
-GtkWidget *scoreLabel;
-GtkWidget *scoreFrame;
-GtkWidget *scoreTextView;
-GtkWidget *lvlLabel;
-GtkWidget *nextTetrominoDrawingArea; /**< Shows the @ref TetreesEngine::nextTetromino "next tetromino" to be spawned.*/
+GtkTextBuffer 	*scoreTextBuf; 										/**< A <a href="https://developer.gnome.org/gtk3/stable/GtkTextBuffer.html">GTK Text Buffer</a>
+																	widget used as a buffer for the text displayed at the @ref scoreTextView "score Text View".*/
+GtkTextIter		scoreIter; 											/**< A <a href="https://developer.gnome.org/gtk3/stable/GtkTextIter.html">GTK Text Iter</a>
+																	widget used as an iterator for text operations within @ref scoreTextView "score Text View".*/
 
-GtkTextBuffer 	*scoreTextBuf;
-GtkTextIter		scoreIter;
+GdkDisplay *display; 												/**< A <a href="https://developer.gnome.org/gdk3/stable/GdkDisplay.html">GDK Display</a> used
+																	for integration with CSS.*/
+GdkScreen *screen; 													/**< A <a href="https://developer.gnome.org/gdk3/stable/GdkScreen.html">GDK Screen</a> used
+																	for integration with CSS.*/
+GtkCssProvider *cssProvider; 										/**< A <a href="https://developer.gnome.org/gdk3/stable/GdkCssProvider.html">GDK CSS Provider</a> which
+							 	 	 	 	 	 	 	 	 	 	stores the CSS file itself.*/
 
-GdkDisplay *display;
-GdkScreen *screen;
-GtkCssProvider *cssProvider;
+guint updateEventID; 												/**< Stores the ID returned by
+																	<a href="https://developer.gnome.org/glib/stable/glib-The-Main-Event-Loop.html#g-timeout-add-full">g_timeout_add_full</a>
+																	when registering the @ref TetreesDefs.__UPDATE_EVENT__ "update event" to application's
+																	<a href="https://developer.gnome.org/glib/stable/glib-The-Main-Event-Loop.html#glib-The-Main-Event-Loop.description">
+																	main loop</a>.
+																	@see @ref TetreesUI::onPlayClicked "onPlayClicked()" and @ref TetreesUI::contextHandler "contextHandler()".*/
+std::string filePath_8bitFont = "Misc/PressStart2P.ttf"; 			/**< A string with path to the TTF file containing a 8-bit stylized font.
+ 	 	 	 	 	 	 	 	 	 	 	 	 	 	 			@see The font used in this project is the <a href="https://www.dafont.com/press-start-2p.font">Press Start 2P</a>.*/
 
-guint updateEventID;
-std::string filePath_8bitFont = "Misc/PressStart2P.ttf";
-const FcChar8 *file = (const FcChar8*)filePath_8bitFont.c_str();
+const FcChar8 *file = (const FcChar8*)filePath_8bitFont.c_str(); 	/**< A char type representation of the @ref filePath_8bitFont "TFF file path" to be used within
+																	fontconfig.h functions.*/
 
 TetreesEngine 		*TetreesUI::gameEngine;
 TetreesUtils		*TetreesUI::utils;
@@ -82,6 +112,19 @@ TetreesUI::TetreesUI(TetreesEngine engine)
 
 }
 
+/**
+ * A callback function that handles a <a href="https://developer.gnome.org/gtk3/stable/GtkWidget.html#GtkWidget-draw">
+ * "draw event"</a> sent by GTK. When the @ref playingFieldDrawingArea
+ * "playing field" is marked for redrawing, this function properly handles the "draw" signal
+ * emitted accordingly to the @ref animationMode "animation" currently selected.
+ * @param widget The object which received the signal.
+ * @param cr The cairo drawing context.
+ * @param user_data User data set when the signal handler was connected (NOT USED).
+ * @return Always returns <a href="https://developer.gnome.org/glib/stable/glib-The-Main-Event-Loop.html#G-SOURCE-REMOVE:CAPS">G_SOURCE_REMOVE</a>
+ * (a macro for `FALSE`) assuring this function will only execute once.
+ * @see Please, for further information see the <a href="https://developer.gnome.org/gtk3/stable/">GTK+ 3 reference manual</a>
+ * and the <a href="https://www.cairographics.org/manual/">Cairo Graphics manual</a>.
+ */
 gboolean TetreesUI::onDrawPlayingFieldDrawingArea(GtkWidget *widget, cairo_t *cr, gpointer user_data)
 {
 
@@ -106,6 +149,19 @@ gboolean TetreesUI::onDrawPlayingFieldDrawingArea(GtkWidget *widget, cairo_t *cr
 
 }
 
+/**
+ * A callback function that handles a <a href="https://developer.gnome.org/gtk3/stable/GtkWidget.html#GtkWidget-draw">
+ * "draw event"</a> sent by GTK. When the @ref nextTetrominoDrawingArea
+ * "next tetromino field" is marked for redrawing, this function properly handles the draw signal
+ * emitted.
+ * @param widget The <a href="https://developer.gnome.org/gtk3/stable/GtkWidget.html">GTK Widget</a> which received the signal.
+ * @param cr The <a href="https://www.cairographics.org/manual/cairo-cairo-t.html">cairo drawing context</a>.
+ * @param user_data User data set when the signal handler was connected (NOT USED).
+ * @return Always returns <a href="https://developer.gnome.org/glib/stable/glib-The-Main-Event-Loop.html#G-SOURCE-REMOVE:CAPS">G_SOURCE_REMOVE</a>
+ * (a macro for `FALSE`) assuring this function will only execute once.
+ * @see Please, for further information see the <a href="https://developer.gnome.org/gtk3/stable/">GTK+ 3 reference manual</a>
+ * and the <a href="https://www.cairographics.org/manual/">Cairo Graphics manual</a>.
+ */
 gboolean TetreesUI::onDrawNextTetrominoDrawingArea(
 		GtkWidget *widget,
 		cairo_t *cr,
@@ -118,7 +174,14 @@ gboolean TetreesUI::onDrawNextTetrominoDrawingArea(
 }
 
 /**
- * Draw the scene.
+ * Draws the actual gameplay's @ref gameScene "scene" inside the @ref playingFieldDrawingArea "playing field drawing area".
+ * In other words, this functions is responsible for drawing a frame containing all the already blocked tetrominoes at the
+ * game board as well as the falling tetromino in the position that it founds itself by the time of the drawing.
+ *
+ * The drawing of a @ref gameScene "scene" occurs every time a @ref TetreesEngine::gameStep "game step"
+ * is issued making the game context changes somehow.
+ * @see @ref updateGameContext and @ref onKeyPress "onKeyPress".
+ * @param cr The <a href="https://www.cairographics.org/manual/cairo-cairo-t.html">cairo drawing context</a> in which the scene will be drawn.
  */
 void TetreesUI::drawScene(cairo_t* cr)
 {
@@ -163,6 +226,17 @@ void TetreesUI::drawScene(cairo_t* cr)
 
 }
 
+/**
+ * When the player pauses the game, the game's current state changes to @ref game_state_t.GAME_STATE_PAUSED "GAME PAUSED" and
+ * also the @ref animationMode "animation mode" changes to @ref animation_t.ANIMATION_GAME_PAUSED "GAME PAUSED ANIMATION"
+ * which leads the @ref onDrawPlayingFieldDrawingArea member function to call this function instead of the
+ * commonly called @ref drawScene.
+ *
+ * A paused scene is nothing but the most recently @ref TetreesEngine::scene "scene" produced by the @ref gameEngine
+ * "game's engine" draw in grey scale plus a @ref TetreesStrings.MSG_GAME_PAUSED "Game Paused message"
+ * wrote atop the drawn scene.
+ * @param cr The <a href="https://www.cairographics.org/manual/cairo-cairo-t.html">cairo drawing context</a> in which the scene will be drawn.
+ */
 void TetreesUI::drawPausedScene(cairo_t *cr)
 {
 
@@ -228,6 +302,15 @@ void TetreesUI::drawPausedScene(cairo_t *cr)
 	//===================================================
 }
 
+/**
+ * Draws @ref nextTetromino "the next tetromino" inside @ref nextTetrominoDrawingArea "next tetromino's drawing area".
+ * Whenever a call to <a href="https://developer.gnome.org/gtk3/stable/GtkWidget.html#gtk-widget-queue-draw">
+ * gtk_widget_queue_draw</a> is made, this function checks if the game is currently in a @ref game_state_t.GAME_STATE_PLAYING
+ * "playing" or @ref game_state_t.GAME_STATE_PAUSED "paused" state and, if so, draws the @ref nextTetromino "next tetromino"
+ * inside @ref nextTetrominoDrawingArea "next tetromino's drawing area".
+ * @param cr The <a href="https://www.cairographics.org/manual/cairo-cairo-t.html">cairo drawing context</a> in which the @ref
+ * nextTetromino "next tetromino" will be drawn.
+ */
 void TetreesUI::drawNextTetromino(cairo_t *cr)
 {
 
@@ -254,10 +337,14 @@ void TetreesUI::drawNextTetromino(cairo_t *cr)
 			gameEngine->getGameState() == GAME_STATE_PAUSED
 	){
 
+		if(gameEngine->getNextTetromino().type != nextTetromino.type)
 		nextTetromino = gameEngine->getNextTetromino();
 		matrixDim = (nextTetromino.shape.getRowHeight()
 						* nextTetromino.shape.getColWidth());
 
+		//In order to center next tetromino's shape within next tetromino
+		//drawing area, the drawing method diverge for each tetromino type
+		//based on its shape dimension
 		for(unsigned r = 0; r < nextTetromino.shape.getRowHeight(); r++){
 			for(unsigned c = 0; c < nextTetromino.shape.getColWidth(); c++){
 				if(nextTetromino.shape(r,c) != EMPTY){
@@ -309,6 +396,20 @@ void TetreesUI::drawNextTetromino(cairo_t *cr)
 
 }
 
+/**
+ * This function is responsible for executing each of the several drawing steps needed to
+ * accomplish the game over animation. As the game over condition is reached -
+ * which occurs when the @ref TetreesEngine::step_BlockSpawnedTetromino "blocked tetrominoes"
+ * pile reaches the @ref limit_t.LIMIT_TOP_BORDER "top border limit" of the
+ * @ref TetreesEngine::gameBoard "game board" - the game's state changes to a
+ * @ref game_state_t.GAME_STATE_GAME_OVER "game over state" and the @ref updateGameContext
+ * function configures the @ref animationControl variable with data necessary to execute
+ * the game over animation. Thus, the drawing control is passed to the @ref animationController
+ * member function which plays a role similar to @ref updateGameContext but is called
+ * by the @ref TetreesDefs.__ANIMATION_EVENT__ "animation event" instead.
+ * @param cr The <a href="https://www.cairographics.org/manual/cairo-cairo-t.html">cairo drawing context</a> where animation
+ * steps will be drawn.
+ */
 void TetreesUI::drawGameOverAnimationStep(cairo_t *cr)
 {
 
@@ -381,161 +482,21 @@ void TetreesUI::drawGameOverAnimationStep(cairo_t *cr)
 
 }
 
-void TetreesUI::drawRowRemovalAnimationStep(cairo_t *cr)
-{
-
-
-
-}
-
-gboolean TetreesUI::onKeyPress(GtkWidget 	*widget,
-							   GdkEventKey 	*event,
-							   gpointer 	user_data)
-{
-
-	if(gameEngine->getGameState() == GAME_STATE_PLAYING){
-		switch(event->keyval){
-		case GDK_KEY_Right:
-			gameEngine->gameStep(STEP_SWERVE_RIGHT);
-			break;
-
-		case GDK_KEY_Left:
-			gameEngine->gameStep(STEP_SWERVE_LEFT);
-			break;
-
-		case GDK_KEY_Up:
-			gameEngine->gameStep(STEP_ROTATE);
-			break;
-
-		case GDK_KEY_Down:
-			gameEngine->gameStep(STEP_DROP);
-			break;
-		}
-
-		gtk_widget_queue_draw(mainWindow);
-	}
-
-	return G_SOURCE_REMOVE;
-
-}
-
-void TetreesUI::setUIState(ui_state_t uiState)
-{
-
-	switch(uiState){
-	case UI_STATE_NOT_STARTED:
-		gtk_button_set_label(GTK_BUTTON(pauseButton), LABEL_PAUSE_BUTTON);
-		gtk_widget_set_sensitive(GTK_WIDGET(playButton), TRUE);
-		gtk_widget_set_sensitive(GTK_WIDGET(pauseButton), FALSE);
-		gtk_widget_set_sensitive(GTK_WIDGET(resetButton), FALSE);
-		break;
-
-	case UI_STATE_PAUSED:
-		if(gameEngine->getGameState() == GAME_STATE_PLAYING)
-			gtk_button_set_label(GTK_BUTTON(pauseButton), LABEL_CONTINUE_BUTTON);
-		else gtk_button_set_label(GTK_BUTTON(pauseButton), LABEL_PAUSE_BUTTON);
-		break;
-
-	case UI_STATE_PLAYING:
-		gtk_widget_set_sensitive(GTK_WIDGET(playButton), FALSE);
-		gtk_widget_set_sensitive(GTK_WIDGET(pauseButton), TRUE);
-		gtk_widget_set_sensitive(GTK_WIDGET(resetButton), TRUE);
-		break;
-	}
-
-}
-
-void TetreesUI::updateScore()
-{
-
-	gameScore.score = gameEngine->getGameScore().score;
-
-	std::string scoreArray = utils->intToStr(gameScore.score);
-	GtkTextIter		beginIter;
-	GtkTextIter		endIter;
-
-	gtk_text_buffer_get_bounds(GTK_TEXT_BUFFER(scoreTextBuf), &beginIter, &endIter);
-	gtk_text_buffer_delete(GTK_TEXT_BUFFER(scoreTextBuf), &beginIter, &endIter);
-	gtk_text_buffer_get_iter_at_offset(GTK_TEXT_BUFFER(scoreTextBuf), &scoreIter, 0);
-	gtk_text_buffer_insert_with_tags_by_name(GTK_TEXT_BUFFER(scoreTextBuf),
-											 &scoreIter,
-											 scoreArray.c_str(),
-											 -1,
-											 "abovePixelsTag",
-											 "centreJustifyTag",
-											 "fontTag",
-											 "fgColorTag",
-											 NULL
-	);
-
-	std::string lvlNum = utils->intToStr(gameLevel.lvl + 1);
-	std::string lvlStr = LABEL_LVL_LABEL;
-	lvlStr.append(lvlNum);
-	gtk_label_set_text(GTK_LABEL(lvlLabel), lvlStr.c_str());
-
-}
-
-void TetreesUI::onPlayClicked(GtkButton* button)
-{
-
-	if(
-			gameEngine->getGameState() == GAME_STATE_NOT_STARTED
-			||
-			gameEngine->getGameState() == GAME_STATE_GAME_OVER
-
-	){
-
-		if(!updateEventID)
-			updateEventID = g_timeout_add_full(
-					G_PRIORITY_HIGH,
-					gameLevel.gameSpeed,
-					(GSourceFunc)updateGameContext,
-					NULL,
-					(GDestroyNotify)contextHandler
-			);
-
-		animationMode = ANIMATION_NONE;
-		gameEngine->issueCommand(CMD_PLAY);
-		setUIState(UI_STATE_PLAYING);
-		gtk_widget_queue_draw(mainWindow);
-
-	}
-
-}
-
-void TetreesUI::onPauseClicked(GtkButton *button)
-{
-
-	setUIState(UI_STATE_PAUSED);
-	gameEngine->issueCommand(CMD_PAUSE);
-	if(animationMode != ANIMATION_GAME_PAUSED)
-		animationMode = ANIMATION_GAME_PAUSED;
-	else
-		animationMode = ANIMATION_NONE;
-	gtk_widget_queue_draw(mainWindow);
-
-}
-
-void TetreesUI::onResetClicked(GtkButton *button)
-{
-
-	gameEngine->issueCommand(CMD_RESET);
-	setUIState(UI_STATE_NOT_STARTED);
-	animationMode = ANIMATION_NONE;
-	gtk_widget_queue_draw(mainWindow);
-
-}
-
-gboolean TetreesUI::animationHandler(GtkWidget *widget)
+/**
+ * This function controls the execution of each step composing an animation. When the
+ * @ref animationMode variable is set to some @ref animation_t "type of animation", this function uses
+ * the @animationControl variable and iteratively command the screen to be redrawn accordingly the
+ * data stored by it.
+ * @note
+ * This is the member function registered within the @ref TetreesDefs.__ANIMATION_EVENT__
+ * "animation event".
+ * @return Always returns <a href="https://developer.gnome.org/glib/stable/glib-The-Main-Event-Loop.html#G-SOURCE-CONTINUE:CAPS">G_SOURCE_CONTINUE</a>
+ * since the event which this function is attached to is permanently executed.
+ */
+gboolean TetreesUI::animationController()
 {
 
 	switch(animationMode){
-
-	case ANIMATION_NONE:
-		break;
-
-	case ANIMATION_GAME_PAUSED:
-		break;
 
 	case ANIMATION_GAME_OVER:
 		if(
@@ -554,13 +515,33 @@ gboolean TetreesUI::animationHandler(GtkWidget *widget)
 		++animationControl.counter;
 		break;
 
+	default:
+		break;
 	}
 
 	return G_SOURCE_CONTINUE;
 
 }
 
-gboolean TetreesUI::updateGameContext(GtkWidget *widget)
+/**
+ * With a central role, this function updates game's context based on the @ref game_state_t "state" the game finds itself.
+ *
+ * This function is periodically called by the @ref TetreesDefs.__UPDATE_EVENT__ "update event"
+ * in order to redraw the user interface as well as updating game's context by @ref TetreesEngine::gameStep "issuing" a
+ * @ref step_t.STEP_DROP "DROP STEP" to @ref gameEngine "game's engine". This step is automatically issued as
+ * part of the gameplay and its @ref level_speed_t "periodicity" varies accordingly to the actual @ref gameLevel "game level".
+ *
+ * Another role of this function is to detect changes at @ref game_state_t "game's state" and feed
+ * the @ref animationControl variable with correct data so the actual animation can execute properly.
+ * @note
+ * This is the member function registered within the @ref TetreesDefs.__UPDATE_EVENT__
+ * "update event".
+ * @return <a href="https://developer.gnome.org/glib/stable/glib-The-Main-Event-Loop.html#G-SOURCE-CONTINUE:CAPS">G_SOURCE_CONTINUE</a>
+ * when the @ref TetreesDefs.__UPDATE_EVENT__ "update event" is still attached to the
+ * <a href="https://developer.gnome.org/glib/stable/glib-The-Main-Event-Loop.html#glib-The-Main-Event-Loop.description">main loop</a>.
+ * <a href="https://developer.gnome.org/glib/stable/glib-The-Main-Event-Loop.html#G-SOURCE-REMOVE:CAPS">G_SOURCE_REMOVE</a> otherwise.
+ */
+gboolean TetreesUI::updateGameContext()
 {
 
 	gboolean ret = G_SOURCE_CONTINUE;
@@ -569,7 +550,7 @@ gboolean TetreesUI::updateGameContext(GtkWidget *widget)
 
 	case GAME_STATE_PLAYING:
 		gameEngine->gameStep(STEP_DROP);
-		//A level up may result in a faster game speed,
+		//A level increase may result in a faster game speed,
 		//so checking and updating game level variable is necessary.
 		if(gameEngine->getGameLevel().lvl != gameLevel.lvl){
 			gameLevel = gameEngine->getGameLevel();
@@ -604,7 +585,18 @@ gboolean TetreesUI::updateGameContext(GtkWidget *widget)
 
 }
 
-void TetreesUI::contextHandler(gpointer data)
+/**
+ * This function will be executed when a call to <a href="https://developer.gnome.org/glib/stable/glib-The-Main-Event-Loop.html#g-source-remove">
+ * g_source_remove</a>@ref updateEventID "(updateEventID)" is made in order to unregister (detach) the @ref TetreesDefs.__UPDATE_EVENT__ "update event"
+ * from application's <a href="https://developer.gnome.org/programming-guidelines/stable/main-contexts.html.en">main context</a>.
+ *
+ * In case the game is currently in a @ref game_state_t.GAME_STATE_PLAYING "playing state" by the time this function is called,
+ * it will register again the @ref TetreesDefs.__UPDATE_EVENT__ "update event" within the
+ * <a href="https://developer.gnome.org/programming-guidelines/stable/main-contexts.html.en">main context</a> by
+ * using a new interval (if that is the case) to call @ref updateGameContext().
+ * @see <a href="https://developer.gnome.org/glib/stable/glib-The-Main-Event-Loop.html#g-timeout-add-full">g_timeout_add_full</a>
+ */
+void TetreesUI::contextHandler()
 {
 
 	updateEventID = 0;
@@ -619,22 +611,196 @@ void TetreesUI::contextHandler(gpointer data)
 				(GDestroyNotify)contextHandler
 		);
 		break;
-	case GAME_STATE_PAUSED:
+	default:
 		break;
-	case GAME_STATE_NOT_STARTED:
+	}
+
+}
+
+/**
+ * This is the callback function to a <a href="https://developer.gnome.org/gtk3/stable/GtkWidget.html#GtkWidget-key-press-event">
+ * key press event</a> within the @ref mainWindow "main window" scope. It maps each key to its respective action during gameplay.
+ * @param widget The object which received the signal (not used).
+ * @param event The <a href="https://developer.gnome.org/gdk3/stable/gdk3-Event-Structures.html#GdkEventKey">GdkEventKey</a>
+ * which triggered this signal (the key itself).
+ * @param user_data User data set when the signal handler was connected (not used).
+ * @return Always returns <a href="https://developer.gnome.org/glib/stable/glib-The-Main-Event-Loop.html#G-SOURCE-REMOVE:CAPS">
+ * G_SOURCE_REMOVE</a> since this is a one time only event.
+ */
+gboolean TetreesUI::onKeyPress(GtkWidget 	*widget,
+							   GdkEventKey 	*event,
+							   gpointer 	user_data)
+{
+
+	if(gameEngine->getGameState() == GAME_STATE_PLAYING){
+		switch(event->keyval){
+		case GDK_KEY_Right:
+			gameEngine->gameStep(STEP_SWERVE_RIGHT);
+			break;
+
+		case GDK_KEY_Left:
+			gameEngine->gameStep(STEP_SWERVE_LEFT);
+			break;
+
+		case GDK_KEY_Up:
+			gameEngine->gameStep(STEP_ROTATE);
+			break;
+
+		case GDK_KEY_Down:
+			gameEngine->gameStep(STEP_DROP);
+			break;
+		}
+
+		gtk_widget_queue_draw(mainWindow);
+	}
+
+	return G_SOURCE_REMOVE;
+
+}
+
+/**
+ * Sets user interface to a specific state depending on what is happening into the game that moment.
+ * This function basically enables and disables interface buttons accordingly to the @ref ui_state_t
+ * "UI state" passed as parameter.
+ * @param uiState The @ref ui_state_t "UI state" in which user interface must be set to.
+ */
+void TetreesUI::setUIState(ui_state_t uiState)
+{
+
+	switch(uiState){
+	case UI_STATE_NOT_STARTED:
+		gtk_button_set_label(GTK_BUTTON(pauseButton), LABEL_PAUSE_BUTTON);
+		gtk_widget_set_sensitive(GTK_WIDGET(playButton), TRUE);
+		gtk_widget_set_sensitive(GTK_WIDGET(pauseButton), FALSE);
+		gtk_widget_set_sensitive(GTK_WIDGET(resetButton), FALSE);
 		break;
-	case GAME_STATE_GAME_OVER:
+
+	case UI_STATE_PAUSED:
+		if(gameEngine->getGameState() == GAME_STATE_PLAYING)
+			gtk_button_set_label(GTK_BUTTON(pauseButton), LABEL_CONTINUE_BUTTON);
+		else gtk_button_set_label(GTK_BUTTON(pauseButton), LABEL_PAUSE_BUTTON);
 		break;
+
+	case UI_STATE_PLAYING:
+		gtk_widget_set_sensitive(GTK_WIDGET(playButton), FALSE);
+		gtk_widget_set_sensitive(GTK_WIDGET(pauseButton), TRUE);
+		gtk_widget_set_sensitive(GTK_WIDGET(resetButton), TRUE);
+		break;
+	}
+
+}
+
+/**
+ * Updates the value displayed at the @ref scoreTextView "score text view". This function
+ * fetches @ref gameEngine "game engine" for the updated score and updates the value
+ * shown inside @ref scoreTextView "score text view".
+ */
+void TetreesUI::updateScore()
+{
+
+	gameScore.score = gameEngine->getGameScore().score;
+
+	std::string scoreArray = utils->intToStr(gameScore.score);
+	GtkTextIter		beginIter;
+	GtkTextIter		endIter;
+
+	gtk_text_buffer_get_bounds(GTK_TEXT_BUFFER(scoreTextBuf), &beginIter, &endIter);
+	gtk_text_buffer_delete(GTK_TEXT_BUFFER(scoreTextBuf), &beginIter, &endIter);
+	gtk_text_buffer_get_iter_at_offset(GTK_TEXT_BUFFER(scoreTextBuf), &scoreIter, 0);
+	gtk_text_buffer_insert_with_tags_by_name(GTK_TEXT_BUFFER(scoreTextBuf),
+											 &scoreIter,
+											 scoreArray.c_str(),
+											 -1,
+											 "abovePixelsTag",
+											 "centreJustifyTag",
+											 "fontTag",
+											 "fgColorTag",
+											 NULL
+	);
+
+	std::string lvlNum = utils->intToStr(gameLevel.lvl + 1);
+	std::string lvlStr = LABEL_LVL_LABEL;
+	lvlStr.append(lvlNum);
+	gtk_label_set_text(GTK_LABEL(lvlLabel), lvlStr.c_str());
+
+}
+
+/**
+ * This is a callback function that handles the <a href="https://developer.gnome.org/gtk3/stable/GtkButton.html#GtkButton-clicked">
+ * clicked signal</a> emitted by the @ref playButton "Play button" when it's clicked. A @ref cmd_t.CMD_PLAY "play command"
+ * is @ref TetreesEngine::issueCommand "issued" to @ref gameEngine "game engine" and the game begins.
+ */
+void TetreesUI::onPlayClicked()
+{
+
+	if(
+			gameEngine->getGameState() == GAME_STATE_NOT_STARTED
+			||
+			gameEngine->getGameState() == GAME_STATE_GAME_OVER
+
+	){
+
+		if(!updateEventID)
+			updateEventID = g_timeout_add_full(
+					G_PRIORITY_HIGH,
+					gameLevel.gameSpeed,
+					(GSourceFunc)updateGameContext,
+					NULL,
+					(GDestroyNotify)contextHandler
+			);
+
+		animationMode = ANIMATION_NONE;
+		gameEngine->issueCommand(CMD_PLAY);
+		setUIState(UI_STATE_PLAYING);
+		gtk_widget_queue_draw(mainWindow);
 
 	}
 
 }
 
 /**
- * Create and put together all UI elements. By using the GTK+ toolkit,
- * this function creates several widgets from different types and hierarchically
- * displace them to properly assemble a graphical interface for the user
+ * This is a callback function that handles the <a href="https://developer.gnome.org/gtk3/stable/GtkButton.html#GtkButton-clicked">
+ * clicked signal</a> emitted by the @ref pauseButton "Pause button" when it's clicked. A @ref cmd_t.CMD_PAUSE "pause command"
+ * is @ref TetreesEngine::issueCommand "issued" to @ref gameEngine "game engine" and the game is then paused.
+ * @note
+ * If the game is already paused, the @ref cmd_t.CMD_PAUSE "pause command" resumes the game instead.
+ */
+void TetreesUI::onPauseClicked()
+{
+
+	setUIState(UI_STATE_PAUSED);
+	gameEngine->issueCommand(CMD_PAUSE);
+	if(animationMode != ANIMATION_GAME_PAUSED)
+		animationMode = ANIMATION_GAME_PAUSED;
+	else
+		animationMode = ANIMATION_NONE;
+	gtk_widget_queue_draw(mainWindow);
+
+}
+
+/**
+ * This is a callback function that handles the <a href="https://developer.gnome.org/gtk3/stable/GtkButton.html#GtkButton-clicked">
+ * clicked signal</a> emitted by the @ref resetButton "Reset button" when it's clicked. A @ref cmd_t.CMD_RESET "reset command"
+ * is @ref TetreesEngine::issueCommand "issued" to @ref gameEngine "game engine" and the game is set back to its initial state, i.e.
+ * the @ref gameScore "score" and @ref TetreesEngine::gameBoard "game board" are cleared.
+ */
+void TetreesUI::onResetClicked()
+{
+
+	gameEngine->issueCommand(CMD_RESET);
+	setUIState(UI_STATE_NOT_STARTED);
+	animationMode = ANIMATION_NONE;
+	gtk_widget_queue_draw(mainWindow);
+
+}
+
+/**
+ * Create and put together all UI elements. By using the <a href="https://developer.gnome.org/gtk3/stable/">GTK+ 3 toolkit</a>,
+ * this function creates several <a href="https://developer.gnome.org/gtk3/stable/GtkWidget.html">GTK Widgets</a>
+ * from different types and hierarchically arrange them in order to provide a graphical interface for the user
  * (player) to interact with.
+ * @param app The <a href="https://developer.gnome.org/gtk3/stable/GtkApplication.html">GTK Application</a> object reference.
+ * @param user_data User data (`**argv`) received passed to the application when it is executed (not used in this application).
  */
 void TetreesUI::setupUI(GtkApplication *app, gpointer user_data)
 {
@@ -703,7 +869,7 @@ void TetreesUI::setupUI(GtkApplication *app, gpointer user_data)
 			NULL
 	);
 
-	g_timeout_add(10,(GSourceFunc)animationHandler, NULL);
+	g_timeout_add(ANIMATION_EVENT_INTERVAL,(GSourceFunc)animationController, NULL);
 	//***************************************************************************************
 
 	//=======

@@ -1,15 +1,13 @@
 var searchData=
 [
-  ['name',['name',['../structrgb__t.html#a98fbae1e6897105536340238b9660ba5',1,'rgb_t']]],
-  ['next_5flvl_5fscore_5ft',['next_lvl_score_t',['../TetreesDefs_8hpp.html#adb9f7ea75cb8fca17c40bc2afbe399ca',1,'TetreesDefs.hpp']]],
-  ['next_5ftetromino_5ffield_5fcell_5fheight',['NEXT_TETROMINO_FIELD_CELL_HEIGHT',['../TetreesDefs_8hpp.html#a67c83d74957fb33b804e920b3e16bfe6',1,'TetreesDefs.hpp']]],
-  ['next_5ftetromino_5ffield_5fcell_5fwidth',['NEXT_TETROMINO_FIELD_CELL_WIDTH',['../TetreesDefs_8hpp.html#ac176e980e4e657c945ed656bd0b5eb73',1,'TetreesDefs.hpp']]],
-  ['next_5ftetromino_5fx',['NEXT_TETROMINO_X',['../TetreesDefs_8hpp.html#ad1ddcef8e7677afbdcc5f65190d5706e',1,'TetreesDefs.hpp']]],
-  ['next_5ftetromino_5fy',['NEXT_TETROMINO_Y',['../TetreesDefs_8hpp.html#a57e9e7e1d5a6df49dbaf4e434281e8ba',1,'TetreesDefs.hpp']]],
-  ['nextlvlscore',['nextLvlScore',['../structgame__level__t.html#a9f5f86c9c90bebdd20950d74bf2dd450',1,'game_level_t']]],
-  ['nexttetromino',['nextTetromino',['../classTetreesEngine.html#a44c902481f5d8a72ca8a78d24f5c3a33',1,'TetreesEngine']]],
-  ['nexttetrominodrawingarea',['nextTetrominoDrawingArea',['../TetreesUI_8cpp.html#aac997784ac88b494498d6e08d6fe62d5',1,'TetreesUI.cpp']]],
-  ['num_5fof_5fcolors',['NUM_OF_COLORS',['../TetreesDefs_8hpp.html#abd45e889c47b3839d9e8b3c8fcb74aee',1,'TetreesDefs.hpp']]],
-  ['num_5fof_5flevels',['NUM_OF_LEVELS',['../TetreesDefs_8hpp.html#a350a4204247d3562e237e289533cc31f',1,'TetreesDefs.hpp']]],
-  ['num_5fof_5ftetrominoes',['NUM_OF_TETROMINOES',['../TetreesDefs_8hpp.html#a69fa4aa1afe74f7f9ec42bf1e07ddf28',1,'TetreesDefs.hpp']]]
+  ['main',['main',['../TetreesMainApp_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'TetreesMainApp.cpp']]],
+  ['maingrid',['mainGrid',['../TetreesUI_8cpp.html#abb2e6a9f558c00289268dc07c341c50f',1,'TetreesUI.cpp']]],
+  ['mainwindow',['mainWindow',['../TetreesUI_8cpp.html#a929776169582ba270fc197a352f288e8',1,'TetreesUI.cpp']]],
+  ['matrix2d',['Matrix2D',['../classMatrix2D.html',1,'Matrix2D&lt; Type &gt;'],['../classMatrix2D.html#a6166db3bae116e2f009721534abdb2de',1,'Matrix2D::Matrix2D(unsigned height, unsigned width)'],['../classMatrix2D.html#aab23e73fe109ec1eb39dc442bcb67cbe',1,'Matrix2D::Matrix2D(unsigned width)'],['../classMatrix2D.html#a5a6653f697f1c397669bd556c1fd272a',1,'Matrix2D::Matrix2D()']]],
+  ['matrix2d_3c_20int_20_3e',['Matrix2D&lt; int &gt;',['../classMatrix2D.html',1,'']]],
+  ['matrix2d_3c_20rgb_5ft_20_3e',['Matrix2D&lt; rgb_t &gt;',['../classMatrix2D.html',1,'']]],
+  ['matrixarray',['matrixArray',['../classMatrix2D.html#a6e702a96baba89ad29226ceb44676e2b',1,'Matrix2D']]],
+  ['msg_5fgame_5fover',['MSG_GAME_OVER',['../TetreesStrings_8hpp.html#a785e610f54ab8795f42902aeac24ba8d',1,'TetreesStrings.hpp']]],
+  ['msg_5fgame_5fpaused',['MSG_GAME_PAUSED',['../TetreesStrings_8hpp.html#a338b3837bdd505145f52cff93b53e18a',1,'TetreesStrings.hpp']]],
+  ['multiplier',['multiplier',['../structgame__score__t.html#a9dbd70f0cf1f4258895ff90db228297d',1,'game_score_t']]]
 ];

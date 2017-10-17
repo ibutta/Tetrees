@@ -28,7 +28,9 @@ static void	activate (GtkApplication *app, gpointer user_data){
  */
 int main(){
 
-	GtkApplication *tetreesApp;
+	GtkApplication *tetreesApp; /**< A <a href="https://developer.gnome.org/gtk3/stable/GtkApplication.html>GTK Application</a>
+									object. @see How to <a href="https://developer.gnome.org/gio/stable/GApplication.html#g-application-run">
+									run an application</a>.*/
 	int status;
 
 	tetreesApp = gtk_application_new("com.github.ibutta.tetrees", G_APPLICATION_FLAGS_NONE);

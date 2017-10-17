@@ -23,60 +23,81 @@
 //Remove comment for test purposes
 //#define MOCKUP
 
+
+/**
+ * @name Mocked Definitions
+ * @{
+ */
+//The following defined constants are mocked. They serve only as definitions for documentation purposes.
+#define __CELL__ 				/**< A cell is the space occupied by a @ref TetreesDefs.__BLOCK__ "block".*/
+#define __BLOCK__ 				/**< Blocks are the smallest four-sided polygon units that compose a @ref TetreesDefs.__TETROMINO__ "tetromino".*/
+#define __TETROMINO__ 			/**< A tetromino (plural is a geometric form composed by several @ref TetreesDefs.__BLOCK__ "blocks" put together.
+ 	 	 	 	 	 	 		There are 7 types of tetrominoes (see @ref tetromino_t).**/
+#define __UPDATE_EVENT__ 		/**< This is a source event attached to the application's
+						 		<a href="https://developer.gnome.org/programming-guidelines/stable/main-contexts.html.en">main context</a>
+								and it's responsible for updating the game context.
+
+								Updating the game context consists in periodically issuing a @ref step_t.STEP_DROP "DROP STEP" resulting in game progress
+						  	    and forcing player's interaction in order to handle the situation (in other words, forces the player to play!).
+
+								The update event is constantly attached and detached (registered and unregistered) from the
+								<a href="https://developer.gnome.org/programming-guidelines/stable/main-contexts.html.en">main context</a>
+								accordingly to the actual ref game_state_t "game state" and @ref game_level_t "game level".
+								@see <a href="https://developer.gnome.org/glib/stable/glib-The-Main-Event-Loop.html#glib-The-Main-Event-Loop.description">
+								The Main Event Loop</a>*/
+#define __ANIMATION_EVENT__ 	/**< Similar to the @ref TetreesDefs.__UPDATE_EVENT__ "update event" the animation event is also a
+								source event attached to the application's <a href="https://developer.gnome.org/programming-guidelines/stable/main-contexts.html.en">
+								main context</a> and it is responsible for executing animations which, in this project,
+								are divided into steps executed separately, iteratively, and consecutively giving a "feeling of movement".
+
+								This event is never detached from <a href="https://developer.gnome.org/programming-guidelines/stable/main-contexts.html.en">
+								main context</a>. It is registered during @ref TetreesUI::setupUI "UI setup" and keeps executing with the same
+								@ref ANIMATION_EVENT_INTERVAL "interval" until application is terminated, however it'll only be used to
+								draw on the screen when an animation needs to be performed.
+								@see <a href="https://developer.gnome.org/glib/stable/glib-The-Main-Event-Loop.html#glib-The-Main-Event-Loop.description">
+						  		The Main Event Loop</a> and <a href="https://developer.gnome.org/glib/stable/glib-The-Main-Event-Loop.html#g-timeout-add-full">
+						  		g_timeout_add_full</a>*/
+/**@}*/
+
 /**
  * @name Fundamental Values
  * @{
  */
-#define __CELL__ /**< A cell is the space occupied by a @ref TetreesDefs.__BLOCK__ "block".*/
-#define __BLOCK__ /**< Blocks are the smallest four-sided polygon units that compose a @ref tetromino_t "tetromino".*/
-const double BLOCK_SIDE_DIM = 30; /**<
- * The size (in pixels) of each side of a block.*/
-const double TETROMINO_LINE_WIDTH = 4; 	/**< Tetromino's line thickness (in pixels).*/
-const int NUM_OF_TETROMINOES = 7; 		/**< The seven tetrominoes fundamental shapes: I, O, T, S, Z, J and L.*/
-const int NUM_OF_LEVELS = 10; 			/**< Number of game levels.*/
-const int NUM_OF_COLORS = 11; 			/**< Number of colors mapped to @ref rgb_t.*/
-const int PLAY_FIELD_WIDTH = 12; 		/**< The playing area width (in cells).*/
-const int PLAY_FIELD_HEIGHT = 22; /**<
- * The playing area height (in cells).
- * @remark A cell is the space occupied
- * by a @ref TetreesDefs.__BLOCK__ "block".*/
-const int HIDDEN_CELLS_OFFSET = 1 * BLOCK_SIDE_DIM;	/**<
- * An offset function to compensate the
- * @ref TetreesDefs.__CELL__ "cells" that are
- * outside the boundaries of the game board's
- * visible playing area.
- */
+const unsigned int ANIMATION_EVENT_INTERVAL = 10;           /**< The execution interval (in ms) in which the @ref TetreesDefs.__ANIMATION_EVENT__ "animation event"
+												            is executed.*/
+const double BLOCK_SIDE_DIM = 30; 							/**< The size (in pixels) of each side of a block.*/
+const double TETROMINO_LINE_WIDTH = 4; 						/**< @ref TetreesDefs.__TETROMINO__ "Tetromino's" line thickness (in pixels).*/
+const int NUM_OF_TETROMINOES = 7; 			                /**< The seven @ref TetreesDefs.__TETROMINO__ "tetrominoes" fundamental shapes: I, O, T, S, Z, J and L.*/
+const int NUM_OF_LEVELS = 10; 				                /**< Number of game levels.*/
+const int NUM_OF_COLORS = 11; 				                /**< Number of colors mapped to @ref rgb_t.*/
+const int PLAY_FIELD_WIDTH = 12; 			                /**< The playing area width (in cells).*/
+const int PLAY_FIELD_HEIGHT = 22; 			                /**< The playing area height (in cells).
+ 	 	 	 	 	 	 	 	 	 	 	                @remark A cell is the space occupied by a @ref TetreesDefs.__BLOCK__ "block".*/
+const int HIDDEN_CELLS_OFFSET = 1 * BLOCK_SIDE_DIM;			/**< An offset function to compensate the @ref TetreesDefs.__CELL__ "cells" that are
+															outside the boundaries of the game board's visible playing area.*/
 const int PLAY_FIELD_PIXEL_WIDTH =
 		((BLOCK_SIDE_DIM * (PLAY_FIELD_WIDTH - 2))
-				+ (TETROMINO_LINE_WIDTH / 2)); 	/**< Calculates the playing field width (in pixels)*/
+				+ (TETROMINO_LINE_WIDTH / 2)); 						/**< Calculates the playing field width (in pixels)*/
 const int PLAY_FIELD_PIXEL_HEIGHT =
 		((BLOCK_SIDE_DIM * (PLAY_FIELD_HEIGHT - 2))
-				+ (TETROMINO_LINE_WIDTH / 2));	/**< Calculates the playing field height (in pixels)*/
+				+ (TETROMINO_LINE_WIDTH / 2));						/**< Calculates the playing field height (in pixels)*/
 const int NEXT_TETROMINO_FIELD_CELL_WIDTH = 6 * BLOCK_SIDE_DIM;		/**< Calculates the next tetromino field width (in pixels)*/
 const int NEXT_TETROMINO_FIELD_CELL_HEIGHT = 4 * BLOCK_SIDE_DIM;	/**< Calculates the next tetromino field height (in pixels)*/
 /**@}*/
 
 //MACROS
-#define SCENE_X(pos) ((pos * BLOCK_SIDE_DIM) - HIDDEN_CELLS_OFFSET + (TETROMINO_LINE_WIDTH / 2)) /**<
- * A function to find the exact X = 0 position (in pixels) of
- * a given position (@ref TetreesDefs.__CELL__ "cell") in the playing field.
- * @warning This function uses screen coordinates.
- */
-#define SCENE_Y(pos) SCENE_X(pos) /**<
- * A function to find the exact Y = 0 position (in pixels) of
- * a given position (@ref TetreesDefs.__CELL__ "cell") in the playing field.
- * @warning This function uses screen coordinates.
- */
-#define NEXT_TETROMINO_X(pos) ((pos * BLOCK_SIDE_DIM) + (TETROMINO_LINE_WIDTH / 2)) /**<
- * A function to find the exact X = 0 position (in pixels) of
- * a given position (@ref TetreesDefs.__CELL__ "cell") in the next tetromino field.
- * @warning This function uses screen coordinates.
- */
-#define NEXT_TETROMINO_Y(pos) NEXT_TETROMINO_X(pos) /**<
- * A function to find the exact Y = 0 position (in pixels) of
- * a given position (@ref TetreesDefs.__CELL__ "cell") in the next tetromino field.
- * @warning This function uses screen coordinates.
- */
+#define SCENE_X(pos) ((pos * BLOCK_SIDE_DIM) - HIDDEN_CELLS_OFFSET + (TETROMINO_LINE_WIDTH / 2)) 		/**< A function to find the exact X = 0 position (in pixels) of
+																										a given position (@ref TetreesDefs.__CELL__ "cell") in the playing field.
+																										@warning This function uses screen coordinates.*/
+#define SCENE_Y(pos) SCENE_X(pos) 																		/**< A function to find the exact Y = 0 position (in pixels) of
+																										a given position (@ref TetreesDefs.__CELL__ "cell") in the playing field.
+																										@warning This function uses screen coordinates.*/
+#define NEXT_TETROMINO_X(pos) ((pos * BLOCK_SIDE_DIM) + (TETROMINO_LINE_WIDTH / 2)) 					/**< A function to find the exact X = 0 position (in pixels) of
+																										a given position (@ref TetreesDefs.__CELL__ "cell") in the next tetromino field.
+																										@warning This function uses screen coordinates.*/
+#define NEXT_TETROMINO_Y(pos) NEXT_TETROMINO_X(pos) 													/**< A function to find the exact Y = 0 position (in pixels) of
+																										a given position (@ref TetreesDefs.__CELL__ "cell") in the next tetromino field.
+																										@warning This function uses screen coordinates.*/
 #define CSS_FILE_PATH "Misc/TetreesStyle.css"
 
 const int _R_ = 0;
@@ -101,7 +122,7 @@ enum step_t{
 /// Tetrominoes types.
 /**
  * An enum to represent each one of the fundamental
- * elements of the game: the tetrominoes.
+ * elements of the game: the @ref TetreesDefs.__TETROMINO__ "tetrominoes".
  */
 enum tetromino_t{
 	TETROMINO_I = 0,
@@ -116,7 +137,7 @@ enum tetromino_t{
 /// Game levels.
 /**
  * All possible game levels. Beat them all
- * and you're done!
+ * if you feel you're up to the challenge!
  */
 enum level_num_t : int{
 	LVL_1 = 0,
@@ -155,16 +176,16 @@ enum level_speed_t : int{
  * @anchor t_prop
  * @name TETROMINOES_PROPORTION
  *
- * Tetrominoes spawning proportion per level where the
+ * @ref TetreesDefs.__TETROMINO__ "Tetrominoes" spawning proportion per level where the
  * elements within the arrays represent the amount of
- * tetrominoes of each type to be spawned.
+ * @ref TetreesDefs.__TETROMINO__ "tetrominoes" of each type to be spawned.
  *
- * @remark The array follows the tetromino_t sequence.\n
+ * @remark The array follows the @ref tetromino_t sequence.\n
  * E.g.: @code{.cpp}
  * //                                         I,O,T,S,Z,J,L
  * const int LVL1_TETROMINOES_PROPORTION[] = {5,1,3,2,2,3,3};
  * @endcode
- * means the first level of the game will randomly spawn tetrominoes with the following proportion:
+ * means the first level of the game will randomly spawn @ref TetreesDefs.__TETROMINO__ "tetrominoes" with the following proportion:
  *       + 5 I-shaped tetrominoes;
  *       + 1 O-shaped tetromino;
  *       + 3 T-shaped tetrominoes;
@@ -230,17 +251,16 @@ enum color_t : int{
 /// Game board limits.
 /**
  * The game board is divided into cells (same as @ref TetreesDefs.__BLOCK__ "blocks").
- * This enum holds game board's border limits (in cells), which are
- * widely used by game engine (and UI as well) during the
- * the whole game processing.
+ * This enum holds game board's border limits (in @ref TetreesDefs.__CELL__ "cells"),
+ * which are widely used by game engine (and UI as well) during game processing.
  */
 enum limit_t : unsigned{
-	LIMIT_RIGHT_BORDER = PLAY_FIELD_WIDTH - 2,
-	LIMIT_LEFT_BORDER = PLAY_FIELD_WIDTH - (PLAY_FIELD_WIDTH - 1),
-	LIMIT_TOP_BORDER = PLAY_FIELD_HEIGHT - (PLAY_FIELD_HEIGHT - 1),
-	LIMIT_BOTTOM_BORDER = PLAY_FIELD_HEIGHT - 2,
-	LIMIT_PLAYING_AREA_HEIGHT = PLAY_FIELD_HEIGHT - 2,
-	LIMIT_PLAYING_AREA_WIDTH = PLAY_FIELD_WIDTH - 2
+	LIMIT_RIGHT_BORDER = PLAY_FIELD_WIDTH - 2,									/**< Rightmost visible column of the @ref TetreesEngine::gameBoard "game board".*/
+	LIMIT_LEFT_BORDER = PLAY_FIELD_WIDTH - (PLAY_FIELD_WIDTH - 1),				/**< Leftmost visible column of the @ref TetreesEngine::gameBoard "game board".*/
+	LIMIT_TOP_BORDER = PLAY_FIELD_HEIGHT - (PLAY_FIELD_HEIGHT - 1),				/**< Topmost visible row of the @ref TetreesEngine::gameBoard "game board".*/
+	LIMIT_BOTTOM_BORDER = PLAY_FIELD_HEIGHT - 2,								/**< Bottom row of the @ref TetreesEngine::gameBoard "game board".*/
+	LIMIT_PLAYING_AREA_HEIGHT = PLAY_FIELD_HEIGHT - 2,							/**< The playing area height (in @ref TetreesDefs.__CELL__ "cells").*/
+	LIMIT_PLAYING_AREA_WIDTH = PLAY_FIELD_WIDTH - 2								/**< The playing area width (in @ref TetreesDefs.__CELL__ "cells").*/
 };
 
 /// Tetrominoes rotation positions.
@@ -262,9 +282,9 @@ enum rpos_t: int{
  * Available commands to be issued to the game engine.
  */
 enum cmd_t: int{
-	CMD_PLAY = 0,
-	CMD_PAUSE,
-	CMD_RESET
+	CMD_PLAY = 0,							/**< Start the game.*/
+	CMD_PAUSE,								/**< Pause/Continue the game.*/
+	CMD_RESET								/**< Reset game to its initial state.*/
 };
 
 /// Game states.
@@ -273,13 +293,13 @@ enum cmd_t: int{
  * interaction between the game engine and the UI.
  */
 enum game_state_t: int{
-	GAME_STATE_NOT_STARTED = 0, /**< When game hasn't started yet, either if it has
-										just been executed or if user reseted it.*/
-	GAME_STATE_PLAYING, /**< When the game is actually being played. A gameplay state.*/
- 	GAME_STATE_PAUSED, /**< When the game is paused.*/
-	GAME_STATE_GAME_OVER, /**< When the game is over, i.e. when the pile of
-						tetrominoes has reached the top of the game's
-						@ref TetreesEngine::gameBoard "playing area".*/
+	GAME_STATE_NOT_STARTED = 0, 			/**< When game hasn't started yet, either if it has
+											just been executed or if user reseted it.*/
+	GAME_STATE_PLAYING, 					/**< When the game is actually being played. A gameplay state.*/
+ 	GAME_STATE_PAUSED, 						/**< When the game is paused.*/
+	GAME_STATE_GAME_OVER, 					/**< When the game is over, i.e. when the pile of
+											@ref TetreesDefs.__TETROMINO__ "tetrominoes" has reached the top of the game's
+											@ref TetreesEngine::gameBoard "playing area".*/
 };
 
 /// User interface states.
@@ -288,9 +308,9 @@ enum game_state_t: int{
  * game current state.
  */
 enum ui_state_t: int{
-	UI_STATE_NOT_STARTED = 0,
-	UI_STATE_PLAYING,
-	UI_STATE_PAUSED
+	UI_STATE_NOT_STARTED = 0,				/**< @ref TetreesUI.playButton "Play Button" = enabled; @ref TetreesUI.pauseButton "Pause Button" = disabled; @ref TetreesUI.resetButton "Reset Button" = disabled.*/
+	UI_STATE_PLAYING,						/**< @ref TetreesUI.playButton "Play Button" = disabled; @ref TetreesUI.pauseButton "Pause Button" = enabled; @ref TetreesUI.resetButton "Reset Button" = enabled.*/
+	UI_STATE_PAUSED							/**< @ref TetreesUI.playButton "Play Button" = disabled; @ref TetreesUI.pauseButton "Pause Button (Continue)" = enabled; @ref TetreesUI.resetButton "Reset Button" = enabled.*/
 };
 
 /// Score commands.
@@ -302,15 +322,15 @@ enum score_t: unsigned{
 	SCORE_UPDATE
 };
 
-/// UI animations.
+/// UI animation types.
 /**
- * Used by UI to keep track of which animation is
+ * Possible animations types implemented. Used by UI to keep track of which animation is
  * going on.
  */
 enum animation_t: int{
-	ANIMATION_NONE = 0,
-	ANIMATION_GAME_OVER,
-	ANIMATION_GAME_PAUSED
+	ANIMATION_NONE = 0, /**< Used when the game is either in a playing, paused or not started @ref game_state_t "state".*/
+	ANIMATION_GAME_OVER, /**< Used for the @ref TetreesUI::drawGameOverAnimationStep "game over animation drawing process".*/
+	ANIMATION_GAME_PAUSED /**< Used for the @ref TetreesUI::drawPausedScene "game paused animation drawing process".*/
 };
 
 /// A matrix/vector abstraction class.
@@ -377,7 +397,7 @@ public:
 
 	/// Matrix element access.
 	/**
-	 * Overrides the '()' operator in order to access
+	 * Overrides the `()` operator in order to access
 	 * a matrix's element by providing its row and column indexes.
 	 * @param r The row containing the element to be accessed.
 	 * @param c The column containing the element to be accessed.
@@ -390,7 +410,7 @@ public:
 
 	/// Matrix element access.
 	/**
-	 * Overrides the '()' operator in order to access
+	 * Overrides the `()` operator in order to access
 	 * a matrix's element by providing its row and column indexes.
 	 * @param r The row containing the element to be accessed.
 	 * @param c The column containing the element to be accessed.
@@ -403,7 +423,7 @@ public:
 
 	/// Array element access.
 	/**
-	 * Overrides the '()' operator in order to access
+	 * Overrides the `()` operator in order to access
 	 * an array's element.
 	 * @param i The index of the element to be accessed.
 	 * @return The element pointed by i.
@@ -415,7 +435,7 @@ public:
 
 	/// Array element access.
 	/**
-	 * Overrides the '()' operator in order to access
+	 * Overrides the `()` operator in order to access
 	 * an array's element.
 	 * @param i The index of the element to be accessed.
 	 * @return The element pointed by i.
@@ -593,18 +613,18 @@ private:
 
 };
 
-/// Struct representing a tetromino.
+/// Struct representing a @ref TetreesDefs.__TETROMINO__ "tetromino".
 /**
  * Used to store several data about related to
- * the tetromino.
+ * the @ref TetreesDefs.__TETROMINO__ "tetromino".
  */
 struct piece_t{
-	color_t color; 			/**< The tetromino color.*/
-	tetromino_t type; 		/**< The tetromino type/shape.*/
-	rpos_t rpos;			/**< The tetromino rotation position.*/
-	unsigned boardCol;		/**< Column position of tetromino's shape first element (0,0) within the game board.*/
-	unsigned boardRow;		/**< Row position of tetromino's shape first element (0,0) within the game board */
-	bool reachedBottom;		/**< True when the tetromino is blocked at game board's bottom.*/
+	color_t color; 			/**< The @ref TetreesDefs.__TETROMINO__ "tetromino" color.*/
+	tetromino_t type; 		/**< The @ref TetreesDefs.__TETROMINO__ "tetromino" type/shape.*/
+	rpos_t rpos;			/**< The @ref TetreesDefs.__TETROMINO__ "tetromino" rotation position.*/
+	unsigned boardCol;		/**< Column position of @ref piece_t.shape "tetromino's shape" first element (0,0) within the game board.*/
+	unsigned boardRow;		/**< Row position of @ref piece_t.shape "tetromino's shape" first element (0,0) within the game board */
+	bool reachedBottom;		/**< True when the @ref TetreesDefs.__TETROMINO__ "tetromino" is blocked at game board's bottom.*/
 	Matrix2D<int> shape;	/**< Tetromino's shape related @ref TetreesUtils::startTetrominoesArray "data".*/
 };
 
@@ -627,21 +647,21 @@ struct rgb_t{
 struct game_score_t{
 	unsigned score;         /**< The game score. Earn more. Beat your friends. Beat the game (if you're think you are up to the challenge)!*/
 	unsigned multiplier;    /**< Score multiplier. The higher the multiplier the more points you will earn.
-	@note The multiplier is increased by removing multiple lines of tetrominoes simultaneously.*/
+	@note The multiplier is increased by removing multiple lines of @ref TetreesDefs.__TETROMINO__ "tetrominoes" simultaneously.*/
 };
 
 /// Game level data type.
 /**
- * Stores several data related to actual game level.
+ * Stores several data related to the actual difficulty level of the game.
  */
 struct game_level_t{
 	int lvl;											/**< The level number.*/
 	unsigned nextLvlScore;								/**< The score needed to reach next level.*/
 	unsigned gameSpeed;									/**< The level speed (in ms).*/
-	int tetrominoesProportionArray[NUM_OF_TETROMINOES];	/**< The tetrominoes spawn rate array related to this level.*/
+	int tetrominoesProportionArray[NUM_OF_TETROMINOES];	/**< The @ref TetreesDefs.__TETROMINO__ "tetrominoes" spawn rate array related to this level.*/
 };
 
-/// Game data tyṕe.
+/// Game data type.
 /**
  * Stores several data related to game itself.
  */
@@ -654,7 +674,7 @@ struct game_data_t{
 /// Type to control UI animations.
 /**
  * Stores UI animation related data. This data
- * are used by UI object so it knows when, how, and
+ * are used by @ref TetreesEngine::gameUI "UI object" so it knows when, how, and
  * for how long it should execute an animation.
  */
 struct animation_control_t{

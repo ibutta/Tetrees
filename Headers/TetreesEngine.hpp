@@ -31,32 +31,38 @@ public:
 	void gtkSetup(GtkApplication* app, gpointer user_data);
 	/// Send game engine a command.
 	void issueCommand(cmd_t command);
-	/// Changes game state.
+	/// Modifies the game context.
 	void gameStep(step_t step);
+	/// A getter for the game state.
 	game_state_t getGameState();
+	/// A getter for the game score.
 	game_score_t getGameScore();
+	/// A getter for the game level.
 	game_level_t getGameLevel();
+	/// A getter for the game scene.
 	Matrix2D<int> getScene();
+	/// A getter for the next tetromino.
 	piece_t getNextTetromino();
 
 private:
 
-	TetreesUI *gameUI; /**< A TetreesUI object for controlling user interface and other game's elements.*/
-	TetreesUtils *utils; /**< A TetreesUtils object that provides utility functions.*/
-	static Matrix2D<int> gameBoard; /**< A Matrix2D that represents the gameBoard containing ONLY the
-											already @ref step_BlockSpawnedTetromino "blocked tetrominoes".
-											Each @ref __BLOCK__ "element" of this matrix contains data
-											that refers to a @ref color_t "color".*/
-	static Matrix2D<int> scene; /**< A Matrix2D containing all data present at @ref gameBoard, PLUS the
-										@ref color_t "color" data related to the @ref spawnedTetromino
-										"falling tetromino". A frame to be @ref TetreesUI::drawScene "drew" on screen.*/
-	static piece_t spawnedTetromino; /**< The piece that is being controlled by player while falls.*/
-	static piece_t nextTetromino; /**< The next piece to be spawned. It is showed inside the small
-										@ref TetreesUI::nextTetrominoDrawingArea "rectangular area"
-										upper right the @ref TetreesUI::playingFieldDrawingArea "playing field".*/
-	static piece_t tetrominoes[NUM_OF_TETROMINOES]; /**< An array of @ref piece_t containing a sample of each of the 7 tetrominoes.*/
-	static game_data_t gameData; /**< A struct containing several data related to the game.*/
-	static game_level_t gameLevels[NUM_OF_LEVELS]; /**< An array of @ref game_level_t containing a sample of each level and related info.*/
+	TetreesUI *gameUI; 											/**< A TetreesUI object for controlling user interface and other game's elements.*/
+	TetreesUtils *utils; 										/**< A TetreesUtils object that provides utility functions.*/
+	static Matrix2D<int> gameBoard; 							/**< A Matrix2D that represents the gameBoard containing ONLY the
+																already @ref step_BlockSpawnedTetromino "blocked tetrominoes".
+																Each @ref __BLOCK__ "element" of this matrix contains data
+																that refers to a @ref color_t "color".*/
+	static Matrix2D<int> scene; 								/**< A Matrix2D containing all data present at @ref gameBoard, PLUS the
+																@ref color_t "color" data related to the @ref spawnedTetromino
+																"falling tetromino". In other words, a frame to be
+																@ref TetreesUI::drawScene "drew" on the screen.*/
+	static piece_t spawnedTetromino; 							/**< The piece that is being controlled by player while falls.*/
+	static piece_t nextTetromino; 								/**< The next @ref piece_t "piece" to be spawned. It is showed inside the small
+																@ref TetreesUI::nextTetrominoDrawingArea "rectangular area"
+																upper right the @ref TetreesUI::playingFieldDrawingArea "playing field".*/
+	static piece_t tetrominoes[NUM_OF_TETROMINOES]; 			/**< An array of @ref piece_t containing a sample of each of the 7 @ref TetreesDefs.__TETROMINO__ "tetrominoes".*/
+	static game_data_t gameData; 								/**< A struct containing several data related to the game.*/
+	static game_level_t gameLevels[NUM_OF_LEVELS]; 				/**< An array of @ref game_level_t containing a sample of each level and its related info.*/
 
 	/// Reset game board.
 	void gameBoardReset();
@@ -83,9 +89,9 @@ private:
 	bool step_OverlappingCheck(unsigned boardRow, unsigned boardCol);
 	/// Detects if a movement infringes game board's border limits.
 	bool step_BorderTrespassingCheck(limit_t borderSide);
-	/// Drops the next tetromino.
+	/// Drops the @ref nextTetromino "next tetromino".
 	void step_SpawnNextTetromino();
-	/// Generates a random tetromino.
+	/// Generates a random @ref TetreesDefs.__TETROMINO__ "tetromino".
 	piece_t step_GetTetromino();
 
 	/// Looks for rows filled with @ref TetreesDefs.__BLOCK__ "blocks".

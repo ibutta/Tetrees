@@ -19,7 +19,7 @@
 
 /// Prefix increment operator overload.
 /**
- * Used to assist tetrominoes' rotation position tracking.
+ * Used to assist @ref TetreesDefs.__TETROMINO__ "tetrominoes'" rotation position tracking.
  */
 rpos_t &operator++ (rpos_t &rpos){
 
@@ -35,7 +35,7 @@ rpos_t &operator++ (rpos_t &rpos){
 
 /// Prefix decrement operator overload.
 /**
- * Used to assist tetrominoes' rotation position tracking.
+ * Used to assist @ref TetreesDefs.__TETROMINO__ "tetrominoes'" rotation position tracking.
  */
 rpos_t &operator-- (rpos_t &rpos){
 
@@ -242,7 +242,7 @@ Matrix2D<int> TetreesEngine::getScene()
 
 /**
  * A getter for @ref nextTetromino.
- * @return The data stored by @ref nextTetromino. The next tetromino to be spawned.
+ * @return The data stored by @ref nextTetromino. The next @ref TetreesDefs.__TETROMINO__ "tetromino" to be spawned.
  */
 piece_t TetreesEngine::getNextTetromino()
 {
@@ -339,8 +339,8 @@ void TetreesEngine::step_SpawnedTetromino_Drop()
 /**
  * Rotates the @ref spawnedTetromino "spawned tetromino" by applying
  * matrix-related operations (@ref Matrix2D::transpose "transposing" and
- * @ref Matrix2D::clockwise90Rotation "rotating") to the tetromino's
- * @ref piece_t.shape "shape".
+ * @ref Matrix2D::clockwise90Rotation "rotating") to the
+ * @ref piece_t.shape "tetromino's shape".
  */
 void TetreesEngine::step_SpawnedTetromino_Rotate()
 {
@@ -399,11 +399,11 @@ void TetreesEngine::step_SpawnedTetromino_SwerveLeft()
  * When the @ref spawnedTetromino "spawned tetromino" reaches a
  * position on game's board where there are no further @ref step_t "movements"
  * allowed, this function is called blocking the @ref spawnedTetromino "spawned tetromino"
- * by making it part of the blocked tetrominoes pile within game board, hence it's no
+ * by making it part of the blocked @ref TetreesDefs.__TETROMINO__ "tetrominoes" pile within game board, hence it's no
  * longer controllable by the player.
  * @remark Moving the @ref spawnedTetromino "falling piece" is allowed while it
  * doesn't reaches the bottom of the game board or collides with the pile of
- * previously blocked tetrominoes.
+ * previously blocked @ref TetreesDefs.__TETROMINO__ "tetrominoes".
  */
 void TetreesEngine::step_BlockSpawnedTetromino()
 {
@@ -541,7 +541,7 @@ bool TetreesEngine::step_DetectCollision(step_t step)
 
 /**
  * Checks if the @ref spawnedTetromino "spawned tetromino" will somehow collide with
- * another tetromino already blocked on the game board.
+ * another @ref TetreesDefs.__TETROMINO__ "tetromino" already blocked on the game board.
  *
  * A possible collision is verified by using the given position at @ref gameBoard "game board" (boardPosRow and
  * boardPosCol) as the start point (0,0) and, from this point on, comparing the surrounding area
@@ -623,11 +623,11 @@ bool TetreesEngine::step_BorderTrespassingCheck(limit_t border)
 }
 
 /**
- * Drops the next tetromino. The one that appears inside the @ref TetreesUI.nextTetrominoDrawingArea
+ * Drops the @ref nextTetromino "next tetromino". The one that appears inside the @ref TetreesUI.nextTetrominoDrawingArea
  * "next tetromino area".
  *
  * This function simply updates the data stored in @ref spawnedTetromino with the one stored
- * in @ref nextTetromino, then it generates another tetromino data to be stored in @ref nextTetromino.
+ * in @ref nextTetromino, then it generates another @ref TetreesUtils::startTetrominoesArray "tetromino data" to be stored in @ref nextTetromino.
  */
 void TetreesEngine::step_SpawnNextTetromino()
 {
@@ -651,9 +651,9 @@ void TetreesEngine::step_SpawnNextTetromino()
 }
 
 /**
- * Randomly generates a @ref piece_t "tetromino" accordingly to the @ref t_prop
+ * Randomly generates a @ref TetreesDefs.__TETROMINO__ "tetromino" accordingly to the @ref t_prop
  * "spawn proportion" per level.
- * @return A random @ref piece_t "tetromino" to be stored as the @ref nextTetromino "next tetromino" to spawn.
+ * @return A random @ref TetreesDefs.__TETROMINO__ "tetromino" to be stored as the @ref nextTetromino "next tetromino" to spawn.
  */
 piece_t TetreesEngine::step_GetTetromino()
 {
@@ -753,7 +753,7 @@ void TetreesEngine::score_HandleLvlCompletion()
  *
  * The game will be over whenever the pile of @ref step_BlockSpawnedTetromino "blocked tetrominoes"
  * reaches the top of the game board.
- * @return 'TRUE' if the game is over. 'FALSE' otherwise.
+ * @return `TRUE` if the game is over. `FALSE` otherwise.
  */
 bool TetreesEngine::score_HandleGameOver()
 {

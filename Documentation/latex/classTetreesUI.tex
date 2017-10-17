@@ -3,85 +3,63 @@
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classTetreesUI_ad6a5b91b1574c25c2bcd48601142013c}{Tetrees\+UI}} (\mbox{\hyperlink{classTetreesEngine}{Tetrees\+Engine}})
+\hyperlink{classTetreesUI_ad6a5b91b1574c25c2bcd48601142013c}{Tetrees\+UI} (\hyperlink{classTetreesEngine}{Tetrees\+Engine})
 \begin{DoxyCompactList}\small\item\em The class constructor. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classTetreesUI_a492d68860089cfbe52c5756b2c3cd2ae}{setup\+UI}} (Gtk\+Application $\ast$, gpointer)
+void \hyperlink{classTetreesUI_a492d68860089cfbe52c5756b2c3cd2ae}{setup\+UI} (Gtk\+Application $\ast$, gpointer)
 \begin{DoxyCompactList}\small\item\em User interface (UI) assembly. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Static Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classTetreesUI_a829fc73fdc1f45fb567168f2c37ab012}\label{classTetreesUI_a829fc73fdc1f45fb567168f2c37ab012}} 
-static gboolean {\bfseries on\+Draw\+Playing\+Field\+Drawing\+Area} (Gtk\+Widget $\ast$, cairo\+\_\+t $\ast$, gpointer)
-\item 
-\mbox{\Hypertarget{classTetreesUI_aa775d6f3e3ca5c11ec3bb73e8dd7f62d}\label{classTetreesUI_aa775d6f3e3ca5c11ec3bb73e8dd7f62d}} 
-static gboolean {\bfseries on\+Draw\+Next\+Tetromino\+Drawing\+Area} (Gtk\+Widget $\ast$, cairo\+\_\+t $\ast$, gpointer)
-\item 
-\mbox{\Hypertarget{classTetreesUI_a9d2b1a8025a16aac4097850deedadd18}\label{classTetreesUI_a9d2b1a8025a16aac4097850deedadd18}} 
-static void {\bfseries on\+Play\+Clicked} (Gtk\+Button $\ast$)
-\item 
-\mbox{\Hypertarget{classTetreesUI_afe0ff659354e4c6dfe6a7f2fce3ad0de}\label{classTetreesUI_afe0ff659354e4c6dfe6a7f2fce3ad0de}} 
-static void {\bfseries on\+Pause\+Clicked} (Gtk\+Button $\ast$)
-\item 
-\mbox{\Hypertarget{classTetreesUI_af80a44c26a4ce356e1f999c8a341197c}\label{classTetreesUI_af80a44c26a4ce356e1f999c8a341197c}} 
-static void {\bfseries on\+Reset\+Clicked} (Gtk\+Button $\ast$)
-\item 
-static void \mbox{\hyperlink{classTetreesUI_a357ae7240cc5f35b5d61244e7a6bcfe3}{draw\+Scene}} (cairo\+\_\+t $\ast$)
-\begin{DoxyCompactList}\small\item\em Draws gameplay actual scene. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classTetreesUI_a7d39f8caa75f5e755e3cebb0e05bb779}\label{classTetreesUI_a7d39f8caa75f5e755e3cebb0e05bb779}} 
-static void {\bfseries draw\+Paused\+Scene} (cairo\+\_\+t $\ast$)
-\item 
-\mbox{\Hypertarget{classTetreesUI_a9f4fa68c99e9d6146d9bdf2baa9db4d6}\label{classTetreesUI_a9f4fa68c99e9d6146d9bdf2baa9db4d6}} 
-static void {\bfseries draw\+Next\+Tetromino} (cairo\+\_\+t $\ast$)
-\item 
-\mbox{\Hypertarget{classTetreesUI_a4d16e60b9a27bfbc2aac1deba09cc74c}\label{classTetreesUI_a4d16e60b9a27bfbc2aac1deba09cc74c}} 
-static void {\bfseries draw\+Game\+Over\+Animation\+Step} (cairo\+\_\+t $\ast$)
-\item 
-\mbox{\Hypertarget{classTetreesUI_a5db6dc449dab49c7baa83f35a7909c0c}\label{classTetreesUI_a5db6dc449dab49c7baa83f35a7909c0c}} 
-static void {\bfseries draw\+Row\+Removal\+Animation\+Step} (cairo\+\_\+t $\ast$)
-\item 
-\mbox{\Hypertarget{classTetreesUI_a5b96d12dcb64cd2d8b76ec7feeb9e80b}\label{classTetreesUI_a5b96d12dcb64cd2d8b76ec7feeb9e80b}} 
-static gboolean {\bfseries animation\+Handler} (Gtk\+Widget $\ast$)
-\item 
-\mbox{\Hypertarget{classTetreesUI_a80d2a8dc3841f2285eb22a5238600df7}\label{classTetreesUI_a80d2a8dc3841f2285eb22a5238600df7}} 
-static gboolean {\bfseries update\+Game\+Context} (Gtk\+Widget $\ast$)
-\item 
-\mbox{\Hypertarget{classTetreesUI_aecd0c6b7dad0f9524673711db8364cd6}\label{classTetreesUI_aecd0c6b7dad0f9524673711db8364cd6}} 
-static void {\bfseries context\+Handler} (gpointer)
-\item 
-\mbox{\Hypertarget{classTetreesUI_ad940ec71d761d3234ee3cef397434784}\label{classTetreesUI_ad940ec71d761d3234ee3cef397434784}} 
-static gboolean {\bfseries on\+Key\+Press} (Gtk\+Widget $\ast$, Gdk\+Event\+Key $\ast$, gpointer)
-\item 
-\mbox{\Hypertarget{classTetreesUI_a195806825b5469dcc99fbca5d14af94f}\label{classTetreesUI_a195806825b5469dcc99fbca5d14af94f}} 
-static void {\bfseries set\+U\+I\+State} (\mbox{\hyperlink{TetreesDefs_8hpp_ab583135648b1264a9f7817709c4dbd3e}{ui\+\_\+state\+\_\+t}})
-\item 
-\mbox{\Hypertarget{classTetreesUI_ac41bb9dc9af1d051c54dd5f2dcf224a9}\label{classTetreesUI_ac41bb9dc9af1d051c54dd5f2dcf224a9}} 
-static void {\bfseries update\+Score} ()
-\end{DoxyCompactItemize}
+static gboolean \hyperlink{classTetreesUI_a829fc73fdc1f45fb567168f2c37ab012}{on\+Draw\+Playing\+Field\+Drawing\+Area} (Gtk\+Widget $\ast$, cairo\+\_\+t $\ast$, gpointer)
+\begin{DoxyCompactList}\small\item\em Handles the {\bfseries draw} event for the playing field (game board). \end{DoxyCompactList}\item 
+static gboolean \hyperlink{classTetreesUI_aa775d6f3e3ca5c11ec3bb73e8dd7f62d}{on\+Draw\+Next\+Tetromino\+Drawing\+Area} (Gtk\+Widget $\ast$, cairo\+\_\+t $\ast$, gpointer)
+\begin{DoxyCompactList}\small\item\em Handles the {\bfseries draw} event for the next tetromino field. \end{DoxyCompactList}\item 
+static void \hyperlink{classTetreesUI_a357ae7240cc5f35b5d61244e7a6bcfe3}{draw\+Scene} (cairo\+\_\+t $\ast$)
+\begin{DoxyCompactList}\small\item\em Draws gameplay\textquotesingle{}s actual scene. \end{DoxyCompactList}\item 
+static void \hyperlink{classTetreesUI_a7d39f8caa75f5e755e3cebb0e05bb779}{draw\+Paused\+Scene} (cairo\+\_\+t $\ast$)
+\begin{DoxyCompactList}\small\item\em Draws actual scene when game is paused. \end{DoxyCompactList}\item 
+static void \hyperlink{classTetreesUI_a9f4fa68c99e9d6146d9bdf2baa9db4d6}{draw\+Next\+Tetromino} (cairo\+\_\+t $\ast$)
+\begin{DoxyCompactList}\small\item\em Draws the next tetromino to be spawned. \end{DoxyCompactList}\item 
+static void \hyperlink{classTetreesUI_a4d16e60b9a27bfbc2aac1deba09cc74c}{draw\+Game\+Over\+Animation\+Step} (cairo\+\_\+t $\ast$)
+\begin{DoxyCompactList}\small\item\em Draws game over animation. \end{DoxyCompactList}\item 
+static gboolean \hyperlink{classTetreesUI_adfb21fb6812e45bebe1e6e9b608786a0}{animation\+Controller} ()
+\begin{DoxyCompactList}\small\item\em Controls animation execution. \end{DoxyCompactList}\item 
+static gboolean \hyperlink{classTetreesUI_a0fe8ccb5c1c594792591036f4f02175f}{update\+Game\+Context} ()
+\begin{DoxyCompactList}\small\item\em Periodically changes game context. \end{DoxyCompactList}\item 
+static void \hyperlink{classTetreesUI_ae7d84906e943cd4b795800d4d561955c}{context\+Handler} ()
+\begin{DoxyCompactList}\small\item\em Handles update event\textquotesingle{}s removal. \end{DoxyCompactList}\item 
+static gboolean \hyperlink{classTetreesUI_ad940ec71d761d3234ee3cef397434784}{on\+Key\+Press} (Gtk\+Widget $\ast$, Gdk\+Event\+Key $\ast$, gpointer)
+\begin{DoxyCompactList}\small\item\em Handles key binding. \end{DoxyCompactList}\item 
+static void \hyperlink{classTetreesUI_a195806825b5469dcc99fbca5d14af94f}{set\+U\+I\+State} (\hyperlink{TetreesDefs_8hpp_ab583135648b1264a9f7817709c4dbd3e}{ui\+\_\+state\+\_\+t})
+\begin{DoxyCompactList}\small\item\em Modifies UI\textquotesingle{}s functionality. \end{DoxyCompactList}\item 
+static void \hyperlink{classTetreesUI_ac41bb9dc9af1d051c54dd5f2dcf224a9}{update\+Score} ()
+\begin{DoxyCompactList}\small\item\em Updates the score value shown. \end{DoxyCompactList}\item 
+static void \hyperlink{classTetreesUI_a0aa1932ac8f09f6d8de7ac7d7a2efa94}{on\+Play\+Clicked} ()
+\begin{DoxyCompactList}\small\item\em Handles the {\bfseries clicked} signal emitted by the Play button. \end{DoxyCompactList}\item 
+static void \hyperlink{classTetreesUI_ae821c638a19a77e9a64e9334b8011cba}{on\+Pause\+Clicked} ()
+\begin{DoxyCompactList}\small\item\em Handles the {\bfseries clicked} signal emitted by the Pause button. \end{DoxyCompactList}\item 
+static void \hyperlink{classTetreesUI_a587ff52a2c843c4d331f329f4b94ddbd}{on\+Reset\+Clicked} ()
+\begin{DoxyCompactList}\small\item\em Handles the {\bfseries clicked} signal emitted by the Reset button. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Static Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
-static \mbox{\hyperlink{classTetreesEngine}{Tetrees\+Engine}} $\ast$ \mbox{\hyperlink{classTetreesUI_a07faa56ea40b28beba7509fa7f65c897}{game\+Engine}}
+static \hyperlink{classTetreesEngine}{Tetrees\+Engine} $\ast$ \hyperlink{classTetreesUI_a07faa56ea40b28beba7509fa7f65c897}{game\+Engine}
 \item 
-static \mbox{\hyperlink{classTetreesUtils}{Tetrees\+Utils}} $\ast$ \mbox{\hyperlink{classTetreesUI_a80545840b2848938d01d7f85786ee141}{utils}}
+static \hyperlink{classTetreesUtils}{Tetrees\+Utils} $\ast$ \hyperlink{classTetreesUI_a80545840b2848938d01d7f85786ee141}{utils}
 \item 
-static \mbox{\hyperlink{classMatrix2D}{Matrix2D}}$<$ \mbox{\hyperlink{structrgb__t}{rgb\+\_\+t}} $>$ \mbox{\hyperlink{classTetreesUI_a57300c1925cb5ae34c9220cd993e28b2}{colors}}
+static \hyperlink{classMatrix2D}{Matrix2D}$<$ \hyperlink{structrgb__t}{rgb\+\_\+t} $>$ \hyperlink{classTetreesUI_a57300c1925cb5ae34c9220cd993e28b2}{colors}
 \item 
-static \mbox{\hyperlink{classMatrix2D}{Matrix2D}}$<$ int $>$ \mbox{\hyperlink{classTetreesUI_a604cf4cecdbc93745eaf7733b3c33602}{game\+Scene}}
+static \hyperlink{classMatrix2D}{Matrix2D}$<$ int $>$ \hyperlink{classTetreesUI_a604cf4cecdbc93745eaf7733b3c33602}{game\+Scene}
 \item 
-\mbox{\Hypertarget{classTetreesUI_a6296ce8f3cde853cec110718c4b88540}\label{classTetreesUI_a6296ce8f3cde853cec110718c4b88540}} 
-static \mbox{\hyperlink{structpiece__t}{piece\+\_\+t}} {\bfseries next\+Tetromino}
+static \hyperlink{structpiece__t}{piece\+\_\+t} \hyperlink{classTetreesUI_a6296ce8f3cde853cec110718c4b88540}{next\+Tetromino}
 \item 
-\mbox{\Hypertarget{classTetreesUI_a128491041c6b77acec829fb5b1f4dafb}\label{classTetreesUI_a128491041c6b77acec829fb5b1f4dafb}} 
-static \mbox{\hyperlink{structgame__score__t}{game\+\_\+score\+\_\+t}} {\bfseries game\+Score}
+static \hyperlink{structgame__score__t}{game\+\_\+score\+\_\+t} \hyperlink{classTetreesUI_a128491041c6b77acec829fb5b1f4dafb}{game\+Score}
 \item 
-\mbox{\Hypertarget{classTetreesUI_a700b75dbee9c324c69a18f34c5efdab9}\label{classTetreesUI_a700b75dbee9c324c69a18f34c5efdab9}} 
-static \mbox{\hyperlink{structgame__level__t}{game\+\_\+level\+\_\+t}} {\bfseries game\+Level}
+static \hyperlink{structgame__level__t}{game\+\_\+level\+\_\+t} \hyperlink{classTetreesUI_a700b75dbee9c324c69a18f34c5efdab9}{game\+Level}
 \item 
-\mbox{\Hypertarget{classTetreesUI_af3bd9b55da30d2b324c2dfe2d740d8a2}\label{classTetreesUI_af3bd9b55da30d2b324c2dfe2d740d8a2}} 
-static \mbox{\hyperlink{TetreesDefs_8hpp_a10487f3bfa31fd7b7b8c20f403f8c947}{animation\+\_\+t}} {\bfseries animation\+Mode}
+static \hyperlink{TetreesDefs_8hpp_a10487f3bfa31fd7b7b8c20f403f8c947}{animation\+\_\+t} \hyperlink{classTetreesUI_af3bd9b55da30d2b324c2dfe2d740d8a2}{animation\+Mode}
 \item 
-\mbox{\Hypertarget{classTetreesUI_a06df6e44abd5d521448cf1299433b55c}\label{classTetreesUI_a06df6e44abd5d521448cf1299433b55c}} 
-static \mbox{\hyperlink{structanimation__control__t}{animation\+\_\+control\+\_\+t}} {\bfseries animation\+Control}
+static \hyperlink{structanimation__control__t}{animation\+\_\+control\+\_\+t} \hyperlink{classTetreesUI_a06df6e44abd5d521448cf1299433b55c}{animation\+Control}
 \end{DoxyCompactItemize}
 
 
@@ -90,20 +68,98 @@ static \mbox{\hyperlink{structanimation__control__t}{animation\+\_\+control\+\_\
 \index{Tetrees\+UI@{Tetrees\+UI}!Tetrees\+UI@{Tetrees\+UI}}
 \index{Tetrees\+UI@{Tetrees\+UI}!Tetrees\+UI@{Tetrees\+UI}}
 \subsubsection{\texorpdfstring{Tetrees\+U\+I()}{TetreesUI()}}
-{\footnotesize\ttfamily Tetrees\+U\+I\+::\+Tetrees\+UI (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classTetreesEngine}{Tetrees\+Engine}}}]{engine }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily Tetrees\+U\+I\+::\+Tetrees\+UI (\begin{DoxyParamCaption}\item[{\hyperlink{classTetreesEngine}{Tetrees\+Engine}}]{engine }\end{DoxyParamCaption})}
 
 
 
 The class constructor. 
 
-Creates an object of the \mbox{\hyperlink{classTetreesUI}{Tetrees\+UI}} class and initiates its member variables. 
+Creates an object of the \hyperlink{classTetreesUI}{Tetrees\+UI} class and initiates its member variables. 
 \begin{DoxyParams}{Parameters}
-{\em engine} & The \mbox{\hyperlink{classTetreesEngine}{game engine}} to be used by this UI object. \\
+{\em engine} & The \hyperlink{classTetreesEngine}{game engine} to be used by this UI object. \\
 \hline
 \end{DoxyParams}
 
 
 \subsection{Member Function Documentation}
+\mbox{\Hypertarget{classTetreesUI_adfb21fb6812e45bebe1e6e9b608786a0}\label{classTetreesUI_adfb21fb6812e45bebe1e6e9b608786a0}} 
+\index{Tetrees\+UI@{Tetrees\+UI}!animation\+Controller@{animation\+Controller}}
+\index{animation\+Controller@{animation\+Controller}!Tetrees\+UI@{Tetrees\+UI}}
+\subsubsection{\texorpdfstring{animation\+Controller()}{animationController()}}
+{\footnotesize\ttfamily gboolean Tetrees\+U\+I\+::animation\+Controller (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Controls animation execution. 
+
+This function controls the execution of each step composing an animation. When the \hyperlink{classTetreesUI_af3bd9b55da30d2b324c2dfe2d740d8a2}{animation\+Mode} variable is set to some \hyperlink{TetreesDefs_8hpp_a10487f3bfa31fd7b7b8c20f403f8c947}{type of animation}, this function uses the  variable and iteratively command the screen to be redrawn accordingly the data stored by it. \begin{DoxyNote}{Note}
+This is the member function registered within the \hyperlink{TetreesDefs_8hpp_a607bc7bf79fa19b90a730745ca487a4b}{animation event}. 
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+Always returns \href{https://developer.gnome.org/glib/stable/glib-The-Main-Event-Loop.html#G-SOURCE-CONTINUE:CAPS}{\tt G\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+C\+O\+N\+T\+I\+N\+UE} since the event which this function is attached to is permanently executed. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTetreesUI_ae7d84906e943cd4b795800d4d561955c}\label{classTetreesUI_ae7d84906e943cd4b795800d4d561955c}} 
+\index{Tetrees\+UI@{Tetrees\+UI}!context\+Handler@{context\+Handler}}
+\index{context\+Handler@{context\+Handler}!Tetrees\+UI@{Tetrees\+UI}}
+\subsubsection{\texorpdfstring{context\+Handler()}{contextHandler()}}
+{\footnotesize\ttfamily void Tetrees\+U\+I\+::context\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Handles update event\textquotesingle{}s removal. 
+
+This function will be executed when a call to \href{https://developer.gnome.org/glib/stable/glib-The-Main-Event-Loop.html#g-source-remove}{\tt g\+\_\+source\+\_\+remove}\hyperlink{TetreesUI_8cpp_a10408b8935c73e0f669f6268f22f1de3}{(update\+Event\+ID)} is made in order to unregister (detach) the \hyperlink{TetreesDefs_8hpp_aaf9e35ddd627efe32323b1ba02ee514e}{update event} from application\textquotesingle{}s \href{https://developer.gnome.org/programming-guidelines/stable/main-contexts.html.en}{\tt main context}.
+
+In case the game is currently in a \hyperlink{TetreesDefs_8hpp_aebae08b2e3a36f1452b33acaf1eaab40ab8ee64fcce8c3b17312b20c78fc9695a}{playing state} by the time this function is called, it will register again the \hyperlink{TetreesDefs_8hpp_aaf9e35ddd627efe32323b1ba02ee514e}{update event} within the \href{https://developer.gnome.org/programming-guidelines/stable/main-contexts.html.en}{\tt main context} by using a new interval (if that is the case) to call \hyperlink{classTetreesUI_a0fe8ccb5c1c594792591036f4f02175f}{update\+Game\+Context()}. \begin{DoxySeeAlso}{See also}
+\href{https://developer.gnome.org/glib/stable/glib-The-Main-Event-Loop.html#g-timeout-add-full}{\tt g\+\_\+timeout\+\_\+add\+\_\+full} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classTetreesUI_a4d16e60b9a27bfbc2aac1deba09cc74c}\label{classTetreesUI_a4d16e60b9a27bfbc2aac1deba09cc74c}} 
+\index{Tetrees\+UI@{Tetrees\+UI}!draw\+Game\+Over\+Animation\+Step@{draw\+Game\+Over\+Animation\+Step}}
+\index{draw\+Game\+Over\+Animation\+Step@{draw\+Game\+Over\+Animation\+Step}!Tetrees\+UI@{Tetrees\+UI}}
+\subsubsection{\texorpdfstring{draw\+Game\+Over\+Animation\+Step()}{drawGameOverAnimationStep()}}
+{\footnotesize\ttfamily void Tetrees\+U\+I\+::draw\+Game\+Over\+Animation\+Step (\begin{DoxyParamCaption}\item[{cairo\+\_\+t $\ast$}]{cr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Draws game over animation. 
+
+This function is responsible for executing each of the several drawing steps needed to accomplish the game over animation. As the game over condition is reached -\/ which occurs when the \hyperlink{classTetreesEngine_a0978ef1f287f00a8ed5a4af2d680b943}{blocked tetrominoes} pile reaches the \hyperlink{TetreesDefs_8hpp_a5dbb1ebfe8a9b95707ac161d3549ed8aa3f2dceb813401410ad271665ae004acb}{top border limit} of the \hyperlink{classTetreesEngine_a37d082a7816d6731b2703dd6d1a1cb97}{game board} -\/ the game\textquotesingle{}s state changes to a \hyperlink{TetreesDefs_8hpp_aebae08b2e3a36f1452b33acaf1eaab40a2c9a2640a3b890ed907410e9dc3f7425}{game over state} and the \hyperlink{classTetreesUI_a0fe8ccb5c1c594792591036f4f02175f}{update\+Game\+Context} function configures the \hyperlink{classTetreesUI_a06df6e44abd5d521448cf1299433b55c}{animation\+Control} variable with data necessary to execute the game over animation. Thus, the drawing control is passed to the \hyperlink{classTetreesUI_adfb21fb6812e45bebe1e6e9b608786a0}{animation\+Controller} member function which plays a role similar to \hyperlink{classTetreesUI_a0fe8ccb5c1c594792591036f4f02175f}{update\+Game\+Context} but is called by the \hyperlink{TetreesDefs_8hpp_a607bc7bf79fa19b90a730745ca487a4b}{animation event} instead. 
+\begin{DoxyParams}{Parameters}
+{\em cr} & The \href{https://www.cairographics.org/manual/cairo-cairo-t.html}{\tt cairo drawing context} where animation steps will be drawn. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTetreesUI_a9f4fa68c99e9d6146d9bdf2baa9db4d6}\label{classTetreesUI_a9f4fa68c99e9d6146d9bdf2baa9db4d6}} 
+\index{Tetrees\+UI@{Tetrees\+UI}!draw\+Next\+Tetromino@{draw\+Next\+Tetromino}}
+\index{draw\+Next\+Tetromino@{draw\+Next\+Tetromino}!Tetrees\+UI@{Tetrees\+UI}}
+\subsubsection{\texorpdfstring{draw\+Next\+Tetromino()}{drawNextTetromino()}}
+{\footnotesize\ttfamily void Tetrees\+U\+I\+::draw\+Next\+Tetromino (\begin{DoxyParamCaption}\item[{cairo\+\_\+t $\ast$}]{cr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Draws the next tetromino to be spawned. 
+
+Draws \hyperlink{classTetreesUI_a6296ce8f3cde853cec110718c4b88540}{the next tetromino} inside \hyperlink{TetreesUI_8cpp_aac997784ac88b494498d6e08d6fe62d5}{next tetromino\textquotesingle{}s drawing area}. Whenever a call to \href{https://developer.gnome.org/gtk3/stable/GtkWidget.html#gtk-widget-queue-draw}{\tt gtk\+\_\+widget\+\_\+queue\+\_\+draw} is made, this function checks if the game is currently in a \hyperlink{TetreesDefs_8hpp_aebae08b2e3a36f1452b33acaf1eaab40ab8ee64fcce8c3b17312b20c78fc9695a}{playing} or \hyperlink{TetreesDefs_8hpp_aebae08b2e3a36f1452b33acaf1eaab40ae6a757f0eb2e39168756440ac804ffa7}{paused} state and, if so, draws the \hyperlink{classTetreesUI_a6296ce8f3cde853cec110718c4b88540}{next tetromino} inside \hyperlink{TetreesUI_8cpp_aac997784ac88b494498d6e08d6fe62d5}{next tetromino\textquotesingle{}s drawing area}. 
+\begin{DoxyParams}{Parameters}
+{\em cr} & The \href{https://www.cairographics.org/manual/cairo-cairo-t.html}{\tt cairo drawing context} in which the \hyperlink{classTetreesUI_a6296ce8f3cde853cec110718c4b88540}{next tetromino} will be drawn. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTetreesUI_a7d39f8caa75f5e755e3cebb0e05bb779}\label{classTetreesUI_a7d39f8caa75f5e755e3cebb0e05bb779}} 
+\index{Tetrees\+UI@{Tetrees\+UI}!draw\+Paused\+Scene@{draw\+Paused\+Scene}}
+\index{draw\+Paused\+Scene@{draw\+Paused\+Scene}!Tetrees\+UI@{Tetrees\+UI}}
+\subsubsection{\texorpdfstring{draw\+Paused\+Scene()}{drawPausedScene()}}
+{\footnotesize\ttfamily void Tetrees\+U\+I\+::draw\+Paused\+Scene (\begin{DoxyParamCaption}\item[{cairo\+\_\+t $\ast$}]{cr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Draws actual scene when game is paused. 
+
+When the player pauses the game, the game\textquotesingle{}s current state changes to \hyperlink{TetreesDefs_8hpp_aebae08b2e3a36f1452b33acaf1eaab40ae6a757f0eb2e39168756440ac804ffa7}{G\+A\+ME P\+A\+U\+S\+ED} and also the \hyperlink{classTetreesUI_af3bd9b55da30d2b324c2dfe2d740d8a2}{animation mode} changes to \hyperlink{TetreesDefs_8hpp_a10487f3bfa31fd7b7b8c20f403f8c947abd2f3ba6deac9f6ca85c0c6247ab445c}{G\+A\+ME P\+A\+U\+S\+ED A\+N\+I\+M\+A\+T\+I\+ON} which leads the \hyperlink{classTetreesUI_a829fc73fdc1f45fb567168f2c37ab012}{on\+Draw\+Playing\+Field\+Drawing\+Area} member function to call this function instead of the commonly called \hyperlink{classTetreesUI_a357ae7240cc5f35b5d61244e7a6bcfe3}{draw\+Scene}.
+
+A paused scene is nothing but the most recently \hyperlink{classTetreesEngine_aeade477c0bc2eaaa894ebbdaca93584e}{scene} produced by the \hyperlink{classTetreesUI_a07faa56ea40b28beba7509fa7f65c897}{game\textquotesingle{}s engine} draw in grey scale plus a \hyperlink{TetreesStrings_8hpp_a338b3837bdd505145f52cff93b53e18a}{Game Paused message} wrote atop the drawn scene. 
+\begin{DoxyParams}{Parameters}
+{\em cr} & The \href{https://www.cairographics.org/manual/cairo-cairo-t.html}{\tt cairo drawing context} in which the scene will be drawn. \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{classTetreesUI_a357ae7240cc5f35b5d61244e7a6bcfe3}\label{classTetreesUI_a357ae7240cc5f35b5d61244e7a6bcfe3}} 
 \index{Tetrees\+UI@{Tetrees\+UI}!draw\+Scene@{draw\+Scene}}
 \index{draw\+Scene@{draw\+Scene}!Tetrees\+UI@{Tetrees\+UI}}
@@ -112,9 +168,139 @@ Creates an object of the \mbox{\hyperlink{classTetreesUI}{Tetrees\+UI}} class an
 
 
 
-Draws gameplay actual scene. 
+Draws gameplay\textquotesingle{}s actual scene. 
 
-Draw the scene. \mbox{\Hypertarget{classTetreesUI_a492d68860089cfbe52c5756b2c3cd2ae}\label{classTetreesUI_a492d68860089cfbe52c5756b2c3cd2ae}} 
+Draws the actual gameplay\textquotesingle{}s \hyperlink{classTetreesUI_a604cf4cecdbc93745eaf7733b3c33602}{scene} inside the \hyperlink{TetreesUI_8cpp_af900bffe25b932fb86dc61cfdf839e95}{playing field drawing area}. In other words, this functions is responsible for drawing a frame containing all the already blocked tetrominoes at the game board as well as the falling tetromino in the position that it founds itself by the time of the drawing.
+
+The drawing of a \hyperlink{classTetreesUI_a604cf4cecdbc93745eaf7733b3c33602}{scene} occurs every time a \hyperlink{classTetreesEngine_a33e9983a618b3538640b6bd987304b8b}{game step} is issued making the game context changes somehow. \begin{DoxySeeAlso}{See also}
+\hyperlink{classTetreesUI_a0fe8ccb5c1c594792591036f4f02175f}{update\+Game\+Context} and \hyperlink{classTetreesUI_ad940ec71d761d3234ee3cef397434784}{on\+Key\+Press}. 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em cr} & The \href{https://www.cairographics.org/manual/cairo-cairo-t.html}{\tt cairo drawing context} in which the scene will be drawn. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTetreesUI_aa775d6f3e3ca5c11ec3bb73e8dd7f62d}\label{classTetreesUI_aa775d6f3e3ca5c11ec3bb73e8dd7f62d}} 
+\index{Tetrees\+UI@{Tetrees\+UI}!on\+Draw\+Next\+Tetromino\+Drawing\+Area@{on\+Draw\+Next\+Tetromino\+Drawing\+Area}}
+\index{on\+Draw\+Next\+Tetromino\+Drawing\+Area@{on\+Draw\+Next\+Tetromino\+Drawing\+Area}!Tetrees\+UI@{Tetrees\+UI}}
+\subsubsection{\texorpdfstring{on\+Draw\+Next\+Tetromino\+Drawing\+Area()}{onDrawNextTetrominoDrawingArea()}}
+{\footnotesize\ttfamily gboolean Tetrees\+U\+I\+::on\+Draw\+Next\+Tetromino\+Drawing\+Area (\begin{DoxyParamCaption}\item[{Gtk\+Widget $\ast$}]{widget,  }\item[{cairo\+\_\+t $\ast$}]{cr,  }\item[{gpointer}]{user\+\_\+data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Handles the {\bfseries draw} event for the next tetromino field. 
+
+A callback function that handles a \href{https://developer.gnome.org/gtk3/stable/GtkWidget.html#GtkWidget-draw}{\tt \char`\"{}draw event\char`\"{}} sent by G\+TK. When the \hyperlink{TetreesUI_8cpp_aac997784ac88b494498d6e08d6fe62d5}{next tetromino field} is marked for redrawing, this function properly handles the draw signal emitted. 
+\begin{DoxyParams}{Parameters}
+{\em widget} & The \href{https://developer.gnome.org/gtk3/stable/GtkWidget.html}{\tt G\+TK Widget} which received the signal. \\
+\hline
+{\em cr} & The \href{https://www.cairographics.org/manual/cairo-cairo-t.html}{\tt cairo drawing context}. \\
+\hline
+{\em user\+\_\+data} & User data set when the signal handler was connected (N\+OT U\+S\+ED). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Always returns \href{https://developer.gnome.org/glib/stable/glib-The-Main-Event-Loop.html#G-SOURCE-REMOVE:CAPS}{\tt G\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+R\+E\+M\+O\+VE} (a macro for {\ttfamily F\+A\+L\+SE}) assuring this function will only execute once. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+Please, for further information see the \href{https://developer.gnome.org/gtk3/stable/}{\tt G\+T\+K+ 3 reference manual} and the \href{https://www.cairographics.org/manual/}{\tt Cairo Graphics manual}. 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classTetreesUI_a829fc73fdc1f45fb567168f2c37ab012}\label{classTetreesUI_a829fc73fdc1f45fb567168f2c37ab012}} 
+\index{Tetrees\+UI@{Tetrees\+UI}!on\+Draw\+Playing\+Field\+Drawing\+Area@{on\+Draw\+Playing\+Field\+Drawing\+Area}}
+\index{on\+Draw\+Playing\+Field\+Drawing\+Area@{on\+Draw\+Playing\+Field\+Drawing\+Area}!Tetrees\+UI@{Tetrees\+UI}}
+\subsubsection{\texorpdfstring{on\+Draw\+Playing\+Field\+Drawing\+Area()}{onDrawPlayingFieldDrawingArea()}}
+{\footnotesize\ttfamily gboolean Tetrees\+U\+I\+::on\+Draw\+Playing\+Field\+Drawing\+Area (\begin{DoxyParamCaption}\item[{Gtk\+Widget $\ast$}]{widget,  }\item[{cairo\+\_\+t $\ast$}]{cr,  }\item[{gpointer}]{user\+\_\+data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Handles the {\bfseries draw} event for the playing field (game board). 
+
+A callback function that handles a \href{https://developer.gnome.org/gtk3/stable/GtkWidget.html#GtkWidget-draw}{\tt \char`\"{}draw event\char`\"{}} sent by G\+TK. When the \hyperlink{TetreesUI_8cpp_af900bffe25b932fb86dc61cfdf839e95}{playing field} is marked for redrawing, this function properly handles the \char`\"{}draw\char`\"{} signal emitted accordingly to the \hyperlink{classTetreesUI_af3bd9b55da30d2b324c2dfe2d740d8a2}{animation} currently selected. 
+\begin{DoxyParams}{Parameters}
+{\em widget} & The object which received the signal. \\
+\hline
+{\em cr} & The cairo drawing context. \\
+\hline
+{\em user\+\_\+data} & User data set when the signal handler was connected (N\+OT U\+S\+ED). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Always returns \href{https://developer.gnome.org/glib/stable/glib-The-Main-Event-Loop.html#G-SOURCE-REMOVE:CAPS}{\tt G\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+R\+E\+M\+O\+VE} (a macro for {\ttfamily F\+A\+L\+SE}) assuring this function will only execute once. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+Please, for further information see the \href{https://developer.gnome.org/gtk3/stable/}{\tt G\+T\+K+ 3 reference manual} and the \href{https://www.cairographics.org/manual/}{\tt Cairo Graphics manual}. 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classTetreesUI_ad940ec71d761d3234ee3cef397434784}\label{classTetreesUI_ad940ec71d761d3234ee3cef397434784}} 
+\index{Tetrees\+UI@{Tetrees\+UI}!on\+Key\+Press@{on\+Key\+Press}}
+\index{on\+Key\+Press@{on\+Key\+Press}!Tetrees\+UI@{Tetrees\+UI}}
+\subsubsection{\texorpdfstring{on\+Key\+Press()}{onKeyPress()}}
+{\footnotesize\ttfamily gboolean Tetrees\+U\+I\+::on\+Key\+Press (\begin{DoxyParamCaption}\item[{Gtk\+Widget $\ast$}]{widget,  }\item[{Gdk\+Event\+Key $\ast$}]{event,  }\item[{gpointer}]{user\+\_\+data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Handles key binding. 
+
+This is the callback function to a \href{https://developer.gnome.org/gtk3/stable/GtkWidget.html#GtkWidget-key-press-event}{\tt key press event} within the \hyperlink{TetreesUI_8cpp_a929776169582ba270fc197a352f288e8}{main window} scope. It maps each key to its respective action during gameplay. 
+\begin{DoxyParams}{Parameters}
+{\em widget} & The object which received the signal (not used). \\
+\hline
+{\em event} & The \href{https://developer.gnome.org/gdk3/stable/gdk3-Event-Structures.html#GdkEventKey}{\tt Gdk\+Event\+Key} which triggered this signal (the key itself). \\
+\hline
+{\em user\+\_\+data} & User data set when the signal handler was connected (not used). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Always returns \href{https://developer.gnome.org/glib/stable/glib-The-Main-Event-Loop.html#G-SOURCE-REMOVE:CAPS}{\tt G\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+R\+E\+M\+O\+VE} since this is a one time only event. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTetreesUI_ae821c638a19a77e9a64e9334b8011cba}\label{classTetreesUI_ae821c638a19a77e9a64e9334b8011cba}} 
+\index{Tetrees\+UI@{Tetrees\+UI}!on\+Pause\+Clicked@{on\+Pause\+Clicked}}
+\index{on\+Pause\+Clicked@{on\+Pause\+Clicked}!Tetrees\+UI@{Tetrees\+UI}}
+\subsubsection{\texorpdfstring{on\+Pause\+Clicked()}{onPauseClicked()}}
+{\footnotesize\ttfamily void Tetrees\+U\+I\+::on\+Pause\+Clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Handles the {\bfseries clicked} signal emitted by the Pause button. 
+
+This is a callback function that handles the \href{https://developer.gnome.org/gtk3/stable/GtkButton.html#GtkButton-clicked}{\tt clicked signal} emitted by the \hyperlink{TetreesUI_8cpp_a119f809cb832f3e370c60c75d766e473}{Pause button} when it\textquotesingle{}s clicked. A \hyperlink{TetreesDefs_8hpp_aadc337e2620d6621659e63e87c45e79da22507047922c1ce8c921c8d193e67126}{pause command} is \hyperlink{classTetreesEngine_aa2a283d09b0b6ab7c03ea2265a2e3438}{issued} to \hyperlink{classTetreesUI_a07faa56ea40b28beba7509fa7f65c897}{game engine} and the game is then paused. \begin{DoxyNote}{Note}
+If the game is already paused, the \hyperlink{TetreesDefs_8hpp_aadc337e2620d6621659e63e87c45e79da22507047922c1ce8c921c8d193e67126}{pause command} resumes the game instead. 
+\end{DoxyNote}
+\mbox{\Hypertarget{classTetreesUI_a0aa1932ac8f09f6d8de7ac7d7a2efa94}\label{classTetreesUI_a0aa1932ac8f09f6d8de7ac7d7a2efa94}} 
+\index{Tetrees\+UI@{Tetrees\+UI}!on\+Play\+Clicked@{on\+Play\+Clicked}}
+\index{on\+Play\+Clicked@{on\+Play\+Clicked}!Tetrees\+UI@{Tetrees\+UI}}
+\subsubsection{\texorpdfstring{on\+Play\+Clicked()}{onPlayClicked()}}
+{\footnotesize\ttfamily void Tetrees\+U\+I\+::on\+Play\+Clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Handles the {\bfseries clicked} signal emitted by the Play button. 
+
+This is a callback function that handles the \href{https://developer.gnome.org/gtk3/stable/GtkButton.html#GtkButton-clicked}{\tt clicked signal} emitted by the \hyperlink{TetreesUI_8cpp_a93e046be1258b131010c58072aab2ead}{Play button} when it\textquotesingle{}s clicked. A \hyperlink{TetreesDefs_8hpp_aadc337e2620d6621659e63e87c45e79da1fbb60a5fbb790c7be80c6f085cb6287}{play command} is \hyperlink{classTetreesEngine_aa2a283d09b0b6ab7c03ea2265a2e3438}{issued} to \hyperlink{classTetreesUI_a07faa56ea40b28beba7509fa7f65c897}{game engine} and the game begins. \mbox{\Hypertarget{classTetreesUI_a587ff52a2c843c4d331f329f4b94ddbd}\label{classTetreesUI_a587ff52a2c843c4d331f329f4b94ddbd}} 
+\index{Tetrees\+UI@{Tetrees\+UI}!on\+Reset\+Clicked@{on\+Reset\+Clicked}}
+\index{on\+Reset\+Clicked@{on\+Reset\+Clicked}!Tetrees\+UI@{Tetrees\+UI}}
+\subsubsection{\texorpdfstring{on\+Reset\+Clicked()}{onResetClicked()}}
+{\footnotesize\ttfamily void Tetrees\+U\+I\+::on\+Reset\+Clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Handles the {\bfseries clicked} signal emitted by the Reset button. 
+
+This is a callback function that handles the \href{https://developer.gnome.org/gtk3/stable/GtkButton.html#GtkButton-clicked}{\tt clicked signal} emitted by the \hyperlink{TetreesUI_8cpp_a7ac3df3e3d13ae5bd16828389ba56461}{Reset button} when it\textquotesingle{}s clicked. A \hyperlink{TetreesDefs_8hpp_aadc337e2620d6621659e63e87c45e79dae71f12b62f9fca54c98ef9630f8fcad1}{reset command} is \hyperlink{classTetreesEngine_aa2a283d09b0b6ab7c03ea2265a2e3438}{issued} to \hyperlink{classTetreesUI_a07faa56ea40b28beba7509fa7f65c897}{game engine} and the game is set back to its initial state, i.\+e. the \hyperlink{classTetreesUI_a128491041c6b77acec829fb5b1f4dafb}{score} and \hyperlink{classTetreesEngine_a37d082a7816d6731b2703dd6d1a1cb97}{game board} are cleared. \mbox{\Hypertarget{classTetreesUI_a195806825b5469dcc99fbca5d14af94f}\label{classTetreesUI_a195806825b5469dcc99fbca5d14af94f}} 
+\index{Tetrees\+UI@{Tetrees\+UI}!set\+U\+I\+State@{set\+U\+I\+State}}
+\index{set\+U\+I\+State@{set\+U\+I\+State}!Tetrees\+UI@{Tetrees\+UI}}
+\subsubsection{\texorpdfstring{set\+U\+I\+State()}{setUIState()}}
+{\footnotesize\ttfamily void Tetrees\+U\+I\+::set\+U\+I\+State (\begin{DoxyParamCaption}\item[{\hyperlink{TetreesDefs_8hpp_ab583135648b1264a9f7817709c4dbd3e}{ui\+\_\+state\+\_\+t}}]{ui\+State }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Modifies UI\textquotesingle{}s functionality. 
+
+Sets user interface to a specific state depending on what is happening into the game that moment. This function basically enables and disables interface buttons accordingly to the \hyperlink{TetreesDefs_8hpp_ab583135648b1264a9f7817709c4dbd3e}{UI state} passed as parameter. 
+\begin{DoxyParams}{Parameters}
+{\em ui\+State} & The \hyperlink{TetreesDefs_8hpp_ab583135648b1264a9f7817709c4dbd3e}{UI state} in which user interface must be set to. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTetreesUI_a492d68860089cfbe52c5756b2c3cd2ae}\label{classTetreesUI_a492d68860089cfbe52c5756b2c3cd2ae}} 
 \index{Tetrees\+UI@{Tetrees\+UI}!setup\+UI@{setup\+UI}}
 \index{setup\+UI@{setup\+UI}!Tetrees\+UI@{Tetrees\+UI}}
 \subsubsection{\texorpdfstring{setup\+U\+I()}{setupUI()}}
@@ -124,36 +310,103 @@ Draw the scene. \mbox{\Hypertarget{classTetreesUI_a492d68860089cfbe52c5756b2c3cd
 
 User interface (UI) assembly. 
 
-Create and put together all UI elements. By using the G\+T\+K+ toolkit, this function creates several widgets from different types and hierarchically displace them to properly assemble a graphical interface for the user (player) to interact with. 
+Create and put together all UI elements. By using the \href{https://developer.gnome.org/gtk3/stable/}{\tt G\+T\+K+ 3 toolkit}, this function creates several \href{https://developer.gnome.org/gtk3/stable/GtkWidget.html}{\tt G\+TK Widgets} from different types and hierarchically arrange them in order to provide a graphical interface for the user (player) to interact with. 
+\begin{DoxyParams}{Parameters}
+{\em app} & The \href{https://developer.gnome.org/gtk3/stable/GtkApplication.html}{\tt G\+TK Application} object reference. \\
+\hline
+{\em user\+\_\+data} & User data ({\ttfamily $\ast$$\ast$argv}) received passed to the application when it is executed (not used in this application). \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTetreesUI_a0fe8ccb5c1c594792591036f4f02175f}\label{classTetreesUI_a0fe8ccb5c1c594792591036f4f02175f}} 
+\index{Tetrees\+UI@{Tetrees\+UI}!update\+Game\+Context@{update\+Game\+Context}}
+\index{update\+Game\+Context@{update\+Game\+Context}!Tetrees\+UI@{Tetrees\+UI}}
+\subsubsection{\texorpdfstring{update\+Game\+Context()}{updateGameContext()}}
+{\footnotesize\ttfamily gboolean Tetrees\+U\+I\+::update\+Game\+Context (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Periodically changes game context. 
+
+With a central role, this function updates game\textquotesingle{}s context based on the \hyperlink{TetreesDefs_8hpp_aebae08b2e3a36f1452b33acaf1eaab40}{state} the game finds itself.
+
+This function is periodically called by the \hyperlink{TetreesDefs_8hpp_aaf9e35ddd627efe32323b1ba02ee514e}{update event} in order to redraw the user interface as well as updating game\textquotesingle{}s context by \hyperlink{classTetreesEngine_a33e9983a618b3538640b6bd987304b8b}{issuing} a \hyperlink{TetreesDefs_8hpp_a4d5a793092a473f85b4c1f7faf62afeda6df5f4c213c30a4ad91af7a5d10daa8e}{D\+R\+OP S\+T\+EP} to \hyperlink{classTetreesUI_a07faa56ea40b28beba7509fa7f65c897}{game\textquotesingle{}s engine}. This step is automatically issued as part of the gameplay and its \hyperlink{TetreesDefs_8hpp_a56295b647dadb94aa1662b267e1c9b6e}{periodicity} varies accordingly to the actual \hyperlink{classTetreesUI_a700b75dbee9c324c69a18f34c5efdab9}{game level}.
+
+Another role of this function is to detect changes at \hyperlink{TetreesDefs_8hpp_aebae08b2e3a36f1452b33acaf1eaab40}{game\textquotesingle{}s state} and feed the \hyperlink{classTetreesUI_a06df6e44abd5d521448cf1299433b55c}{animation\+Control} variable with correct data so the actual animation can execute properly. \begin{DoxyNote}{Note}
+This is the member function registered within the \hyperlink{TetreesDefs_8hpp_aaf9e35ddd627efe32323b1ba02ee514e}{update event}. 
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+\href{https://developer.gnome.org/glib/stable/glib-The-Main-Event-Loop.html#G-SOURCE-CONTINUE:CAPS}{\tt G\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+C\+O\+N\+T\+I\+N\+UE} when the \hyperlink{TetreesDefs_8hpp_aaf9e35ddd627efe32323b1ba02ee514e}{update event} is still attached to the \href{https://developer.gnome.org/glib/stable/glib-The-Main-Event-Loop.html#glib-The-Main-Event-Loop.description}{\tt main loop}. \href{https://developer.gnome.org/glib/stable/glib-The-Main-Event-Loop.html#G-SOURCE-REMOVE:CAPS}{\tt G\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+R\+E\+M\+O\+VE} otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTetreesUI_ac41bb9dc9af1d051c54dd5f2dcf224a9}\label{classTetreesUI_ac41bb9dc9af1d051c54dd5f2dcf224a9}} 
+\index{Tetrees\+UI@{Tetrees\+UI}!update\+Score@{update\+Score}}
+\index{update\+Score@{update\+Score}!Tetrees\+UI@{Tetrees\+UI}}
+\subsubsection{\texorpdfstring{update\+Score()}{updateScore()}}
+{\footnotesize\ttfamily void Tetrees\+U\+I\+::update\+Score (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Updates the score value shown. 
+
+Updates the value displayed at the \hyperlink{TetreesUI_8cpp_aacb77432f2785bad4cb2dd55899b5336}{score text view}. This function fetches \hyperlink{classTetreesUI_a07faa56ea40b28beba7509fa7f65c897}{game engine} for the updated score and updates the value shown inside \hyperlink{TetreesUI_8cpp_aacb77432f2785bad4cb2dd55899b5336}{score text view}. 
 
 \subsection{Member Data Documentation}
-\mbox{\Hypertarget{classTetreesUI_a57300c1925cb5ae34c9220cd993e28b2}\label{classTetreesUI_a57300c1925cb5ae34c9220cd993e28b2}} 
+\mbox{\Hypertarget{classTetreesUI_a06df6e44abd5d521448cf1299433b55c}\label{classTetreesUI_a06df6e44abd5d521448cf1299433b55c}} 
+\index{Tetrees\+UI@{Tetrees\+UI}!animation\+Control@{animation\+Control}}
+\index{animation\+Control@{animation\+Control}!Tetrees\+UI@{Tetrees\+UI}}
+\subsubsection{\texorpdfstring{animation\+Control}{animationControl}}
+{\footnotesize\ttfamily \hyperlink{structanimation__control__t}{animation\+\_\+control\+\_\+t} Tetrees\+U\+I\+::animation\+Control\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+Stores several \hyperlink{structanimation__control__t}{control datum} about animations executed by the \hyperlink{classTetreesEngine_a01bf1d438236d5f57129ffb22adf59ce}{UI object}. \mbox{\Hypertarget{classTetreesUI_af3bd9b55da30d2b324c2dfe2d740d8a2}\label{classTetreesUI_af3bd9b55da30d2b324c2dfe2d740d8a2}} 
+\index{Tetrees\+UI@{Tetrees\+UI}!animation\+Mode@{animation\+Mode}}
+\index{animation\+Mode@{animation\+Mode}!Tetrees\+UI@{Tetrees\+UI}}
+\subsubsection{\texorpdfstring{animation\+Mode}{animationMode}}
+{\footnotesize\ttfamily \hyperlink{TetreesDefs_8hpp_a10487f3bfa31fd7b7b8c20f403f8c947}{animation\+\_\+t} Tetrees\+U\+I\+::animation\+Mode\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+Stores which \hyperlink{TetreesDefs_8hpp_a10487f3bfa31fd7b7b8c20f403f8c947}{animation} must be executed by the UI. \mbox{\Hypertarget{classTetreesUI_a57300c1925cb5ae34c9220cd993e28b2}\label{classTetreesUI_a57300c1925cb5ae34c9220cd993e28b2}} 
 \index{Tetrees\+UI@{Tetrees\+UI}!colors@{colors}}
 \index{colors@{colors}!Tetrees\+UI@{Tetrees\+UI}}
 \subsubsection{\texorpdfstring{colors}{colors}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classMatrix2D}{Matrix2D}}$<$ \mbox{\hyperlink{structrgb__t}{rgb\+\_\+t}} $>$ Tetrees\+U\+I\+::colors\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+{\footnotesize\ttfamily \hyperlink{classMatrix2D}{Matrix2D}$<$ \hyperlink{structrgb__t}{rgb\+\_\+t} $>$ Tetrees\+U\+I\+::colors\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
 
-An array containing \mbox{\hyperlink{structrgb__t}{data}} related to all colors available to be used by UI. \mbox{\Hypertarget{classTetreesUI_a07faa56ea40b28beba7509fa7f65c897}\label{classTetreesUI_a07faa56ea40b28beba7509fa7f65c897}} 
+An array containing \hyperlink{structrgb__t}{data} related to all colors available to be used by UI. \mbox{\Hypertarget{classTetreesUI_a07faa56ea40b28beba7509fa7f65c897}\label{classTetreesUI_a07faa56ea40b28beba7509fa7f65c897}} 
 \index{Tetrees\+UI@{Tetrees\+UI}!game\+Engine@{game\+Engine}}
 \index{game\+Engine@{game\+Engine}!Tetrees\+UI@{Tetrees\+UI}}
 \subsubsection{\texorpdfstring{game\+Engine}{gameEngine}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classTetreesEngine}{Tetrees\+Engine}} $\ast$ Tetrees\+U\+I\+::game\+Engine\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+{\footnotesize\ttfamily \hyperlink{classTetreesEngine}{Tetrees\+Engine} $\ast$ Tetrees\+U\+I\+::game\+Engine\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
 
-A \mbox{\hyperlink{classTetreesEngine}{Tetrees\+Engine}} object that controls all game\textquotesingle{}s rules during gameplay. \mbox{\Hypertarget{classTetreesUI_a604cf4cecdbc93745eaf7733b3c33602}\label{classTetreesUI_a604cf4cecdbc93745eaf7733b3c33602}} 
+A \hyperlink{classTetreesEngine}{Tetrees\+Engine} object that controls all game\textquotesingle{}s rules during gameplay. \mbox{\Hypertarget{classTetreesUI_a700b75dbee9c324c69a18f34c5efdab9}\label{classTetreesUI_a700b75dbee9c324c69a18f34c5efdab9}} 
+\index{Tetrees\+UI@{Tetrees\+UI}!game\+Level@{game\+Level}}
+\index{game\+Level@{game\+Level}!Tetrees\+UI@{Tetrees\+UI}}
+\subsubsection{\texorpdfstring{game\+Level}{gameLevel}}
+{\footnotesize\ttfamily \hyperlink{structgame__level__t}{game\+\_\+level\+\_\+t} Tetrees\+U\+I\+::game\+Level\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+Stores the present \hyperlink{structgame__level__t}{level} of the game. \mbox{\Hypertarget{classTetreesUI_a604cf4cecdbc93745eaf7733b3c33602}\label{classTetreesUI_a604cf4cecdbc93745eaf7733b3c33602}} 
 \index{Tetrees\+UI@{Tetrees\+UI}!game\+Scene@{game\+Scene}}
 \index{game\+Scene@{game\+Scene}!Tetrees\+UI@{Tetrees\+UI}}
 \subsubsection{\texorpdfstring{game\+Scene}{gameScene}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classMatrix2D}{Matrix2D}}$<$ int $>$ Tetrees\+U\+I\+::game\+Scene\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+{\footnotesize\ttfamily \hyperlink{classMatrix2D}{Matrix2D}$<$ int $>$ Tetrees\+U\+I\+::game\+Scene\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
 
-Stores the actual \mbox{\hyperlink{classTetreesEngine_aeade477c0bc2eaaa894ebbdaca93584e}{game scene}} to be drawn on screen. \mbox{\Hypertarget{classTetreesUI_a80545840b2848938d01d7f85786ee141}\label{classTetreesUI_a80545840b2848938d01d7f85786ee141}} 
+Stores the actual \hyperlink{classTetreesEngine_aeade477c0bc2eaaa894ebbdaca93584e}{game scene} to be drawn on screen. \mbox{\Hypertarget{classTetreesUI_a128491041c6b77acec829fb5b1f4dafb}\label{classTetreesUI_a128491041c6b77acec829fb5b1f4dafb}} 
+\index{Tetrees\+UI@{Tetrees\+UI}!game\+Score@{game\+Score}}
+\index{game\+Score@{game\+Score}!Tetrees\+UI@{Tetrees\+UI}}
+\subsubsection{\texorpdfstring{game\+Score}{gameScore}}
+{\footnotesize\ttfamily \hyperlink{structgame__score__t}{game\+\_\+score\+\_\+t} Tetrees\+U\+I\+::game\+Score\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+Stores the updated \hyperlink{structgame__data__t_a70e04b66160685cc84bcdd30edb97e46}{game score} to be displayed at the \hyperlink{TetreesUI_8cpp_ae067b2d6b08b38aa73b035c82d9e14b0}{score label}. \mbox{\Hypertarget{classTetreesUI_a6296ce8f3cde853cec110718c4b88540}\label{classTetreesUI_a6296ce8f3cde853cec110718c4b88540}} 
+\index{Tetrees\+UI@{Tetrees\+UI}!next\+Tetromino@{next\+Tetromino}}
+\index{next\+Tetromino@{next\+Tetromino}!Tetrees\+UI@{Tetrees\+UI}}
+\subsubsection{\texorpdfstring{next\+Tetromino}{nextTetromino}}
+{\footnotesize\ttfamily \hyperlink{structpiece__t}{piece\+\_\+t} Tetrees\+U\+I\+::next\+Tetromino\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+Stores the \hyperlink{classTetreesEngine_a44c902481f5d8a72ca8a78d24f5c3a33}{next tetromino} which is drew inside \hyperlink{TetreesUI_8cpp_aac997784ac88b494498d6e08d6fe62d5}{next tetromino field} top right next the \hyperlink{classTetreesEngine_a37d082a7816d6731b2703dd6d1a1cb97}{game board}. \mbox{\Hypertarget{classTetreesUI_a80545840b2848938d01d7f85786ee141}\label{classTetreesUI_a80545840b2848938d01d7f85786ee141}} 
 \index{Tetrees\+UI@{Tetrees\+UI}!utils@{utils}}
 \index{utils@{utils}!Tetrees\+UI@{Tetrees\+UI}}
 \subsubsection{\texorpdfstring{utils}{utils}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classTetreesUtils}{Tetrees\+Utils}} $\ast$ Tetrees\+U\+I\+::utils\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+{\footnotesize\ttfamily \hyperlink{classTetreesUtils}{Tetrees\+Utils} $\ast$ Tetrees\+U\+I\+::utils\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
 
-A \mbox{\hyperlink{classTetreesUtils}{Tetrees\+Utils}} object that provides utility functions. 
+A \hyperlink{classTetreesUtils}{Tetrees\+Utils} object that provides utility functions. 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-Headers/\mbox{\hyperlink{TetreesUI_8hpp}{Tetrees\+U\+I.\+hpp}}\item 
-Source/\mbox{\hyperlink{TetreesUI_8cpp}{Tetrees\+U\+I.\+cpp}}\end{DoxyCompactItemize}
+/home/igao/workspace\+\_\+eclipse\+\_\+cpp/\+Tetrees/\+Headers/\hyperlink{TetreesUI_8hpp}{Tetrees\+U\+I.\+hpp}\item 
+/home/igao/workspace\+\_\+eclipse\+\_\+cpp/\+Tetrees/\+Source/\hyperlink{TetreesUI_8cpp}{Tetrees\+U\+I.\+cpp}\end{DoxyCompactItemize}
