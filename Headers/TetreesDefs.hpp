@@ -28,7 +28,9 @@
  * @name Mocked Definitions
  * @{
  */
+
 //The following defined constants are mocked. They serve only as definitions for documentation purposes.
+
 #define __CELL__ 				/**< A cell is the space occupied by a @ref TetreesDefs.__BLOCK__ "block".*/
 #define __BLOCK__ 				/**< Blocks are the smallest four-sided polygon units that compose a @ref TetreesDefs.__TETROMINO__ "tetromino".*/
 #define __TETROMINO__ 			/**< A tetromino (plural is a geometric form composed by several @ref TetreesDefs.__BLOCK__ "blocks" put together.
@@ -121,17 +123,17 @@ enum step_t{
 
 /// Tetrominoes types.
 /**
- * An enum to represent each one of the fundamental
+ * An enum representing each of the fundamental
  * elements of the game: the @ref TetreesDefs.__TETROMINO__ "tetrominoes".
  */
 enum tetromino_t{
-	TETROMINO_I = 0,
-	TETROMINO_O,
-	TETROMINO_T,
-	TETROMINO_S,
-	TETROMINO_Z,
-	TETROMINO_J,
-	TETROMINO_L
+	TETROMINO_I = 0,					/**< The I-shaped tetromino.*/
+	TETROMINO_O,						/**< The O-shaped tetromino.*/
+	TETROMINO_T,						/**< The T-shaped tetromino.*/
+	TETROMINO_S,						/**< The S-shaped tetromino.*/
+	TETROMINO_Z,						/**< The Z-shaped tetromino.*/
+	TETROMINO_J,						/**< The J-shaped tetromino.*/
+	TETROMINO_L							/**< The L-shaped tetromino.*/
 };
 
 /// Game levels.
@@ -140,16 +142,16 @@ enum tetromino_t{
  * if you feel you're up to the challenge!
  */
 enum level_num_t : int{
-	LVL_1 = 0,
-	LVL_2,
-	LVL_3,
-	LVL_4,
-	LVL_5,
-	LVL_6,
-	LVL_7,
-	LVL_8,
-	LVL_9,
-	LVL_10
+	LVL_1 = 0,							/**< Level 1.*/
+	LVL_2,								/**< Level 2.*/
+	LVL_3,								/**< Level 3.*/
+	LVL_4,								/**< Level 4.*/
+	LVL_5,								/**< Level 5.*/
+	LVL_6,								/**< Level 6.*/
+	LVL_7,								/**< Level 7.*/
+	LVL_8,								/**< Level 8.*/
+	LVL_9,								/**< Level 9.*/
+	LVL_10								/**< Level 10 - The last one!.*/
 };
 
 /// Game speed per level.
@@ -158,18 +160,21 @@ enum level_num_t : int{
  *
  * Each game level increases the difficulty and one way to
  * make the game more difficult is by speeding it up.
+ *
+ * @note These are the intervals between each occurrence of the @ref TetreesDefs.__UPDATE_EVENT__ "update event"
+ * within each level of the game.
  */
 enum level_speed_t : int{
-	LVL_1_SPEED = 900,
-	LVL_2_SPEED = 700,
-	LVL_3_SPEED = 700,
-	LVL_4_SPEED = 580,
-	LVL_5_SPEED = 580,
-	LVL_6_SPEED = 400,
-	LVL_7_SPEED = 400,
-	LVL_8_SPEED = 300,
-	LVL_9_SPEED = 300,
-	LVL_10_SPEED = 150
+	LVL_1_SPEED = 900,						/**< Update event will occur every 900 ms within level 1.*/
+	LVL_2_SPEED = 700,						/**< Update event will occur every 700 ms within level 2.*/
+	LVL_3_SPEED = 700,						/**< Update event will occur every 700 ms within level 3.*/
+	LVL_4_SPEED = 580,						/**< Update event will occur every 580 ms within level 4.*/
+	LVL_5_SPEED = 580,						/**< Update event will occur every 580 ms within level 5.*/
+	LVL_6_SPEED = 400,						/**< Update event will occur every 400 ms within level 6.*/
+	LVL_7_SPEED = 400,						/**< Update event will occur every 400 ms within level 7.*/
+	LVL_8_SPEED = 300,						/**< Update event will occur every 300 ms within level 8.*/
+	LVL_9_SPEED = 300,						/**< Update event will occur every 300 ms within level 9.*/
+	LVL_10_SPEED = 150						/**< Update event will occur every 150 ms within level 10.*/
 };
 
 /**
@@ -218,21 +223,21 @@ const int LVL10_TETROMINOES_PROPORTION[] = 	{0,0,0,0,0,0,0};
  * next one.
  */
 enum next_lvl_score_t : unsigned{
-	NEXT_LVL_SCORE_LVL1 = 	20,
-	NEXT_LVL_SCORE_LVL2 = 	40,
-	NEXT_LVL_SCORE_LVL3 = 	60,
-	NEXT_LVL_SCORE_LVL4 = 	90,
-	NEXT_LVL_SCORE_LVL5 = 	130,
-	NEXT_LVL_SCORE_LVL6 = 	160,
-	NEXT_LVL_SCORE_LVL7 = 	200,
-	NEXT_LVL_SCORE_LVL8 = 	240,
-	NEXT_LVL_SCORE_LVL9 = 	300,
-	NEXT_LVL_SCORE_LVL10 = 	0
+	NEXT_LVL_SCORE_LVL1 = 	20,					/**< Level 1 goes from 0 to 19 points.*/
+	NEXT_LVL_SCORE_LVL2 = 	40,					/**< Level 2 goes from 20 to 39 points.*/
+	NEXT_LVL_SCORE_LVL3 = 	60,					/**< Level 3 goes from 40 to 59 points.*/
+	NEXT_LVL_SCORE_LVL4 = 	90,					/**< Level 4 goes from 60 to 89 points.*/
+	NEXT_LVL_SCORE_LVL5 = 	130,				/**< Level 5 goes from 90 to 129 points.*/
+	NEXT_LVL_SCORE_LVL6 = 	160,				/**< Level 6 goes from 130 to 159 points.*/
+	NEXT_LVL_SCORE_LVL7 = 	200,				/**< Level 7 goes from 160 to 199 points.*/
+	NEXT_LVL_SCORE_LVL8 = 	240,				/**< Level 8 goes from 200 to 239 points.*/
+	NEXT_LVL_SCORE_LVL9 = 	300,				/**< Level 9 goes from 240 to 299 points.*/
+	NEXT_LVL_SCORE_LVL10 = 	0					/**< Level 10 goes from 300 to infinity... and beyond! Or until you give up...*/
 };
 
 /// UI possible colors.
 /**
- * Available colors to be used in UI assembling.
+ * Available colors to be used in UI's drawing and assembling.
  */
 enum color_t : int{
 	COLOR_TRANSPARENT = 0,
@@ -328,9 +333,9 @@ enum score_t: unsigned{
  * going on.
  */
 enum animation_t: int{
-	ANIMATION_NONE = 0, /**< Used when the game is either in a playing, paused or not started @ref game_state_t "state".*/
-	ANIMATION_GAME_OVER, /**< Used for the @ref TetreesUI::drawGameOverAnimationStep "game over animation drawing process".*/
-	ANIMATION_GAME_PAUSED /**< Used for the @ref TetreesUI::drawPausedScene "game paused animation drawing process".*/
+	ANIMATION_NONE = 0, 					/**< Used when the game is either in a playing, paused or not started @ref game_state_t "state".*/
+	ANIMATION_GAME_OVER, 					/**< Used for the @ref TetreesUI::drawGameOverAnimationStep "game over animation drawing process".*/
+	ANIMATION_GAME_PAUSED 					/**< Used for the @ref TetreesUI::drawPausedScene "game paused animation drawing process".*/
 };
 
 /// A matrix/vector abstraction class.
@@ -607,9 +612,9 @@ public:
 
 private:
 
-	unsigned rHeight; 	/**< Matrix's number of rows.*/
-	unsigned cWidth; 	/**< Matrix's number of columns/Array's length.*/
-	Type *matrixArray; 	/**< The vector abstracting a matrix/array.*/
+	unsigned rHeight; 			/**< Matrix's number of rows.*/
+	unsigned cWidth; 			/**< Matrix's number of columns/Array's length.*/
+	Type *matrixArray; 			/**< The vector abstracting a matrix/array.*/
 
 };
 
@@ -619,13 +624,13 @@ private:
  * the @ref TetreesDefs.__TETROMINO__ "tetromino".
  */
 struct piece_t{
-	color_t color; 			/**< The @ref TetreesDefs.__TETROMINO__ "tetromino" color.*/
-	tetromino_t type; 		/**< The @ref TetreesDefs.__TETROMINO__ "tetromino" type/shape.*/
-	rpos_t rpos;			/**< The @ref TetreesDefs.__TETROMINO__ "tetromino" rotation position.*/
-	unsigned boardCol;		/**< Column position of @ref piece_t.shape "tetromino's shape" first element (0,0) within the game board.*/
-	unsigned boardRow;		/**< Row position of @ref piece_t.shape "tetromino's shape" first element (0,0) within the game board */
-	bool reachedBottom;		/**< True when the @ref TetreesDefs.__TETROMINO__ "tetromino" is blocked at game board's bottom.*/
-	Matrix2D<int> shape;	/**< Tetromino's shape related @ref TetreesUtils::startTetrominoesArray "data".*/
+	color_t color; 					/**< The @ref TetreesDefs.__TETROMINO__ "tetromino" color.*/
+	tetromino_t type; 				/**< The @ref TetreesDefs.__TETROMINO__ "tetromino" type/shape.*/
+	rpos_t rpos;					/**< The @ref TetreesDefs.__TETROMINO__ "tetromino" rotation position.*/
+	unsigned boardCol;				/**< Column position of @ref piece_t.shape "tetromino's shape" first element (0,0) within the game board.*/
+	unsigned boardRow;				/**< Row position of @ref piece_t.shape "tetromino's shape" first element (0,0) within the game board */
+	bool reachedBottom;				/**< True when the @ref TetreesDefs.__TETROMINO__ "tetromino" is blocked at game board's bottom.*/
+	Matrix2D<int> shape;			/**< Tetromino's shape related @ref TetreesUtils::startTetrominoesArray "data".*/
 };
 
 /// RGB elements of a color.
@@ -633,10 +638,10 @@ struct piece_t{
  * Stores data related to RGB components of a color.
  */
 struct rgb_t{
-	color_t name; 	/**< The color name.*/
-	double r;		/**< Red component value.*/
-	double g;		/**< Green component value.*/
-	double b;		/**< Blue component value.*/
+	color_t name; 			/**< The color name.*/
+	double r;				/**< Red component value.*/
+	double g;				/**< Green component value.*/
+	double b;				/**< Blue component value.*/
 };
 
 /// Game score data type.
@@ -645,9 +650,9 @@ struct rgb_t{
  * score system.
  */
 struct game_score_t{
-	unsigned score;         /**< The game score. Earn more. Beat your friends. Beat the game (if you're think you are up to the challenge)!*/
-	unsigned multiplier;    /**< Score multiplier. The higher the multiplier the more points you will earn.
-	@note The multiplier is increased by removing multiple lines of @ref TetreesDefs.__TETROMINO__ "tetrominoes" simultaneously.*/
+	unsigned score;         			/**< The game score. Earn more. Beat your friends. Beat the game (if you're think you are up to the challenge)!*/
+	unsigned multiplier;    			/**< Score multiplier. The higher the multiplier the more points you will earn.
+										@note The multiplier is increased by removing multiple lines of @ref TetreesDefs.__TETROMINO__ "tetrominoes" simultaneously.*/
 };
 
 /// Game level data type.
@@ -655,10 +660,10 @@ struct game_score_t{
  * Stores several data related to the actual difficulty level of the game.
  */
 struct game_level_t{
-	int lvl;											/**< The level number.*/
-	unsigned nextLvlScore;								/**< The score needed to reach next level.*/
-	unsigned gameSpeed;									/**< The level speed (in ms).*/
-	int tetrominoesProportionArray[NUM_OF_TETROMINOES];	/**< The @ref TetreesDefs.__TETROMINO__ "tetrominoes" spawn rate array related to this level.*/
+	int lvl;													/**< The level number.*/
+	unsigned nextLvlScore;										/**< The score needed to reach next level.*/
+	unsigned gameSpeed;											/**< The level speed (in ms).*/
+	int tetrominoesProportionArray[NUM_OF_TETROMINOES];			/**< The @ref TetreesDefs.__TETROMINO__ "tetrominoes" spawn rate array related to this level.*/
 };
 
 /// Game data type.
@@ -666,9 +671,9 @@ struct game_level_t{
  * Stores several data related to game itself.
  */
 struct game_data_t{
-	game_state_t gState;	/**< Current game state. @see game_state_t.*/
-	game_score_t gScore;	/**< Current game score related data. @see game_score_t.*/
-	game_level_t gLevel;	/**< Current game level related data. @see game_level_t.*/
+	game_state_t gState;			/**< Current game state. @see game_state_t.*/
+	game_score_t gScore;			/**< Current game score related data. @see game_score_t.*/
+	game_level_t gLevel;			/**< Current game level related data. @see game_level_t.*/
 };
 
 /// Type to control UI animations.

@@ -22,6 +22,8 @@ var searchData=
   ['setupui',['setupUI',['../classTetreesUI.html#a492d68860089cfbe52c5756b2c3cd2ae',1,'TetreesUI']]],
   ['shape',['shape',['../structpiece__t.html#a3c8f9c2e51c6bab728e564143c439746',1,'piece_t']]],
   ['spawnedtetromino',['spawnedTetromino',['../classTetreesEngine.html#a26435ee2f02d9ba70d9e359745114f6e',1,'TetreesEngine']]],
+  ['startcolorsarray',['startColorsArray',['../classTetreesUtils.html#afaeab256a68024309eefbbdfae158397',1,'TetreesUtils']]],
+  ['startgamelevelsarray',['startGameLevelsArray',['../classTetreesUtils.html#a1bbb7dbec571bf3490fd74fcdacc7640',1,'TetreesUtils']]],
   ['starttetrominoesarray',['startTetrominoesArray',['../classTetreesUtils.html#acb377319f6772d9e88f677273c895912',1,'TetreesUtils']]],
   ['step_5fblockspawnedtetromino',['step_BlockSpawnedTetromino',['../classTetreesEngine.html#a0978ef1f287f00a8ed5a4af2d680b943',1,'TetreesEngine']]],
   ['step_5fbordertrespassingcheck',['step_BorderTrespassingCheck',['../classTetreesEngine.html#aa593f5f688e984a2cdbbf83b162d00a2',1,'TetreesEngine']]],

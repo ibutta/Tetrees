@@ -40,7 +40,7 @@ private:
 	static game_score_t gameScore; 								/**< Stores the updated @ref game_data_t.gScore "game score" to be displayed at the @ref TetreesUI.scoreLabel "score label".*/
 	static game_level_t gameLevel; 								/**< Stores the present @ref game_level_t "level" of the game.*/
 	static animation_t animationMode; 							/**< Stores which @ref animation_t "animation" must be executed by the UI.*/
-	static animation_control_t animationControl; 				/**< Stores several @ref animation_control_t "control datum" about animations executed by the
+	static animation_control_t animationControl; 				/**< Stores several @ref animation_control_t "control data" about animations executed by the
 																@ref TetreesEngine::gameUI "UI object".*/
 
 	/// Handles the **draw** event for the playing field (game board).

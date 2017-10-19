@@ -3,21 +3,108 @@
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classTetreesUtils_afaeab256a68024309eefbbdfae158397}\label{classTetreesUtils_afaeab256a68024309eefbbdfae158397}} 
-void {\bfseries start\+Colors\+Array} (\hyperlink{classMatrix2D}{Matrix2D}$<$ \hyperlink{structrgb__t}{rgb\+\_\+t} $>$ colors\+Array)
-\item 
-\mbox{\Hypertarget{classTetreesUtils_a812d9a7bee07fef5dfcec1fd36c4b502}\label{classTetreesUtils_a812d9a7bee07fef5dfcec1fd36c4b502}} 
-\hyperlink{TetreesDefs_8hpp_a8ba5fbce2446135735693ab60c896bbd}{color\+\_\+t} {\bfseries get\+Color} (int color\+Ref)
-\item 
-\mbox{\Hypertarget{classTetreesUtils_ad6ece1c845969a3535b8a6d971d8ddcb}\label{classTetreesUtils_ad6ece1c845969a3535b8a6d971d8ddcb}} 
-std\+::string {\bfseries int\+To\+Str} (unsigned int\+Num)
-\item 
-\mbox{\Hypertarget{classTetreesUtils_acb377319f6772d9e88f677273c895912}\label{classTetreesUtils_acb377319f6772d9e88f677273c895912}} 
+\mbox{\Hypertarget{classTetreesUtils_a877e9b03752855651aced77c6e888c55}\label{classTetreesUtils_a877e9b03752855651aced77c6e888c55}} 
+\hyperlink{classTetreesUtils_a877e9b03752855651aced77c6e888c55}{Tetrees\+Utils} ()
+\begin{DoxyCompactList}\small\item\em The class constructor. \end{DoxyCompactList}\item 
+void \hyperlink{classTetreesUtils_afaeab256a68024309eefbbdfae158397}{start\+Colors\+Array} (\hyperlink{classMatrix2D}{Matrix2D}$<$ \hyperlink{structrgb__t}{rgb\+\_\+t} $>$ colors\+Array)
+\begin{DoxyCompactList}\small\item\em Fills an array with color related data. \end{DoxyCompactList}\item 
+\hyperlink{TetreesDefs_8hpp_a8ba5fbce2446135735693ab60c896bbd}{color\+\_\+t} \hyperlink{classTetreesUtils_a812d9a7bee07fef5dfcec1fd36c4b502}{get\+Color} (int color\+Ref)
+\begin{DoxyCompactList}\small\item\em Retrieves a color based on its reference. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classTetreesUtils_ad6ece1c845969a3535b8a6d971d8ddcb}{int\+To\+Str} (unsigned int\+Num)
+\begin{DoxyCompactList}\small\item\em Converts an integer to char. \end{DoxyCompactList}\item 
 void \hyperlink{classTetreesUtils_acb377319f6772d9e88f677273c895912}{start\+Tetrominoes\+Array} (\hyperlink{structpiece__t}{piece\+\_\+t} tetrominoes\+Array\mbox{[}\hyperlink{TetreesDefs_8hpp_a69fa4aa1afe74f7f9ec42bf1e07ddf28}{N\+U\+M\+\_\+\+O\+F\+\_\+\+T\+E\+T\+R\+O\+M\+I\+N\+O\+ES}\mbox{]})
 \begin{DoxyCompactList}\small\item\em Assembles all data related to each of the 7 types of tetrominoes. \end{DoxyCompactList}\item 
+void \hyperlink{classTetreesUtils_a1bbb7dbec571bf3490fd74fcdacc7640}{start\+Game\+Levels\+Array} (\hyperlink{structgame__level__t}{game\+\_\+level\+\_\+t} levels\+Array\mbox{[}\hyperlink{TetreesDefs_8hpp_a350a4204247d3562e237e289533cc31f}{N\+U\+M\+\_\+\+O\+F\+\_\+\+L\+E\+V\+E\+LS}\mbox{]})
+\begin{DoxyCompactList}\small\item\em Fills an array with data regarding each level of the game. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classTetreesUtils_a812d9a7bee07fef5dfcec1fd36c4b502}\label{classTetreesUtils_a812d9a7bee07fef5dfcec1fd36c4b502}} 
+\index{Tetrees\+Utils@{Tetrees\+Utils}!get\+Color@{get\+Color}}
+\index{get\+Color@{get\+Color}!Tetrees\+Utils@{Tetrees\+Utils}}
+\subsubsection{\texorpdfstring{get\+Color()}{getColor()}}
+{\footnotesize\ttfamily \hyperlink{TetreesDefs_8hpp_a8ba5fbce2446135735693ab60c896bbd}{color\+\_\+t} Tetrees\+Utils\+::get\+Color (\begin{DoxyParamCaption}\item[{int}]{color\+Ref }\end{DoxyParamCaption})}
+
+
+
+Retrieves a color based on its reference. 
+
+Returns a \hyperlink{TetreesDefs_8hpp_a8ba5fbce2446135735693ab60c896bbd}{color} according to the reference number. \begin{DoxyNote}{Note}
+This function is more of \char`\"{}a way to make the code more readable\char`\"{}. It does a redundant work but helps one to easily understand the code. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em ref} & A reference number to a specific color. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The \hyperlink{TetreesDefs_8hpp_a8ba5fbce2446135735693ab60c896bbd}{color} related to the given reference number. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTetreesUtils_ad6ece1c845969a3535b8a6d971d8ddcb}\label{classTetreesUtils_ad6ece1c845969a3535b8a6d971d8ddcb}} 
+\index{Tetrees\+Utils@{Tetrees\+Utils}!int\+To\+Str@{int\+To\+Str}}
+\index{int\+To\+Str@{int\+To\+Str}!Tetrees\+Utils@{Tetrees\+Utils}}
+\subsubsection{\texorpdfstring{int\+To\+Str()}{intToStr()}}
+{\footnotesize\ttfamily std\+::string Tetrees\+Utils\+::int\+To\+Str (\begin{DoxyParamCaption}\item[{unsigned}]{int\+Num }\end{DoxyParamCaption})}
+
+
+
+Converts an integer to char. 
+
+Returns the char representation of the given integer number. 
+\begin{DoxyParams}{Parameters}
+{\em int\+Num} & The integer number to be converted to char. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The given integer as a char. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTetreesUtils_afaeab256a68024309eefbbdfae158397}\label{classTetreesUtils_afaeab256a68024309eefbbdfae158397}} 
+\index{Tetrees\+Utils@{Tetrees\+Utils}!start\+Colors\+Array@{start\+Colors\+Array}}
+\index{start\+Colors\+Array@{start\+Colors\+Array}!Tetrees\+Utils@{Tetrees\+Utils}}
+\subsubsection{\texorpdfstring{start\+Colors\+Array()}{startColorsArray()}}
+{\footnotesize\ttfamily void Tetrees\+Utils\+::start\+Colors\+Array (\begin{DoxyParamCaption}\item[{\hyperlink{classMatrix2D}{Matrix2D}$<$ \hyperlink{structrgb__t}{rgb\+\_\+t} $>$}]{colors\+Array }\end{DoxyParamCaption})}
+
+
+
+Fills an array with color related data. 
+
+This function receives an array and fills it with \hyperlink{structrgb__t}{colors related data}. More specifically, there will be within each array\textquotesingle{}s element data regarding to the red, green, and blue component of a color (in {\ttfamily double} values) as well as its name. 
+\begin{DoxyParams}{Parameters}
+{\em colors\+Array} & The array to be filled with colors\textquotesingle{} data. \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{classTetreesUtils_a1bbb7dbec571bf3490fd74fcdacc7640}\label{classTetreesUtils_a1bbb7dbec571bf3490fd74fcdacc7640}} 
-void {\bfseries start\+Game\+Levels\+Array} (\hyperlink{structgame__level__t}{game\+\_\+level\+\_\+t} levels\+Array\mbox{[}\hyperlink{TetreesDefs_8hpp_a350a4204247d3562e237e289533cc31f}{N\+U\+M\+\_\+\+O\+F\+\_\+\+L\+E\+V\+E\+LS}\mbox{]})
-\end{DoxyCompactItemize}
+\index{Tetrees\+Utils@{Tetrees\+Utils}!start\+Game\+Levels\+Array@{start\+Game\+Levels\+Array}}
+\index{start\+Game\+Levels\+Array@{start\+Game\+Levels\+Array}!Tetrees\+Utils@{Tetrees\+Utils}}
+\subsubsection{\texorpdfstring{start\+Game\+Levels\+Array()}{startGameLevelsArray()}}
+{\footnotesize\ttfamily void Tetrees\+Utils\+::start\+Game\+Levels\+Array (\begin{DoxyParamCaption}\item[{\hyperlink{structgame__level__t}{game\+\_\+level\+\_\+t}}]{levels\mbox{[}\+N\+U\+M\+\_\+\+O\+F\+\_\+\+L\+E\+V\+E\+L\+S\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Fills an array with data regarding each level of the game. 
+
+The array received as parameter by this function is filled with \hyperlink{structgame__level__t}{game levels\textquotesingle{} data} where each entry represents one of the \hyperlink{TetreesDefs_8hpp_ac7faaacc16f5e7962108661dfc411257}{levels}. 
+\begin{DoxyParams}{Parameters}
+{\em levels\mbox{[}\+N\+U\+M\+\_\+\+O\+F\+\_\+\+L\+E\+V\+E\+L\+S\mbox{]}} & The array to be filled with game levels\textquotesingle{} data. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTetreesUtils_acb377319f6772d9e88f677273c895912}\label{classTetreesUtils_acb377319f6772d9e88f677273c895912}} 
+\index{Tetrees\+Utils@{Tetrees\+Utils}!start\+Tetrominoes\+Array@{start\+Tetrominoes\+Array}}
+\index{start\+Tetrominoes\+Array@{start\+Tetrominoes\+Array}!Tetrees\+Utils@{Tetrees\+Utils}}
+\subsubsection{\texorpdfstring{start\+Tetrominoes\+Array()}{startTetrominoesArray()}}
+{\footnotesize\ttfamily void Tetrees\+Utils\+::start\+Tetrominoes\+Array (\begin{DoxyParamCaption}\item[{\hyperlink{structpiece__t}{piece\+\_\+t}}]{tetrominoes\mbox{[}\+N\+U\+M\+\_\+\+O\+F\+\_\+\+T\+E\+T\+R\+O\+M\+I\+N\+O\+E\+S\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Assembles all data related to each of the 7 types of tetrominoes. 
+
+Fills an array with data regarding each type of tetrominoes available.
+
+The array received as parameter by this function is filled with \hyperlink{structpiece__t}{tetrominoes\textquotesingle{} data} where each entry represents one of the \hyperlink{TetreesDefs_8hpp_acd279a62a49ecee418dd808ac39a1795}{seven tetrominoes}. 
+\begin{DoxyParams}{Parameters}
+{\em tetrominoes\mbox{[}\+N\+U\+M\+\_\+\+O\+F\+\_\+\+T\+E\+T\+R\+O\+M\+I\+N\+O\+E\+S\mbox{]}} & The array to be filled with tetrominoes\textquotesingle{} data. \\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
