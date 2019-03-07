@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['r',['r',['../structrgb__t.html#a89e46e1937cafe0683023100a5e1915a',1,'rgb_t']]],
-  ['reachedbottom',['reachedBottom',['../structpiece__t.html#acb67c9322e157b7dd7c7e0efd212da76',1,'piece_t']]],
-  ['rheight',['rHeight',['../classMatrix2D.html#afdcd47964719a1c4e006fbdd313d2f17',1,'Matrix2D']]],
-  ['rpos',['rpos',['../structpiece__t.html#ab1d715c35231b557560096e2d79f4a43',1,'piece_t']]]
+  ['lvl',['lvl',['../structgame__level__t.html#ab80383a9c51e3ad25cda4df0a7df8df2',1,'game_level_t']]],
+  ['lvllabel',['lvlLabel',['../TetreesUI_8cpp.html#a5105cbc816245ddca29759f153415653',1,'TetreesUI.cpp']]]
 ];

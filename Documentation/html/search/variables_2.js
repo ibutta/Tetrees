@@ -1,9 +1,7 @@
 var searchData=
 [
-  ['g',['g',['../structrgb__t.html#a626bf50c035e97070dcd72f3717ee64f',1,'rgb_t']]],
-  ['gamespeed',['gameSpeed',['../structgame__level__t.html#a2501f9b624ec9cf7788649127e111a33',1,'game_level_t']]],
-  ['gameui',['gameUI',['../classTetreesEngine.html#a01bf1d438236d5f57129ffb22adf59ce',1,'TetreesEngine']]],
-  ['glevel',['gLevel',['../structgame__data__t.html#a7918ec335ac715bcf7ec197920afe56b',1,'game_data_t']]],
-  ['gscore',['gScore',['../structgame__data__t.html#a70e04b66160685cc84bcdd30edb97e46',1,'game_data_t']]],
-  ['gstate',['gState',['../structgame__data__t.html#a48253f7b6212e0ff99d5d5960b79476d',1,'game_data_t']]]
+  ['color',['color',['../structpiece__t.html#af6408bda8899430d6457a83afb657225',1,'piece_t']]],
+  ['colors',['colors',['../classTetreesUI.html#a57300c1925cb5ae34c9220cd993e28b2',1,'TetreesUI']]],
+  ['cssprovider',['cssProvider',['../TetreesUI_8cpp.html#abc4f181f9f1390698df2a37f459418fe',1,'TetreesUI.cpp']]],
+  ['cwidth',['cWidth',['../classMatrix2D.html#ad30f0f3c259aaa26ddda2b4d17eddef2',1,'Matrix2D']]]
 ];

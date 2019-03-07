@@ -1,10 +1,16 @@
 var searchData=
 [
-  ['name',['name',['../structrgb__t.html#a98fbae1e6897105536340238b9660ba5',1,'rgb_t']]],
-  ['next_5ftetromino_5ffield_5fcell_5fheight',['NEXT_TETROMINO_FIELD_CELL_HEIGHT',['../TetreesDefs_8hpp.html#a67c83d74957fb33b804e920b3e16bfe6',1,'TetreesDefs.hpp']]],
-  ['next_5ftetromino_5ffield_5fcell_5fwidth',['NEXT_TETROMINO_FIELD_CELL_WIDTH',['../TetreesDefs_8hpp.html#ac176e980e4e657c945ed656bd0b5eb73',1,'TetreesDefs.hpp']]],
-  ['nextlvlscore',['nextLvlScore',['../structgame__level__t.html#a9f5f86c9c90bebdd20950d74bf2dd450',1,'game_level_t']]],
-  ['num_5fof_5fcolors',['NUM_OF_COLORS',['../TetreesDefs_8hpp.html#abd45e889c47b3839d9e8b3c8fcb74aee',1,'TetreesDefs.hpp']]],
-  ['num_5fof_5flevels',['NUM_OF_LEVELS',['../TetreesDefs_8hpp.html#a350a4204247d3562e237e289533cc31f',1,'TetreesDefs.hpp']]],
-  ['num_5fof_5ftetrominoes',['NUM_OF_TETROMINOES',['../TetreesDefs_8hpp.html#a69fa4aa1afe74f7f9ec42bf1e07ddf28',1,'TetreesDefs.hpp']]]
+  ['g',['g',['../structrgb__t.html#a626bf50c035e97070dcd72f3717ee64f',1,'rgb_t']]],
+  ['gameboard',['gameBoard',['../classTetreesEngine.html#a37d082a7816d6731b2703dd6d1a1cb97',1,'TetreesEngine']]],
+  ['gamedata',['gameData',['../classTetreesEngine.html#afa356b8bb38e8918400e7175d6fbbd2e',1,'TetreesEngine']]],
+  ['gameengine',['gameEngine',['../classTetreesUI.html#a07faa56ea40b28beba7509fa7f65c897',1,'TetreesUI']]],
+  ['gamelevel',['gameLevel',['../classTetreesUI.html#a700b75dbee9c324c69a18f34c5efdab9',1,'TetreesUI']]],
+  ['gamelevels',['gameLevels',['../classTetreesEngine.html#a03ea87d7cefe7b216977c9123fc6ef60',1,'TetreesEngine']]],
+  ['gamescene',['gameScene',['../classTetreesUI.html#a604cf4cecdbc93745eaf7733b3c33602',1,'TetreesUI']]],
+  ['gamescore',['gameScore',['../classTetreesUI.html#a128491041c6b77acec829fb5b1f4dafb',1,'TetreesUI']]],
+  ['gamespeed',['gameSpeed',['../structgame__level__t.html#a2501f9b624ec9cf7788649127e111a33',1,'game_level_t']]],
+  ['gameui',['gameUI',['../classTetreesEngine.html#a01bf1d438236d5f57129ffb22adf59ce',1,'TetreesEngine']]],
+  ['glevel',['gLevel',['../structgame__data__t.html#a7918ec335ac715bcf7ec197920afe56b',1,'game_data_t']]],
+  ['gscore',['gScore',['../structgame__data__t.html#a70e04b66160685cc84bcdd30edb97e46',1,'game_data_t']]],
+  ['gstate',['gState',['../structgame__data__t.html#a48253f7b6212e0ff99d5d5960b79476d',1,'game_data_t']]]
 ];

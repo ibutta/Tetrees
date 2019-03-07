@@ -58,7 +58,7 @@ PROJECT_LOGO           =
 # entered, it will be relative to the location where doxygen was started. If
 # left blank the current directory will be used.
 
-OUTPUT_DIRECTORY       = /home/igao/workspace_eclipse_cpp/Tetrees/Documentation
+OUTPUT_DIRECTORY       = ./
 
 # If the CREATE_SUBDIRS tag is set to YES then doxygen will create 4096 sub-
 # directories (in 2 levels) under the output directory of each output format and
@@ -790,7 +790,7 @@ WARN_LOGFILE           =
 # spaces. See also FILE_PATTERNS and EXTENSION_MAPPING
 # Note: If this tag is empty the current directory is searched.
 
-INPUT                  = /home/igao/workspace_eclipse_cpp/Tetrees/Headers/TetreesDefs.hpp /home/igao/workspace_eclipse_cpp/Tetrees/Headers/TetreesStrings.hpp /home/igao/workspace_eclipse_cpp/Tetrees/Headers/TetreesUtils.hpp /home/igao/workspace_eclipse_cpp/Tetrees/Headers/TetreesEngine.hpp /home/igao/workspace_eclipse_cpp/Tetrees/Headers/TetreesUI.hpp /home/igao/workspace_eclipse_cpp/Tetrees/Source/TetreesMainApp.cpp /home/igao/workspace_eclipse_cpp/Tetrees/Source/TetreesEngine.cpp /home/igao/workspace_eclipse_cpp/Tetrees/Source/TetreesUI.cpp /home/igao/workspace_eclipse_cpp/Tetrees/Source/TetreesUtils.cpp
+INPUT                  = ../Headers/TetreesDefs.hpp ../Headers/TetreesStrings.hpp ../Headers/TetreesUtils.hpp ../Headers/TetreesEngine.hpp ../Headers/TetreesUI.hpp ../Source/TetreesMainApp.cpp ../Source/TetreesEngine.cpp ../Source/TetreesUI.cpp ../Source/TetreesUtils.cpp
 
 # This tag can be used to specify the character encoding of the source files
 # that doxygen parses. Internally doxygen uses the UTF-8 encoding. Doxygen uses
@@ -1538,7 +1538,7 @@ MATHJAX_FORMAT         = HTML-CSS
 # output directory using the MATHJAX_RELPATH option. The destination directory
 # should contain the MathJax.js script. For instance, if the mathjax directory
 # is located at the same level as the HTML output directory, then
-# MATHJAX_RELPATH should be ../mathjax. The default value points to the MathJax
+# MATHJAX_RELPATH should be .../mathjax. The default value points to the MathJax
 # Content Delivery Network so you can quickly see the result without installing
 # MathJax. However, it is strongly recommended to install a local copy of
 # MathJax from https://www.mathjax.org before deployment.

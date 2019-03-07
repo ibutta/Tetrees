@@ -1,10 +1,13 @@
 var searchData=
 [
-  ['r',['r',['../structrgb__t.html#a89e46e1937cafe0683023100a5e1915a',1,'rgb_t']]],
-  ['reachedbottom',['reachedBottom',['../structpiece__t.html#acb67c9322e157b7dd7c7e0efd212da76',1,'piece_t']]],
-  ['reverserows',['reverseRows',['../classMatrix2D.html#aaaefe293f1a0549afb2e506b71b18490',1,'Matrix2D']]],
-  ['rgb_5ft',['rgb_t',['../structrgb__t.html',1,'']]],
-  ['rheight',['rHeight',['../classMatrix2D.html#afdcd47964719a1c4e006fbdd313d2f17',1,'Matrix2D']]],
-  ['rpos',['rpos',['../structpiece__t.html#ab1d715c35231b557560096e2d79f4a43',1,'piece_t']]],
-  ['rpos_5ft',['rpos_t',['../TetreesDefs_8hpp.html#ae8c3bf9765f183eabf1106110513afc6',1,'TetreesDefs.hpp']]]
+  ['main',['main',['../TetreesMainApp_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'TetreesMainApp.cpp']]],
+  ['maingrid',['mainGrid',['../TetreesUI_8cpp.html#abb2e6a9f558c00289268dc07c341c50f',1,'TetreesUI.cpp']]],
+  ['mainwindow',['mainWindow',['../TetreesUI_8cpp.html#a929776169582ba270fc197a352f288e8',1,'TetreesUI.cpp']]],
+  ['matrix2d',['Matrix2D',['../classMatrix2D.html',1,'Matrix2D&lt; Type &gt;'],['../classMatrix2D.html#a6166db3bae116e2f009721534abdb2de',1,'Matrix2D::Matrix2D(unsigned height, unsigned width)'],['../classMatrix2D.html#aab23e73fe109ec1eb39dc442bcb67cbe',1,'Matrix2D::Matrix2D(unsigned width)'],['../classMatrix2D.html#a5a6653f697f1c397669bd556c1fd272a',1,'Matrix2D::Matrix2D()']]],
+  ['matrix2d_3c_20int_20_3e',['Matrix2D&lt; int &gt;',['../classMatrix2D.html',1,'']]],
+  ['matrix2d_3c_20rgb_5ft_20_3e',['Matrix2D&lt; rgb_t &gt;',['../classMatrix2D.html',1,'']]],
+  ['matrixarray',['matrixArray',['../classMatrix2D.html#a6e702a96baba89ad29226ceb44676e2b',1,'Matrix2D']]],
+  ['msg_5fgame_5fover',['MSG_GAME_OVER',['../TetreesStrings_8hpp.html#a785e610f54ab8795f42902aeac24ba8d',1,'TetreesStrings.hpp']]],
+  ['msg_5fgame_5fpaused',['MSG_GAME_PAUSED',['../TetreesStrings_8hpp.html#a338b3837bdd505145f52cff93b53e18a',1,'TetreesStrings.hpp']]],
+  ['multiplier',['multiplier',['../structgame__score__t.html#a9dbd70f0cf1f4258895ff90db228297d',1,'game_score_t']]]
 ];

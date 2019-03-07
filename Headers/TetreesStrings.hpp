@@ -43,7 +43,7 @@
 #define CSS_NAME_RESET_BUTTON					"resetButton"
 
 //Messages
-#define MSG_GAME_PAUSED			"GAME PAUSED"
-#define MSG_GAME_OVER			"GAME OVER!"
+#define MSG_GAME_PAUSED			"GAME PAUSED" /**< The message to be shown when game is paused.*/
+#define MSG_GAME_OVER			"GAME OVER!" /**< The message to be shown when game has ended.*/
 
 #endif /* HEADERS_TETREESSTRINGS_H_ */

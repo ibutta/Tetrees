@@ -5,12 +5,23 @@
  *      Author: Igor S. Buttarello
  */
 
+/**
+ * @file TetreesUtils.cpp
+ * @brief The source file containing the TetreesUtils class' member functions implementation.
+ */
+
 #include <TetreesUtils.hpp>
 
 TetreesUtils::TetreesUtils()
 {
 }
 
+/**
+ * This function receives an array and fills it with @ref rgb_t "colors related data". More specifically,
+ * there will be within each array's element data regarding to the red, green, and blue component
+ * of a color (in `double` values) as well as its name.
+ * @param colorsArray The array to be filled with colors' data.
+ */
 void TetreesUtils::startColorsArray(Matrix2D<rgb_t> colorsArray)
 {
 
@@ -99,10 +110,17 @@ void TetreesUtils::startColorsArray(Matrix2D<rgb_t> colorsArray)
 
 }
 
-color_t TetreesUtils::getColor(int ref)
+/**
+ * Returns a @ref color_t "color" according to the reference number.
+ * @note This function is more of "a way to make the code more readable". It does a redundant
+ * work but helps one to easily understand the code.
+ * @param ref A reference number to a specific color.
+ * @return The @ref color_t "color" related to the given reference number.
+ */
+color_t TetreesUtils::getColor(int colorRef)
 {
 
-	switch(ref){
+	switch(colorRef){
 
 	case COLOR_TRANSPARENT: return COLOR_TRANSPARENT;
 	case COLOR_LIGHT_BLUE:  return COLOR_LIGHT_BLUE;
@@ -120,15 +138,25 @@ color_t TetreesUtils::getColor(int ref)
 
 }
 
-std::string TetreesUtils::intToStr(unsigned num)
+/**
+ * Returns the char representation of the given integer number.
+ * @param intNum The integer number to be converted to char.
+ * @return The given integer as a char.
+ */
+std::string TetreesUtils::intToStr(unsigned intNum)
 {
 
 	std::ostringstream stream;
-	stream << std::dec << num;
+	stream << std::dec << intNum;
 	return stream.str();
 
 }
 
+/**
+ * The array received as parameter by this function is filled with @ref piece_t "tetrominoes' data"
+ * where each entry represents one of the @ref tetromino_t "seven tetrominoes".
+ * @param tetrominoes[NUM_OF_TETROMINOES] The array to be filled with tetrominoes' data.
+ */
 void TetreesUtils::startTetrominoesArray(piece_t tetrominoes[NUM_OF_TETROMINOES])
 {
 
@@ -308,6 +336,11 @@ void TetreesUtils::startTetrominoesArray(piece_t tetrominoes[NUM_OF_TETROMINOES]
 
 }
 
+/**
+ * The array received as parameter by this function is filled with @ref game_level_t "game levels' data"
+ * where each entry represents one of the @ref level_num_t "levels".
+ * @param levels[NUM_OF_LEVELS] The array to be filled with game levels' data.
+ */
 void TetreesUtils::startGameLevelsArray(game_level_t levels[NUM_OF_LEVELS])
 {
 
