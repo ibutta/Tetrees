@@ -34,8 +34,8 @@ int main(){
 	int status;
 
 	tetreesApp = gtk_application_new("com.github.ibutta.tetrees", G_APPLICATION_FLAGS_NONE);
-	g_signal_connect(tetreesApp, "activate", G_CALLBACK (activate), NULL);
-	status = g_application_run(G_APPLICATION (tetreesApp), 0, NULL);
+	g_signal_connect(tetreesApp, "activate", G_CALLBACK (activate), nullptr);
+	status = g_application_run(G_APPLICATION (tetreesApp), 0, nullptr);
 	g_object_unref(tetreesApp);
 
 	return status;

@@ -10,7 +10,7 @@
  * @brief Defs header file.
  *
  * A key header file that defines several global
- * constants, macros, enums, structs, and a class.
+ * constants, macros, enums, and structs.
  */
 
 #ifndef TETREESDEFS_H_
@@ -357,7 +357,7 @@ public:
 	 * @param height The number of rows in the new matrix.
 	 * @param width The number of columns in the new matrix.
 	 */
-	Matrix2D(unsigned height, unsigned width) : rHeight(height), cWidth(width), matrixArray(NULL)
+	Matrix2D(unsigned height, unsigned width) : rHeight(height), cWidth(width), matrixArray(nullptr)
 	{
 		if(rHeight > 0 && cWidth > 0){
 			matrixArray = new Type[rHeight * cWidth];
@@ -369,7 +369,7 @@ public:
 	 * Generates an object representing a 1D vector.
 	 * @param width The number of elements of the new vector.
 	 */
-	Matrix2D(unsigned width) : rHeight(1), cWidth(width), matrixArray(NULL)
+	Matrix2D(unsigned width) : rHeight(1), cWidth(width), matrixArray(nullptr)
 	{
 		if(cWidth > 0){
 			matrixArray = new Type[cWidth];
@@ -380,13 +380,13 @@ public:
 	/**
 	 * Generates an empty object.
 	 */
-	Matrix2D() : rHeight(0), cWidth(0), matrixArray(NULL)
+	Matrix2D() : rHeight(0), cWidth(0), matrixArray(nullptr)
 	{}
 
 	/// Assign operator override.
 	/*
 	 * Overrides the assign operator to properly deal with
-	 * a value assignment when regarding to memory copy issues.
+	 * copy issues.
 	 */
 	Matrix2D<Type> &operator= (const Matrix2D<Type> &other)
 	{

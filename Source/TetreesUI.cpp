@@ -607,7 +607,7 @@ void TetreesUI::contextHandler()
 				G_PRIORITY_HIGH,
 				gameLevel.gameSpeed,
 				(GSourceFunc)updateGameContext,
-				NULL,
+				nullptr,
 				(GDestroyNotify)contextHandler
 		);
 		break;
@@ -715,7 +715,7 @@ void TetreesUI::updateScore()
 											 "centreJustifyTag",
 											 "fontTag",
 											 "fgColorTag",
-											 NULL
+											 nullptr
 	);
 
 	std::string lvlNum = utils->intToStr(gameLevel.lvl + 1);
@@ -745,7 +745,7 @@ void TetreesUI::onPlayClicked()
 					G_PRIORITY_HIGH,
 					gameLevel.gameSpeed,
 					(GSourceFunc)updateGameContext,
-					NULL,
+					nullptr,
 					(GDestroyNotify)contextHandler
 			);
 
@@ -820,7 +820,7 @@ void TetreesUI::setupUI(GtkApplication *app, gpointer user_data)
 
 	gtk_widget_add_events(mainWindow, GDK_KEY_PRESS_MASK);
 
-	g_signal_connect(mainWindow, "key-press-event", G_CALLBACK(onKeyPress), NULL);
+	g_signal_connect(mainWindow, "key-press-event", G_CALLBACK(onKeyPress), nullptr);
 	//**************************************************************************************
 
 	//==========
@@ -836,7 +836,7 @@ void TetreesUI::setupUI(GtkApplication *app, gpointer user_data)
 	//PLAYING FIELD FRAME
 	//====================
 	//***************************************************************************************
-	playingFieldFrame = gtk_frame_new(NULL);
+	playingFieldFrame = gtk_frame_new(nullptr);
 	gtk_widget_set_name(
 			GTK_WIDGET(playingFieldFrame),
 			CSS_NAME_PLAYING_FIELD_FRAME
@@ -866,10 +866,10 @@ void TetreesUI::setupUI(GtkApplication *app, gpointer user_data)
 			playingFieldDrawingArea,
 			"draw",
 			G_CALLBACK(onDrawPlayingFieldDrawingArea),
-			NULL
+			nullptr
 	);
 
-	g_timeout_add(ANIMATION_EVENT_INTERVAL,(GSourceFunc)animationController, NULL);
+	g_timeout_add(ANIMATION_EVENT_INTERVAL,(GSourceFunc)animationController, nullptr);
 	//***************************************************************************************
 
 	//=======
@@ -886,7 +886,7 @@ void TetreesUI::setupUI(GtkApplication *app, gpointer user_data)
 	//NEXT TETROMINO FRAME
 	//=====================
 	//***************************************************************************************
-	nextTetrominoFrame = gtk_frame_new(NULL);
+	nextTetrominoFrame = gtk_frame_new(nullptr);
 	gtk_widget_set_name(
 			GTK_WIDGET(nextTetrominoFrame),
 			CSS_NAME_NEXT_TETROMINO_FRAME
@@ -923,7 +923,7 @@ void TetreesUI::setupUI(GtkApplication *app, gpointer user_data)
 			nextTetrominoDrawingArea,
 			"draw",
 			G_CALLBACK(onDrawNextTetrominoDrawingArea),
-			NULL
+			nullptr
 	);
 	//***************************************************************************************
 
@@ -942,7 +942,7 @@ void TetreesUI::setupUI(GtkApplication *app, gpointer user_data)
 	//SCORE FRAME
 	//============
 	//***************************************************************************************
-	scoreFrame = gtk_frame_new(NULL);
+	scoreFrame = gtk_frame_new(nullptr);
 	gtk_widget_set_name(
 			GTK_WIDGET(scoreFrame),
 			CSS_NAME_SCORE_FRAME
@@ -1000,28 +1000,28 @@ void TetreesUI::setupUI(GtkApplication *app, gpointer user_data)
 			"centreJustifyTag",
 			"justification",
 			GTK_JUSTIFY_CENTER,
-			NULL
+			nullptr
 	);
 	gtk_text_buffer_create_tag(
 			GTK_TEXT_BUFFER(scoreTextBuf),
 			"fontTag",
 			"font",
 			"PressStart2P 24",
-			NULL
+			nullptr
 	);
 	gtk_text_buffer_create_tag(
 			GTK_TEXT_BUFFER(scoreTextBuf),
 			"fgColorTag",
 			"foreground",
 			"green",
-			NULL
+			nullptr
 	);
 	gtk_text_buffer_create_tag(
 			GTK_TEXT_BUFFER(scoreTextBuf),
 			"abovePixelsTag",
 			"pixels-above-lines",
 			12,
-			NULL
+			nullptr
 	);
 	gtk_container_add(GTK_CONTAINER(scoreFrame), scoreTextView);
 	//***************************************************************************************
@@ -1049,12 +1049,13 @@ void TetreesUI::setupUI(GtkApplication *app, gpointer user_data)
 	//***************************************************************************************
 	playButton = gtk_button_new_with_label(LABEL_PLAY_BUTTON);
 	gtk_widget_set_name(GTK_WIDGET(playButton), CSS_NAME_PLAY_BUTTON);
+	gtk_widget_set_size_request(GTK_WIDGET(playButton), 130, 0);
 
 	g_signal_connect(
 			playButton,
 			"clicked",
 			G_CALLBACK(onPlayClicked),
-			NULL
+			nullptr
 	);
 	//***************************************************************************************
 
@@ -1064,14 +1065,14 @@ void TetreesUI::setupUI(GtkApplication *app, gpointer user_data)
 	//***************************************************************************************
 	pauseButton = gtk_button_new_with_label(LABEL_PAUSE_BUTTON);
 	gtk_widget_set_name(GTK_WIDGET(pauseButton), CSS_NAME_PAUSE_BUTTON);
-	gtk_widget_set_size_request(GTK_WIDGET(pauseButton), 154, 0);
+	gtk_widget_set_size_request(GTK_WIDGET(pauseButton), 130, 0);
 	gtk_widget_set_sensitive(GTK_WIDGET(pauseButton), FALSE);
 
 	g_signal_connect(
 			pauseButton,
 			"clicked",
 			G_CALLBACK(onPauseClicked),
-			NULL
+			nullptr
 	);
 	//***************************************************************************************
 
@@ -1081,13 +1082,14 @@ void TetreesUI::setupUI(GtkApplication *app, gpointer user_data)
 	//***************************************************************************************
 	resetButton = gtk_button_new_with_label(LABEL_RESET_BUTTON);
 	gtk_widget_set_name(GTK_WIDGET(resetButton), CSS_NAME_RESET_BUTTON);
+	gtk_widget_set_size_request(GTK_WIDGET(resetButton), 130, 0);
 	gtk_widget_set_sensitive(GTK_WIDGET(resetButton), FALSE);
 
 	g_signal_connect(
 			resetButton,
 			"clicked",
 			G_CALLBACK(onResetClicked),
-			NULL
+			nullptr
 	);
 	//***************************************************************************************
 
@@ -1120,7 +1122,7 @@ void TetreesUI::setupUI(GtkApplication *app, gpointer user_data)
 	gtk_css_provider_load_from_file(
 			cssProvider,
 			g_file_new_for_path(CSS_FILE_PATH),
-			NULL
+			nullptr
 	);
 	//***************************************************************************************
 

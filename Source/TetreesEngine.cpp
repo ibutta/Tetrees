@@ -64,7 +64,7 @@ game_level_t	TetreesEngine::gameLevels[NUM_OF_LEVELS];
 TetreesEngine::TetreesEngine()
 {
 
-	srand(time(NULL));
+	srand(time(nullptr));
 	gameUI = new TetreesUI(*this);
 	utils = new TetreesUtils();
 	gameData.gState = GAME_STATE_NOT_STARTED;
