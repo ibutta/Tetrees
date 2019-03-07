@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['scene_5fx',['SCENE_X',['../TetreesDefs_8hpp.html#ac0af1c5c642460534a8eb7827a37e7bf',1,'TetreesDefs.hpp']]],
-  ['scene_5fy',['SCENE_Y',['../TetreesDefs_8hpp.html#ad9ec28c85f18edf52f01cf50c4b4e0b7',1,'TetreesDefs.hpp']]]
+  ['msg_5fgame_5fover',['MSG_GAME_OVER',['../TetreesStrings_8hpp.html#a785e610f54ab8795f42902aeac24ba8d',1,'TetreesStrings.hpp']]],
+  ['msg_5fgame_5fpaused',['MSG_GAME_PAUSED',['../TetreesStrings_8hpp.html#a338b3837bdd505145f52cff93b53e18a',1,'TetreesStrings.hpp']]]
 ];

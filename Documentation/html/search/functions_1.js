@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['gamestep',['gameStep',['../classTetreesEngine.html#a33e9983a618b3538640b6bd987304b8b',1,'TetreesEngine']]],
-  ['getcolwidth',['getColWidth',['../classMatrix2D.html#afd2fbe10a27044f6e716242fde6a645a',1,'Matrix2D']]],
-  ['getrowheight',['getRowHeight',['../classMatrix2D.html#acc55ef0f69af583aaefb8a484b4c2ca7',1,'Matrix2D']]],
-  ['gtksetup',['gtkSetup',['../classTetreesEngine.html#a85e0da200fb3e17745f1978d24acca2f',1,'TetreesEngine']]]
+  ['clockwise90rotation',['clockwise90Rotation',['../classMatrix2D.html#a2845ff86d7f24ccd338b42b2a9cbe017',1,'Matrix2D']]],
+  ['contexthandler',['contextHandler',['../classTetreesUI.html#ae7d84906e943cd4b795800d4d561955c',1,'TetreesUI']]],
+  ['counterclockwise90rotation',['counterclockwise90Rotation',['../classMatrix2D.html#a3fc1bc77793995134f6d2a9095eb57cb',1,'Matrix2D']]]
 ];

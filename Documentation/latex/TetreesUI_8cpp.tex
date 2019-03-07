@@ -1,0 +1,213 @@
+\hypertarget{TetreesUI_8cpp}{}\section{/home/igor/eclipse-\/cpp-\/workspace/\+Tetrees/\+Source/\+Tetrees\+UI.cpp File Reference}
+\label{TetreesUI_8cpp}\index{/home/igor/eclipse-\/cpp-\/workspace/\+Tetrees/\+Source/\+Tetrees\+U\+I.\+cpp@{/home/igor/eclipse-\/cpp-\/workspace/\+Tetrees/\+Source/\+Tetrees\+U\+I.\+cpp}}
+
+
+The source file containing the \hyperlink{classTetreesUI}{Tetrees\+UI} class\textquotesingle{} member functions implementation.  
+
+
+{\ttfamily \#include $<$Tetrees\+Engine.\+hpp$>$}\newline
+{\ttfamily \#include $<$Tetrees\+U\+I.\+hpp$>$}\newline
+{\ttfamily \#include $<$Tetrees\+Utils.\+hpp$>$}\newline
+{\ttfamily \#include $<$fontconfig/fontconfig.\+h$>$}\newline
+{\ttfamily \#include $<$Tetrees\+Strings.\+hpp$>$}\newline
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+Gtk\+Widget $\ast$ \hyperlink{TetreesUI_8cpp_a929776169582ba270fc197a352f288e8}{main\+Window}
+\item 
+Gtk\+Widget $\ast$ \hyperlink{TetreesUI_8cpp_a98d2477cef8ca3a919a3e0af02da0a0d}{playing\+Field\+Frame}
+\item 
+Gtk\+Widget $\ast$ \hyperlink{TetreesUI_8cpp_aa28e1158cd1473e8640bc421f0fc7340}{next\+Tetromino\+Frame}
+\item 
+Gtk\+Widget $\ast$ \hyperlink{TetreesUI_8cpp_abb2e6a9f558c00289268dc07c341c50f}{main\+Grid}
+\item 
+Gtk\+Widget $\ast$ \hyperlink{TetreesUI_8cpp_ac781c7f7f1667b12c3e26b8cb2622bf5}{box01}
+\item 
+Gtk\+Widget $\ast$ \hyperlink{TetreesUI_8cpp_a587a173ec1b3ab1a2db7155f0f9322ef}{button\+Box}
+\item 
+Gtk\+Widget $\ast$ \hyperlink{TetreesUI_8cpp_a93e046be1258b131010c58072aab2ead}{play\+Button}
+\item 
+Gtk\+Widget $\ast$ \hyperlink{TetreesUI_8cpp_a119f809cb832f3e370c60c75d766e473}{pause\+Button}
+\item 
+Gtk\+Widget $\ast$ \hyperlink{TetreesUI_8cpp_a7ac3df3e3d13ae5bd16828389ba56461}{reset\+Button}
+\item 
+Gtk\+Widget $\ast$ \hyperlink{TetreesUI_8cpp_af900bffe25b932fb86dc61cfdf839e95}{playing\+Field\+Drawing\+Area}
+\item 
+Gtk\+Widget $\ast$ \hyperlink{TetreesUI_8cpp_ae067b2d6b08b38aa73b035c82d9e14b0}{score\+Label}
+\item 
+Gtk\+Widget $\ast$ \hyperlink{TetreesUI_8cpp_a8d867e3855c9142a39c9314c758e9990}{score\+Frame}
+\item 
+Gtk\+Widget $\ast$ \hyperlink{TetreesUI_8cpp_aacb77432f2785bad4cb2dd55899b5336}{score\+Text\+View}
+\item 
+Gtk\+Widget $\ast$ \hyperlink{TetreesUI_8cpp_a5105cbc816245ddca29759f153415653}{lvl\+Label}
+\item 
+Gtk\+Widget $\ast$ \hyperlink{TetreesUI_8cpp_aac997784ac88b494498d6e08d6fe62d5}{next\+Tetromino\+Drawing\+Area}
+\item 
+Gtk\+Text\+Buffer $\ast$ \hyperlink{TetreesUI_8cpp_a987e52b6afd77146d28d866324936333}{score\+Text\+Buf}
+\item 
+Gtk\+Text\+Iter \hyperlink{TetreesUI_8cpp_adc132ad6d9929e2a33e24d4cd6d35322}{score\+Iter}
+\item 
+Gdk\+Display $\ast$ \hyperlink{TetreesUI_8cpp_af8ddf64c2ced2048a5de5626a796c43c}{display}
+\item 
+Gdk\+Screen $\ast$ \hyperlink{TetreesUI_8cpp_ae721ea915e8dc917e4474171757a230e}{screen}
+\item 
+Gtk\+Css\+Provider $\ast$ \hyperlink{TetreesUI_8cpp_abc4f181f9f1390698df2a37f459418fe}{css\+Provider}
+\item 
+guint \hyperlink{TetreesUI_8cpp_a10408b8935c73e0f669f6268f22f1de3}{update\+Event\+ID}
+\item 
+std\+::string \hyperlink{TetreesUI_8cpp_a816e612f85e91ff77ce93b10f5b9ec2e}{file\+Path\+\_\+8bit\+Font} = \char`\"{}Misc/Press\+Start2\+P.\+ttf\char`\"{}
+\item 
+const Fc\+Char8 $\ast$ \hyperlink{TetreesUI_8cpp_a72251ac20f5ac4b09eccfff3e2687252}{file} = (const Fc\+Char8$\ast$)file\+Path\+\_\+8bit\+Font.\+c\+\_\+str()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The source file containing the \hyperlink{classTetreesUI}{Tetrees\+UI} class\textquotesingle{} member functions implementation. 
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{TetreesUI_8cpp_ac781c7f7f1667b12c3e26b8cb2622bf5}\label{TetreesUI_8cpp_ac781c7f7f1667b12c3e26b8cb2622bf5}} 
+\index{Tetrees\+U\+I.\+cpp@{Tetrees\+U\+I.\+cpp}!box01@{box01}}
+\index{box01@{box01}!Tetrees\+U\+I.\+cpp@{Tetrees\+U\+I.\+cpp}}
+\subsubsection{\texorpdfstring{box01}{box01}}
+{\footnotesize\ttfamily Gtk\+Widget$\ast$ box01}
+
+A \href{https://developer.gnome.org/gtk3/stable/GtkBox}{\tt G\+TK Box} used to pack widgets. Named this way because of its position within the \hyperlink{TetreesUI_8cpp_abb2e6a9f558c00289268dc07c341c50f}{main grid}, i.\+e row 0 and column 1. \mbox{\Hypertarget{TetreesUI_8cpp_a587a173ec1b3ab1a2db7155f0f9322ef}\label{TetreesUI_8cpp_a587a173ec1b3ab1a2db7155f0f9322ef}} 
+\index{Tetrees\+U\+I.\+cpp@{Tetrees\+U\+I.\+cpp}!button\+Box@{button\+Box}}
+\index{button\+Box@{button\+Box}!Tetrees\+U\+I.\+cpp@{Tetrees\+U\+I.\+cpp}}
+\subsubsection{\texorpdfstring{button\+Box}{buttonBox}}
+{\footnotesize\ttfamily Gtk\+Widget$\ast$ button\+Box}
+
+A \href{https://developer.gnome.org/gtk3/stable/GtkButtonBox}{\tt G\+TK Button Box} to pack the buttons widgets (\hyperlink{TetreesUI_8cpp_a93e046be1258b131010c58072aab2ead}{Play}, \hyperlink{TetreesUI_8cpp_a119f809cb832f3e370c60c75d766e473}{Pause}, and \hyperlink{TetreesUI_8cpp_a7ac3df3e3d13ae5bd16828389ba56461}{Reset} buttons). \mbox{\Hypertarget{TetreesUI_8cpp_abc4f181f9f1390698df2a37f459418fe}\label{TetreesUI_8cpp_abc4f181f9f1390698df2a37f459418fe}} 
+\index{Tetrees\+U\+I.\+cpp@{Tetrees\+U\+I.\+cpp}!css\+Provider@{css\+Provider}}
+\index{css\+Provider@{css\+Provider}!Tetrees\+U\+I.\+cpp@{Tetrees\+U\+I.\+cpp}}
+\subsubsection{\texorpdfstring{css\+Provider}{cssProvider}}
+{\footnotesize\ttfamily Gtk\+Css\+Provider$\ast$ css\+Provider}
+
+A \href{https://developer.gnome.org/gdk3/stable/GdkCssProvider.html}{\tt G\+DK C\+SS Provider} which stores the C\+SS file itself. \mbox{\Hypertarget{TetreesUI_8cpp_af8ddf64c2ced2048a5de5626a796c43c}\label{TetreesUI_8cpp_af8ddf64c2ced2048a5de5626a796c43c}} 
+\index{Tetrees\+U\+I.\+cpp@{Tetrees\+U\+I.\+cpp}!display@{display}}
+\index{display@{display}!Tetrees\+U\+I.\+cpp@{Tetrees\+U\+I.\+cpp}}
+\subsubsection{\texorpdfstring{display}{display}}
+{\footnotesize\ttfamily Gdk\+Display$\ast$ display}
+
+A \href{https://developer.gnome.org/gdk3/stable/GdkDisplay.html}{\tt G\+DK Display} used for integration with C\+SS. \mbox{\Hypertarget{TetreesUI_8cpp_a72251ac20f5ac4b09eccfff3e2687252}\label{TetreesUI_8cpp_a72251ac20f5ac4b09eccfff3e2687252}} 
+\index{Tetrees\+U\+I.\+cpp@{Tetrees\+U\+I.\+cpp}!file@{file}}
+\index{file@{file}!Tetrees\+U\+I.\+cpp@{Tetrees\+U\+I.\+cpp}}
+\subsubsection{\texorpdfstring{file}{file}}
+{\footnotesize\ttfamily const Fc\+Char8$\ast$ file = (const Fc\+Char8$\ast$)file\+Path\+\_\+8bit\+Font.\+c\+\_\+str()}
+
+A char type representation of the \hyperlink{TetreesUI_8cpp_a816e612f85e91ff77ce93b10f5b9ec2e}{T\+FF file path} to be used within fontconfig.\+h functions. \mbox{\Hypertarget{TetreesUI_8cpp_a816e612f85e91ff77ce93b10f5b9ec2e}\label{TetreesUI_8cpp_a816e612f85e91ff77ce93b10f5b9ec2e}} 
+\index{Tetrees\+U\+I.\+cpp@{Tetrees\+U\+I.\+cpp}!file\+Path\+\_\+8bit\+Font@{file\+Path\+\_\+8bit\+Font}}
+\index{file\+Path\+\_\+8bit\+Font@{file\+Path\+\_\+8bit\+Font}!Tetrees\+U\+I.\+cpp@{Tetrees\+U\+I.\+cpp}}
+\subsubsection{\texorpdfstring{file\+Path\+\_\+8bit\+Font}{filePath\_8bitFont}}
+{\footnotesize\ttfamily std\+::string file\+Path\+\_\+8bit\+Font = \char`\"{}Misc/Press\+Start2\+P.\+ttf\char`\"{}}
+
+A string with path to the T\+TF file containing a 8-\/bit stylized font. \begin{DoxySeeAlso}{See also}
+The font used in this project is the \href{https://www.dafont.com/press-start-2p.font}{\tt Press Start 2P}. 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{TetreesUI_8cpp_a5105cbc816245ddca29759f153415653}\label{TetreesUI_8cpp_a5105cbc816245ddca29759f153415653}} 
+\index{Tetrees\+U\+I.\+cpp@{Tetrees\+U\+I.\+cpp}!lvl\+Label@{lvl\+Label}}
+\index{lvl\+Label@{lvl\+Label}!Tetrees\+U\+I.\+cpp@{Tetrees\+U\+I.\+cpp}}
+\subsubsection{\texorpdfstring{lvl\+Label}{lvlLabel}}
+{\footnotesize\ttfamily Gtk\+Widget$\ast$ lvl\+Label}
+
+A \href{https://developer.gnome.org/gtk3/stable/GtkLabel.html}{\tt G\+TK Label} that displays the actual \hyperlink{classTetreesUI_a700b75dbee9c324c69a18f34c5efdab9}{game level}. \mbox{\Hypertarget{TetreesUI_8cpp_abb2e6a9f558c00289268dc07c341c50f}\label{TetreesUI_8cpp_abb2e6a9f558c00289268dc07c341c50f}} 
+\index{Tetrees\+U\+I.\+cpp@{Tetrees\+U\+I.\+cpp}!main\+Grid@{main\+Grid}}
+\index{main\+Grid@{main\+Grid}!Tetrees\+U\+I.\+cpp@{Tetrees\+U\+I.\+cpp}}
+\subsubsection{\texorpdfstring{main\+Grid}{mainGrid}}
+{\footnotesize\ttfamily Gtk\+Widget$\ast$ main\+Grid}
+
+A \href{https://developer.gnome.org/gtk3/stable/GtkGrid}{\tt G\+TK Grid} used to arrange children widgets in rows and columns within the \hyperlink{TetreesUI_8cpp_a929776169582ba270fc197a352f288e8}{main window}. \mbox{\Hypertarget{TetreesUI_8cpp_a929776169582ba270fc197a352f288e8}\label{TetreesUI_8cpp_a929776169582ba270fc197a352f288e8}} 
+\index{Tetrees\+U\+I.\+cpp@{Tetrees\+U\+I.\+cpp}!main\+Window@{main\+Window}}
+\index{main\+Window@{main\+Window}!Tetrees\+U\+I.\+cpp@{Tetrees\+U\+I.\+cpp}}
+\subsubsection{\texorpdfstring{main\+Window}{mainWindow}}
+{\footnotesize\ttfamily Gtk\+Widget$\ast$ main\+Window}
+
+A \href{https://developer.gnome.org/gtk3/stable/GtkWindow.html}{\tt G\+TK Window} widget which is the top level \href{https://developer.gnome.org/gtk3/stable/GtkContainer.html}{\tt container} to all other widgets within this application. \mbox{\Hypertarget{TetreesUI_8cpp_aac997784ac88b494498d6e08d6fe62d5}\label{TetreesUI_8cpp_aac997784ac88b494498d6e08d6fe62d5}} 
+\index{Tetrees\+U\+I.\+cpp@{Tetrees\+U\+I.\+cpp}!next\+Tetromino\+Drawing\+Area@{next\+Tetromino\+Drawing\+Area}}
+\index{next\+Tetromino\+Drawing\+Area@{next\+Tetromino\+Drawing\+Area}!Tetrees\+U\+I.\+cpp@{Tetrees\+U\+I.\+cpp}}
+\subsubsection{\texorpdfstring{next\+Tetromino\+Drawing\+Area}{nextTetrominoDrawingArea}}
+{\footnotesize\ttfamily Gtk\+Widget$\ast$ next\+Tetromino\+Drawing\+Area}
+
+A \href{https://developer.gnome.org/gtk3/stable/GtkDrawingArea.html}{\tt G\+TK Drawing Area} widget used to show the \hyperlink{classTetreesEngine_a44c902481f5d8a72ca8a78d24f5c3a33}{next tetromino} to be spawned. \mbox{\Hypertarget{TetreesUI_8cpp_aa28e1158cd1473e8640bc421f0fc7340}\label{TetreesUI_8cpp_aa28e1158cd1473e8640bc421f0fc7340}} 
+\index{Tetrees\+U\+I.\+cpp@{Tetrees\+U\+I.\+cpp}!next\+Tetromino\+Frame@{next\+Tetromino\+Frame}}
+\index{next\+Tetromino\+Frame@{next\+Tetromino\+Frame}!Tetrees\+U\+I.\+cpp@{Tetrees\+U\+I.\+cpp}}
+\subsubsection{\texorpdfstring{next\+Tetromino\+Frame}{nextTetrominoFrame}}
+{\footnotesize\ttfamily Gtk\+Widget$\ast$ next\+Tetromino\+Frame}
+
+A \href{https://developer.gnome.org/gtk3/stable/GtkFrame.html}{\tt G\+TK Frame}. Just a secondary widget to properly arrange the \hyperlink{TetreesUI_8cpp_aac997784ac88b494498d6e08d6fe62d5}{next tetromino field} within the \hyperlink{TetreesUI_8cpp_a929776169582ba270fc197a352f288e8}{main window}. \mbox{\Hypertarget{TetreesUI_8cpp_a119f809cb832f3e370c60c75d766e473}\label{TetreesUI_8cpp_a119f809cb832f3e370c60c75d766e473}} 
+\index{Tetrees\+U\+I.\+cpp@{Tetrees\+U\+I.\+cpp}!pause\+Button@{pause\+Button}}
+\index{pause\+Button@{pause\+Button}!Tetrees\+U\+I.\+cpp@{Tetrees\+U\+I.\+cpp}}
+\subsubsection{\texorpdfstring{pause\+Button}{pauseButton}}
+{\footnotesize\ttfamily Gtk\+Widget$\ast$ pause\+Button}
+
+A \href{https://developer.gnome.org/gtk3/stable/GtkButton}{\tt G\+TK Button} widget that pauses/resumes the game when \hyperlink{classTetreesUI_a0aa1932ac8f09f6d8de7ac7d7a2efa94}{clicked} during gameplay. \mbox{\Hypertarget{TetreesUI_8cpp_a93e046be1258b131010c58072aab2ead}\label{TetreesUI_8cpp_a93e046be1258b131010c58072aab2ead}} 
+\index{Tetrees\+U\+I.\+cpp@{Tetrees\+U\+I.\+cpp}!play\+Button@{play\+Button}}
+\index{play\+Button@{play\+Button}!Tetrees\+U\+I.\+cpp@{Tetrees\+U\+I.\+cpp}}
+\subsubsection{\texorpdfstring{play\+Button}{playButton}}
+{\footnotesize\ttfamily Gtk\+Widget$\ast$ play\+Button}
+
+A \href{https://developer.gnome.org/gtk3/stable/GtkButton}{\tt G\+TK Button} widget that starts the game when \hyperlink{classTetreesUI_a0aa1932ac8f09f6d8de7ac7d7a2efa94}{clicked}. \mbox{\Hypertarget{TetreesUI_8cpp_af900bffe25b932fb86dc61cfdf839e95}\label{TetreesUI_8cpp_af900bffe25b932fb86dc61cfdf839e95}} 
+\index{Tetrees\+U\+I.\+cpp@{Tetrees\+U\+I.\+cpp}!playing\+Field\+Drawing\+Area@{playing\+Field\+Drawing\+Area}}
+\index{playing\+Field\+Drawing\+Area@{playing\+Field\+Drawing\+Area}!Tetrees\+U\+I.\+cpp@{Tetrees\+U\+I.\+cpp}}
+\subsubsection{\texorpdfstring{playing\+Field\+Drawing\+Area}{playingFieldDrawingArea}}
+{\footnotesize\ttfamily Gtk\+Widget$\ast$ playing\+Field\+Drawing\+Area}
+
+A \href{https://developer.gnome.org/gtk3/stable/GtkDrawingArea.html}{\tt G\+TK Drawing Area} widget used to display the actual state of the \hyperlink{classTetreesEngine_a37d082a7816d6731b2703dd6d1a1cb97}{game board} (namely, a \hyperlink{classTetreesEngine_aeade477c0bc2eaaa894ebbdaca93584e}{scene}). \mbox{\Hypertarget{TetreesUI_8cpp_a98d2477cef8ca3a919a3e0af02da0a0d}\label{TetreesUI_8cpp_a98d2477cef8ca3a919a3e0af02da0a0d}} 
+\index{Tetrees\+U\+I.\+cpp@{Tetrees\+U\+I.\+cpp}!playing\+Field\+Frame@{playing\+Field\+Frame}}
+\index{playing\+Field\+Frame@{playing\+Field\+Frame}!Tetrees\+U\+I.\+cpp@{Tetrees\+U\+I.\+cpp}}
+\subsubsection{\texorpdfstring{playing\+Field\+Frame}{playingFieldFrame}}
+{\footnotesize\ttfamily Gtk\+Widget$\ast$ playing\+Field\+Frame}
+
+A \href{https://developer.gnome.org/gtk3/stable/GtkFrame.html}{\tt G\+TK Frame}. Just a secondary widget to properly arrange the \hyperlink{TetreesUI_8cpp_af900bffe25b932fb86dc61cfdf839e95}{playing field} within the \hyperlink{TetreesUI_8cpp_a929776169582ba270fc197a352f288e8}{main window}. \mbox{\Hypertarget{TetreesUI_8cpp_a7ac3df3e3d13ae5bd16828389ba56461}\label{TetreesUI_8cpp_a7ac3df3e3d13ae5bd16828389ba56461}} 
+\index{Tetrees\+U\+I.\+cpp@{Tetrees\+U\+I.\+cpp}!reset\+Button@{reset\+Button}}
+\index{reset\+Button@{reset\+Button}!Tetrees\+U\+I.\+cpp@{Tetrees\+U\+I.\+cpp}}
+\subsubsection{\texorpdfstring{reset\+Button}{resetButton}}
+{\footnotesize\ttfamily Gtk\+Widget$\ast$ reset\+Button}
+
+A \href{https://developer.gnome.org/gtk3/stable/GtkButton}{\tt G\+TK Button} widget that when \hyperlink{classTetreesUI_a0aa1932ac8f09f6d8de7ac7d7a2efa94}{clicked} resets the game to its initial state. \mbox{\Hypertarget{TetreesUI_8cpp_a8d867e3855c9142a39c9314c758e9990}\label{TetreesUI_8cpp_a8d867e3855c9142a39c9314c758e9990}} 
+\index{Tetrees\+U\+I.\+cpp@{Tetrees\+U\+I.\+cpp}!score\+Frame@{score\+Frame}}
+\index{score\+Frame@{score\+Frame}!Tetrees\+U\+I.\+cpp@{Tetrees\+U\+I.\+cpp}}
+\subsubsection{\texorpdfstring{score\+Frame}{scoreFrame}}
+{\footnotesize\ttfamily Gtk\+Widget$\ast$ score\+Frame}
+
+A \href{https://developer.gnome.org/gtk3/stable/GtkFrame.html}{\tt G\+TK Frame} Just a secondary widget to properly arrange the \hyperlink{TetreesUI_8cpp_aacb77432f2785bad4cb2dd55899b5336}{game score\textquotesingle{}s displaying area} within the \hyperlink{TetreesUI_8cpp_a929776169582ba270fc197a352f288e8}{main window}. \mbox{\Hypertarget{TetreesUI_8cpp_adc132ad6d9929e2a33e24d4cd6d35322}\label{TetreesUI_8cpp_adc132ad6d9929e2a33e24d4cd6d35322}} 
+\index{Tetrees\+U\+I.\+cpp@{Tetrees\+U\+I.\+cpp}!score\+Iter@{score\+Iter}}
+\index{score\+Iter@{score\+Iter}!Tetrees\+U\+I.\+cpp@{Tetrees\+U\+I.\+cpp}}
+\subsubsection{\texorpdfstring{score\+Iter}{scoreIter}}
+{\footnotesize\ttfamily Gtk\+Text\+Iter score\+Iter}
+
+A \href{https://developer.gnome.org/gtk3/stable/GtkTextIter.html}{\tt G\+TK Text Iter} widget used as an iterator for text operations within \hyperlink{TetreesUI_8cpp_aacb77432f2785bad4cb2dd55899b5336}{score Text View}. \mbox{\Hypertarget{TetreesUI_8cpp_ae067b2d6b08b38aa73b035c82d9e14b0}\label{TetreesUI_8cpp_ae067b2d6b08b38aa73b035c82d9e14b0}} 
+\index{Tetrees\+U\+I.\+cpp@{Tetrees\+U\+I.\+cpp}!score\+Label@{score\+Label}}
+\index{score\+Label@{score\+Label}!Tetrees\+U\+I.\+cpp@{Tetrees\+U\+I.\+cpp}}
+\subsubsection{\texorpdfstring{score\+Label}{scoreLabel}}
+{\footnotesize\ttfamily Gtk\+Widget$\ast$ score\+Label}
+
+A \href{https://developer.gnome.org/gtk3/stable/GtkLabel.html}{\tt G\+TK Label} that displays the word \char`\"{}\+Score\char`\"{}. \mbox{\Hypertarget{TetreesUI_8cpp_a987e52b6afd77146d28d866324936333}\label{TetreesUI_8cpp_a987e52b6afd77146d28d866324936333}} 
+\index{Tetrees\+U\+I.\+cpp@{Tetrees\+U\+I.\+cpp}!score\+Text\+Buf@{score\+Text\+Buf}}
+\index{score\+Text\+Buf@{score\+Text\+Buf}!Tetrees\+U\+I.\+cpp@{Tetrees\+U\+I.\+cpp}}
+\subsubsection{\texorpdfstring{score\+Text\+Buf}{scoreTextBuf}}
+{\footnotesize\ttfamily Gtk\+Text\+Buffer$\ast$ score\+Text\+Buf}
+
+A \href{https://developer.gnome.org/gtk3/stable/GtkTextBuffer.html}{\tt G\+TK Text Buffer} widget used as a buffer for the text displayed at the \hyperlink{TetreesUI_8cpp_aacb77432f2785bad4cb2dd55899b5336}{score Text View}. \mbox{\Hypertarget{TetreesUI_8cpp_aacb77432f2785bad4cb2dd55899b5336}\label{TetreesUI_8cpp_aacb77432f2785bad4cb2dd55899b5336}} 
+\index{Tetrees\+U\+I.\+cpp@{Tetrees\+U\+I.\+cpp}!score\+Text\+View@{score\+Text\+View}}
+\index{score\+Text\+View@{score\+Text\+View}!Tetrees\+U\+I.\+cpp@{Tetrees\+U\+I.\+cpp}}
+\subsubsection{\texorpdfstring{score\+Text\+View}{scoreTextView}}
+{\footnotesize\ttfamily Gtk\+Widget$\ast$ score\+Text\+View}
+
+A \href{https://developer.gnome.org/gtk3/stable/GtkTextView.html}{\tt G\+TK Text View} that displays stylized text informing the \hyperlink{classTetreesUI_a128491041c6b77acec829fb5b1f4dafb}{game score}. \mbox{\Hypertarget{TetreesUI_8cpp_ae721ea915e8dc917e4474171757a230e}\label{TetreesUI_8cpp_ae721ea915e8dc917e4474171757a230e}} 
+\index{Tetrees\+U\+I.\+cpp@{Tetrees\+U\+I.\+cpp}!screen@{screen}}
+\index{screen@{screen}!Tetrees\+U\+I.\+cpp@{Tetrees\+U\+I.\+cpp}}
+\subsubsection{\texorpdfstring{screen}{screen}}
+{\footnotesize\ttfamily Gdk\+Screen$\ast$ screen}
+
+A \href{https://developer.gnome.org/gdk3/stable/GdkScreen.html}{\tt G\+DK Screen} used for integration with C\+SS. \mbox{\Hypertarget{TetreesUI_8cpp_a10408b8935c73e0f669f6268f22f1de3}\label{TetreesUI_8cpp_a10408b8935c73e0f669f6268f22f1de3}} 
+\index{Tetrees\+U\+I.\+cpp@{Tetrees\+U\+I.\+cpp}!update\+Event\+ID@{update\+Event\+ID}}
+\index{update\+Event\+ID@{update\+Event\+ID}!Tetrees\+U\+I.\+cpp@{Tetrees\+U\+I.\+cpp}}
+\subsubsection{\texorpdfstring{update\+Event\+ID}{updateEventID}}
+{\footnotesize\ttfamily guint update\+Event\+ID}
+
+Stores the ID returned by \href{https://developer.gnome.org/glib/stable/glib-The-Main-Event-Loop.html#g-timeout-add-full}{\tt g\+\_\+timeout\+\_\+add\+\_\+full} when registering the \hyperlink{TetreesDefs_8hpp_aaf9e35ddd627efe32323b1ba02ee514e}{update event} to application\textquotesingle{}s \href{https://developer.gnome.org/glib/stable/glib-The-Main-Event-Loop.html#glib-The-Main-Event-Loop.description}{\tt main loop}. \begin{DoxySeeAlso}{See also}
+\hyperlink{classTetreesUI_a0aa1932ac8f09f6d8de7ac7d7a2efa94}{on\+Play\+Clicked()} and \hyperlink{classTetreesUI_ae7d84906e943cd4b795800d4d561955c}{context\+Handler()}. 
+\end{DoxySeeAlso}

@@ -1,5 +1,5 @@
 Source/TetreesUI.o: ../Source/TetreesUI.cpp \
- /home/igao/workspace_eclipse_cpp/Tetrees/Headers/TetreesEngine.hpp \
+ /home/igor/eclipse-cpp-workspace/Tetrees/Headers/TetreesEngine.hpp \
  /usr/include/gtk-3.0/gtk/gtk.h /usr/include/gtk-3.0/gdk/gdk.h \
  /usr/include/gtk-3.0/gdk/gdkconfig.h /usr/include/glib-2.0/glib.h \
  /usr/include/glib-2.0/glib/galloca.h /usr/include/glib-2.0/glib/gtypes.h \
@@ -38,6 +38,8 @@ Source/TetreesUI.o: ../Source/TetreesUI.cpp \
  /usr/include/glib-2.0/glib/gmappedfile.h \
  /usr/include/glib-2.0/glib/gmarkup.h \
  /usr/include/glib-2.0/glib/gmessages.h \
+ /usr/include/glib-2.0/glib/gvariant.h \
+ /usr/include/glib-2.0/glib/gvarianttype.h \
  /usr/include/glib-2.0/glib/goption.h \
  /usr/include/glib-2.0/glib/gpattern.h \
  /usr/include/glib-2.0/glib/gprimes.h /usr/include/glib-2.0/glib/gqsort.h \
@@ -55,9 +57,7 @@ Source/TetreesUI.o: ../Source/TetreesUI.cpp \
  /usr/include/glib-2.0/glib/gtrashstack.h \
  /usr/include/glib-2.0/glib/gtree.h \
  /usr/include/glib-2.0/glib/gurifuncs.h \
- /usr/include/glib-2.0/glib/gvarianttype.h \
- /usr/include/glib-2.0/glib/gvariant.h \
- /usr/include/glib-2.0/glib/gversion.h \
+ /usr/include/glib-2.0/glib/guuid.h /usr/include/glib-2.0/glib/gversion.h \
  /usr/include/glib-2.0/glib/deprecated/gallocator.h \
  /usr/include/glib-2.0/glib/deprecated/gcache.h \
  /usr/include/glib-2.0/glib/deprecated/gcompletion.h \
@@ -233,6 +233,8 @@ Source/TetreesUI.o: ../Source/TetreesUI.cpp \
  /usr/include/pango-1.0/pango/pango-attributes.h \
  /usr/include/pango-1.0/pango/pango-font.h \
  /usr/include/pango-1.0/pango/pango-coverage.h \
+ /usr/include/pango-1.0/pango/pango-version-macros.h \
+ /usr/include/pango-1.0/pango/pango-features.h \
  /usr/include/pango-1.0/pango/pango-types.h \
  /usr/include/pango-1.0/pango/pango-gravity.h \
  /usr/include/pango-1.0/pango/pango-matrix.h \
@@ -247,7 +249,6 @@ Source/TetreesUI.o: ../Source/TetreesUI.cpp \
  /usr/include/pango-1.0/pango/pango-engine.h \
  /usr/include/pango-1.0/pango/pango-glyph.h \
  /usr/include/pango-1.0/pango/pango-enum-types.h \
- /usr/include/pango-1.0/pango/pango-features.h \
  /usr/include/pango-1.0/pango/pango-glyph-item.h \
  /usr/include/pango-1.0/pango/pango-layout.h \
  /usr/include/pango-1.0/pango/pango-tabs.h \
@@ -259,11 +260,19 @@ Source/TetreesUI.o: ../Source/TetreesUI.cpp \
  /usr/include/gtk-3.0/gdk/gdkdisplay.h \
  /usr/include/gtk-3.0/gdk/gdkevents.h /usr/include/gtk-3.0/gdk/gdkdnd.h \
  /usr/include/gtk-3.0/gdk/gdkdevice.h \
+ /usr/include/gtk-3.0/gdk/gdkdevicetool.h \
  /usr/include/gtk-3.0/gdk/gdkdevicemanager.h \
+ /usr/include/gtk-3.0/gdk/gdkseat.h /usr/include/gtk-3.0/gdk/gdkwindow.h \
+ /usr/include/gtk-3.0/gdk/gdkdrawingcontext.h \
+ /usr/include/gtk-3.0/gdk/gdkframeclock.h \
+ /usr/include/gtk-3.0/gdk/gdkframetimings.h \
+ /usr/include/gtk-3.0/gdk/gdkmonitor.h \
+ /usr/include/gtk-3.0/gdk/gdkrectangle.h \
  /usr/include/gtk-3.0/gdk/gdkcairo.h \
  /usr/include/gtk-3.0/gdk/deprecated/gdkcolor.h \
  /usr/include/gtk-3.0/gdk/gdkrgba.h /usr/include/gtk-3.0/gdk/gdkpixbuf.h \
  /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h \
+ /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-macros.h \
  /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-features.h \
  /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-core.h \
  /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-transform.h \
@@ -275,18 +284,15 @@ Source/TetreesUI.o: ../Source/TetreesUI.cpp \
  /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-autocleanups.h \
  /usr/include/pango-1.0/pango/pangocairo.h \
  /usr/include/gtk-3.0/gdk/gdkcursor.h \
+ /usr/include/gtk-3.0/gdk/gdkdevicepad.h \
  /usr/include/gtk-3.0/gdk/gdkdisplaymanager.h \
  /usr/include/gtk-3.0/gdk/gdkenumtypes.h \
- /usr/include/gtk-3.0/gdk/gdkframeclock.h \
- /usr/include/gtk-3.0/gdk/gdkframetimings.h \
  /usr/include/gtk-3.0/gdk/gdkglcontext.h \
  /usr/include/gtk-3.0/gdk/gdkkeys.h /usr/include/gtk-3.0/gdk/gdkkeysyms.h \
  /usr/include/gtk-3.0/gdk/gdkmain.h /usr/include/gtk-3.0/gdk/gdkpango.h \
  /usr/include/gtk-3.0/gdk/gdkproperty.h \
- /usr/include/gtk-3.0/gdk/gdkrectangle.h \
  /usr/include/gtk-3.0/gdk/gdkselection.h \
  /usr/include/gtk-3.0/gdk/gdktestutils.h \
- /usr/include/gtk-3.0/gdk/gdkwindow.h \
  /usr/include/gtk-3.0/gdk/gdkthreads.h \
  /usr/include/gtk-3.0/gdk/gdkvisual.h \
  /usr/include/gtk-3.0/gdk/gdk-autocleanup.h \
@@ -368,6 +374,7 @@ Source/TetreesUI.o: ../Source/TetreesUI.cpp \
  /usr/include/gtk-3.0/gtk/gtktreemodelfilter.h \
  /usr/include/gtk-3.0/gtk/gtkimage.h \
  /usr/include/gtk-3.0/gtk/gtkapplicationwindow.h \
+ /usr/include/gtk-3.0/gtk/gtkshortcutswindow.h \
  /usr/include/gtk-3.0/gtk/gtkaspectframe.h \
  /usr/include/gtk-3.0/gtk/gtkframe.h \
  /usr/include/gtk-3.0/gtk/gtkassistant.h \
@@ -403,6 +410,8 @@ Source/TetreesUI.o: ../Source/TetreesUI.cpp \
  /usr/include/gtk-3.0/gtk/gtkcssprovider.h \
  /usr/include/gtk-3.0/gtk/gtkcsssection.h \
  /usr/include/gtk-3.0/gtk/gtkdebug.h \
+ /usr/include/gtk-3.0/gtk/gtkdragdest.h \
+ /usr/include/gtk-3.0/gtk/gtkdragsource.h \
  /usr/include/gtk-3.0/gtk/gtkdrawingarea.h \
  /usr/include/gtk-3.0/gtk/gtkeventbox.h \
  /usr/include/gtk-3.0/gtk/gtkeventcontroller.h \
@@ -412,6 +421,8 @@ Source/TetreesUI.o: ../Source/TetreesUI.cpp \
  /usr/include/gtk-3.0/gtk/gtkfilefilter.h \
  /usr/include/gtk-3.0/gtk/gtkfilechooserbutton.h \
  /usr/include/gtk-3.0/gtk/gtkfilechooserdialog.h \
+ /usr/include/gtk-3.0/gtk/gtkfilechoosernative.h \
+ /usr/include/gtk-3.0/gtk/gtknativedialog.h \
  /usr/include/gtk-3.0/gtk/gtkfilechooserwidget.h \
  /usr/include/gtk-3.0/gtk/gtkflowbox.h \
  /usr/include/gtk-3.0/gtk/gtkfontbutton.h \
@@ -461,6 +472,7 @@ Source/TetreesUI.o: ../Source/TetreesUI.cpp \
  /usr/include/gtk-3.0/gtk/gtkoffscreenwindow.h \
  /usr/include/gtk-3.0/gtk/gtkorientable.h \
  /usr/include/gtk-3.0/gtk/gtkoverlay.h \
+ /usr/include/gtk-3.0/gtk/gtkpadcontroller.h \
  /usr/include/gtk-3.0/gtk/gtkpagesetup.h \
  /usr/include/gtk-3.0/gtk/gtkpapersize.h \
  /usr/include/gtk-3.0/gtk/gtkpaned.h \
@@ -495,6 +507,10 @@ Source/TetreesUI.o: ../Source/TetreesUI.cpp \
  /usr/include/gtk-3.0/gtk/gtkseparatormenuitem.h \
  /usr/include/gtk-3.0/gtk/gtkseparatortoolitem.h \
  /usr/include/gtk-3.0/gtk/gtksettings.h \
+ /usr/include/gtk-3.0/gtk/gtkshortcutlabel.h \
+ /usr/include/gtk-3.0/gtk/gtkshortcutsgroup.h \
+ /usr/include/gtk-3.0/gtk/gtkshortcutssection.h \
+ /usr/include/gtk-3.0/gtk/gtkshortcutsshortcut.h \
  /usr/include/gtk-3.0/gtk/gtkshow.h \
  /usr/include/gtk-3.0/gtk/gtkstacksidebar.h \
  /usr/include/gtk-3.0/gtk/gtkstack.h \
@@ -563,12 +579,12 @@ Source/TetreesUI.o: ../Source/TetreesUI.cpp \
  /usr/include/gtk-3.0/gtk/deprecated/gtkvscrollbar.h \
  /usr/include/gtk-3.0/gtk/deprecated/gtkvseparator.h \
  /usr/include/gtk-3.0/gtk/gtk-autocleanups.h \
- /home/igao/workspace_eclipse_cpp/Tetrees/Headers/TetreesDefs.hpp \
- /home/igao/workspace_eclipse_cpp/Tetrees/Headers/TetreesUI.hpp \
- /home/igao/workspace_eclipse_cpp/Tetrees/Headers/TetreesUtils.hpp \
- /home/igao/workspace_eclipse_cpp/Tetrees/Headers/TetreesStrings.hpp
+ /home/igor/eclipse-cpp-workspace/Tetrees/Headers/TetreesDefs.hpp \
+ /home/igor/eclipse-cpp-workspace/Tetrees/Headers/TetreesUI.hpp \
+ /home/igor/eclipse-cpp-workspace/Tetrees/Headers/TetreesUtils.hpp \
+ /home/igor/eclipse-cpp-workspace/Tetrees/Headers/TetreesStrings.hpp
 
-/home/igao/workspace_eclipse_cpp/Tetrees/Headers/TetreesEngine.hpp:
+/home/igor/eclipse-cpp-workspace/Tetrees/Headers/TetreesEngine.hpp:
 
 /usr/include/gtk-3.0/gtk/gtk.h:
 
@@ -670,6 +686,10 @@ Source/TetreesUI.o: ../Source/TetreesUI.cpp \
 
 /usr/include/glib-2.0/glib/gmessages.h:
 
+/usr/include/glib-2.0/glib/gvariant.h:
+
+/usr/include/glib-2.0/glib/gvarianttype.h:
+
 /usr/include/glib-2.0/glib/goption.h:
 
 /usr/include/glib-2.0/glib/gpattern.h:
@@ -710,9 +730,7 @@ Source/TetreesUI.o: ../Source/TetreesUI.cpp \
 
 /usr/include/glib-2.0/glib/gurifuncs.h:
 
-/usr/include/glib-2.0/glib/gvarianttype.h:
-
-/usr/include/glib-2.0/glib/gvariant.h:
+/usr/include/glib-2.0/glib/guuid.h:
 
 /usr/include/glib-2.0/glib/gversion.h:
 
@@ -1082,6 +1100,10 @@ Source/TetreesUI.o: ../Source/TetreesUI.cpp \
 
 /usr/include/pango-1.0/pango/pango-coverage.h:
 
+/usr/include/pango-1.0/pango/pango-version-macros.h:
+
+/usr/include/pango-1.0/pango/pango-features.h:
+
 /usr/include/pango-1.0/pango/pango-types.h:
 
 /usr/include/pango-1.0/pango/pango-gravity.h:
@@ -1109,8 +1131,6 @@ Source/TetreesUI.o: ../Source/TetreesUI.cpp \
 /usr/include/pango-1.0/pango/pango-glyph.h:
 
 /usr/include/pango-1.0/pango/pango-enum-types.h:
-
-/usr/include/pango-1.0/pango/pango-features.h:
 
 /usr/include/pango-1.0/pango/pango-glyph-item.h:
 
@@ -1140,7 +1160,23 @@ Source/TetreesUI.o: ../Source/TetreesUI.cpp \
 
 /usr/include/gtk-3.0/gdk/gdkdevice.h:
 
+/usr/include/gtk-3.0/gdk/gdkdevicetool.h:
+
 /usr/include/gtk-3.0/gdk/gdkdevicemanager.h:
+
+/usr/include/gtk-3.0/gdk/gdkseat.h:
+
+/usr/include/gtk-3.0/gdk/gdkwindow.h:
+
+/usr/include/gtk-3.0/gdk/gdkdrawingcontext.h:
+
+/usr/include/gtk-3.0/gdk/gdkframeclock.h:
+
+/usr/include/gtk-3.0/gdk/gdkframetimings.h:
+
+/usr/include/gtk-3.0/gdk/gdkmonitor.h:
+
+/usr/include/gtk-3.0/gdk/gdkrectangle.h:
 
 /usr/include/gtk-3.0/gdk/gdkcairo.h:
 
@@ -1151,6 +1187,8 @@ Source/TetreesUI.o: ../Source/TetreesUI.cpp \
 /usr/include/gtk-3.0/gdk/gdkpixbuf.h:
 
 /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf.h:
+
+/usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-macros.h:
 
 /usr/include/gdk-pixbuf-2.0/gdk-pixbuf/gdk-pixbuf-features.h:
 
@@ -1174,13 +1212,11 @@ Source/TetreesUI.o: ../Source/TetreesUI.cpp \
 
 /usr/include/gtk-3.0/gdk/gdkcursor.h:
 
+/usr/include/gtk-3.0/gdk/gdkdevicepad.h:
+
 /usr/include/gtk-3.0/gdk/gdkdisplaymanager.h:
 
 /usr/include/gtk-3.0/gdk/gdkenumtypes.h:
-
-/usr/include/gtk-3.0/gdk/gdkframeclock.h:
-
-/usr/include/gtk-3.0/gdk/gdkframetimings.h:
 
 /usr/include/gtk-3.0/gdk/gdkglcontext.h:
 
@@ -1194,13 +1230,9 @@ Source/TetreesUI.o: ../Source/TetreesUI.cpp \
 
 /usr/include/gtk-3.0/gdk/gdkproperty.h:
 
-/usr/include/gtk-3.0/gdk/gdkrectangle.h:
-
 /usr/include/gtk-3.0/gdk/gdkselection.h:
 
 /usr/include/gtk-3.0/gdk/gdktestutils.h:
-
-/usr/include/gtk-3.0/gdk/gdkwindow.h:
 
 /usr/include/gtk-3.0/gdk/gdkthreads.h:
 
@@ -1376,6 +1408,8 @@ Source/TetreesUI.o: ../Source/TetreesUI.cpp \
 
 /usr/include/gtk-3.0/gtk/gtkapplicationwindow.h:
 
+/usr/include/gtk-3.0/gtk/gtkshortcutswindow.h:
+
 /usr/include/gtk-3.0/gtk/gtkaspectframe.h:
 
 /usr/include/gtk-3.0/gtk/gtkframe.h:
@@ -1446,6 +1480,10 @@ Source/TetreesUI.o: ../Source/TetreesUI.cpp \
 
 /usr/include/gtk-3.0/gtk/gtkdebug.h:
 
+/usr/include/gtk-3.0/gtk/gtkdragdest.h:
+
+/usr/include/gtk-3.0/gtk/gtkdragsource.h:
+
 /usr/include/gtk-3.0/gtk/gtkdrawingarea.h:
 
 /usr/include/gtk-3.0/gtk/gtkeventbox.h:
@@ -1463,6 +1501,10 @@ Source/TetreesUI.o: ../Source/TetreesUI.cpp \
 /usr/include/gtk-3.0/gtk/gtkfilechooserbutton.h:
 
 /usr/include/gtk-3.0/gtk/gtkfilechooserdialog.h:
+
+/usr/include/gtk-3.0/gtk/gtkfilechoosernative.h:
+
+/usr/include/gtk-3.0/gtk/gtknativedialog.h:
 
 /usr/include/gtk-3.0/gtk/gtkfilechooserwidget.h:
 
@@ -1566,6 +1608,8 @@ Source/TetreesUI.o: ../Source/TetreesUI.cpp \
 
 /usr/include/gtk-3.0/gtk/gtkoverlay.h:
 
+/usr/include/gtk-3.0/gtk/gtkpadcontroller.h:
+
 /usr/include/gtk-3.0/gtk/gtkpagesetup.h:
 
 /usr/include/gtk-3.0/gtk/gtkpapersize.h:
@@ -1633,6 +1677,14 @@ Source/TetreesUI.o: ../Source/TetreesUI.cpp \
 /usr/include/gtk-3.0/gtk/gtkseparatortoolitem.h:
 
 /usr/include/gtk-3.0/gtk/gtksettings.h:
+
+/usr/include/gtk-3.0/gtk/gtkshortcutlabel.h:
+
+/usr/include/gtk-3.0/gtk/gtkshortcutsgroup.h:
+
+/usr/include/gtk-3.0/gtk/gtkshortcutssection.h:
+
+/usr/include/gtk-3.0/gtk/gtkshortcutsshortcut.h:
 
 /usr/include/gtk-3.0/gtk/gtkshow.h:
 
@@ -1770,10 +1822,10 @@ Source/TetreesUI.o: ../Source/TetreesUI.cpp \
 
 /usr/include/gtk-3.0/gtk/gtk-autocleanups.h:
 
-/home/igao/workspace_eclipse_cpp/Tetrees/Headers/TetreesDefs.hpp:
+/home/igor/eclipse-cpp-workspace/Tetrees/Headers/TetreesDefs.hpp:
 
-/home/igao/workspace_eclipse_cpp/Tetrees/Headers/TetreesUI.hpp:
+/home/igor/eclipse-cpp-workspace/Tetrees/Headers/TetreesUI.hpp:
 
-/home/igao/workspace_eclipse_cpp/Tetrees/Headers/TetreesUtils.hpp:
+/home/igor/eclipse-cpp-workspace/Tetrees/Headers/TetreesUtils.hpp:
 
-/home/igao/workspace_eclipse_cpp/Tetrees/Headers/TetreesStrings.hpp:
+/home/igor/eclipse-cpp-workspace/Tetrees/Headers/TetreesStrings.hpp:
