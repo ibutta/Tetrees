@@ -1,7 +1,7 @@
 # Tetrees
 A small part of my work as a game developer and a computer scientist, but yet just another puzzle game involving blocks.
 
-**Understanding the code:**
+### **_Understanding the code:_**
 
 Inside the ["Documentation/html"](https://github.com/ibutta/Tetrees/tree/master/Documentation/html) directory you will find the code documentation made with doxygen. It's a work in progress so you'll probably find some flaws... Start by opening the "Documentation/html/index.html" file in your browser (preferably, Google Chrome) and, from there, you can find the documentation with definition and explanation of every class, object, member functions, and variables.
 
@@ -16,16 +16,19 @@ There is a 1.0 version ("Tetrees 1.0" executable) right off the bat in the main 
 ***DON'T MOVE THE EXECUTABLE ALONE TO ANOTHER DIRECTORY OR IT WON'T RUN THE GAME INTERFACE PROPERLY DUE TO SOME .CSS, .TTF, 
 AND OTHER FILES PRESENT INSIDE "Misc" DIRECTORY***
 
+### **_Linux_**:
 For now, it'll only compile in **Linux** systems since **_it's the best OS ever!!!_** Just kidding... I love to develop
 using Linux because it's free, beautiful, and it also demands some computer science abilities. 
 
-###**_Windows_**: I'll work to come up with a version for Windows (soon).
+### **_Windows_**: 
+I'll work to come up with a version for Windows as soon as possible.
 
-###**_MacOS_**: I have a MacOS version almost finished! I'll upload it very soon!
+### **_MacOS_**: 
+There is a MacOS version almost finished! I'll upload it very soon!
 
 
 **This project uses:**
-  - **_cairo_** library for drawings;
+  - **_cairo library_** for drawings;
   - **_GTK_** and **_GDK_** for widgets.
 
 Thank you for your interest in my project!
